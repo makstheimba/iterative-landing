@@ -7,9 +7,9 @@
 - Run `npm run develop` to start developing
 
 ## Documentation
-[Gatsby](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter)
-[Gatsby Guides](https://www.gatsbyjs.com/docs/tutorial/?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter)
-[Gatsby Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter)
+[Gatsby](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter)  
+[Gatsby Guides](https://www.gatsbyjs.com/docs/tutorial/?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter)  
+[Gatsby Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter)  
 [Styled Components](https://styled-components.com/docs)
 
 ## Structure
