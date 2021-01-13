@@ -14,9 +14,9 @@ Medium.args = {
   size: 'm',
 };
 
-const ExampleHeader = {
+const ExampleLogo = {
   title: 'Example/Logo',
   component: Logo,
 };
 
-export default ExampleHeader;
+export default ExampleLogo;
