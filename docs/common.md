@@ -81,3 +81,9 @@ This component should wrap each page and set appropriate background, common font
         child: PropTypes.node.isRequired
     }
 ```
+
+## Cookies
+
+[Figma](https://www.figma.com/file/m3nYO4Yg9kLTGWvzoHrPKY/Iterative.ai?node-id=873%3A5742)
+New users should be notified about usage of cookies on the website.
+If user accepts cookies his decision should be saved to the localStorage so information about cookies does not appear again later

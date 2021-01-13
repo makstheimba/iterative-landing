@@ -29,6 +29,12 @@ Communitycard displays title and description. Featuring various company accompli
   description: PropTypes.string.isRequired
 ```
 
+## Extra: Background animation at the top of the page
+[Figma](https://www.figma.com/file/m3nYO4Yg9kLTGWvzoHrPKY/Iterative.ai?node-id=39%3A768)
+
+Ideally there should be a beautiful animation with colorful dots running alongside the tracks of faded Iterative logo.
+Implementation of this animation is up to you :)
+
 ## Assemble Main Page
 
 Required Components: Title, Icon, Header, Footer, Button, Layout

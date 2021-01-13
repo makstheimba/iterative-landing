@@ -1,5 +1,8 @@
 # About page
 
+## Timeline
+
+Timeline with company milestones. Ideally component should accept a list of titles and subtitles and display them on a timeline.
 ## DeveloperCard
 [Figma](https://www.figma.com/file/m3nYO4Yg9kLTGWvzoHrPKY/Iterative.ai?node-id=28%3A336)
 
