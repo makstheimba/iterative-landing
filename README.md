@@ -11,4 +11,3 @@
 `pages/` - each page of the landing is stored in separate js file
 
 `components/` - directory for common components. Each component is stored in a separate folder with `js` and `css` file. Add [propTypes](https://github.com/facebook/prop-types#usage) for component to make it more accessible.
-
