@@ -1,0 +1,71 @@
+.title {
+  margin: 0;
+  font-family: 'Space Grotesk', sans-serif, Arial, Helvetica;
+  font-style: normal;
+  text-align: left;
+  background-color: #ffffff 18.77%;
+  background-image: linear-gradient(
+    121.57deg,
+    #ffffff 18.77%,
+    rgba(255, 255, 255, 0.66) 60.15%
+  );
+  background-size: 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.title_size_s {
+  letter-spacing: 0.01em;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 26px;
+}
+
+.title_size_m {
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 40px;
+}
+
+.title_size_l {
+  font-weight: 900;
+  font-size: 28px;
+  line-height: 32px;
+}
+
+@media screen and (min-width: 768px) {
+  .title_size_s {
+    font-size: 28px;
+    line-height: 32px;
+  }
+
+  .title_size_m {
+    font-size: 48px;
+    line-height: 48px;
+  }
+
+  .title_size_l {
+    font-size: 56px;
+    line-height: 56px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .title_size_s {
+    font-size: 36px;
+    line-height: 40px;
+  }
+
+  .title_size_m {
+    font-size: 56px;
+    line-height: 56px;
+  }
+
+  .title_size_l {
+    font-size: 72px;
+    line-height: 72px;
+  }
+}
