@@ -1,16 +1,18 @@
 import React from 'react'
 import mainImage from '../../images/Enterprise/main.png'
+import { Title } from '../Enterprise/Enterprise'
+import '../Enterprise/Enterprise.css'
 
 const Enterprise = () => {
   return (
     <section className="enterprise">
-      <div class="enterprise__accent"></div>
-      <h2 class="enterprise__title">Enterprise</h2>
-      <p class="enterprise__subtitle">
+      <hr className="enterprise__accent"></hr>
+      <h2 className="enterprise__title">Enterprise</h2>
+      <p className="enterprise__subtitle">
         AI hand in hand with software development. 
         Built with data scientists, ML engineers, and data engineers in mind.
       </p>
-      <image src={mainImage} alt="Iterative Enterprise"></image>
+      <img className="enterprise__main-image" src={mainImage} alt="Iterative Enterprise"></img>
       <div className="enterprise__list-container">
         <ul className="enterprise__list">
           <li className="enterprise__list-item">
