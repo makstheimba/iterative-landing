@@ -1,6 +1,7 @@
 import * as React from "react"
 import Layout from "../Layout/Layout"
 import SEO from "../utils/Seo"
+import Enterprise from '../components/Enterprise'
 
 
 // markup
@@ -9,7 +10,7 @@ const IndexPage = () => {
     <Layout>
       <SEO title="Home" description="This is our home and here we will share basic information" />
       our actual components will go in here
-
+      <Enterprise />
     </Layout>
 
 
