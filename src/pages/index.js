@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Link } from 'gatsby';
 import { Logo } from '../components/logo/logo';
+import Title from '../components/title/title';
 
 // styles
 const pageStyles = {
@@ -72,6 +73,7 @@ const links = [
 const IndexPage = () => {
   return (
     <main style={pageStyles}>
+      <Title title="This is a test" size="l" />
       <title>Home Page</title>
       <h1 style={headingStyles}>
         Congratulations
