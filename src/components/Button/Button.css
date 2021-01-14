@@ -1,0 +1,39 @@
+.button {
+  font-family: 'Space Grotesk', sans-serif;
+  color: #fff;
+  border-radius: 100px;
+  border: none;
+  padding: 8px 16px;
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  display: block;
+}
+
+.button_color_blue-gradient {
+  background: linear-gradient(270deg, #13adc7 0%, #945dd6 100%);
+}
+
+.button_color_orange-gradient {
+  background: linear-gradient(270deg, #f46737 0%, #945dd6 100%);
+}
+
+@media (min-width: 768px) {
+  .button {
+    padding: 16px 24px;
+    width: auto;
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .button {
+    padding: 20px 40px;
+    font-size: 24px;
+    line-height: 24px;
+  }
+}
