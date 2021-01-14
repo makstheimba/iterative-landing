@@ -20,4 +20,17 @@ window.___navigate = (pathname) => {
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
+  backgrounds: {
+    default: 'dark',
+    values: [
+      {
+        name: 'dark',
+        value: '#0f1624',
+      },
+      {
+        name: 'light',
+        value: '#fff',
+      },
+    ],
+  },
 };
