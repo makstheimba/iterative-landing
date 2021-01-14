@@ -1,0 +1,11 @@
+@import url(../../vendor/normalize.css);
+@import url(../../fonts/space-grotesk.css);
+
+.layout {
+  font-family: 'Space Grotesk', sans-serif;
+  background-color: #0f1624;
+  color: rgba(255, 255, 255, 0.5);
+  width: 100%;
+  max-width: 1238px;
+  margin: 0 auto;
+}
