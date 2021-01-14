@@ -1,8 +1,8 @@
 export default {
   // we dont know the fonts yet
   fonts: {
-    // title: 
-    // main: 
+    title: "Space Grotesk, sans-serif",
+    main: "Space Grotesk, sans-serif"
   },
   //extra colors for layout
   colors: {
