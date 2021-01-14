@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './title.css';
+import './Title.css';
 
 export default function Title({ size, title }) {
   return <h1 className={`title title_size_${size}`}>{title}</h1>

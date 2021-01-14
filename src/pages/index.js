@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Link } from 'gatsby';
 import { Logo } from '../components/logo/logo';
-import Title from '../components/title/title';
+import Title from '../components/Title/Title';
 
 // styles
 const pageStyles = {
