@@ -9,7 +9,7 @@
   left: 0;
   filter: drop-shadow(0px 8px 16px rgba(46, 49, 55, 0.1)),
     drop-shadow(0px 0px 2px rgba(46, 49, 55, 0.2));
-  border-radius: 12px;
+  border-radius: 16px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -69,23 +69,27 @@
 
 @media (min-width: 414px) {
   .cookies {
-    width: 336px;
-    left: 10px;
+    margin: 0 68px 0 10px;
   }
 }
 
 @media (min-width: 768px) {
   .cookies {
-    width: 480px;
+    margin: 0 278px 0 10px;
+  }
+
+  .cookies__text {
     font-size: 12px;
     line-height: 18px;
-    margin: 0;
   }
 }
 
 @media (min-width: 1024px) {
   .cookies {
-    width: 740px;
+    margin: 0 0 0 10px;
+  }
+
+  .cookies__text {
     font-size: 14px;
     line-height: 22px;
   }
