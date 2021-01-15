@@ -42,6 +42,7 @@
   letter-spacing: 0.02em;
   color: rgba(255, 255, 255, 0.5);
   max-width: 50rem;
+  margin-bottom: 5rem;
 }
 .enterprise__image-container{
   text-align: center;
@@ -55,6 +56,7 @@
   list-style-type: none;
   display: flex;
   justify-content: space-between;
+  margin-top: 5.1875rem;
 }
 
 .enterprise__list-title{
@@ -65,6 +67,17 @@
   line-height: 2rem;
   letter-spacing: 0.02em;
   color: #FFFFFF;
+  margin-bottom: 0.5rem;
+}
+
+.enterprise__list-text{
+font-family: "Roobert TRIAL", Arial, sans-serif;
+font-style: normal;
+font-weight: normal;
+font-size: 1.125rem;
+line-height: 1.875rem;
+letter-spacing: 0.02em;
+color: rgba(255, 255, 255, 0.75);
 }
 
 .enterprise__list-item{
@@ -75,6 +88,7 @@
   display: block;
   width: 48px;
   height: 48px;
+  margin-bottom: 0.5rem;
 
   background-position: center;
   object-fit: scale-down; 
