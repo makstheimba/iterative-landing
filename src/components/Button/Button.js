@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './Button.css';
 
-function Button({
+export default function Button({
   onClick,
   type = 'blue-gradient',
   children,
@@ -29,5 +29,3 @@ Button.propTypes = {
   onClick: PropTypes.func.isRequired,
   disabled: PropTypes.bool,
 };
-
-export default Button;
