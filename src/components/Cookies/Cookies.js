@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Button from '../Button/Button';
 import './Cookies.css';
 
 export default function Cookies() {
@@ -30,9 +31,9 @@ export default function Cookies() {
           cookie policy
         </a>
       </p>
-      <button onClick={applyCookies} className="cookies__btn">
+      <Button type="light-blue" onClick={applyCookies} size="small">
         Apply
-      </button>
+      </Button>
     </div>
   );
 }

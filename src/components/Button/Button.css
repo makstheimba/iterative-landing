@@ -12,14 +12,72 @@
   font-size: 14px;
   line-height: 16px;
   display: block;
+  transition: filter 0.2s ease-in-out, background-image 0.2s ease-in-out,
+    background-color 0.2s ease-in-out, opacity 0.2s ease-in-out,
+    box-shadow 0.2s ease-in-out;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.button:disabled {
+  box-shadow: inset 0px 2px 1px rgba(46, 49, 55, 0.15),
+    inset 0px 0px 4px rgba(20, 20, 55, 0.3);
+  opacity: 0.5;
+  cursor: default;
+}
+
+.button:focus {
+  box-shadow: inset 0px 2px 1px rgba(46, 49, 55, 0.15),
+    inset 0px 0px 4px rgba(20, 20, 55, 0.3);
+}
+
+.button_size_small {
+  width: auto;
 }
 
 .button_color_blue-gradient {
   background: linear-gradient(270deg, #13adc7 0%, #945dd6 100%);
 }
 
+.button:hover.button_color_blue-gradient {
+  filter: brightness(1.1);
+}
+
+.button:focus.button_color_blue-gradient {
+  filter: brightness(1);
+}
+
+.button:disabled.button_color_blue-gradient {
+  background: linear-gradient(270deg, #00dbd8 0%, #b133ff 100%);
+  filter: brightness(1);
+}
+
 .button_color_orange-gradient {
   background: linear-gradient(270deg, #f46737 0%, #945dd6 100%);
+}
+
+.button:hover.button_color_orange-gradient {
+  filter: brightness(1.1);
+}
+
+.button:focus.button_color_orange-gradient,
+.button:disabled.button_color_orange-gradient {
+  filter: brightness(1);
+}
+
+.button_color_light-blue {
+  background: #13adc7;
+}
+
+.button:hover.button_color_light-blue {
+  background: #15c2e0;
+}
+
+.button:focus.button_color_light-blue,
+.button:disabled.button_color_light-blue {
+  background: #13adc7;
 }
 
 @media (min-width: 768px) {
@@ -28,6 +86,11 @@
     width: auto;
     font-size: 18px;
   }
+
+  .button_size_small {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -35,5 +98,11 @@
     padding: 20px 40px;
     font-size: 24px;
     line-height: 24px;
+  }
+
+  .button_size_small {
+    padding: 8px 16px;
+    font-size: 14px;
+    line-height: 16px;
   }
 }
