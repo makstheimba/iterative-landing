@@ -2,7 +2,6 @@
   display: block;
   position: relative;
   padding-left: 28px;
-
   cursor: pointer;
   font-size: 22px;
   -webkit-user-select: none;
@@ -11,7 +10,7 @@
   user-select: none;
 }
 
-input {
+.formcheck__input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
@@ -30,16 +29,16 @@ input {
   box-sizing: border-box;
 }
 
-.formcheck:hover input ~ .formcheck__button {
+.formcheck:hover .formcheck__input ~ .formcheck__button {
   background-color: #ccc;
 }
 
-.formcheck input:checked ~ .formcheck__button-square {
+.formcheck .formcheck__input:checked ~ .formcheck__button-square {
   background-color: #13adc7;
   border: 0;
 }
 
-.formcheck input:checked ~ .formcheck__button-circle {
+.formcheck .formcheck__input:checked ~ .formcheck__button-circle {
   border: 2px solid #13adc7;
 }
 
@@ -49,7 +48,7 @@ input {
   display: none;
 }
 
-.formcheck input:checked ~ .formcheck__button:after {
+.formcheck .formcheck__input:checked ~ .formcheck__button:after {
   display: block;
 }
 
@@ -91,4 +90,52 @@ input {
   font-weight: normal;
   font-size: 16px;
   line-height: 20px;
+}
+
+@media (min-width: 768px) {
+  .formcheck {
+    padding-left: 32px;
+  }
+  .formcheck__button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+  }
+  .formcheck__text {
+    font-size: 18px;
+    line-height: 20px;
+  }
+  .formcheck .formcheck__button-square:after {
+    left: 5px;
+    top: 2px;
+    width: calc(8.24px - 3px);
+    height: calc(12.74px - 3px);
+    border-width: 0 3px 3px 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .formcheck {
+    padding-left: 40px;
+  }
+  .formcheck__button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 24px;
+  }
+  .formcheck__text {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .formcheck .formcheck__button-square:after {
+    left: 7.5px;
+    top: 4px;
+    width: calc(8.24px - 3px);
+    height: calc(12.74px - 3px);
+    border-width: 0 3px 3px 0;
+  }
 }
