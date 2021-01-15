@@ -20,3 +20,9 @@ OrangeGradient.args = {
   type: 'orange-gradient',
   children: 'Contact us',
 };
+
+export const LightBlueGradient = Template.bind({});
+LightBlueGradient.args = {
+  type: 'light-blue',
+  children: 'Apply',
+};
