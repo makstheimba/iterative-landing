@@ -1,8 +1,15 @@
 import React from 'react'
 import { CommunitySection, ContainerCommunity } from '../MeetCommunity/MeetCommunity'
-import { LinkContainer, LinkName, LinkListName, LinkList, SocialIconsContainer, CompanyContainer, SocialContainer, SocialContainerIcon } from "./FooterLinks"
+import { LinkContainer, LinkName, LinkListName, LinkList, SocialIconsContainer, CompanyContainer, SocialContainer, SocialContainerIcon, CompanyLogo, Slogan } from "./FooterLinks"
 
 import Logo from "../../images/Brand.svg"
+import Discord from "../../images/icn-discord.svg"
+import Github from "../../images/icn-github.svg"
+import Twitter from "../../images/icn-twitter.svg"
+import LinkedIn from '../../images/icn-linkedin-in.svg'
+import Youtube from "../../images/icn-youtube.svg"
+import { Link } from 'gatsby'
+
 
 const linkData = [
   {
@@ -50,16 +57,23 @@ const FooterLinks = () => {
 
         <SocialIconsContainer>
           <CompanyContainer>
-            <img src={Logo} />
-            <p>Open platform to operationalize AI</p>
+            <Link to="/">
+              <CompanyLogo src={Logo} />
+            </Link>
+            <Slogan>Open platform to operationalize AI</Slogan>
           </CompanyContainer>
 
           <SocialContainer>
-            <SocialContainerIcon>icons</SocialContainerIcon>
-            <SocialContainerIcon>icons</SocialContainerIcon>
-            <SocialContainerIcon>icons</SocialContainerIcon>
-            <SocialContainerIcon>icons</SocialContainerIcon>
-            <SocialContainerIcon>icons</SocialContainerIcon>
+            <a href="google.com">  <SocialContainerIcon src={Github} /></a>
+            <a href="google.com">  <SocialContainerIcon src={Twitter} /> </a>
+            <a href="google.com">  <SocialContainerIcon src={LinkedIn} /></a>
+            <a href="google.com">  <SocialContainerIcon src={Youtube} /></a>
+            <a href="google.com">  <SocialContainerIcon src={Discord} /></a>
+
+
+
+
+
 
           </SocialContainer>
 

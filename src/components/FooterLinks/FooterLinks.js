@@ -22,25 +22,48 @@ color: rgba(255, 255, 255, 0.75);
 `
 
 export const LinkListName = styled.p`
-font-size: 14px;
-margin: 7px 0;
-color:#ACAFB4
+font-size: 18px;
+
+color:#ACAFB4;
+margin: 10px  0 10px 0;
 `
 
 export const SocialIconsContainer = styled.div`
 display: flex;
 justify-content: space-between;
+margin-top: 78px;
 `
 
 export const CompanyContainer = styled.div`
-display: flex
+display: flex;
+align-items: center;
 
 `
+
+export const CompanyLogo = styled.img`
+margin-right: 32px;
+`
+export const Slogan = styled.p`
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 30px;
+letter-spacing: 0.02em;
+align-content: center;
+`
+
 
 export const SocialContainer = styled.div`
-display: flex
+max-width: 336px;
+border: 1px solid red;
+margin: 0 15px;
+display: flex;
+    align-items: center;
+    align-self: flex-start;
 
 `
-export const SocialContainerIcon = styled.p`
-margin: 0 10px;
+export const SocialContainerIcon = styled.img`
+margin: 0 36px 0 12px;
+width: 24px;
+height: 24px;
 `

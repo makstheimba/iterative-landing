@@ -1,5 +1,8 @@
 import React from 'react'
 import { Box, Boxes, BoxNum, BoxText, CommunitySection, ContainerCommunity, IconContainer, Icons, Join, JoinText, SectionTitle } from './MeetCommunity'
+import Discord from "../../images/icn-discord.svg"
+import Github from "../../images/icn-github.svg"
+import Twitter from "../../images/icn-twitter.svg"
 
 
 const data = [
@@ -9,7 +12,7 @@ const data = [
     text2: "Contributors "
   },
   {
-    number: 100,
+    number: 1000,
     text: "Companies",
   },
   {
@@ -45,9 +48,9 @@ const MeetCommunity = () => {
         <Join>
           <JoinText>Join the Community: </JoinText>
           <IconContainer>
-            <Icons>Icon</Icons>
-            <Icons>Icon</Icons>
-            <Icons>Icon</Icons>
+            <Icons src={Discord} />
+            <Icons src={Github} />
+            <Icons src={Twitter} />
           </IconContainer>
         </Join>
 
