@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './Form-check.css';
+import './FormCheck.css';
 
 export default function FormCheck({ text, shape }) {
 

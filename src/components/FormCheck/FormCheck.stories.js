@@ -1,5 +1,5 @@
 import React from 'react';
-import FormCheck from './Form-check';
+import FormCheck from './FormCheck';
 
 const Template = (args) => <FormCheck {...args} />;
 
