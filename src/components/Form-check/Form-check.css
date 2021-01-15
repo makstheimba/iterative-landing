@@ -1,20 +1,74 @@
 .formcheck {
-  display: flex;
-  justify-content: left;
-  align-items: baseline;
+  display: block;
+  position: relative;
+  padding-left: 28px;
+
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
+
+input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
 .formcheck__button {
+  position: absolute;
+  top: 2px;
+  left: 0;
   width: 16px;
   height: 16px;
   background: #ffffff;
   border: 1px solid rgba(15, 22, 36, 0.5);
   box-sizing: border-box;
-  margin-right: 12px;
+}
+
+.formcheck:hover input ~ .formcheck__button {
+  background-color: #ccc;
+}
+
+.formcheck input:checked ~ .formcheck__button-square {
+  background-color: #13adc7;
+  border: 0;
+}
+
+.formcheck input:checked ~ .formcheck__button-circle {
+  border: 2px solid #13adc7;
+}
+
+.formcheck__button:after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+
+.formcheck input:checked ~ .formcheck__button:after {
+  display: block;
+}
+
+.formcheck .formcheck__button-square:after {
+  left: 4.5px;
+  top: 2px;
+  width: calc(6.18px - 2.25px);
+  height: calc(9.55px - 2.25px);
+  border: solid white;
+  border-width: 0 2.25px 2.25px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 .formcheck__button-square {
   border-radius: 4px;
 }
+
 .formcheck__button-square-checked {
   border-radius: 4px;
   background-image: url('../../images/icn-check.png');

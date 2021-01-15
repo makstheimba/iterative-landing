@@ -7,14 +7,12 @@ export const Square = Template.bind({});
 Square.args = {
   shape: 'square',
   text: 'add text in prompt',
-  isChecked: true,
 };
 
 export const Circle = Template.bind({});
 Circle.args = {
   shape: 'circle',
   text: 'add text in prompt',
-  isChecked: true,
 };
 
 const ExampleFormCheck = {
