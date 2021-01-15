@@ -12,12 +12,14 @@ const Enterprise = () => {
         AI hand in hand with software development. 
         Built with data scientists, ML engineers, and data engineers in mind.
       </p>
-      <img className="enterprise__main-image" src={mainImage} alt="Iterative Enterprise"></img>
+      <div className="enterprise__image-container">
+        <img className="enterprise__main-image" src={mainImage} alt="Iterative Enterprise"></img>
+      </div>
       <div className="enterprise__list-container">
         <ul className="enterprise__list">
           <li className="enterprise__list-item">
             <i className="enterprise__list-icon enterprise__list-icon_gear"></i>
-            <h3 class="enterprise__list-title">Familiar</h3>
+            <h4 class="enterprise__list-title">Familiar</h4>
             <p class="enterprise__list-text">
               Don’t reinvent the wheel! 
               Fast and cost-efficient path to production 
@@ -25,14 +27,14 @@ const Enterprise = () => {
           </li>
           <li className="enterprise__list-item">
             <i className="enterprise__list-icon enterprise__list-icon_code"></i>
-              <h3 class="enterprise__list-title">Open source</h3>
+              <h4 class="enterprise__list-title">Open source</h4>
               <p class="enterprise__list-text">
                 Lightweight. Open-source. No-strings attached. 
               </p>
           </li>
           <li className="enterprise__list-item">
             <i className="enterprise__list-icon enterprise__list-icon_shield"></i>
-              <h3 class="enterprise__list-title">Secure</h3>
+              <h4 class="enterprise__list-title">Secure</h4>
               <p class="enterprise__list-text">
                 You data is always stored by you. 
                 Your models are trained on your machines
