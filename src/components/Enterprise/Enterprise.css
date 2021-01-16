@@ -52,9 +52,9 @@
 }
 .enterprise__image-container{
   text-align: center;
-  background: radial-gradient(50% 50% at 50% 50%, rgba(79, 108, 176, 0.25) 53.8%, rgba(79, 108, 176, 0) 100%);
-
+  background-image: radial-gradient(50% 50% at 50% 50%, rgba(79, 108, 176, 0.25) 53.8%, rgba(79, 108, 176, 0) 100%);
 }
+
 .enterprise__main-image{
   padding: 3.75rem;
 }
@@ -78,13 +78,13 @@
 }
 
 .enterprise__list-text{
-font-family: "Roobert TRIAL", Arial, sans-serif;
-font-style: normal;
-font-weight: normal;
-font-size: 1.125rem;
-line-height: 1.875rem;
-letter-spacing: 0.02em;
-color: rgba(255, 255, 255, 0.75);
+  font-family: "Roobert TRIAL", Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.125rem;
+  line-height: 1.875rem;
+  letter-spacing: 0.02em;
+  color: rgba(255, 255, 255, 0.75);
 }
 
 .enterprise__list-item{
@@ -113,4 +113,25 @@ color: rgba(255, 255, 255, 0.75);
 
 .enterprise__list-icon_shield{
   background-image: url('../../images/Enterprise/icon/shield.svg');
+}
+
+@media screen and (max-width:1061px){
+  .enterprise__image-container{
+    background-image: none;
+  }
+
+}
+
+@media screen and (max-width:768px){
+  .enterprise__list-item{
+    max-width: 12.666875rem;
+  }
+
+  .enterprise{
+    padding: 0rem 3rem 3rem 3rem;
+  }
+}
+
+@media screen and (max-width:414px){
+
 }
