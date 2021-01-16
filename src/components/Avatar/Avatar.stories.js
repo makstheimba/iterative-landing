@@ -10,6 +10,21 @@ const CommonAvatar = {
 };
 export default CommonAvatar;
 
+export const Square = Template.bind({});
+Square.args = {
+  shape: 'square',
+  image: testAvatar,
+  color: '#945DD6',
+}
+
+export const Circle = Template.bind({});
+Circle.args = {
+  shape: 'circle',
+  image: testAvatar,
+  color: '#945DD6',
+  isClick: false,
+}
+
 export const Default = Template.bind({});
 Default.args = {
   image: testAvatar,
