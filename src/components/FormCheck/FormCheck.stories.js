@@ -16,7 +16,7 @@ Circle.args = {
 };
 
 const ExampleFormCheck = {
-  title: 'Element/Form-check',
+  title: 'Element/FormCheck',
   component: FormCheck,
 };
 
