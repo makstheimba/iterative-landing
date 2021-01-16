@@ -1,4 +1,5 @@
 .avatar {
+  border: red solid;
   width: 80px;
   height: 80px;
   position: relative;
@@ -17,6 +18,8 @@
 }
 
 .avatar__item-img {
+  background-image: url(../../images/temp-avatar.jpg);
+  background-repeat: no-repeat;
   transform: rotate(15deg);
   position: absolute;
   top: -15%;
@@ -26,9 +29,14 @@
 }
 
 .avatar__item-background {
+  width: 80px;
+  height: 80px;
+  background-image: url(../../images/avatar-bg.svg);
+  background-repeat: no-repeat;
+  color: red;
   position: absolute;
-  top: 3.5px;
-  left: 7px;
+  top: 8px;
+  left: 8px;
   z-index: 0;
 }
 
