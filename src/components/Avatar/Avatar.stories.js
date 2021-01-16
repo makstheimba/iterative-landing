@@ -25,8 +25,3 @@ Circle.args = {
   isClick: false,
 }
 
-export const Default = Template.bind({});
-Default.args = {
-  image: testAvatar,
-  color: '#945DD6',
-};
