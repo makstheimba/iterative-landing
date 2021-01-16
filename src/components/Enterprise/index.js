@@ -16,7 +16,7 @@ const Enterprise = () => {
       </p>
       <div className="enterprise__image-container">
         <picture>
-          <source media="(min-width:1062px)" srcset={mainImageL}/>
+          <source media="(min-width:1076px)" srcset={mainImageL}/>
           <source media="(min-width:768px)" srcset={mainImageM}/>
           <source media="(min-width:414px)" srcset={mainImageS}/>
           <img className="enterprise__main-image" src={mainImageL} alt="enterprise"/>

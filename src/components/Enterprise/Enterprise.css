@@ -1,5 +1,5 @@
 .enterprise{
-  padding: 0rem 5rem 5rem 5rem;
+  padding: 0 6.25% 6.25% 6.25%;
   margin: auto;
   max-width: 1200px;
 }
@@ -32,7 +32,6 @@
   
   /* gradient */
   background: -webkit-linear-gradient(120deg, #FFFFFF 18.77%, rgba(255, 255, 255, 0.66) 60.15%);
-
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
@@ -115,21 +114,41 @@
   background-image: url('../../images/Enterprise/icon/shield.svg');
 }
 
-@media screen and (max-width:1061px){
+@media screen and (max-width:1075px){
   .enterprise__image-container{
     background-image: none;
   }
-
 }
 
 @media screen and (max-width:768px){
+  .enterprise{
+    padding: 0rem 3rem 3rem 3rem;
+  }
+
+  .enterprise__accent{
+    margin-bottom: 1.5rem;
+  }
+
+  .enterprise__title{
+    font-size: 3rem;
+    line-height: 3rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .enterprise__subtitle{
+    font-size: 1.25rem;
+    line-height: 2rem;
+    margin-bottom: 4rem;
+  }
+
+  .enterprise__main-image{
+    padding: 0rem;
+  }
+
   .enterprise__list-item{
     max-width: 12.666875rem;
   }
 
-  .enterprise{
-    padding: 0rem 3rem 3rem 3rem;
-  }
 }
 
 @media screen and (max-width:414px){
