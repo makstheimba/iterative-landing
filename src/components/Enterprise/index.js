@@ -1,5 +1,7 @@
 import React from 'react'
-import mainImage from '../../images/Enterprise/main.png'
+import mainImageL from '../../images/Enterprise/main-l.png'
+import mainImageM from '../../images/Enterprise/main-m.png'
+import mainImageS from '../../images/Enterprise/main-s.png'
 import { Title } from '../Enterprise/Enterprise'
 import '../Enterprise/Enterprise.css'
 
@@ -13,7 +15,12 @@ const Enterprise = () => {
         Built with data scientists, ML engineers, and data engineers in mind.
       </p>
       <div className="enterprise__image-container">
-        <img className="enterprise__main-image" src={mainImage} alt="Iterative Enterprise"></img>
+      <picture>
+        <source media="(min-width:1062px)" srcset={mainImageL}/>
+        <source media="(min-width:768px)" srcset={mainImageM}/>
+        <source media="(min-width:414px)" srcset={mainImageS}/>
+        <img className="enterprise__main-image" src={mainImageL} alt="enterprise"/>
+      </picture>
       </div>
       <div className="enterprise__list-container">
         <ul className="enterprise__list">

@@ -31,7 +31,7 @@
   line-height: 3.5rem;
   
   /* gradient */
-  background: -webkit-linear-gradient(90deg, #FFFFFF 18.77%, rgba(255, 255, 255, 0.66) 60.15%);
+  background: -webkit-linear-gradient(120deg, #FFFFFF 18.77%, rgba(255, 255, 255, 0.66) 60.15%);
 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -52,10 +52,11 @@
 }
 .enterprise__image-container{
   text-align: center;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(79, 108, 176, 0.25) 53.8%, rgba(79, 108, 176, 0) 100%);
+
 }
 .enterprise__main-image{
   padding: 3.75rem;
-  background: radial-gradient(50% 50% at 50% 50%, rgba(79, 108, 176, 0.25) 53.8%, rgba(79, 108, 176, 0) 100%);
 }
 
 .enterprise__list{
