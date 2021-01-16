@@ -39,7 +39,7 @@
 }
 
 .formcheck .formcheck__input:checked ~ .formcheck__button-circle {
-  border: 2px solid #13adc7;
+  border: 5px solid #13adc7;
 }
 
 .formcheck .formcheck__input:focus ~ .formcheck__button-square {
