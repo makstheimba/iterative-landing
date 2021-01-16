@@ -22,8 +22,8 @@ export default function Avatar({ image, color, shape, isClick, onClick }) {
 
 Avatar.propTypes = {
   image: PropTypes.string.isRequired,
-  color: PropTypes.string.isRequired,
   shape: PropTypes.string.isRequired,
+  color: PropTypes.string.isRequired,
   onClick: PropTypes.func,
   isClick: PropTypes.bool,
 }
