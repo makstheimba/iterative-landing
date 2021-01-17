@@ -1,22 +1,12 @@
 import React from 'react';
 
-import { Logo } from './logo';
+import { Logo } from './Logo';
 
-const Template = (args) => <Logo {...args} />;
+export const Default = () => <Logo />;
 
-export const Small = Template.bind({});
-Small.args = {
-  size: 's',
-};
-
-export const Medium = Template.bind({});
-Medium.args = {
-  size: 'm',
-};
-
-const ExampleLogo = {
-  title: 'Example/Logo',
+const CommonLogo = {
+  title: 'Common/Logo',
   component: Logo,
 };
 
-export default ExampleLogo;
+export default CommonLogo;
