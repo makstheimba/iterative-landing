@@ -1,12 +1,15 @@
 import * as React from 'react';
-import PropTypes from 'prop-types';
-import './logo.css';
 
-export function Logo({ size }) {
-  // TODO: implement an actual logo
-  return <span className={`logo logo_size_${size}`}>Stub for the logo</span>;
+import './Logo.css';
+import logoImg from '../../images/icon.svg';
+import label from '../../images/iterative.svg';
+
+export function Logo() {
+  return (
+    <div className="logo">
+      <img className="logo logo__icon" src={logoImg} alt="Logo" />
+      <img className="logo logo__label" src={label} alt="Label" />
+    </div>
+  );
 }
 
-Logo.propTypes = {
-  size: PropTypes.oneOf(['s', 'm']),
-};
