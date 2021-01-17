@@ -25,13 +25,12 @@ export const LinkListName = styled.p`
 font-size: 18px;
 
 color:#ACAFB4;
-margin: 10px  0 10px 0;
+margin: 10px  0 25px 0;
 `
 
 export const SocialIconsContainer = styled.div`
 display: flex;
 justify-content: space-between;
-margin-top: 78px;
 `
 
 export const CompanyContainer = styled.div`

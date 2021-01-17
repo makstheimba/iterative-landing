@@ -8,7 +8,15 @@ margin: 0 auto;
 export const ContainerCommunity = styled.div`
 max-width: 1040px;
 margin: 0 auto;
-border-top: ${props => props.line ? "1px solid rgba(255, 255, 255, 0.1);" : ""}
+border-top: ${props => props.line ? "1px solid rgba(255, 255, 255, 0.1);" : ""};
+@media ${props => props.theme.breakpoints.sm} {
+    border: 10px #e2dddd solid;
+  };
+  @media ${props => props.theme.breakpoints.md} {
+    border: 40px #e2dddd solid;
+  };
+
+
 `
 export const SectionTitle = styled.h2`
 font-size: 56px;
