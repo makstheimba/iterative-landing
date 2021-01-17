@@ -22,6 +22,6 @@ Circle.args = {
   shape: 'circle',
   image: testAvatar,
   color: '#945DD6',
-  isClick: false,
+  isClicked: false,
 }
 

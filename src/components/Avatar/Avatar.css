@@ -1,7 +1,8 @@
 .avatar {
   width: auto;
 }
-.avatar-square {
+
+.avatar__square {
   width: 80px;
   height: 80px;
   position: relative;
@@ -40,7 +41,7 @@
   left: -20%;
 }
 
-.avatar-circle {
+.avatar__circle {
   width: 16px;
   height: 16px;
   border-radius: 100%;
@@ -48,9 +49,10 @@
   object-fit: contain;
   border: 1px solid #ffffff;
   filter: drop-shadow(0px 2px 8px rgba(0, 0, 0, 0.15));
+  box-sizing: border-box;
 }
 
-.avatar-circle-clicked {
+.avatar__circle_clicked {
   border: 2px solid #ffffff;
 }
 
