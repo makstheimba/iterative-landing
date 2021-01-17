@@ -29,6 +29,11 @@
   overflow: hidden;
 }
 
+.avatar__item_border {
+  border: #fff solid 0.1px;
+  background-color: #0f1624;
+}
+
 .avatar__item-img {
   width: 150%;
   height: 150%;
@@ -39,6 +44,23 @@
   position: absolute;
   top: -15%;
   left: -20%;
+}
+
+.avatar__hidden {
+  display: none;
+}
+
+.avatar__item-alt {
+  display: block;
+  transform: rotate(15deg);
+  position: absolute;
+  width: 100%;
+  top: 30px;
+  left: 0;
+  z-index: 1;
+  font-size: 15px;
+  text-align: center;
+  color: #ffffff;
 }
 
 .avatar__circle {
@@ -54,6 +76,19 @@
 
 .avatar__circle_clicked {
   border: 2px solid #ffffff;
+}
+
+.avatar__circle-alt {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 4px;
+  left: 0;
+  z-index: 1;
+  font-size: 5px;
+  text-align: center;
+  color: #ffffff;
+  overflow: hidden;
 }
 
 @media (min-width: 768px) {
