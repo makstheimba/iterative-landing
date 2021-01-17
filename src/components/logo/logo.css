@@ -1,11 +1,90 @@
 .logo {
-  color: red;
+  display: flex;
+  align-items: center;
+  width: 114.26px;
+  height: 24px;
 }
 
-.logo_size_s {
-  font-size: 12px;
+.logo__icon {
+  width: 19.2px;
+  height: 19.2px;
+  margin: 2.4px 12px 2.4px 2.4px;
 }
 
-.logo_size_m {
-  font-size: 20px;
+.logo__label {
+  width: 80.66px;
+  height: 15.19px;
+  margin: 4.4px 0;
+  align-self: center;
+}
+
+.logo__text {
+  width: 227px;
+  height: 22px;
+  margin: 0 auto;
+  font-family: 'Space Grotesk', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0.02em;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+@media (min-width: 768px) {
+  .logo {
+    width: 152.35px;
+    height: 32px;
+    margin-right: 40px;
+  }
+
+  .logo__icon {
+    width: 25.6px;
+    height: 25.6px;
+    margin: 3.2px 16px 3.2px 3.2px;
+  }
+
+  .logo__label {
+    width: 107.55px;
+    height: 20.25px;
+    margin: 5.87px 0;
+  }
+
+  .logo__text {
+    width: 100%;
+    height: 28px;
+    margin: 0;
+    font-size: 16px;
+    line-height: 28px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .logo {
+    width: 190.44px;
+    height: 40px;
+    margin-right: 80px;
+  }
+
+  .logo__icon {
+    width: 32px;
+    height: 32px;
+    margin: 4px 20px 4px 4px;
+  }
+
+  .logo__label {
+    width: 134.44px;
+    height: 25.32px;
+    margin: 7.34px 0;
+  }
+
+  .logo__text {
+    width: 291px;
+    height: 30px;
+    margin: 0 0 0 32px;
+    font-size: 18px;
+    line-height: 30px;
+  }
 }
