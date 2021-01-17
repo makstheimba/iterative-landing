@@ -25,3 +25,17 @@ Circle.args = {
   isClicked: false,
 }
 
+export const SquareAlt = Template.bind({});
+SquareAlt.args = {
+  shape: 'square',
+  image: '',
+  color: '#945DD6',
+}
+export const CircleAlt = Template.bind({});
+CircleAlt.args = {
+  shape: 'circle',
+  image: '',
+  color: '#945DD6',
+}
+
+
