@@ -2,12 +2,26 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './Icon.css';
 
-export default function Icon({ icon, link, linkDescription, pixelSizes }) {
-  const [sizeS, sizeM, sizeL] = pixelSizes;
+export default function Icon({
+  icon,
+  link,
+  linkDescription,
+  widthPixelSizes = [],
+  heightPixelSizes = [],
+}) {
+  const [widthS, widthM, widthL] = widthPixelSizes;
+  const [
+    heightS = widthS,
+    heightM = widthM,
+    heightL = widthL,
+  ] = heightPixelSizes;
   const cssVars = {
-    '--size-s': `${sizeS}px`,
-    '--size-m': `${sizeM}px`,
-    '--size-l': `${sizeL}px`,
+    '--width-s': `${widthS}px`,
+    '--width-m': `${widthM}px`,
+    '--width-l': `${widthL}px`,
+    '--height-s': `${heightS}px`,
+    '--height-m': `${heightM}px`,
+    '--height-l': `${heightL}px`,
     '--icon-img': `url(${icon})`,
   };
 
@@ -30,5 +44,6 @@ Icon.propTypes = {
   icon: PropTypes.any.isRequired,
   link: PropTypes.string,
   linkDescription: PropTypes.string,
-  pixelSizes: PropTypes.arrayOf(PropTypes.number).isRequired,
+  widthPixelSizes: PropTypes.arrayOf(PropTypes.number).isRequired,
+  heightPixelSizes: PropTypes.arrayOf(PropTypes.number),
 };

@@ -1,7 +1,7 @@
 .icon {
   display: flex;
-  height: var(--size-s);
-  width: var(--size-s);
+  height: var(--height-s);
+  width: var(--width-s);
   background-image: var(--icon-img);
   align-items: center;
   justify-content: center;
@@ -12,8 +12,8 @@
 
 .icon_is-link {
   border-radius: 50%;
-  padding: calc(var(--size-s) / 2);
-  background-size: var(--size-s);
+  padding: calc(var(--height-s) / 2) calc(var(--width-s) / 2);
+  background-size: var(--height-s) var(--width-s);
   transition: background-color ease-in-out 0.2s;
 }
 
@@ -35,24 +35,24 @@
 
 @media (min-width: 768px) {
   .icon {
-    height: var(--size-m);
-    width: var(--size-m);
+    height: var(--height-m);
+    width: var(--width-m);
   }
 
   .icon_is-link {
-    padding: calc(var(--size-m) / 2);
-    background-size: var(--size-m);
+    padding: calc(var(--height-m) / 2) calc(var(--width-m) / 2);
+    background-size: var(--height-m) var(--width-m);
   }
 }
 
 @media (min-width: 1024px) {
   .icon {
-    height: var(--size-l);
-    width: var(--size-l);
+    height: var(--height-l);
+    width: var(--width-l);
   }
 
   .icon_is-link {
-    padding: calc(var(--size-l) / 2);
-    background-size: var(--size-l);
+    padding: calc(var(--height-l) / 2) calc(var(--width-l) / 2);
+    background-size: var(--height-l) calc(var(--width-l));
   }
 }
