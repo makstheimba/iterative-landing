@@ -9,8 +9,6 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Home" description="This is our home and here we will share basic information" />
-      our actual components will go in here
-
       <Hero />
     </Layout>
 
