@@ -19,33 +19,39 @@ const Enterprise = () => {
           <source media="(min-width:1076px)" srcset={mainImageL}/>
           <source media="(min-width:768px)" srcset={mainImageM}/>
           <source media="(min-width:414px)" srcset={mainImageS}/>
-          <img className="enterprise__main-image" src={mainImageL} alt="enterprise"/>
+          <img className="enterprise__main-image" src={mainImageS} alt="enterprise"/>
         </picture>
       </div>
       <div className="enterprise__list-container">
         <ul className="enterprise__list">
           <li className="enterprise__list-item">
             <i className="enterprise__list-icon enterprise__list-icon_gear"></i>
-            <h4 class="enterprise__list-title">Familiar</h4>
-            <p class="enterprise__list-text">
-              Don’t reinvent the wheel! 
-              Fast and cost-efficient path to production 
-            </p>
+            <div className="enterprise__list-text-container">
+              <h4 class="enterprise__list-title">Familiar</h4>
+              <p class="enterprise__list-paragraph">
+                Don’t reinvent the wheel! 
+                Fast and cost-efficient path to production 
+              </p>
+            </div>
           </li>
           <li className="enterprise__list-item">
             <i className="enterprise__list-icon enterprise__list-icon_code"></i>
+            <div className="enterprise__list-text-container">
               <h4 class="enterprise__list-title">Open source</h4>
-              <p class="enterprise__list-text">
+              <p class="enterprise__list-paragraph">
                 Lightweight. Open-source. No-strings attached. 
               </p>
+            </div>
           </li>
           <li className="enterprise__list-item">
             <i className="enterprise__list-icon enterprise__list-icon_shield"></i>
+            <div className="enterprise__list-text-container">
               <h4 class="enterprise__list-title">Secure</h4>
-              <p class="enterprise__list-text">
+              <p class="enterprise__list-paragraph">
                 You data is always stored by you. 
                 Your models are trained on your machines
               </p>
+            </div>
           </li>
         </ul>
       </div>
