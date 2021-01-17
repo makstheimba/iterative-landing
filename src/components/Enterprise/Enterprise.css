@@ -67,7 +67,7 @@
   margin-top: 5.1875rem;
 }
 
-.enterprise__list-text-container{
+.enterprise__list-container{
   display: flex;
   flex-direction: column;
 }
@@ -225,13 +225,13 @@
   .enterprise__list-item{
     max-width: 320px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
   }
 
-  .enterprise__list-text-container{
+  .enterprise__list-container{
     display: flex;
+    flex-direction: row;
     margin-left: 1.125rem;
-
   }
 
   .enterprise__list-title{
