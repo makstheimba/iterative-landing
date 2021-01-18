@@ -201,7 +201,15 @@
   }
 
   .enterprise__list-item{
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.875rem;
+    max-width: 320px;
+    flex-direction: row;
+  }
+
+  .enterprise__list-container{
+    display: flex;
+    max-width: 240px;
+    margin-left: 18px;
   }
 
   .enterprise__list-icon{
@@ -220,18 +228,6 @@
   
   .enterprise__list-icon_shield{
     background-image: url('../../images/Enterprise/icon/shield-s.svg');
-  }
-
-  .enterprise__list-item{
-    max-width: 320px;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .enterprise__list-container{
-    display: flex;
-    flex-direction: row;
-    margin-left: 1.125rem;
   }
 
   .enterprise__list-title{
