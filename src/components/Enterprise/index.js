@@ -2,7 +2,6 @@ import React from 'react'
 import mainImageL from '../../images/Enterprise/main-l.png'
 import mainImageM from '../../images/Enterprise/main-m.png'
 import mainImageS from '../../images/Enterprise/main-s.png'
-import { Title } from '../Enterprise/Enterprise'
 import '../Enterprise/Enterprise.css'
 
 const Enterprise = () => {
