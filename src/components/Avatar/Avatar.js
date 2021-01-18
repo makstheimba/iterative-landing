@@ -23,12 +23,12 @@ export default function Avatar({ image, color, shape, alt, onClick }) {
             </defs>
             <path fill={fill} d="M2.24814 50.7004C-2.18305 34.163 7.631 17.1645 24.1685 12.7333L63.2996 2.24814C79.837 -2.18305 96.8355 7.631 101.267 24.1685L111.752 63.2996C116.183 79.837 106.369 96.8355 89.8316 101.267L50.7004 111.752C34.163 116.183 17.1645 106.369 12.7333 89.8316L2.24814 50.7004Z" stroke={squareAltBorder} strokeWidth="0.5" />
           </svg>
-          <span className={squareAltClass}>{alt || "avatar"}</span>
+          <span id="alt-span-id" className={squareAltClass}>{alt || "avatar"}</span>
         </div>
       }
       { shape === "circle" &&
         <div style={{ backgroundImage: `url(${image})` }} className="avatar__circle" onClick={onClick}>
-          <span id="alt-span-id" className={circleAltClass}>{alt || "avatar"}</span>
+          <span className={circleAltClass}>{alt || "avatar"}</span>
         </div>
       }
     </div >
