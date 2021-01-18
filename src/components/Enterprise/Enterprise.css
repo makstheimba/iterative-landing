@@ -2,6 +2,9 @@
   padding: 0 6.25% 6.25% 6.25%;
   max-width: 1200px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .enterprise__accent{
@@ -126,6 +129,9 @@
 @media screen and (max-width:1075px){
   .enterprise__image-container{
     background-image: none;
+  }
+  .enterprise__main-image{
+    padding: 0px;
   }
 }
 
