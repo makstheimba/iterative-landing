@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import './Logo.css';
-import logoImg from '../../images/icon.svg';
+import logoImg from '../../images/iterative-icon.svg';
 import label from '../../images/iterative.svg';
 
 export function Logo() {
