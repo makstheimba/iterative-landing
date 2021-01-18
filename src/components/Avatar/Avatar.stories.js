@@ -30,7 +30,9 @@ SquareAlt.args = {
   shape: 'square',
   image: '',
   color: '#945DD6',
+  alt: 'leadership avatar',
 }
+
 export const CircleAlt = Template.bind({});
 CircleAlt.args = {
   shape: 'circle',

@@ -3,21 +3,25 @@
 }
 
 .avatar__square {
-  width: 80px;
-  height: 80px;
+  width: 82px;
+  height: 82px;
   position: relative;
+  overflow: hidden;
 }
 
 .avatar__square_item {
-  width: 75px;
-  height: 75px;
+  width: 74px;
+  height: 74px;
   object-fit: contain;
+  position: absolute;
+  top: 7px;
+  left: 7px;
 }
 
 .avatar__square_item_shift {
   position: absolute;
-  top: -8px;
-  left: -7px;
+  top: 0;
+  left: 0;
 }
 
 .avatar__hidden {
@@ -27,16 +31,10 @@
 .avatar__square_alt {
   position: absolute;
   color: #fff;
-  width: 100%;
-  height: 100%;
-  top: 20%;
-  left: 10%;
+  margin: 8%;
+  top: 15px;
+  left: 0;
   z-index: 1;
-  overflow: hidden;
-}
-
-.avatar__square_alt_text {
-  display: block;
   font-size: 15px;
   text-align: center;
   font-family: 'Space Grotesk', sans-serif;
@@ -52,6 +50,7 @@
   border: 1px solid #ffffff;
   filter: drop-shadow(0px 2px 8px rgba(0, 0, 0, 0.15));
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 .avatar__circle_clicked {
@@ -79,12 +78,20 @@
   .avatar__square_item {
     width: 88px;
     height: 88px;
+    position: absolute;
+    top: 7px;
+    left: 8px;
   }
 
   .avatar__square_item_shift {
     position: absolute;
-    top: -7px;
-    left: -8px;
+    top: 0;
+    left: 0;
+  }
+
+  .avatar__square_alt {
+    top: 15px;
+    left: 0;
   }
 
   .avatar__circle {
@@ -114,12 +121,20 @@
     width: 116px;
     height: 116px;
     object-fit: contain;
+    position: absolute;
+    top: 7px;
+    left: 6px;
   }
 
   .avatar__square_item_shift {
     position: absolute;
-    top: -7px;
-    left: -6px;
+    top: 0;
+    left: 0;
+  }
+
+  .avatar__square_alt {
+    top: 20px;
+    left: 6px;
   }
 
   .avatar__circle {
