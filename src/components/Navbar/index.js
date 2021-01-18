@@ -1,8 +1,8 @@
 import React from 'react'
-import styled from 'styled-components'
-import { NavBarWrapper, NavLink, NavLogo, NavDivider, NavSocial } from './NavBar'
+import { NavBarWrapper, NavLink, NavLogo, NavDivider, NavIcon, NavSocial } from './NavBar'
 import navLogo from '../../images/nav_logo.svg'
 import navIterative from '../../images/nav_iterative.svg'
+import navArrow from '../../images/nav_down.svg'
 
 const NavBar = () => {
   return (
@@ -14,9 +14,12 @@ const NavBar = () => {
       <NavLink to="/">About Us</NavLink>
       <NavLink to="/">Pricing</NavLink>
       <NavDivider />
-      <NavLink to="/">Products</NavLink>
+      <NavLink to="/" isMenu="true">Products <NavIcon src={navArrow}/></NavLink>
+      
       <NavSocial>
-
+        <NavIcon src={navArrow}/>
+        <NavIcon src={navArrow}/>
+        <NavIcon src={navArrow}/>
       </NavSocial>
     </NavBarWrapper>
   )
