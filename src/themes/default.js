@@ -1,10 +1,10 @@
 export default {
-  // we dont know the fonts yet
+  // Temp fonts
   fonts: {
     title: "Space Grotesk, sans-serif",
     main: "Space Grotesk, sans-serif"
   },
-  //extra colors for layout
+  // Colors for layout
   colors: {
     primary1: "hsl(204,23.8%,95.9%)",
     background1: "#0F1624",
@@ -12,10 +12,11 @@ export default {
     button: "hsl(205.1,100%,36.1%)",
     background2: "hsl(232.7,27.3%,23.7%)",
   },
-  // Typography do we need one? or do you want to do it individually? 
+  // Breakpoints for responsive design
   breakpoints: {
-    sm: ' screen and (max-width: 420px)',
-    md: ' screen and (max-width: 768px)',
-    lg: 'only screen and (max-width: 1024px)',
+    sm: 'screen and (max-width: 414px)',
+    md: 'screen and (max-width: 768px)',
+    lg: 'screen and (max-width: 1024px)',
+
   },
 }
