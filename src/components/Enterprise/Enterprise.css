@@ -139,6 +139,7 @@
 
   .enterprise__accent{
     margin-bottom: 1.5rem;
+    justify-content: flex-start;
   }
 
   .enterprise__title{
@@ -152,6 +153,7 @@
     line-height: 2rem;
     margin-bottom: 4rem;
   }
+
 
   .enterprise__main-image{
     padding: 0rem;
@@ -176,6 +178,8 @@
     letter-spacing: 0.02em;
   }
 
+  /* */
+  
 }
 
 @media screen and (max-width:414px){
