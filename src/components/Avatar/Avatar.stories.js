@@ -12,6 +12,7 @@ export default CommonAvatar;
 
 export const Shape = Template.bind({});
 Shape.args = {
+  shape: 'square',
   image: testAvatar,
   color: '#945DD6',
 }

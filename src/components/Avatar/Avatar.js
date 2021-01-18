@@ -4,9 +4,9 @@ import './Avatar.css';
 
 export default function Avatar({ image, color, shape, alt, onClick }) {
   const fill = image ? "url(#avatarImg)" : "#0f1624";
-  const squareAltClass = image ? "avatar__hidden" : "avatar__square_alt";
+  const squareAltClass = image ? "avatar__hidden-el" : "avatar__square_alt";
   const squareAltBorder = image ? "" : "#fff";
-  const circleAltClass = image ? "avatar__hidden" : "avatar__circle_alt";
+  const circleAltClass = image ? "avatar__hidden-el" : "avatar__circle_alt";
 
   return (
     <div className="avatar" >
