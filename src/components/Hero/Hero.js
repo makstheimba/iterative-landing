@@ -3,19 +3,31 @@ import styled from 'styled-components'
 export const HeroWrapper = styled.div`
   display: flex;
   flex-direction: column;
+  justify-self: center;
   align-content: center;
   justify-content: center;
-  width: 100%;
-  padding: 0 5rem 5rem;
+  width: calc(100vw - 96px);
+  padding: 0 48px;
   margin: 0 auto;
   max-width: 1040px;
   box-sizing: content-box;
   position: relative;
+  overflow: hidden;
+
+  @media ${(props) => props.theme.breakpoints.lg} {
+    padding: 0 48px;
+  }
 `
 export const HeroBG = styled.img`
   position: absolute;
-  right: -20px;
+  right: 0;
   top: 0;
+
+  @media ${(props) => props.theme.breakpoints.lg} {
+    width: 450px;
+    height: 450px;
+    right: -200px;
+  }
 `
 
 export const SectionHeader = styled.h2`

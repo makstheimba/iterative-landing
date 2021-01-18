@@ -1,8 +1,11 @@
 import React from 'react'
-import { NavBarWrapper, NavLink, NavLogo, NavDivider, NavIcon, NavSocial } from './NavBar'
+import { NavBarWrapper, NavLink, NavLogo, NavDivider, NavProducts, NavIcon, NavSocial, NavProductsIcon, NavIconImg } from './NavBar'
 import navLogo from '../../images/nav_logo.svg'
 import navIterative from '../../images/nav_iterative.svg'
 import navArrow from '../../images/nav_down.svg'
+import twitter from '../../images/icn-twitter.svg'
+import github from '../../images/icn-github.svg'
+import youtube from '../../images/icn-youtube.svg'
 
 const NavBar = () => {
   return (
@@ -14,12 +17,12 @@ const NavBar = () => {
       <NavLink to="/">About Us</NavLink>
       <NavLink to="/">Pricing</NavLink>
       <NavDivider />
-      <NavLink to="/" isMenu="true">Products <NavIcon src={navArrow}/></NavLink>
+      <NavProducts>Products <NavProductsIcon src={navArrow}/></NavProducts>
       
       <NavSocial>
-        <NavIcon src={navArrow}/>
-        <NavIcon src={navArrow}/>
-        <NavIcon src={navArrow}/>
+        <NavIcon href="#" target="_blank" rel="noreferrer"><NavIconImg src={twitter}/></NavIcon>
+        <NavIcon href="#" target="_blank" rel="noreferrer"><NavIconImg src={github}/></NavIcon>
+        <NavIcon href="#" target="_blank" rel="noreferrer"><NavIconImg src={youtube}/></NavIcon>
       </NavSocial>
     </NavBarWrapper>
   )
