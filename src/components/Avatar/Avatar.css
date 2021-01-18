@@ -96,6 +96,11 @@
   .avatar__circle_clicked {
     border: 4px solid #ffffff;
   }
+
+  .avatar__circle_alt {
+    top: 7px;
+    left: 0;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -125,5 +130,10 @@
 
   .avatar__circle_clicked {
     border: 4px solid #ffffff;
+  }
+
+  .avatar__circle_alt {
+    top: 11px;
+    left: 0;
   }
 }
