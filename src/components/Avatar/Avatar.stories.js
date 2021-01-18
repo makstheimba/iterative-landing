@@ -15,7 +15,7 @@ Shape.args = {
   shape: 'square',
   image: testAvatar,
   color: '#945DD6',
-}
+};
 
 export const ShapeAltCustom = Template.bind({});
 ShapeAltCustom.args = {
@@ -23,7 +23,7 @@ ShapeAltCustom.args = {
   image: '',
   color: '#945DD6',
   alt: 'leadership avatar',
-}
+};
 
 export const ShapeAltDefault = Template.bind({});
 ShapeAltDefault.args = {
@@ -31,5 +31,4 @@ ShapeAltDefault.args = {
   image: '',
   color: '#945DD6',
   alt: '',
-}
-
+};
