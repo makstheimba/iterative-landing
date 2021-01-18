@@ -18,21 +18,6 @@
   align-self: center;
 }
 
-.logo__text {
-  width: 227px;
-  height: 22px;
-  margin: 0 auto;
-  font-family: 'Space Grotesk', sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 22px;
-  letter-spacing: 0.02em;
-  color: rgba(255, 255, 255, 0.5);
-}
-
 @media (min-width: 768px) {
   .logo {
     width: 152.35px;
@@ -50,14 +35,6 @@
     width: 107.55px;
     height: 20.25px;
     margin: 5.87px 0;
-  }
-
-  .logo__text {
-    width: 100%;
-    height: 28px;
-    margin: 0;
-    font-size: 16px;
-    line-height: 28px;
   }
 }
 
@@ -78,13 +55,5 @@
     width: 134.44px;
     height: 25.32px;
     margin: 7.34px 0;
-  }
-
-  .logo__text {
-    width: 291px;
-    height: 30px;
-    margin: 0 0 0 32px;
-    font-size: 18px;
-    line-height: 30px;
   }
 }
