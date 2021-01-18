@@ -14,9 +14,8 @@ export default {
   },
   // Typography do we need one? or do you want to do it individually? 
   breakpoints: {
-    sm: ' screen and (max-width: 497px)',
-    md: ' screen and (max-width: 1280px)',
-    lg: 'only screen and (max-width: 960px)',
-    xl: 'only screen and (max-width: 1028px)',
+    sm: ' screen and (max-width: 420px)',
+    md: ' screen and (max-width: 768px)',
+    lg: 'only screen and (max-width: 1024px)',
   },
 }
