@@ -2,11 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './Avatar.css';
 
-export default function Avatar({ image, color, shape, alt, isClicked, onClick }) {
+export default function Avatar({ image, color, shape, alt, onClick }) {
   const fill = image ? "url(#avatarImg)" : "#0f1624";
   const squareAltClass = image ? "avatar__hidden" : "avatar__square_alt";
   const squareAltBorder = image ? "" : "#fff";
-  const circleClass = !isClicked ? "avatar__circle" : "avatar__circle avatar__circle_clicked";
   const circleAltClass = image ? "avatar__hidden" : "avatar__circle_alt";
 
   return (
@@ -28,7 +27,7 @@ export default function Avatar({ image, color, shape, alt, isClicked, onClick })
         </div>
       }
       { shape === "circle" &&
-        <div style={{ backgroundImage: `url(${image})` }} className={circleClass} onClick={onClick}>
+        <div style={{ backgroundImage: `url(${image})` }} className="avatar__circle" onClick={onClick}>
           <span className={circleAltClass}>{alt || "avatar"}</span>
         </div>
       }
@@ -38,11 +37,10 @@ export default function Avatar({ image, color, shape, alt, isClicked, onClick })
 
 Avatar.propTypes = {
   image: PropTypes.string.isRequired,
-  shape: PropTypes.string.isRequired,
+  shape: PropTypes.oneOf(['square', 'circle']),
   color: PropTypes.string,
   alt: PropTypes.string,
   onClick: PropTypes.func,
-  isClicked: PropTypes.bool,
 }
 
 

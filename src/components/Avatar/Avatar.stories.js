@@ -10,34 +10,25 @@ const CommonAvatar = {
 };
 export default CommonAvatar;
 
-export const Square = Template.bind({});
-Square.args = {
-  shape: 'square',
+export const Shape = Template.bind({});
+Shape.args = {
   image: testAvatar,
   color: '#945DD6',
 }
 
-export const Circle = Template.bind({});
-Circle.args = {
-  shape: 'circle',
-  image: testAvatar,
-  color: '#945DD6',
-  isClicked: false,
-}
-
-export const SquareAlt = Template.bind({});
-SquareAlt.args = {
+export const ShapeAltCustom = Template.bind({});
+ShapeAltCustom.args = {
   shape: 'square',
   image: '',
   color: '#945DD6',
   alt: 'leadership avatar',
 }
 
-export const CircleAlt = Template.bind({});
-CircleAlt.args = {
-  shape: 'circle',
+export const ShapeAltDefault = Template.bind({});
+ShapeAltDefault.args = {
+  shape: 'square',
   image: '',
   color: '#945DD6',
+  alt: '',
 }
-
 
