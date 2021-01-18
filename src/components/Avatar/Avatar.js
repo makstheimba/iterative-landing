@@ -40,6 +40,7 @@ Avatar.propTypes = {
   image: PropTypes.string.isRequired,
   shape: PropTypes.string.isRequired,
   color: PropTypes.string,
+  alt: PropTypes.string,
   onClick: PropTypes.func,
   isClicked: PropTypes.bool,
 }
