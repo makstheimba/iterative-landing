@@ -3,10 +3,10 @@ import Community from './Community';
 
 const Template = (args) => <Community {...args} />;
 
-const ElementCommunity = {
+const CommonCommunity = {
   title: 'Element/Community',
   component: Community,
 };
-export default ElementCommunity;
+export default CommonCommunity;
 
 export const Default = Template.bind({});
