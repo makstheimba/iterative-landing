@@ -20,13 +20,9 @@ export default function Community() {
       </ul>
       <p className="community__text">Join the community:</p>
       <ul className="community__iconlist">
-        <Icon
-          icon={icnDiscard}
-          link={'#'}
-          widthPixelSizes={[32, 18.38, 24.5]}
-        />
+        <Icon icon={icnDiscard} link={'#'} widthPixelSizes={[32, 24, 24.5]} />
         <Icon icon={icnGithub} link={'#'} widthPixelSizes={[32, 24, 32]} />
-        <Icon icon={icnTwitter} link={'#'} widthPixelSizes={[32, 22.5, 30]} />
+        <Icon icon={icnTwitter} link={'#'} widthPixelSizes={[32, 24, 30]} />
       </ul>
     </section>
   );

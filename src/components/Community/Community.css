@@ -47,3 +47,47 @@
   align-items: center;
   gap: 1px;
 }
+
+@media (min-width: 768px) {
+  .community {
+    width: 672px;
+    padding: 24px 0 64px 0;
+  }
+
+  .community__line {
+    width: 48px;
+    height: 4px;
+    border-radius: 2px;
+  }
+
+  .community__cardlist {
+    margin: 32px 0 0 0;
+    width: 100%;
+    gap: calc((672px - (156px * 4)) / 3);
+  }
+
+  .community__text {
+    margin: 24px 0 0 0;
+    text-align: center;
+    font-family: 'Space Grotesk', sans-serif, Arial, Helvetica;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  .community__iconlist {
+    list-style: none;
+    padding: 0;
+    margin: -1px 0 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1px;
+  }
+}
+
+@media (min-width: 1024px) {
+}
