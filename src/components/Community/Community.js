@@ -23,21 +23,10 @@ export default function Community() {
         <Icon
           icon={icnDiscard}
           link={'#'}
-          widthPixelSizes={[24.5, 18.38, 24.5]}
-          heightPixelSizes={[28, 21, 28]}
+          widthPixelSizes={[32, 18.38, 24.5]}
         />
-        <Icon
-          icon={icnGithub}
-          link={'#'}
-          widthPixelSizes={[32, 24, 32]}
-          heightPixelSizes={[31.21, 23.41, 31.21]}
-        />
-        <Icon
-          icon={icnTwitter}
-          link={'#'}
-          widthPixelSizes={[30, 22.5, 30]}
-          heightPixelSizes={[24.37, 18.27, 24.37]}
-        />
+        <Icon icon={icnGithub} link={'#'} widthPixelSizes={[32, 24, 32]} />
+        <Icon icon={icnTwitter} link={'#'} widthPixelSizes={[32, 22.5, 30]} />
       </ul>
     </section>
   );

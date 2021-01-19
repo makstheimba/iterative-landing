@@ -41,9 +41,9 @@
 .community__iconlist {
   list-style: none;
   padding: 0;
-  margin: 16px 0 0 0;
+  margin: -1px 0 0 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 1px;
 }
