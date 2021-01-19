@@ -1,12 +1,4 @@
-import styled, {css} from 'styled-components'
-
-import GearImage from '../../images/Enterprise/icon/gear.svg'
-import GearImageS from '../../images/Enterprise/icon/gear-s.svg'
-import CodeImage from '../../images/Enterprise/icon/code.svg'
-import CodeImageS from '../../images/Enterprise/icon/code-s.svg'
-import ShieldImage from '../../images/Enterprise/icon/shield.svg'
-import ShieldImageS from '../../images/Enterprise/icon/shield-s.svg'
-
+import styled from 'styled-components'
 
 export const Section = styled.section`
 padding: 0 6.25% 6.25% 6.25%;
@@ -199,27 +191,15 @@ flex-direction: column;
 }
 `
 
-export const ListIcon = styled.i`
+export const ListIcon = styled.img`
 display: block;
 width: 48px;
 height: 48px;
 margin-bottom: 8px;
 
-background-position: center;
-object-fit: scale-down; 
-background-repeat: no-repeat;
-background-color: transparent;
-${props => props.gear && `background-image: url(${GearImage});`}
-${props => props.code && `background-image: url(${CodeImage});`}
-${props => props.shield && `background-image: url(${ShieldImage});`}
-
-
 @media ${props => props.theme.breakpoints.sm}{
   width: 32px;
   height: 32px;
   margin-bottom: 0px;
-  ${props => props.gear && `background-image: url(${GearImageS}});`}
-  ${props => props.code && `background-image: url(${CodeImageS}});`}
-  ${props => props.shield && `background-image: url(${ShieldImageS}});`}
 }
 `

@@ -2,6 +2,15 @@ import React from 'react'
 import mainImageL from '../../images/Enterprise/main-l.png'
 import mainImageM from '../../images/Enterprise/main-m.png'
 import mainImageS from '../../images/Enterprise/main-s.png'
+
+import gearImage from '../../images/Enterprise/icon/gear.svg'
+import gearImageS from '../../images/Enterprise/icon/gear-s.svg'
+import codeImage from '../../images/Enterprise/icon/code.svg'
+import codeImageS from '../../images/Enterprise/icon/code-s.svg'
+import shieldImage from '../../images/Enterprise/icon/shield.svg'
+import shieldImageS from '../../images/Enterprise/icon/shield-s.svg'
+
+
 import { Section, Accent, Title, Subtitle,
   ImageContainer, MainImage, List,
   ListContainer, ListTitle, ListParagraph,
@@ -26,7 +35,11 @@ const Enterprise = () => {
       </ImageContainer>
       <List>
         <ListItem>
-          <ListIcon gear></ListIcon>
+        <picture>
+          <source media="(min-width:768px)" srcset={gearImage}/>
+          <source media="(min-width:414px)" srcset={gearImageS}/>
+          <ListIcon src={GearImageS} alt="gear"/>
+        </picture>
           <ListContainer>
             <ListTitle>Familiar</ListTitle>
             <ListParagraph>
@@ -36,7 +49,11 @@ const Enterprise = () => {
           </ListContainer>
         </ListItem>
         <ListItem>
-          <ListIcon code></ListIcon>
+        <picture>
+          <source media="(min-width:768px)" srcset={codeImage}/>
+          <source media="(min-width:414px)" srcset={codeImageS}/>
+          <ListIcon src={codeImageS} alt="code-brackets"/>
+        </picture>
           <ListContainer>
             <ListTitle>Open source</ListTitle>
             <ListParagraph>
@@ -45,7 +62,11 @@ const Enterprise = () => {
           </ListContainer>
         </ListItem>
         <ListItem>
-          <ListIcon shield></ListIcon>
+        <picture>
+          <source media="(min-width:768px)" srcset={shieldImage}/>
+          <source media="(min-width:${})" srcset={shieldImageS}/>
+          <ListIcon src={shieldImageS} alt="shield"/>
+        </picture>
           <ListContainer>
             <ListTitle>Secure</ListTitle>
             <ListParagraph>
