@@ -1,10 +1,9 @@
 import * as React from 'react';
-
-import './Logo.css';
 import logoImg from '../../images/iterative-icon.svg';
 import label from '../../images/iterative.svg';
+import './Logo.css';
 
-export function Logo() {
+export default function Logo() {
   return (
     <div className="logo">
       <img
