@@ -6,7 +6,6 @@ import { Section, Accent, Title, Subtitle,
   ImageContainer, MainImage, List,
   ListContainer, ListTitle, ListParagraph,
   ListItem, ListIcon } from '../Enterprise/Enterprise'
-// import '../Enterprise/Enterprise.css'
 
 const Enterprise = () => {
   return (
@@ -27,7 +26,7 @@ const Enterprise = () => {
       </ImageContainer>
       <List>
         <ListItem>
-          <ListIcon icon="gear"></ListIcon>
+          <ListIcon gear></ListIcon>
           <ListContainer>
             <ListTitle>Familiar</ListTitle>
             <ListParagraph>
@@ -37,7 +36,7 @@ const Enterprise = () => {
           </ListContainer>
         </ListItem>
         <ListItem>
-          <ListIcon icon="code"></ListIcon>
+          <ListIcon code></ListIcon>
           <ListContainer>
             <ListTitle>Open source</ListTitle>
             <ListParagraph>
@@ -46,7 +45,7 @@ const Enterprise = () => {
           </ListContainer>
         </ListItem>
         <ListItem>
-          <ListIcon icon="shield"></ListIcon>
+          <ListIcon shield></ListIcon>
           <ListContainer>
             <ListTitle>Secure</ListTitle>
             <ListParagraph>

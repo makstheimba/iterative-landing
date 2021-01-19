@@ -1,5 +1,13 @@
 import styled, {css} from 'styled-components'
 
+import GearImage from '../../images/Enterprise/icon/gear.svg'
+import GearImageS from '../../images/Enterprise/icon/gear-s.svg'
+import CodeImage from '../../images/Enterprise/icon/code.svg'
+import CodeImageS from '../../images/Enterprise/icon/code-s.svg'
+import ShieldImage from '../../images/Enterprise/icon/shield.svg'
+import ShieldImageS from '../../images/Enterprise/icon/shield-s.svg'
+
+
 export const Section = styled.section`
 padding: 0 6.25% 6.25% 6.25%;
 max-width: 1200px;
@@ -201,14 +209,17 @@ background-position: center;
 object-fit: scale-down; 
 background-repeat: no-repeat;
 background-color: transparent;
+background-image: url(${props => props.gear && GearImage});
+background-image: url(${props => props.code && GearImage});
+background-image: url(${props => props.shield && ShieldImage});
 
-background-image: url('../../images/Enterprise/icon/${props => props.icon}.svg');
 
 @media screen and (max-width:414px){
   width: 32px;
   height: 32px;
   margin-bottom: 0px;
-  background-image: url('../../images/Enterprise/icon/${props => props.icon}-s.svg');
-
+  background-image: url(${props => props.gear && GearImageS});
+  background-image: url(${props => props.code && GearImageS});
+  background-image: url(${props => props.shield && ShieldImageS});
 }
 `
