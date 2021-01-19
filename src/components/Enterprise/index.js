@@ -38,7 +38,7 @@ const Enterprise = () => {
         <picture>
           <source media="(min-width:768px)" srcset={gearImage}/>
           <source media="(min-width:414px)" srcset={gearImageS}/>
-          <ListIcon src={GearImageS} alt="gear"/>
+          <ListIcon src={gearImageS} alt="gear"/>
         </picture>
           <ListContainer>
             <ListTitle>Familiar</ListTitle>
