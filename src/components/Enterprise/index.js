@@ -30,7 +30,7 @@ const Enterprise = () => {
           <source media="(min-width:1200px)" srcset={mainImageL}/>
           <source media="(min-width:768px)" srcset={mainImageM}/>
           <source media="(min-width:414px)" srcset={mainImageS}/>
-          <MainImage src={mainImageS} alt="enterprise"/>
+          <MainImage src={mainImageL} alt="enterprise"/>
         </picture>
       </ImageContainer>
       <List>
