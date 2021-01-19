@@ -94,14 +94,14 @@ margin-bottom: 80px;
 export const ImageContainer = styled.div`
 text-align: center;
 background-image: radial-gradient(50% 50% at 50% 50%, rgba(79, 108, 176, 0.25) 53.8%, rgba(79, 108, 176, 0) 100%);
-@media screen and (max-width:1075px){
+@media screen and (max-width:1200px){
   background-image: none;
 }
 `
 
 export const MainImage = styled.img`
 padding: 60px;
-@media screen and (max-width:1075px){
+@media screen and (max-width:1200px){
   padding: 0px;
 }
 `
