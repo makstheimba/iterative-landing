@@ -28,3 +28,41 @@
   letter-spacing: 0.02em;
   color: rgba(255, 255, 255, 0.75);
 }
+
+@media (min-width: 768px) {
+  .communitycard {
+    width: 140px;
+    height: 96px;
+    padding: 16px 0 0 16px;
+  }
+
+  .communitycard__title {
+    font-size: 28px;
+    line-height: 32px;
+  }
+
+  .communitycard__description {
+    width: 124px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .communitycard {
+    width: 218px;
+    height: 120px;
+    padding: 24px 0 0 24px;
+  }
+
+  .communitycard__title {
+    font-size: 36px;
+    line-height: 40px;
+  }
+
+  .communitycard__description {
+    width: 194px;
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
