@@ -4,10 +4,10 @@ import './CommunityCard.css';
 
 export default function CommunityCard({ title, description }) {
   return (
-    <div className="communitycard">
+    <li className="communitycard">
       <h3 className="communitycard__title">{title}</h3>
       <p className="communitycard__description">{description}</p>
-    </div>
+    </li>
   );
 }
 
