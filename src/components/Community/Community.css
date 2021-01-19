@@ -1,0 +1,49 @@
+.community {
+  width: 288px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 19px 0 32px 0;
+  position: relative;
+}
+
+.community__line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 32px;
+  height: 2px;
+  border-radius: 1px;
+  background: linear-gradient(270deg, #f46737 0%, #945dd6 100%);
+}
+
+.community__cardlist {
+  list-style: none;
+  padding: 0;
+  margin: 24px 0 0 0;
+  width: 100%;
+  display: flex;
+  gap: calc(288px - (138px * 2));
+  flex-wrap: wrap;
+}
+
+.community__text {
+  margin: 24px 0 0 0;
+  text-align: center;
+  font-family: 'Space Grotesk', sans-serif, Arial, Helvetica;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.community__iconlist {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
