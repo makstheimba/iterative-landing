@@ -6,8 +6,8 @@ import { HeaderContainer } from './Footer'
 const Footer = () => {
   return (
     <>
-      <MeetCommunity />
-      <FooterLinks />
+      {/* <MeetCommunity /> */}
+      {/* <FooterLinks /> */}
     </>
   )
 }
