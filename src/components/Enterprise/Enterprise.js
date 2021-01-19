@@ -209,9 +209,9 @@ background-position: center;
 object-fit: scale-down; 
 background-repeat: no-repeat;
 background-color: transparent;
-${props => props.gear && `background-image: url(${GearImage}});`}
-${props => props.code && `background-image: url(${CodeImage}});`}
-${props => props.shield && `background-image: url(${ShieldImage}});`}
+${props => props.gear && `background-image: url(${GearImage});`}
+${props => props.code && `background-image: url(${CodeImage});`}
+${props => props.shield && `background-image: url(${ShieldImage});`}
 
 
 @media ${props => props.theme.breakpoints.sm}{
