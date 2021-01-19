@@ -8,6 +8,7 @@
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+  transition: background-image ease-in-out 0.2s;
 }
 
 .icon_is-link {
