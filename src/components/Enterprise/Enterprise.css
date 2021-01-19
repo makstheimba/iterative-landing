@@ -127,7 +127,7 @@
   background-image: url('../../images/Enterprise/icon/shield.svg');
 }
 
-@media screen and (max-width:1075px){
+@media screen and (max-width:1200px){
   .enterprise__image-container{
     background-image: none;
   }
