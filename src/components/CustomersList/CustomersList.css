@@ -1,0 +1,10 @@
+.customerslist {
+  list-style: none;
+  padding: 0;
+  width: 288px;
+  margin-right: auto;
+  margin-left: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 19px 56px;
+}
