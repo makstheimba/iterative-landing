@@ -1,0 +1,30 @@
+.communitycard {
+  width: 126px;
+  height: 70px;
+  padding: 12px 0 0 12px;
+  background-color: #212d45;
+  border-radius: 12px;
+}
+
+.communitycard__title {
+  margin: 0;
+  font-family: 'Space Grotesk', sans-serif, Arial, Helvetica;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 26px;
+  letter-spacing: 0.01em;
+  color: #ffffff;
+}
+
+.communitycard__description {
+  width: 122px;
+  margin: 8px 0 0 0;
+  font-family: 'Space Grotesk', sans-serif, Arial, Helvetica;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 14px;
+  letter-spacing: 0.02em;
+  color: rgba(255, 255, 255, 0.75);
+}
