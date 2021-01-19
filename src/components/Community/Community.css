@@ -49,6 +49,10 @@
   gap: 1px;
 }
 
+.community__iconlist-item {
+  list-style: none;
+}
+
 @media (min-width: 768px) {
   .community {
     min-width: 672px;
