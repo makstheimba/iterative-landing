@@ -18,16 +18,17 @@ margin: 0 auto;
 `
 
 export const ContainerCommunity = styled.div`
-border-top: ${props => props.line ? "1px solid rgba(255, 255, 255, 0.1);" : ""};
-max-width:1040px;
-@media ${props => props.theme.breakpoints.md} {
-  max-width: 100%;
-  margin: 0 auto;
-}
-@media ${props => props.theme.breakpoints.sm} {
-  max-width: 288px;
-  margin: 0 auto;
-} 
+  border-top: ${props => props.line ? "1px solid rgba(255, 255, 255, 0.1);" : ""};
+  max-width:1040px;
+  
+  @media ${props => props.theme.breakpoints.md} {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  @media ${props => props.theme.breakpoints.sm} {
+    max-width: 288px;
+    margin: 0 auto;
+  } 
 `
 
 

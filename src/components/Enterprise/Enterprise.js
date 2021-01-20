@@ -1,125 +1,124 @@
 import styled from 'styled-components'
 
 export const Section = styled.section`
-padding: 0 6.25% 6.25% 6.25%;
-max-width: 1040px;
-margin: 0 auto;
-display: flex;
-flex-direction: column;
-justify-content: center;
-box-sizing: initial;
-@media ${props => props.theme.breakpoints.sm}{
-  padding: 0 5% 5% 5%;
-}
+  padding: 32px 48px 0;
+  max-width: 1040px;
+  width: calc(100vw - 96px);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: initial;
+  
+  @media ${(props) => props.theme.breakpoints.lg} {
+    padding: 24px 48px 0;
+  }
+
+  @media ${(props) => props.theme.breakpoints.md} {
+    padding: 16px 16px 0;
+    width: calc(100vw - 32px);
+  }
 `
-export const Accent = styled.hr`
-display: block;
-unicode-bidi: normal;
-margin-block-start: 0px;
-margin-block-end: 0px;
-margin-inline-start: 0px;
-margin-inline-end: 0px;
-overflow: hidden;
-border-style: none;
-border-width: 0px;
 
-width: 64px;
-height: 6px;
-background: linear-gradient(-90deg,#13ADC7, #945DD6);
-border-radius: 30px;
-margin-bottom: 32px;
+export const Accent = styled.div`
+  width: 64px;
+  height: 6px;
+  border-radius: 10px;
+  background-color: #fff;
+  background: ${(props) => props.colorAlt ? 
+    'linear-gradient(270deg, #F46737 0%, #945DD6 100%)' :
+    'linear-gradient(270deg, #13ADC7 0%, #945DD6 100%)'};
 
-@media ${props => props.theme.breakpoints.md}{
-  width: 48px;
-  margin-bottom: 24px;
-  justify-content: flex-start;
-}
+  @media ${(props) => props.theme.breakpoints.lg} {
+    width: 48px;
+    height: 4px;
+  }
 
-@media ${props => props.theme.breakpoints.sm}{
-  width: 32px;
-  margin-bottom: 16px;
-}
+  @media ${(props) => props.theme.breakpoints.md} {
+    width: 32px;
+    height: 2px;
+  }
 `
 
 export const Title = styled.h2`
-font-family: "Roobert TRIAL", Arial, sans-serif;
-font-style: normal;
-font-weight: 800;
-font-size: 56px;
-line-height: 56px;
-letter-spacing: 0.02em;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 56px;
+  line-height: 56px;
+  max-width: 300px;
+  background: linear-gradient(121.57deg, #FFFFFF 18.77%, rgba(255, 255, 255, 0.66) 60.15%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 18px;
 
-background: -webkit-linear-gradient(121.57deg, #FFFFFF 18.77%, rgba(255, 255, 255, 0.66) 60.15%);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
+  @media ${props => props.theme.breakpoints.lg}{
+    font-size: 48px;
+    line-height: 48px;
+    margin-bottom: 12px;
+  }
 
-margin-bottom: 18px;
-
-@media ${props => props.theme.breakpoints.md}{
-  font-size: 48px;
-  line-height: 48px;
-  margin-bottom: 12px;
-}
-
-@media ${props => props.theme.breakpoints.sm}{
-  font-size: 32px;
-  line-height: 40px;
-  margin-bottom: 8px;
-}
+  @media ${props => props.theme.breakpoints.md}{
+    font-size: 32px;
+    line-height: 40px;
+    margin-bottom: 8px;
+  }
 `
 
 export const Subtitle = styled.p`
-font-family: "Roobert TRIAL", Arial, sans-serif;
-font-style: normal;
-font-weight: normal;
-font-size: 24px;
-line-height: 40px;
-letter-spacing: 0.02em;
-color: rgba(255, 255, 255, 0.5);
-max-width: 800px;
-margin-bottom: 80px;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 40px;
+  letter-spacing: 0.02em;
+  color: rgba(255, 255, 255, 0.5);
+  max-width: 800px;
+  margin-bottom: 80px;
 
-@media ${props => props.theme.breakpoints.md}{
-  font-size: 20px;
-  line-height: 32px;
-  margin-bottom: 64px;
-}
+  @media ${props => props.theme.breakpoints.lg}{
+    font-size: 20px;
+    line-height: 32px;
+    margin-bottom: 64px;
+  }
 
-@media ${props => props.theme.breakpoints.sm}{
-  font-size: 16px;
-  line-height: 24px;  
-  margin-bottom: 32px;
+  @media ${props => props.theme.breakpoints.md}{
+    font-size: 16px;
+    line-height: 24px;  
+    margin-bottom: 32px;
 }
 `
 
 export const ImageContainer = styled.div`
-text-align: center;
-background-image: radial-gradient(50% 50% at 50% 50%, rgba(79, 108, 176, 0.25) 53.8%, rgba(79, 108, 176, 0) 100%);
-@media screen and (max-width:1200px){
-  background-image: none;
-}
+  text-align: center;
+  background-image: radial-gradient(50% 50% at 50% 50%, rgba(79, 108, 176, 0.25) 53.8%, rgba(79, 108, 176, 0) 100%);
+  width: 100%;
+  padding: 60px;
+
+  @media screen and (max-width:1024px){
+    background-image: none;
+    padding: 0;
+  }
 `
 
 export const MainImage = styled.img`
-padding: 60px;
-@media screen and (max-width:1200px){
-  padding: 0px;
-}
+  width: 100%;
 `
 
 export const List = styled.ul`
-list-style-type: none;
-display: flex;
-justify-content: space-between;
-margin-top: 83px;
-@media ${props => props.theme.breakpoints.md}{
-  max-width: 672px;
-}
-@media ${props => props.theme.breakpoints.sm}{
-  flex-direction: column;
-  margin-top: 32px;
-  max-width: 320px;
-}
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin: 80px 0;
+  
+  @media ${props => props.theme.breakpoints.lg}{
+    margin: 64px 0;
+  }
+  
+  @media ${props => props.theme.breakpoints.sm}{
+    flex-direction: column;
+    margin-top: 32px;
+    max-width: 320px;
+    margin-bottom: 44px;
+  }
 `
 
 export const ListContainer = styled.div`
@@ -156,24 +155,19 @@ margin-bottom: 8px;
 `
 
 export const ListParagraph = styled.p`
-font-family: "Roobert TRIAL", Arial, sans-serif;
-font-style: normal;
-font-weight: normal;
-font-size: 18px;
-line-height: 30px;
-letter-spacing: 0.02em;
-color: rgba(255, 255, 255, 0.75);
+  font-size: 18px;
+  line-height: 30px;
+  color: rgba(255, 255, 255, 0.75);
 
-@media ${props => props.theme.breakpoints.md}{
-  font-size: 16px;
-  line-height: 28px;
-  letter-spacing: 0.02em;
-}
+  @media ${props => props.theme.breakpoints.lg}{
+    font-size: 16px;
+    line-height: 28px;
+  }
 
-@media ${props => props.theme.breakpoints.sm}{
-  font-size: 14px;
-  line-height: 22px;
-}
+  @media ${props => props.theme.breakpoints.md}{
+    font-size: 14px;
+    line-height: 22px;
+  }
 `
 
 export const ListItem = styled.li`
@@ -196,7 +190,7 @@ export const ListIcon = styled.img`
 display: block;
 width: 48px;
 height: 48px;
-margin-bottom: 8px;
+margin-bottom: 10px;
 
 @media ${props => props.theme.breakpoints.sm}{
   width: 32px;

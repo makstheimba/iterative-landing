@@ -34,8 +34,6 @@ const linkData = [
   },
 ]
 
-
-
 const FooterLinks = () => {
   return (
     <CommunitySection>
@@ -71,11 +69,8 @@ const FooterLinks = () => {
             <a href="google.com">  <SocialContainerIcon src={Discord} /></a>
           </SocialContainer>
 
-
         </SocialIconsContainer>
       </ContainerCommunity>
-
-
     </CommunitySection>
   )
 }
