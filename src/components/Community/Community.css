@@ -1,0 +1,130 @@
+.community {
+  padding: 19px 16px 32px 16px;
+  position: relative;
+}
+
+.community__line {
+  position: absolute;
+  top: 0;
+  left: 16px;
+  width: 32px;
+  height: 2px;
+  border-radius: 1px;
+  background: linear-gradient(270deg, #f46737 0%, #945dd6 100%);
+}
+
+.community__cardlist {
+  list-style: none;
+  padding: 0;
+  margin: 24px 0 0 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.community__text {
+  margin: 24px 0 0 0;
+  text-align: center;
+  font-family: 'Space Grotesk', sans-serif, Arial, Helvetica;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.community__iconlist {
+  list-style: none;
+  padding: 0;
+  margin: -1px 0 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1px;
+}
+
+.community__iconlist-item {
+  list-style: none;
+}
+
+@media (min-width: 768px) {
+  .community {
+    padding: 28px 48px 32px 48px;
+  }
+
+  .community__line {
+    left: 48px;
+    width: 48px;
+    height: 4px;
+    border-radius: 2px;
+  }
+
+  .community__cardlist {
+    margin: 32px 0 0 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+
+  .community__cardlist :nth-child(1) {
+    order: 1;
+  }
+
+  .community__cardlist :nth-child(2) {
+    order: 3;
+  }
+
+  .community__cardlist :nth-child(3) {
+    order: 2;
+  }
+
+  .community__cardlist :nth-child(4) {
+    order: 4;
+  }
+
+  .community__container {
+    margin: 25px 0 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .community__text {
+    margin: 0 15px 0 0;
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  .community__iconlist {
+    gap: 7px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .community {
+    padding: 41px 80px 80px 80px;
+  }
+
+  .community__line {
+    left: 80px;
+    width: 64px;
+    height: 6px;
+    border-radius: 3px;
+  }
+
+  .community__cardlist {
+    margin: 39px 0 0 0;
+    gap: 24px;
+  }
+
+  .community__container {
+    margin: 27px 0 0 0;
+  }
+
+  .community__text {
+    margin: 0 16px 0 0;
+    font-size: 24px;
+    line-height: 40px;
+  }
+}
