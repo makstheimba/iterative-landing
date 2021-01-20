@@ -3,7 +3,7 @@ import Title from '../Title/Title';
 import CommunityCard from '../CommunityCard/CommunityCard';
 import Icon from '../Icon/Icon';
 import './Community.css';
-import icnDiscard from '../../images/icn-discord.svg';
+import icnDiscord from '../../images/icn-discord.svg';
 import icnGithub from '../../images/icn-github.svg';
 import icnTwitter from '../../images/icn-twitter.svg';
 
@@ -23,9 +23,9 @@ export default function Community() {
         <ul className="community__iconlist">
           <li className="community__iconlist-item">
             <Icon
-              icon={icnDiscard}
+              icon={icnDiscord}
               link="about:blank"
-              linkDescription="Go to Discard"
+              linkDescription="Go to Discord"
               widthPixelSizes={[32, 24, 32]}
             />
           </li>
