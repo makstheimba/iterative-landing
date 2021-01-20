@@ -1,6 +1,5 @@
 .communitycard {
   list-style: none;
-  width: 126px;
   height: 70px;
   padding: 12px 0 0 12px;
   margin: 0;
@@ -33,7 +32,6 @@
 
 @media (min-width: 768px) {
   .communitycard {
-    width: 140px;
     height: 96px;
     padding: 16px 0 0 16px;
   }
@@ -52,7 +50,6 @@
 
 @media (min-width: 1024px) {
   .communitycard {
-    width: 218px;
     height: 120px;
     padding: 24px 0 0 24px;
   }
