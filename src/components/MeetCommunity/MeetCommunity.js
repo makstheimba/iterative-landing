@@ -3,18 +3,17 @@ import styled from "styled-components"
 export const CommunitySection = styled.section`
   width: calc(100vw - 96px);
   max-width: 1040px;
-  padding: 32px 48px 0;
+  padding: 32px 48px 80px;
   margin: 0 auto;
   box-sizing: content-box;
 
   @media ${props => props.theme.breakpoints.md} {
-    padding: 32px 16px;
+    padding: 32px 16px 64px;
     width: calc(100vw - 32px);
   }
 
   @media ${props => props.theme.breakpoints.sm} {
-    min-width: 320px;
-    margin: 0 auto;
+    padding: 16px 16px 32px;
   }
 `
 
@@ -117,15 +116,15 @@ line-height: 24px;
 letter-spacing: 0.02em;
 color: rgba(255, 255, 255, 0.75);
 
-@media ${props => props.theme.breakpoints.md}{
-font-size: 16px;
-line-height: 20px;
-};
+  @media ${props => props.theme.breakpoints.lg}{
+    font-size: 16px;
+    line-height: 20px;
+  };
 
-@media ${props => props.theme.breakpoints.sm} {
-font-size: 10px;
-line-height: 14px;
-}
+  @media ${props => props.theme.breakpoints.md} {
+    font-size: 10px;
+    line-height: 14px;
+  }
 
 `
 
