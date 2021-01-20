@@ -1,15 +1,16 @@
 import styled from "styled-components"
 
 export const CommunitySection = styled.section`
-width: calc(100vw - 96px);
-max-width: 1040px;
-padding: top 48px bottom;
-margin: 0 auto;
+  width: calc(100vw - 96px);
+  max-width: 1040px;
+  padding: 32px 48px 0;
+  margin: 0 auto;
+  box-sizing: content-box;
 
   @media ${props => props.theme.breakpoints.md} {
-    max-width: 768px;
-      margin: 0 auto;
-  } 
+    padding: 32px 16px;
+    width: calc(100vw - 32px);
+  }
 
   @media ${props => props.theme.breakpoints.sm} {
     min-width: 320px;
@@ -18,17 +19,8 @@ margin: 0 auto;
 `
 
 export const ContainerCommunity = styled.div`
-  border-top: ${props => props.line ? "1px solid rgba(255, 255, 255, 0.1);" : ""};
   max-width:1040px;
-  
-  @media ${props => props.theme.breakpoints.md} {
-    max-width: 100%;
-    margin: 0 auto;
-  }
-  @media ${props => props.theme.breakpoints.sm} {
-    max-width: 288px;
-    margin: 0 auto;
-  } 
+  border-top: ${props => props.line ? "1px solid rgba(255, 255, 255, 0.1);" : ""};
 `
 
 
@@ -57,58 +49,46 @@ margin-bottom:40px;
 } 
 `
 
-
-
 export const Boxes = styled.div`
-max-width: 1040px;
-display: flex;
-gap: 24px;
-margin-bottom: 40px;
-@media ${props => props.theme.breakpoints.md}{
-  max-width: 672px;
-  display: flex;
-  gap: 16px;
-  margin-bottom: 32px;
-}
-
-@media ${props => props.theme.breakpoints.sm}{
-  max-width: 288px;
+  width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(138px, 1fr));
-  gap: 10px;
-  margin-bottom: 24px;
-}
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-bottom: 40px;
+
+  @media ${props => props.theme.breakpoints.lg}{
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+
+  @media ${props => props.theme.breakpoints.md}{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    max-width: 500px;
+    margin: 0 auto 24px;
+  }
 `
 
-
 export const Box = styled.div`
-background: #212D45;
-border-radius: 12px;
-width: 242px;
-height: 144px;
-padding: 24px;
-@media ${props => props.theme.breakpoints.md} {
-  width: 156px;
-  height: 112px;
-  padding: 16px;
-  &:first-child{
+  background: #212D45;
+  border-radius: 12px;
+  height: 144px;
+  padding: 24px;
+
+  @media ${props => props.theme.breakpoints.lg} {
     height: 112px;
-};
- &:nth-child(2){
-   grid-row:2;
- }
-}
-@media ${props => props.theme.breakpoints.sm} {
-  width: 138px;
-  height: 82px;
-  padding: 12px;
-  &:first-child{
-  height: 82px;
-};
- &:nth-child(2){
-   grid-row:2;
- }
-}
+    padding: 16px;
+  }
+
+  @media ${props => props.theme.breakpoints.md} {
+    height: 82px;
+    padding: 12px;
+    
+    &:nth-child(2n){
+      grid-row:2;
+    }
+  }
 
 `
 export const BoxNum = styled.h5`
@@ -119,19 +99,15 @@ line-height: 40px;
 letter-spacing: 0.01em;
 color: #FFFFFF;
 margin-bottom: 8px;
-@media ${props => props.theme.breakpoints.md} {
+@media ${props => props.theme.breakpoints.lg} {
   font-size: 28px;
   line-height: 32px;
 }
-@media ${props => props.theme.breakpoints.sm} {
+@media ${props => props.theme.breakpoints.md} {
   font-size: 24px;
   line-height: 26px;
 }
-
-
 `
-
-
 
 export const BoxText = styled.p`
 font-style: normal;
@@ -154,32 +130,21 @@ line-height: 14px;
 `
 
 export const Join = styled.div`
-
-display: flex;
-max-width: 1040px;
-justify-content: center;
-margin-bottom: 80px;
-
-
-@media ${props => props.theme.breakpoints.md}{
-  max-width: 672px;
   display: flex;
-  /* width: 672px; */
+  max-width: 1040px;
   justify-content: center;
-  margin-bottom: 64px;
-}
-@media ${props => props.theme.breakpoints.sm}{
-  max-width: 288px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 32px;
-}
 
+  @media ${props => props.theme.breakpoints.lg}{
+    display: flex;
+    justify-content: center;
+  }
+
+  @media ${props => props.theme.breakpoints.md}{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 `
-
-
-
 
 export const JoinText = styled.h5`
   font-style: normal;
@@ -190,19 +155,18 @@ export const JoinText = styled.h5`
   color: rgba(255, 255, 255, 0.5);
   margin-right: 44px;
 
-@media ${props => props.theme.breakpoints.md}{
+@media ${props => props.theme.breakpoints.lg}{
   line-height: 32px;
   font-size: 20px;
   margin-right: 35px;
 };
 
-@media ${props => props.theme.breakpoints.sm}{
+@media ${props => props.theme.breakpoints.md}{
   font-size: 16px;
   line-height: 24px;
   margin: 0;
   margin-bottom: 16px;
 }
-
 `
 
 

@@ -122,13 +122,14 @@ export const List = styled.ul`
 `
 
 export const ListContainer = styled.div`
-display: flex;
-flex-direction: column;
-@media ${props => props.theme.breakpoints.sm}{
   display: flex;
-  max-width: 240px;
-  margin-left: 18px;
-}
+  flex-direction: column;
+  
+  @media ${props => props.theme.breakpoints.sm}{
+    display: flex;
+    max-width: 240px;
+    margin-left: 18px;
+  }
 `
 
 export const ListTitle = styled.h4`

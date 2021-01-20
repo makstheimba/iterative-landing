@@ -36,7 +36,7 @@ const linkData = [
 
 const FooterLinks = () => {
   return (
-    <CommunitySection>
+    <CommunitySection line>
       <ContainerCommunity line>
         <LinkList>
           {linkData.map((data, index) => {
