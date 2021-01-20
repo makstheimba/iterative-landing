@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const Section = styled.section`
 padding: 0 6.25% 6.25% 6.25%;
-max-width: 1200px;
+max-width: 1040px;
 margin: 0 auto;
 display: flex;
 flex-direction: column;
@@ -23,13 +23,14 @@ overflow: hidden;
 border-style: none;
 border-width: 0px;
 
-width: 48px;
+width: 64px;
 height: 6px;
-background: linear-gradient(90deg,#13ADC7, #945DD6);
+background: linear-gradient(-90deg,#13ADC7, #945DD6);
 border-radius: 30px;
 margin-bottom: 32px;
 
 @media ${props => props.theme.breakpoints.md}{
+  width: 48px;
   margin-bottom: 24px;
   justify-content: flex-start;
 }
