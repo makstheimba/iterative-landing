@@ -25,6 +25,7 @@ export default function Community() {
             <Icon
               icon={icnDiscard}
               link="about:blank"
+              linkDescription="Go to Discard"
               widthPixelSizes={[32, 24, 32]}
             />
           </li>
@@ -32,6 +33,7 @@ export default function Community() {
             <Icon
               icon={icnGithub}
               link="about:blank"
+              linkDescription="Go to Github"
               widthPixelSizes={[32, 24, 32]}
             />
           </li>
@@ -39,6 +41,7 @@ export default function Community() {
             <Icon
               icon={icnTwitter}
               link="about:blank"
+              linkDescription="Go to Twitter"
               widthPixelSizes={[32, 24, 32]}
             />
           </li>
