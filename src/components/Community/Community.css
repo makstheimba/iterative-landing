@@ -1,16 +1,12 @@
 .community {
-  width: 288px;
-  height: auto;
-  margin-right: auto;
-  margin-left: auto;
-  padding: 19px 0 32px 0;
+  padding: 19px 16px 32px 16px;
   position: relative;
 }
 
 .community__line {
   position: absolute;
   top: 0;
-  left: 0;
+  left: 16px;
   width: 32px;
   height: 2px;
   border-radius: 1px;
@@ -55,11 +51,11 @@
 
 @media (min-width: 768px) {
   .community {
-    min-width: 672px;
-    padding: 28px 0 32px 0;
+    padding: 28px 48px 32px 48px;
   }
 
   .community__line {
+    left: 48px;
     width: 48px;
     height: 4px;
     border-radius: 2px;
@@ -107,12 +103,11 @@
 
 @media (min-width: 1024px) {
   .community {
-    min-width: 1024px;
-    max-width: 1040px;
-    padding: 41px 0 80px 0;
+    padding: 41px 80px 80px 80px;
   }
 
   .community__line {
+    left: 80px;
     width: 64px;
     height: 6px;
     border-radius: 3px;

@@ -7,6 +7,7 @@ const CommonCommunity = {
   title: 'Element/Community',
   component: Community,
 };
+
 export default CommonCommunity;
 
 export const Default = Template.bind({});
