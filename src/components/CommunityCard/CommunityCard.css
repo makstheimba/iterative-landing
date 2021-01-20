@@ -1,7 +1,6 @@
 .communitycard {
   list-style: none;
-  height: 70px;
-  padding: 12px 0 0 12px;
+  padding: 12px 4px 8px 12px;
   margin: 0;
   background-color: #212d45;
   border-radius: 12px;
@@ -19,7 +18,6 @@
 }
 
 .communitycard__description {
-  width: 122px;
   margin: 8px 0 0 0;
   font-family: 'Space Grotesk', sans-serif, Arial, Helvetica;
   font-style: normal;
@@ -32,8 +30,7 @@
 
 @media (min-width: 768px) {
   .communitycard {
-    height: 96px;
-    padding: 16px 0 0 16px;
+    padding: 16px;
   }
 
   .communitycard__title {
@@ -42,7 +39,6 @@
   }
 
   .communitycard__description {
-    width: 124px;
     font-size: 16px;
     line-height: 20px;
   }
@@ -50,8 +46,7 @@
 
 @media (min-width: 1024px) {
   .communitycard {
-    height: 120px;
-    padding: 24px 0 0 24px;
+    padding: 24px;
   }
 
   .communitycard__title {
@@ -60,7 +55,6 @@
   }
 
   .communitycard__description {
-    width: 194px;
     font-size: 18px;
     line-height: 24px;
   }
