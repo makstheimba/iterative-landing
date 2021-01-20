@@ -6,23 +6,22 @@ max-width: 1040px;
 padding: top 48px bottom;
 margin: 0 auto;
 
-@media ${props => props.theme.breakpoints.md} {
-  max-width: 768px;
+  @media ${props => props.theme.breakpoints.md} {
+    max-width: 768px;
+      margin: 0 auto;
+  } 
+
+  @media ${props => props.theme.breakpoints.sm} {
+    min-width: 320px;
     margin: 0 auto;
-} 
-
-@media ${props => props.theme.breakpoints.sm} {
-  min-width: 320px;
-  margin: 0 auto;
-} 
-
+  }
 `
 
 export const ContainerCommunity = styled.div`
 border-top: ${props => props.line ? "1px solid rgba(255, 255, 255, 0.1);" : ""};
 max-width:1040px;
 @media ${props => props.theme.breakpoints.md} {
-  width: 672px;
+  max-width: 100%;
   margin: 0 auto;
 }
 @media ${props => props.theme.breakpoints.sm} {
