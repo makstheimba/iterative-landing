@@ -104,7 +104,7 @@ export default function NavBar() {
         </ul>
       </div>
       <div className="nav-bar__logo-img">
-        <Logo />
+        <Logo link="/" linkDescription={'Go to home page'} />
       </div>
       <ul className="nav-bar__items nav-bar__menu-items">
         <li className="nav-bar__menu-item">
