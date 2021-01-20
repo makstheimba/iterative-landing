@@ -1,0 +1,229 @@
+.nav-bar {
+  margin: 0 0 32px;
+  padding: 8px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.nav-bar__dropdown {
+  position: relative;
+}
+
+.nav-bar__dropdown-btn {
+  display: grid;
+  align-items: center;
+  padding: 0;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 7px;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  width: min-content;
+}
+
+.nav-bar__dropdown_place_logo .icon {
+  opacity: 0.75;
+}
+
+.nav-bar__dropdown-btn:hover {
+  cursor: pointer;
+}
+
+.nav-bar__items {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-bar__dropdown-items {
+  flex-direction: column;
+  border-radius: 8px;
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: calc(100% + 8px);
+  visibility: hidden;
+  background-color: #fff;
+  color: #0f1624;
+  transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+}
+
+.nav-bar__dropdown-items_visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.nav-bar__product {
+  display: grid;
+  grid-template-areas:
+    'icon title'
+    'icon description';
+  grid-template-columns: 32px 200px;
+  column-gap: 16px;
+  padding: 12px 16px;
+  text-decoration: none;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.nav-bar__product:hover {
+  cursor: pointer;
+  background-color: rgba(15, 22, 36, 0.1);
+}
+
+.nav-bar__dropdown-item:first-child .nav-bar__product {
+  padding: 16px 16px 12px;
+}
+
+.nav-bar__dropdown-item:last-child .nav-bar__product {
+  padding: 12px 16px 16px;
+}
+
+.nav-bar__product-icon {
+  height: 32px;
+  grid-area: icon;
+  display: flex;
+  align-items: center;
+}
+
+.nav-bar__product-title {
+  grid-area: title;
+  text-decoration: none;
+  color: #0f1624;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 26px;
+  margin: 0;
+  grid-template-columns: min-content auto;
+  column-gap: 8px;
+  align-items: center;
+  display: grid;
+}
+
+.nav-bar__product-description {
+  grid-area: description;
+  text-decoration: none;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 22px;
+  margin: 0;
+  color: rgba(15, 22, 36, 0.5);
+}
+
+.nav-bar__menu-item {
+  margin: 0 0 0 16px;
+}
+
+.nav-bar__menu-text {
+  text-decoration: none;
+  color: #fff;
+  opacity: 0.75;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.nav-bar__menu-divider {
+  display: none;
+  height: 21px;
+  width: 1px;
+  background-color: rgba(255, 255, 255, 0.33);
+}
+
+.nav-bar__connect-items {
+  margin: 0 0 0 auto;
+  display: none;
+}
+
+.nav-bar__connect-item {
+  margin: 0 0 0 8px;
+}
+
+.nav-bar__menu-text_active,
+.nav-bar__menu-text:hover,
+.nav-bar__dropdown_visible .icon,
+.nav-bar__dropdown-btn:hover .icon {
+  opacity: 1;
+}
+
+.nav-bar__logo-img,
+.nav-bar__dropdown_place_menu {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .nav-bar {
+    width: calc(100% + 8px);
+    padding: 0;
+    margin: 0 0 64px;
+    justify-content: flex-start;
+  }
+
+  .nav-bar__dropdown_place_logo {
+    display: none;
+  }
+
+  .nav-bar__menu-item {
+    margin: 0 0 0 24px;
+  }
+
+  .nav-bar__menu-divider {
+    margin: 0 24px;
+  }
+
+  .nav-bar__menu-item:first-child {
+    margin: 0 0 0 40px;
+  }
+
+  .nav-bar__menu-text {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .nav-bar__dropdown_place_menu,
+  .nav-bar__logo-img,
+  .nav-bar__connect-items,
+  .nav-bar__menu-divider {
+    display: flex;
+  }
+}
+
+@media (min-width: 1024px) {
+  .nav-bar {
+    margin: 0 0 80px;
+    height: 40px;
+    width: calc(100% + 12px);
+  }
+
+  .nav-bar__logo-img {
+    max-width: 270px;
+    flex-grow: 1;
+  }
+
+  .nav-bar__menu-item {
+    margin: 0 0 0 40px;
+  }
+
+  .nav-bar__menu-item:first-child {
+    margin: 0;
+  }
+
+  .nav-bar__menu-text {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .nav-bar__menu-divider {
+    margin: 0 40px;
+  }
+
+  .nav-bar__connect-item:first-child {
+    margin: 0 0 0 40px;
+  }
+}
