@@ -8,10 +8,7 @@ const Footer = () => {
     <>
       <MeetCommunity />
       <FooterLinks />
-
     </>
-
-
   )
 }
 
