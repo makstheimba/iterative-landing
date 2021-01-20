@@ -15,6 +15,11 @@ export const NavBarWrapper = styled.div`
   @media ${(props) => props.theme.breakpoints.lg} {
     padding: 24px 48px 0;
   }
+
+  @media ${(props) => props.theme.breakpoints.md} {
+    width: calc(100vw - 32px);
+    padding: 16px 16px 0;
+  }
 `
 
 export const NavLink = styled(Link)`
@@ -37,6 +42,13 @@ export const NavLink = styled(Link)`
     line-height: 24px;
     height: 32px;
     margin-right: ${({ isMenu }) => (isMenu ? '8px' : '24px')};
+  }
+
+  @media ${(props) => props.theme.breakpoints.md} {
+    font-size: 14px;
+    line-height: 16px;
+    height: 16px;
+    margin: 0 0 0 16px;
   }
 `
 export const NavProducts = styled.button`
@@ -67,6 +79,28 @@ export const NavProductsIcon = styled.img`
   margin-left: 8px;
   display: flex;
   align-self: center;
+
+  @media ${(props) => props.theme.breakpoints.md} {
+    margin: 2px 0 0;
+    height: 6px;
+  }
+`
+
+export const NavProductsMobile = styled.button`
+  border: none;
+  display: flex;
+  align-items: center;
+  background: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+  margin-right: auto;
+
+  &:focus {
+    outline: none;
+  }
+  &:hover {
+    opacity: .6;
+  }
 `
 
 export const NavLogo = styled.img`
@@ -77,6 +111,11 @@ export const NavLogo = styled.img`
   @media ${(props) => props.theme.breakpoints.lg} {
     height: ${({ logo }) => (logo ? '25px' : '20px')};
     margin-right: ${({ logo }) => (logo ? '16px' : '40px')};
+  }
+
+  @media ${(props) => props.theme.breakpoints.md} {
+    height: ${({ logo }) => (logo ? '19px' : '15px')};
+    margin-right: ${({ logo }) => (logo ? '12px' : '7px')};
   }
 `
 
