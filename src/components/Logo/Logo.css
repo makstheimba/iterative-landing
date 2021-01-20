@@ -11,6 +11,10 @@
   cursor: pointer;
 }
 
+.logo_active:hover {
+  opacity: 1;
+}
+
 .logo__visually-hidden-el {
   border: 0;
   clip: rect(0 0 0 0);

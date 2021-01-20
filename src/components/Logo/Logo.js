@@ -9,7 +9,11 @@ export default function Logo({ link, linkDescription }) {
   return (
     <>
       {link ? (
-        <Link to={link} className="logo logo_is-link">
+        <Link
+          activeClassName="logo_active"
+          to={link}
+          className="logo logo_is-link"
+        >
           <img
             className="logo logo__icon"
             src={logoImg}
