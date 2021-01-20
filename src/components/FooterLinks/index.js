@@ -69,12 +69,6 @@ const FooterLinks = () => {
             <a href="google.com">  <SocialContainerIcon src={LinkedIn} /></a>
             <a href="google.com">  <SocialContainerIcon src={Youtube} /></a>
             <a href="google.com">  <SocialContainerIcon src={Discord} /></a>
-
-
-
-
-
-
           </SocialContainer>
 
 

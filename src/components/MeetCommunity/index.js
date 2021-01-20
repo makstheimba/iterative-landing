@@ -34,26 +34,30 @@ const MeetCommunity = () => {
         <SectionTitle>
           Meet our community
        </SectionTitle>
+
         <Boxes>
           {data.map((card, index) => {
             return (
               <Box key={index}>
                 <BoxNum>{`${card.number}+`}</BoxNum>
+
                 <BoxText>{card.text}</BoxText>
                 {card.text2 && <BoxText>{card.text2}</BoxText>}
               </Box>
             )
           })}
         </Boxes>
+
         <Join>
-          <JoinText>Join the Community: </JoinText>
+          <JoinText>Join the community:</JoinText>
+
           <IconContainer>
             <Icons src={Discord} />
             <Icons src={Github} />
             <Icons src={Twitter} />
           </IconContainer>
-        </Join>
 
+        </Join>
 
       </ContainerCommunity>
     </CommunitySection>
