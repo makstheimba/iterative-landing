@@ -63,7 +63,7 @@ const Enterprise = () => {
           </ListContainer>
         </ListItem>
       </List >
-      <SectionDivider colorAlt="true"/>
+      <SectionDivider colorAlt/>
     </Section>
   )
 }
