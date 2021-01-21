@@ -1,9 +1,9 @@
 import React from 'react'
-import { Box, Boxes, BoxNum, BoxText, CommunitySection, IconContainer, Icons, Join, JoinText, SectionTitle } from './MeetCommunity'
+import { Box, Boxes, BoxNum, BoxText, IconContainer, Icons, Join, JoinText } from './MeetCommunity'
 import Discord from "../../images/icn-discord.svg"
 import Github from "../../images/icn-github.svg"
 import Twitter from "../../images/icn-twitter.svg"
-
+import { Section, SectionTitle } from '../GlobalStyles'
 
 const data = [
   {
@@ -23,16 +23,12 @@ const data = [
     number: 9000,
     text: "Github Stars",
   },
-
 ]
 
 const MeetCommunity = () => {
   return (
-    <CommunitySection>
-      <SectionTitle>
-        Meet our community
-       </SectionTitle>
-
+    <Section>
+      <SectionTitle>Meet our community</SectionTitle>
       <Boxes>
         {data.map((card, index) => {
           return (
@@ -44,7 +40,6 @@ const MeetCommunity = () => {
           )
         })}
       </Boxes>
-
       <Join>
         <JoinText>Join the community:</JoinText>
         <IconContainer>
@@ -53,8 +48,7 @@ const MeetCommunity = () => {
           <Icons src={Twitter} />
         </IconContainer>
       </Join>
-      
-    </CommunitySection>
+    </Section>
   )
 }
 

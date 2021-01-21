@@ -4,9 +4,8 @@ import mainImageS from '../../images/Enterprise/main-s.png'
 import gearImage from '../../images/Enterprise/icon/gear.svg'
 import codeImage from '../../images/Enterprise/icon/code.svg'
 import shieldImage from '../../images/Enterprise/icon/shield.svg'
-
+import { Section, SectionDivider, SectionTitle, SectionText } from '../GlobalStyles'
 import {
-  Section, Accent, Title, Subtitle,
   ImageContainer, MainImage, List,
   ListContainer, ListTitle, ListParagraph,
   ListItem, ListIcon
@@ -15,11 +14,11 @@ import {
 const Enterprise = () => {
   return (
     <Section>
-      <Title>Enterprise</Title>
-      <Subtitle>
+      <SectionTitle>Enterprise</SectionTitle>
+      <SectionText>
         AI hand in hand with software development.
         Built with data scientists, ML engineers, and data engineers in mind.
-      </Subtitle>
+      </SectionText>
       <ImageContainer>
         <picture>
           <source media="(min-width:600px)" srcset={mainImageL} />
@@ -64,7 +63,7 @@ const Enterprise = () => {
           </ListContainer>
         </ListItem>
       </List >
-      <Accent colorAlt="true"/>
+      <SectionDivider colorAlt="true"/>
     </Section>
   )
 }

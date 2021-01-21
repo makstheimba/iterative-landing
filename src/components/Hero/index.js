@@ -1,5 +1,6 @@
 import React from 'react'
-import { HeroWrapper, HeroBG, SectionHeader, SectionText, HeroButton, HeroSponsorsContainer, HeroSponsorLogo, SectionDivider } from './Hero'
+import { HeroBG, HeroButton, HeroSponsorsContainer, HeroSponsorLogo } from './Hero'
+import { Section, SectionDivider, SectionTitle, SectionText } from '../GlobalStyles'
 import hero0 from '../../images/hero_bg.svg'
 import hero1 from '../../images/hero_Standard.svg'
 import hero2 from '../../images/hero_Rubrik.svg'
@@ -10,9 +11,9 @@ import hero6 from '../../images/hero_Neosensory.svg'
 
 const Hero = () => {
   return (
-    <HeroWrapper>
+    <Section>
       <HeroBG src={hero0} />
-      <SectionHeader>Open platform <br />to operationalize AI</SectionHeader>
+      <SectionTitle main>Open platform <br />to operationalize AI</SectionTitle>
       <SectionText>
         AI teams face challenges that require new technologies. We build these technologies. Existing data warehouses and data lakes do not fit unstructured datasets like text, images, and videos.
       </SectionText>
@@ -26,7 +27,7 @@ const Hero = () => {
         <HeroSponsorLogo src={hero6} />
       </HeroSponsorsContainer>
       <SectionDivider />
-    </HeroWrapper>
+    </Section>
   )
 }
 

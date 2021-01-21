@@ -30,36 +30,36 @@ const linkData = [
 const Footer = () => {
   return (
     <FooterWrapper>
-        <LinkList>
-          {linkData.map((data, index) => {
-            return (
-              <div key={index}>
-                <LinkName>{data.name}</LinkName>
-                <LinkListName>{data.linkOne}</LinkListName>
-                <LinkListName>{data.linkTwo}</LinkListName>
-                {data.linkThree && <LinkListName>{data.linkThree}</LinkListName>}
-              </div>
-            )
-          })}
-        </LinkList>
+      <LinkList>
+        {linkData.map((data, index) => {
+          return (
+            <div key={index}>
+              <LinkName>{data.name}</LinkName>
+              <LinkListName>{data.linkOne}</LinkListName>
+              <LinkListName>{data.linkTwo}</LinkListName>
+              {data.linkThree && <LinkListName>{data.linkThree}</LinkListName>}
+            </div>
+          )
+        })}
+      </LinkList>
 
-        <SocialIconsContainer>
-          <CompanyContainer>
-            <Link to="/">
-              <CompanyLogo src={Logo} />
-            </Link>
-            <Slogan>Open platform to operationalize AI</Slogan>
-          </CompanyContainer>
+      <SocialIconsContainer>
+        <CompanyContainer>
+          <Link to="/">
+            <CompanyLogo src={Logo} />
+          </Link>
+          <Slogan>Open platform to operationalize AI</Slogan>
+        </CompanyContainer>
 
-          <SocialContainer>
-            <a href="google.com" target="_blank" rel="noreferrer"> <SocialContainerIcon src={Github} /></a>
-            <a href="google.com" target="_blank" rel="noreferrer"> <SocialContainerIcon src={Twitter} /></a>
-            <a href="google.com" target="_blank" rel="noreferrer"> <SocialContainerIcon src={LinkedIn} /></a>
-            <a href="google.com" target="_blank" rel="noreferrer"> <SocialContainerIcon src={Youtube} /></a>
-            <a href="google.com" target="_blank" rel="noreferrer"> <SocialContainerIcon src={Discord} /></a>
-          </SocialContainer>
+        <SocialContainer>
+          <a href="google.com" target="_blank" rel="noreferrer"> <SocialContainerIcon src={Github} /></a>
+          <a href="google.com" target="_blank" rel="noreferrer"> <SocialContainerIcon src={Twitter} /></a>
+          <a href="google.com" target="_blank" rel="noreferrer"> <SocialContainerIcon src={LinkedIn} /></a>
+          <a href="google.com" target="_blank" rel="noreferrer"> <SocialContainerIcon src={Youtube} /></a>
+          <a href="google.com" target="_blank" rel="noreferrer"> <SocialContainerIcon src={Discord} /></a>
+        </SocialContainer>
 
-        </SocialIconsContainer>
+      </SocialIconsContainer>
     </FooterWrapper>
   )
 }
