@@ -11,36 +11,54 @@ import neosensory from '../../images/client-neosensory.svg';
 export default function CustomersList() {
   return (
     <ul className="customerslist">
-      <Icon
-        icon={standard}
-        widthPixelSizes={[55, 0, 0]}
-        heightPixelSizes={[16, 0, 0]}
-      />
-      <Icon
-        icon={rubrik}
-        widthPixelSizes={[50, 0, 0]}
-        heightPixelSizes={[16, 0, 0]}
-      />
-      <Icon
-        icon={warbyparker}
-        widthPixelSizes={[74, 0, 0]}
-        heightPixelSizes={[16, 0, 0]}
-      />
-      <Icon
-        icon={odnoklassniki}
-        widthPixelSizes={[11.57, 0, 0]}
-        heightPixelSizes={[22, 0, 0]}
-      />
-      <Icon
-        icon={smithsonian}
-        widthPixelSizes={[70, 0, 0]}
-        heightPixelSizes={[22, 0, 0]}
-      />
-      <Icon
-        icon={neosensory}
-        widthPixelSizes={[56, 0, 0]}
-        heightPixelSizes={[22, 0, 0]}
-      />
+      <li className="customerslist__item">
+        <Icon
+          icon={standard}
+          widthPixelSizes={[55, 78, 130]}
+          heightPixelSizes={[20, 48, 80]}
+          linkDescription="Standard"
+        />
+      </li>
+      <li className="customerslist__item">
+        <Icon
+          icon={rubrik}
+          widthPixelSizes={[50, 75, 122]}
+          heightPixelSizes={[19, 48, 80]}
+          linkDescription="Rubrick"
+        />
+      </li>
+      <li className="customerslist__item">
+        <Icon
+          icon={warbyparker}
+          widthPixelSizes={[74, 109, 185]}
+          heightPixelSizes={[20, 48, 80]}
+          linkDescription="Warby Parker"
+        />
+      </li>
+      <li className="customerslist__item">
+        <Icon
+          icon={odnoklassniki}
+          widthPixelSizes={[12, 18, 30]}
+          heightPixelSizes={[27, 56, 94]}
+          linkDescription="Odnoklassniki"
+        />
+      </li>
+      <li className="customerslist__item">
+        <Icon
+          icon={smithsonian}
+          widthPixelSizes={[68, 99, 162]}
+          heightPixelSizes={[20, 48, 80]}
+          linkDescription="Smithsonian"
+        />
+      </li>
+      <li className="customerslist__item">
+        <Icon
+          icon={neosensory}
+          widthPixelSizes={[56, 85, 141]}
+          heightPixelSizes={[32, 67, 112]}
+          linkDescription="Neosensory"
+        />
+      </li>
     </ul>
   );
 }

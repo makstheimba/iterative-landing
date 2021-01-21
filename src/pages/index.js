@@ -1,4 +1,5 @@
 import * as React from 'react';
+import CustomersList from '../components/CustomersList/CustomersList';
 import Layout from '../components/Layout/Layout';
 import Title from '../components/Title/Title';
 
@@ -7,7 +8,10 @@ const IndexPage = () => {
   return (
     <main>
       <Layout>
-        <Title title="This is a test, I made it longer to see if the title gradient is ok." size="l" />
+        <Title
+          title="This is a test, I made it longer to see if the title gradient is ok."
+          size="l"
+        />
       </Layout>
     </main>
   );
