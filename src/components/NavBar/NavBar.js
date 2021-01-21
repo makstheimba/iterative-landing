@@ -53,9 +53,9 @@ export default function NavBar() {
                   icon={viewerIcon}
                 />
               </div>
-              <p className="nav-bar__product-title">
+              <h2 className="nav-bar__product-title">
                 Viewer <Icon widthPixelSizes={[12, 12, 12]} icon={linkIcon} />
-              </p>
+              </h2>
               <p className="nav-bar__product-description">
                 Track and share insights from ML projects
               </p>
@@ -75,7 +75,7 @@ export default function NavBar() {
                   icon={dvcIcon}
                 />
               </div>
-              <p className="nav-bar__product-title">DVC</p>
+              <h2 className="nav-bar__product-title">DVC</h2>
               <p className="nav-bar__product-description">
                 Open-source version control system for ML projects
               </p>
@@ -95,7 +95,7 @@ export default function NavBar() {
                   icon={cmlIcon}
                 />
               </div>
-              <p className="nav-bar__product-title">CML</p>
+              <h2 className="nav-bar__product-title">CML</h2>
               <p className="nav-bar__product-description">
                 Open-source CI/CD for ML projects
               </p>
@@ -159,9 +159,9 @@ export default function NavBar() {
                   icon={viewerIcon}
                 />
               </div>
-              <p className="nav-bar__product-title">
+              <h2 className="nav-bar__product-title">
                 Viewer <Icon widthPixelSizes={[12, 12, 12]} icon={linkIcon} />
-              </p>
+              </h2>
               <p className="nav-bar__product-description">
                 Track and share insights from ML projects
               </p>
@@ -181,7 +181,7 @@ export default function NavBar() {
                   icon={dvcIcon}
                 />
               </div>
-              <p className="nav-bar__product-title">DVC</p>
+              <h2 className="nav-bar__product-title">DVC</h2>
               <p className="nav-bar__product-description">
                 Open-source version control system for ML projects
               </p>
@@ -201,7 +201,7 @@ export default function NavBar() {
                   icon={cmlIcon}
                 />
               </div>
-              <p className="nav-bar__product-title">CML</p>
+              <h2 className="nav-bar__product-title">CML</h2>
               <p className="nav-bar__product-description">
                 Open-source CI/CD for ML projects
               </p>
