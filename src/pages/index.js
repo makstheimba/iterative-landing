@@ -1,17 +1,22 @@
 import * as React from 'react';
 import Community from '../components/Community/Community';
 import Layout from '../components/Layout/Layout';
-import Title from '../components/Title/Title';
+import Button from '../components/Button/Button';
+import Header from '../components/Header/Header';
 
-// markup
 const IndexPage = () => {
   return (
     <main>
       <Layout>
-        <Title
-          title="This is a test, I made it longer to see if the title gradient is ok."
-          size="l"
-        />
+        <Header
+          isMain
+          title="Open platform to operationalize AI"
+          text="AI teams face challenges that require new technologies. We build these technologies. Existing data warehouses and data lakes do not fit unstructured datasets like text, images, and videos."
+        >
+          <Button onClick={() => console.log('open demo form')}>
+            Request a Demo
+          </Button>
+        </Header>
         <Community />
       </Layout>
     </main>
