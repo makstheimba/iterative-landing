@@ -3,6 +3,27 @@
   align-items: center;
   width: 114.26px;
   height: 24px;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.logo_is-link:hover {
+  opacity: 0.75;
+  cursor: pointer;
+}
+
+.logo_active:hover {
+  opacity: 1;
+}
+
+.logo__visually-hidden-el {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
 }
 
 .logo__icon {
@@ -23,7 +44,6 @@
   .logo {
     width: 152.35px;
     height: 32px;
-    margin-right: 40px;
   }
 
   .logo__icon {
@@ -43,7 +63,6 @@
   .logo {
     width: 190.44px;
     height: 40px;
-    margin-right: 80px;
   }
 
   .logo__icon {

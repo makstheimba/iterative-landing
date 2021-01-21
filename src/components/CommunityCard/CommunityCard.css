@@ -1,0 +1,61 @@
+.communitycard {
+  list-style: none;
+  padding: 12px 4px 8px 12px;
+  margin: 0;
+  background-color: #212d45;
+  border-radius: 12px;
+}
+
+.communitycard__title {
+  margin: 0;
+  font-family: 'Space Grotesk', sans-serif, Arial, Helvetica;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 26px;
+  letter-spacing: 0.01em;
+  color: #ffffff;
+}
+
+.communitycard__description {
+  margin: 8px 0 0 0;
+  font-family: 'Space Grotesk', sans-serif, Arial, Helvetica;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 14px;
+  letter-spacing: 0.02em;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+@media (min-width: 768px) {
+  .communitycard {
+    padding: 16px;
+  }
+
+  .communitycard__title {
+    font-size: 28px;
+    line-height: 32px;
+  }
+
+  .communitycard__description {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .communitycard {
+    padding: 24px;
+  }
+
+  .communitycard__title {
+    font-size: 36px;
+    line-height: 40px;
+  }
+
+  .communitycard__description {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
