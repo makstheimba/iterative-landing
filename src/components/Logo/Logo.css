@@ -11,6 +11,10 @@
   cursor: pointer;
 }
 
+.logo_active:hover {
+  opacity: 1;
+}
+
 .logo__visually-hidden-el {
   border: 0;
   clip: rect(0 0 0 0);
@@ -40,7 +44,6 @@
   .logo {
     width: 152.35px;
     height: 32px;
-    margin-right: 40px;
   }
 
   .logo__icon {
@@ -60,7 +63,6 @@
   .logo {
     width: 190.44px;
     height: 40px;
-    margin-right: 80px;
   }
 
   .logo__icon {
