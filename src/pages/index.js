@@ -10,7 +10,7 @@ const IndexPage = () => {
       <Layout>
         <Header
           isMain
-          title="Open platform to operationalize AI"
+          title="Open platform to&nbsp;operationalize AI"
           text="AI teams face challenges that require new technologies. We build these technologies. Existing data warehouses and data lakes do not fit unstructured datasets like text, images, and videos."
         >
           <Button onClick={() => console.log('open demo form')}>
