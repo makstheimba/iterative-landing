@@ -1,0 +1,13 @@
+body {
+  margin: 0;
+}
+
+.layout {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  font-family: sans-serif;
+  background-color: #0f1624;
+  display: flex;
+  flex-direction: column;
+}
