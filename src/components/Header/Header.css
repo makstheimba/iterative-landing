@@ -41,7 +41,7 @@
   }
 
   .header__is-main .header__text {
-    margin: 16px 0 24px;
+    margin: 24px 0;
   }
 }
 
@@ -63,6 +63,6 @@
   }
 
   .header__is-main .header__text {
-    margin: 16px 0 32px;
+    margin: 32px 0;
   }
 }
