@@ -16,7 +16,6 @@ export default function CustomersList() {
           icon={standard}
           widthPixelSizes={[55, 78, 130]}
           heightPixelSizes={[20, 48, 80]}
-          linkDescription="Standard"
         />
       </li>
       <li className="customerslist__item">
@@ -24,7 +23,6 @@ export default function CustomersList() {
           icon={rubrik}
           widthPixelSizes={[50, 75, 122]}
           heightPixelSizes={[19, 48, 80]}
-          linkDescription="Rubrick"
         />
       </li>
       <li className="customerslist__item">
@@ -32,7 +30,6 @@ export default function CustomersList() {
           icon={warbyparker}
           widthPixelSizes={[74, 109, 185]}
           heightPixelSizes={[20, 48, 80]}
-          linkDescription="Warby Parker"
         />
       </li>
       <li className="customerslist__item">
@@ -40,7 +37,6 @@ export default function CustomersList() {
           icon={odnoklassniki}
           widthPixelSizes={[12, 18, 30]}
           heightPixelSizes={[27, 56, 94]}
-          linkDescription="Odnoklassniki"
         />
       </li>
       <li className="customerslist__item">
@@ -48,7 +44,6 @@ export default function CustomersList() {
           icon={smithsonian}
           widthPixelSizes={[68, 99, 162]}
           heightPixelSizes={[20, 48, 80]}
-          linkDescription="Smithsonian"
         />
       </li>
       <li className="customerslist__item">
@@ -56,7 +51,6 @@ export default function CustomersList() {
           icon={neosensory}
           widthPixelSizes={[56, 85, 141]}
           heightPixelSizes={[32, 67, 112]}
-          linkDescription="Neosensory"
         />
       </li>
     </ul>
