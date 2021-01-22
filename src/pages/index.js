@@ -9,7 +9,7 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Home" description="This is our home and here we will share basic information" />
-      {/* <Hero /> */}
+      <Hero />
     </Layout>
 
 
