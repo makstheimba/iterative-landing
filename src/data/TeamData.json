@@ -5,8 +5,8 @@
     "pic": "https://randomuser.me/api/portraits/men/4.jpg",
     "location": "",
     "coordinates": {
-      "x": "40%",
-      "y": "72%"
+      "x": "11%",
+      "y": "25%"
     },
     "description": ""
   },
@@ -16,8 +16,8 @@
     "pic": "https://randomuser.me/api/portraits/women/4.jpg",
     "location": "",
     "coordinates": {
-      "x": "44%",
-      "y": "80%"
+      "x": "9%",
+      "y": "33.5%"
     },
     "description": ""
   },
@@ -27,8 +27,8 @@
     "pic": "https://randomuser.me/api/portraits/women/5.jpg",
     "location": "",
     "coordinates": {
-      "x": "15%",
-      "y": "72%"
+      "x": "12.4%",
+      "y": "34%"
     },
     "description": ""
   },
@@ -38,8 +38,8 @@
     "pic": "https://randomuser.me/api/portraits/women/6.jpg",
     "location": "",
     "coordinates": {
-      "x": "8%",
-      "y": "54%"
+      "x": "11.2%",
+      "y": "42%"
     },
     "description": ""
   },
@@ -49,8 +49,8 @@
     "pic": "https://randomuser.me/api/portraits/men/5.jpg",
     "location": "",
     "coordinates": {
-      "x": "15%",
-      "y": "65%"
+      "x": "20%",
+      "y": "20%"
     },
     "description": ""
   },
@@ -60,8 +60,41 @@
     "pic": "https://randomuser.me/api/portraits/men/6.jpg",
     "location": "",
     "coordinates": {
-      "x": "45%",
-      "y": "70%"
+      "x": "16.4%",
+      "y": "27%"
+    },
+    "description": ""
+  },
+  {
+    "name": "",
+    "title": "",
+    "pic": "https://randomuser.me/api/portraits/women/7.jpg",
+    "location": "",
+    "coordinates": {
+      "x": "20%",
+      "y": "28%"
+    },
+    "description": ""
+  },
+  {
+    "name": "",
+    "title": "",
+    "pic": "https://randomuser.me/api/portraits/men/7.jpg",
+    "location": "",
+    "coordinates": {
+      "x": "23.5%",
+      "y": "28%"
+    },
+    "description": ""
+  },
+  {
+    "name": "",
+    "title": "",
+    "pic": "https://randomuser.me/api/portraits/women/8.jpg",
+    "location": "",
+    "coordinates": {
+      "x": "19%",
+      "y": "37%"
     },
     "description": ""
   }
