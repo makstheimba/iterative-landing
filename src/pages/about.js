@@ -1,13 +1,22 @@
 import * as React from 'react';
-import { Link } from 'gatsby';
+import Layout from '../components/Layout/Layout';
+import Cookies from '../components/Cookies/Cookies';
+import Header from '../components/Header/Header';
 
-const AboutPage = () => {
+export default function AboutPage() {
   return (
-    <div>
-      Hi! This is an About page.
-      <Link to="/">Go to the home page</Link>
-    </div>
+    <Layout>
+      <Cookies />
+      <Header
+        title="About Us"
+        text={
+          <p className="header__text">
+            Data Science = Highly Iterative Metrics-driven Process With{' '}
+            <br className="header__break_for_tablet"></br>
+            Data <br className="header__break_for_desktop"></br>and Code
+          </p>
+        }
+      />
+    </Layout>
   );
-};
-
-export default AboutPage;
+}
