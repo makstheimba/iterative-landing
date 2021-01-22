@@ -1,7 +1,7 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import Icon from '../Icon/Icon';
 import Logo from '../Logo/Logo';
+import FooterList from '../FooterList/FooterList';
 import githubIcon from '../../images/icn-github.svg';
 import twitterIcon from '../../images/icn-twitter.svg';
 import linkedInIcon from '../../images/icn-linkedin-in.svg';
@@ -10,74 +10,36 @@ import discordIcon from '../../images/icn-discord.svg';
 import './Footer.css';
 
 export default function Footer() {
+  const footerLinkListsData = [
+    {
+      title: 'Company',
+      links: [
+        { url: '/about/', isLocal: true, text: 'About us' },
+        { url: '/pricing/', isLocal: true, text: 'Pricing' },
+      ],
+    },
+    {
+      title: 'Legal',
+      links: [
+        { url: '/', isLocal: true, text: 'Privacy Policy' },
+        { url: '/', isLocal: true, text: 'Terms of use' },
+      ],
+    },
+    {
+      title: 'Our Products',
+      links: [
+        { url: 'about:blank', text: 'DVC' },
+        { url: 'about:blank', text: 'CML' },
+        { url: 'about:blank', text: 'Studio' },
+      ],
+    },
+  ];
   return (
     <footer className="footer">
       <ul className="footer__list footer__link-lists">
-        <li className="footer__link-lists-item">
-          <h2 className="footer__link-list-title">Company</h2>
-          <ul className="footer__list footer__link-list">
-            <li className="footer__link-list-item">
-              <Link to="/about/" className="footer__link">
-                About us
-              </Link>
-            </li>
-            <li className="footer__link-list-item">
-              <Link to="/pricing/" className="footer__link">
-                Pricing
-              </Link>
-            </li>
-          </ul>
-        </li>
-        <li className="footer__link-lists-item">
-          <h2 className="footer__link-list-title">Legal</h2>
-          <ul className="footer__list footer__link-list">
-            <li className="footer__link-list-item">
-              <a href="/" className="footer__link">
-                Privacy Policy
-              </a>
-            </li>
-            <li className="footer__link-list-item">
-              <a href="/" className="footer__link">
-                Terms of use
-              </a>
-            </li>
-          </ul>
-        </li>
-        <li className="footer__link-lists-item">
-          <h2 className="footer__link-list-title">Our Products</h2>
-          <ul className="footer__list footer__link-list">
-            <li className="footer__link-list-item">
-              <a
-                target="_blank"
-                rel="noreferrer"
-                href="about:blank"
-                className="footer__link"
-              >
-                DVC
-              </a>
-            </li>
-            <li className="footer__link-list-item">
-              <a
-                target="_blank"
-                rel="noreferrer"
-                href="about:blank"
-                className="footer__link"
-              >
-                CML
-              </a>
-            </li>
-            <li className="footer__link-list-item">
-              <a
-                target="_blank"
-                rel="noreferrer"
-                href="about:blank"
-                className="footer__link"
-              >
-                Studio
-              </a>
-            </li>
-          </ul>
-        </li>
+        {footerLinkListsData.map((data, i) => (
+          <FooterList key={i} {...data} />
+        ))}
       </ul>
       <div className="footer__company">
         <Logo link="/" linkDescription="Go to home page" />
