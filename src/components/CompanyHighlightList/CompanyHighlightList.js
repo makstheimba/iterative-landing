@@ -11,20 +11,17 @@ export default function CompanyHighlightList() {
       <CompanyHighlight
         icon={gearIcon}
         title="Familiar"
-        text="Don’t reinvent the wheel! Fast&nbsp;and cost-efficient path to production"
-        description="Gear Icon"
+        description="Don’t reinvent the wheel! Fast&nbsp;and cost&#8209;efficient path to production"
       />
       <CompanyHighlight
         icon={codeIcon}
         title="Open source"
-        text="Lightweight. Open-source. No&#8209;strings attached."
-        description="Code Icon"
+        description="Lightweight.&nbsp;Open&#8209;source. No&#8209;strings attached."
       />
       <CompanyHighlight
         icon={shieldIcon}
         title="Secure"
-        text="You data is always stored by you. Your models are trained on your machines"
-        description="Shield Icon"
+        description="You data is always stored by you. Your models are trained on your machines"
       />
     </ul>
   );
