@@ -1,39 +1,21 @@
 import styled from 'styled-components'
 
-export const HeroWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  justify-content: center;
-  width: 100%;
-  padding: 0 5rem 5rem;
-  margin: 0 auto;
-  max-width: 1040px;
-  box-sizing: content-box;
-  position: relative;
-`
 export const HeroBG = styled.img`
   position: absolute;
-  right: -20px;
+  left: 500px;
   top: 0;
-`
 
-export const SectionHeader = styled.h2`
-  padding: 80px 0 32px;
-  font-size: 72px;
-  font-weight: 800;
-  max-width: 700px;
-  background: linear-gradient(121.57deg, #FFFFFF 18.77%, rgba(255, 255, 255, 0.66) 60.15%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-`
+  @media ${(props) => props.theme.breakpoints.lg} {
+    width: 450px;
+    height: 450px;
+    left: 500px;
+  }
 
-export const SectionText = styled.p`
-  max-width: 800px;
-  font-size: 24px;
-  line-height: 40px;
-  padding: 0 0 32px;
-  color: rgba(255, 255, 255, 0.5);
+  @media ${(props) => props.theme.breakpoints.md} {
+    width: 300px;
+    height: 300px;
+    left: 65vw;
+  }
 `
 
 export const HeroButton = styled.button`
@@ -46,6 +28,34 @@ export const HeroButton = styled.button`
   margin: 0 0 80px;
   color: #fff;
   background: linear-gradient(270deg, #13ADC7 0%, #945DD6 100%);
+  background-size: 100% 100%;
+  cursor: pointer;
+  transition: 0.5s ease;
+  position: relative;
+  left: 0;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    background-size: 500% 100%;
+    left: 8px;
+  }
+
+  @media ${(props) => props.theme.breakpoints.lg} {
+    width: 184px;
+    height: 48px;
+    font-size: 16px;
+    margin-bottom: 64px;
+  }
+
+  @media ${(props) => props.theme.breakpoints.md} {
+    width: 100%;
+    height: 32px;
+    font-size: 14px;
+    margin-bottom: 32px;
+  }
 `
 
 export const HeroSponsorsContainer = styled.div`
@@ -53,20 +63,28 @@ export const HeroSponsorsContainer = styled.div`
   display: flex;
   justify-content: space-between;
   margin: 0 0 80px;
-`  
 
-export const HeroSponsor = styled.div`
-  width: 1fr;
+  @media ${(props) => props.theme.breakpoints.lg} {
+    margin-bottom: 64px;
+  }
+
+  @media ${(props) => props.theme.breakpoints.md} {
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+  }
 `
 
 export const HeroSponsorLogo = styled.img`
   width: 1fr;
-`
+  height: 80px; 
 
-export const SectionDivider = styled.div`
-  width: 64px;
-  height: 6px;
-  border-radius: 10px;
-  background-color: #fff;
-  background: linear-gradient(270deg, #13ADC7 0%, #945DD6 100%);
+  @media ${(props) => props.theme.breakpoints.lg} {
+    height: 50px;
+  }
+
+  @media ${(props) => props.theme.breakpoints.md} {
+    height: 32px;
+    flex-basis: 33%;
+    margin-bottom: 8px;
+  }
 `
