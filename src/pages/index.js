@@ -3,6 +3,7 @@ import Community from '../components/Community/Community';
 import Layout from '../components/Layout/Layout';
 import Button from '../components/Button/Button';
 import Header from '../components/Header/Header';
+import Footer from '../components/Footer/Footer';
 
 const IndexPage = () => {
   return (
@@ -19,6 +20,7 @@ const IndexPage = () => {
       <main>
         <Community />
       </main>
+      <Footer />
     </Layout>
   );
 };

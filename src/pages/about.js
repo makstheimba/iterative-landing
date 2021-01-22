@@ -2,6 +2,7 @@ import * as React from 'react';
 import Layout from '../components/Layout/Layout';
 import Cookies from '../components/Cookies/Cookies';
 import Header from '../components/Header/Header';
+import Footer from '../components/Footer/Footer';
 
 export default function AboutPage() {
   return (
@@ -17,6 +18,7 @@ export default function AboutPage() {
           </p>
         }
       />
+      <Footer />
     </Layout>
   );
 }
