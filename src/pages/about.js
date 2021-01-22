@@ -1,13 +1,16 @@
 import * as React from "react"
-import { Link } from "gatsby"
+import Layout from '../Layout/Layout'
+import SEO from '../utils/Seo'
+import TheTeam from "../components/TheTeam"
 
 const AboutPage = () => {
     return (
-        <div>
-            Hi! This is an About page.
-            <Link to="/">Go to the home page</Link>
-        </div>
+      <Layout>
+        <SEO title="About Us" description="This is our About Us page" />
+        
+        <TheTeam />
+      </Layout>
     )
-}
+  }
 
 export default AboutPage;

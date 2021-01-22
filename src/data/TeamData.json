@@ -1,0 +1,68 @@
+[
+  {
+    "name": "",
+    "title": "",
+    "pic": "https://randomuser.me/api/portraits/men/4.jpg",
+    "location": "",
+    "coordinates": {
+      "x": "40%",
+      "y": "72%"
+    },
+    "description": ""
+  },
+  {
+    "name": "",
+    "title": "",
+    "pic": "https://randomuser.me/api/portraits/women/4.jpg",
+    "location": "",
+    "coordinates": {
+      "x": "44%",
+      "y": "80%"
+    },
+    "description": ""
+  },
+  {
+    "name": "",
+    "title": "",
+    "pic": "https://randomuser.me/api/portraits/women/5.jpg",
+    "location": "",
+    "coordinates": {
+      "x": "15%",
+      "y": "72%"
+    },
+    "description": ""
+  },
+  {
+    "name": "",
+    "title": "",
+    "pic": "https://randomuser.me/api/portraits/women/6.jpg",
+    "location": "",
+    "coordinates": {
+      "x": "8%",
+      "y": "54%"
+    },
+    "description": ""
+  },
+  {
+    "name": "",
+    "title": "",
+    "pic": "https://randomuser.me/api/portraits/men/5.jpg",
+    "location": "",
+    "coordinates": {
+      "x": "15%",
+      "y": "65%"
+    },
+    "description": ""
+  },
+  {
+    "name": "",
+    "title": "",
+    "pic": "https://randomuser.me/api/portraits/men/6.jpg",
+    "location": "",
+    "coordinates": {
+      "x": "45%",
+      "y": "70%"
+    },
+    "description": ""
+  }
+]
