@@ -26,8 +26,13 @@ Main.args = {
 export const About = Template.bind({});
 About.args = {
   title: 'About Us',
-  text:
-    'Data Science = Highly Iterative Metrics-driven Process With Data and Code',
+  text: (
+    <p className="header__text">
+      Data Science = Highly Iterative Metrics-driven Process With{' '}
+      <br className="header__break_for_tablet"></br>
+      Data <br className="header__break_for_desktop"></br>and Code
+    </p>
+  ),
 };
 
 export const Pricing = Template.bind({});
