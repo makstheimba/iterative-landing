@@ -1,5 +1,6 @@
 import * as React from 'react';
 import Community from '../components/Community/Community';
+import CompanyHighlightList from '../components/CompanyHighlightList/CompanyHighlightList';
 import Layout from '../components/Layout/Layout';
 import Title from '../components/Title/Title';
 
@@ -13,6 +14,7 @@ const IndexPage = () => {
           size="l"
         />
         <Community />
+        <CompanyHighlightList />
       </Layout>
     </main>
   );
