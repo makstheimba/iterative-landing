@@ -35,6 +35,10 @@
   color: rgba(255, 255, 255, 0.5);
 }
 
+.sectiontitle__break_for_desktop {
+  display: none;
+}
+
 @media (min-width: 768px) {
   .sectiontitle {
     padding: 24px 0 0 0;
@@ -57,6 +61,10 @@
     font-size: 16px;
     line-height: 28px;
   }
+
+  .sectiontitle__break_for_desktop {
+    display: none;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -71,7 +79,6 @@
   }
 
   .sectiontitle__subtitle {
-    width: 800px;
     padding: 0;
     margin: 16px 0 0 0;
     font-size: 24px;
@@ -85,5 +92,9 @@
     line-height: 32px;
     letter-spacing: 0.02em;
     color: rgba(255, 255, 255, 0.5);
+  }
+
+  .sectiontitle__break_for_desktop {
+    display: initial;
   }
 }
