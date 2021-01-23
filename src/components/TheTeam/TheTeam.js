@@ -124,20 +124,20 @@ export const PopupContainer = styled.div`
 
 export const TeamPopup = styled.div`
   position: absolute;
-  left: ${({ open }) => (open ? 'calc(50% - 240px)' : '30%')};
+  left: ${({ open }) => (open ? 'calc(50% - 240px)' : 'calc(50% - 340px)')};
   top: calc(50% - 176px);
   width: 480px;
   height: 354px;
   background-color: #fff;
   border-radius: 16px;
   padding: 24px;
-  transition: 0.4s ease-in-out;
+  transition: 0.4s ease-out;
 
   @media ${(props) => props.theme.breakpoints.lg} {
     width: 400px;
     height: 308px;
     padding: 24px;
-    left: ${({ open }) => (open ? 'calc(50% - 200px)' : '20%')};
+    left: ${({ open }) => (open ? 'calc(50% - 200px)' : 'calc(50% - 300px)')};
     top: calc(50% - 154px);
   }
 `
