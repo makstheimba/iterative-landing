@@ -97,6 +97,17 @@ export const MemberBubble = styled.button`
     width: 16px;
     height: 16px;
     border: 1px solid #FFF;
+    cursor: initial;
+
+    &:hover {
+      background-size: 100%;
+    }
+    &:focus {
+    outline: none;
+    background-size: 100%;
+    border: 1px solid #FFF;
+    margin: 2px;
+    }
   }
 `
 export const PopupContainer = styled.div`
@@ -126,6 +137,8 @@ export const TeamPopup = styled.div`
     width: 400px;
     height: 308px;
     padding: 24px;
+    left: ${({ open }) => (open ? 'calc(50% - 200px)' : '20%')};
+    top: calc(50% - 154px);
   }
 `
 

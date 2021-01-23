@@ -8,9 +8,25 @@ import twitterIcon from '../../images/Team/team_icn-twitter.svg'
 import linkedinIcon from '../../images/Team/team_icn-linkedin.svg'
 
 const TheTeam = () => {
+  const MOBILE_WIDTH = 768;
   const [popupOpen, setPopupOpen] = React.useState(false);
+  const [width, setWidth] = React.useState(window.innerWidth);
+
+  React.useEffect(() => {
+    function handleResize() {
+      setWidth(window.innerWidth);
+      if (width < MOBILE_WIDTH) {
+        handlePopupClose();
+      }
+    }
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  });
 
   function handlePopupOpen(devData) {
+    if (width < MOBILE_WIDTH) {
+      return;
+    }
     setPopupOpen(true);
   }
 
