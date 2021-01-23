@@ -10,8 +10,8 @@ const AboutPage = () => {
       <Layout>
         <SEO title="About Us" description="This is our About Us page" />
         <AboutUs />
-        <Career />
         <TheTeam />
+        <Career />
       </Layout>
     )
   }
