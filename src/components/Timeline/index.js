@@ -28,38 +28,35 @@ const data = [
   },
 ]
 
-
-
-
 const Timeline = () => {
-const [currentPos, setcurrentPos] = React.useState(0);
+// const [currentPos, setcurrentPos] = React.useState(0);
 
- const carouselRef = React.useRef();
-  const scrollerRef = React.useRef();
+//  const carouselRef = React.useRef();
+//   const scrollerRef = React.useRef();
 
-  function handleScroll(){
-  setcurrentPos(carouselRef.current.scrollLeft);
-  findSetActive();
-}
+//   function handleScroll(){
+//   setcurrentPos(carouselRef.current.scrollLeft);
+//   findSetActive();
+// }
 
-function findSetActive(){
-  //actually it would be better if these elements were created and inserted at the beggining
-  //so that the array would only be created once
-  const carouselItems = Array.from(carouselRef.querySelectorAll('.carousel__item'));
-  carouselItems.forEach(item =>{
-    if(currentPos >= item.offset.left){
-      item.classList.add('carousel__button_active');
-    }
-  })
-}
+// function findSetActive(){
+//   //actually it would be better if these elements were created and inserted at the beggining
+//   //so that the array would only be created once
+//   const carouselItems = Array.from(carouselRef.querySelectorAll('.carousel__item'));
+//   carouselItems.forEach(item => {
+//     if(currentPos >= item.offset.left){
+//       item.classList.add('carousel__button_active');
+//     }
+//   })
+// }
 
-  function handleClick(index){
-    const elemPos = carouselRef.current.querySelectorAll('.carousel__item')[index].offset.left;
-    scrollerRef.current.scrollTo({
-      left: elemPos,
-      behavior: 'smooth'
-    })
-  }
+  // function handleClick(index){
+  //   const elemPos = carouselRef.current.querySelectorAll('.carousel__item')[index].offset.left;
+  //   scrollerRef.current.scrollTo({
+  //     left: elemPos,
+  //     behavior: 'smooth'
+  //   })
+  // }
 
   return (
   <Section>
@@ -69,7 +66,7 @@ function findSetActive(){
     </SectionText>
 
     
-    <ul className="carousel__container" ref={carouselRef} onScroll={handleScroll}>
+    <ul className="carousel__container" >
     {data.map((item, index) => {
           return (
             <li key={index} className="carousel__item" id={`carousel__item-${index}`}>
@@ -82,11 +79,11 @@ function findSetActive(){
         })}
     </ul>
 
-    <div className="carousel__buttons" ref={scrollerRef}>
+    <div className="carousel__buttons" >
     {data.map((item, index) => {
           return (
-            // <Link key={index} className="carousel__button" href={`#carousel__item-${index}`}></Link>
-            <Link key={index} className="carousel__button" onClick={handleClick(index)}></Link>
+            <Link key={index} className="carousel__button" href={`#carousel__item-${index}`}></Link>
+            // <Link key={index} className="carousel__button" onClick={handleClick(index)}></Link>
             )
         })}
     </div>
