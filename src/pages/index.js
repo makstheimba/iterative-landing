@@ -4,6 +4,8 @@ import Layout  from '../components/Layout/Layout'
 import Footer  from '../components/Footer/Footer'
 import QuickLinks from '../components/QuickLinks/QuickLinks'
 import BottomLine from '../components/BottomLine/BottomLine'
+import Community from '../components/Community/Community'
+import Highlights from '../components/Highlights/Highlights'
 
 // markup
 const IndexPage = () => {
@@ -14,9 +16,11 @@ const IndexPage = () => {
 
 
         <Link to="/about/">This is a link to About page</Link><br />
+        <Highlights />
+        <Community />
         <Footer>
           <QuickLinks></QuickLinks>
-          <BottomLine></BottomLine> 
+          <BottomLine></BottomLine>
         </Footer>
       </Layout>
     </main>
