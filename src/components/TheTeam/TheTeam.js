@@ -99,32 +99,147 @@ export const MemberBubble = styled.button`
     border: 1px solid #FFF;
   }
 `
+export const PopupContainer = styled.div`
+  visibility: ${({ open }) => (open ? 'visible' : 'hidden')};
+  opacity: ${({ open }) => (open ? '1' : '0')};
+  transition: 0.3s ease;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,.1);
+`
 
 export const TeamPopup = styled.div`
   position: absolute;
-  left: calc(50% - 240px);
+  left: ${({ open }) => (open ? 'calc(50% - 240px)' : '30%')};
   top: calc(50% - 176px);
   width: 480px;
   height: 354px;
   background-color: #fff;
   border-radius: 16px;
   padding: 24px;
+  transition: 0.4s ease-in-out;
+
+  @media ${(props) => props.theme.breakpoints.lg} {
+    width: 400px;
+    height: 308px;
+    padding: 24px;
+  }
 `
 
-export const IntroContainer = styled.div``
-export const PopupName = styled.h3``
-export const PopupTitle = styled.p``
-export const PopupLocation = styled.p``
-export const PopupDescription = styled.p``
-export const PicWrap = styled.div``
-export const PopupPic = styled.img``
-export const PopupLinks = styled.h3``
+export const IntroContainer = styled.div`
+  display: flex;
+  width: 100%;
+  padding-bottom: 24px;
 
-export const PopupIcon = styled.h3`
-@media ${(props) => props.theme.breakpoints.lg} {
+  @media ${(props) => props.theme.breakpoints.lg} {
+    padding-bottom: 16px;
+  }
+`
+
+export const IntroText = styled.div`
+  display: flex;
+  flex-direction: column;
+
+`
+
+export const IntroName = styled.h3`
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  color: #0f1624;
+  padding-bottom: 16px;
+
+  @media ${(props) => props.theme.breakpoints.lg} {
+    font-size: 20px;
+    line-height: 32px;
+    padding-bottom: 12px;
+  }
   
-}
-@media ${(props) => props.theme.breakpoints.md} {
-  
-}
+`
+export const IntroTitle = styled.p`
+  font-size: 14px;
+  line-height: 22px;
+  padding-bottom: 20px;
+  max-width: 272px;
+  color: rgba(15, 22, 36, 0.75);
+
+  @media ${(props) => props.theme.breakpoints.lg} {
+    font-size: 12px;
+    line-height: 18px;
+    padding-bottom: 12px;
+    max-width: 232px;
+    padding-right: 16px;
+  }
+`
+
+export const IntroLocation = styled.p`
+  display: flex;
+  font-size: 14px;
+  line-height: 22px;
+  color: rgba(15, 22, 36, 0.5);
+  align-items: center;
+  padding-bottom: 16px;
+
+  @media ${(props) => props.theme.breakpoints.lg} {
+    font-size: 12px;
+    line-height: 18px;
+  }
+`
+
+export const IntroDivider = styled.div`
+  width: 32px;
+  height: 1px;
+  background-color: rgba(15,22,36, .1);
+`
+
+export const IntroAvatar = styled.div`
+  width: 136px;
+  height: 136px;
+  margin-left: auto;
+  background-color: rgba(0,0,0,.4);
+
+  @media ${(props) => props.theme.breakpoints.lg} {
+    width: 104px;
+    height: 104px;
+  }
+`
+export const PopupPic = styled.img``
+
+export const IntroDescription = styled.p`
+  font-size: 18px;
+  line-height: 30px;
+  color: rgba(15, 22, 36, 0.75);
+  padding-bottom: 24px;
+
+  @media ${(props) => props.theme.breakpoints.lg} {
+    font-size: 16px;
+    line-height: 28px;
+    padding-bottom: 16px;
+  }
+`
+
+export const PopupLinks = styled.div`
+  display: flex;
+`
+
+export const PopupLink = styled.a`
+  display: flex;
+  margin-right: 12px;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: 0.2s;
+
+  &:hover {
+    opacity: 1;
+    transform: scale(1.3);
+  }
+`
+
+export const PopupIcon = styled.img`
+  height: 16px;
+  width: 16px;
+  margin-right: ${(props) => props.loc ? '8px' : '0'}; 
 `
