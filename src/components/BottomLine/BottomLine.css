@@ -1,0 +1,29 @@
+.bottomLine {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  align-items: center;
+  margin: 0;
+}
+
+.bottomLine__logo {
+  display: flex;
+  flex-direction: row;
+}
+
+.bottomLine__text {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 18px;
+  line-height: 30px;
+  margin-left: 32px;
+}
+
+.bottomLine__list {
+  width: 335px;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

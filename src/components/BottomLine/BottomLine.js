@@ -10,14 +10,16 @@ import github from '../../images/Github.svg'
 
 export default function BottomLine({  children }) {
   return <div className="bottomLine">
-    <img src={logoWithText} />
-    <p className="bottomLine__text">Open platform to operationalize AI</p>
-    <ul>
-    <li className="bottomLine__social"><img src={github} /></li>
-    <li className="bottomLine__social"><img src={twitter} /></li>
-    <li className="bottomLine__social"><img src={linkedin} /></li>
-    <li className="bottomLine__social"><img src={youtube} /></li>
-    <li className="bottomLine__social"><img src={discord} /></li>
+    <div className="bottomLine__logo">
+      <img src={logoWithText} />
+      <p className="bottomLine__text">Open platform to operationalize AI</p>
+    </div>
+    <ul className="bottomLine__list">
+      <li className="bottomLine__social"><img src={github} /></li>
+      <li className="bottomLine__social"><img src={twitter} /></li>
+      <li className="bottomLine__social"><img src={linkedin} /></li>
+      <li className="bottomLine__social"><img src={youtube} /></li>
+      <li className="bottomLine__social"><img src={discord} /></li>
     </ul>
   </div>
 };
