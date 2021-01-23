@@ -69,3 +69,9 @@
   line-height: 40px;
   letter-spacing: .02em;
 }
+
+.community__social {
+  height: 32px;
+  width: 32px;
+  margin: auto;
+}
