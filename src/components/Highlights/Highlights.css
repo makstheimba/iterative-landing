@@ -1,0 +1,27 @@
+.highlights {
+  width: 90%;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 auto 80px;
+}
+
+.highlights__feature {
+  max-width: 300px;
+}
+
+.highlights__tite {
+  margin: 8px 0;
+  font-size: 28px;
+  line-height: 32px;
+  color: #fff;
+}
+
+.highlights__text {
+  margin: 0;
+  font-size: 18px;
+  line-height: 30px;
+  color: rgba(255,255,255,0.75)
+}
