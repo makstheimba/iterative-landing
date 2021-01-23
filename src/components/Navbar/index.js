@@ -30,8 +30,8 @@ const NavBar = () => {
             <NavLogo src={navLogo} logo="true" />
             <NavLogo src={navIterative} />
           </NavLink>
-          <NavLink to="/">About Us</NavLink>
-          <NavLink to="/">Pricing</NavLink>
+          <NavLink to="/about">About Us</NavLink>
+          <NavLink to="/pricing">Pricing</NavLink>
           <NavDivider />
           <NavProducts>Products <NavProductsIcon src={navArrow} /></NavProducts>
 
