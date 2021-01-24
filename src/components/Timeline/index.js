@@ -1,9 +1,11 @@
 import React from 'react'
 import { Section, SectionTitle, SectionText } from '../GlobalStyles/index'
-import { Link } from "gatsby"
+import {
+  CarouselContainer, CarouselItem, CarouselItemTitle, CarouselItemImg,
+  CarouselItemText, CarouselButtons, CarouselButton
+  } from './Timeline'
 import TimelineImg from '../../images/timeline.svg'
-import './Timeline.css'
-
+//import './Timeline.css' //used for id anchors. will delete later
 
 const data = [
   {
@@ -29,34 +31,6 @@ const data = [
 ]
 
 const Timeline = () => {
-// const [currentPos, setcurrentPos] = React.useState(0);
-
-//  const carouselRef = React.useRef();
-//   const scrollerRef = React.useRef();
-
-//   function handleScroll(){
-//   setcurrentPos(carouselRef.current.scrollLeft);
-//   findSetActive();
-// }
-
-// function findSetActive(){
-//   //actually it would be better if these elements were created and inserted at the beggining
-//   //so that the array would only be created once
-//   const carouselItems = Array.from(carouselRef.querySelectorAll('.carousel__item'));
-//   carouselItems.forEach(item => {
-//     if(currentPos >= item.offset.left){
-//       item.classList.add('carousel__button_active');
-//     }
-//   })
-// }
-
-  // function handleClick(index){
-  //   const elemPos = carouselRef.current.querySelectorAll('.carousel__item')[index].offset.left;
-  //   scrollerRef.current.scrollTo({
-  //     left: elemPos,
-  //     behavior: 'smooth'
-  //   })
-  // }
 
   return (
   <Section>
@@ -66,27 +40,32 @@ const Timeline = () => {
     </SectionText>
 
     
-    <ul className="carousel__container" >
+    <CarouselContainer>
     {data.map((item, index) => {
           return (
-            <li key={index} className="carousel__item" id={`carousel__item-${index}`}>
-              <h1 className="carousel__item-title">{`${item.year}`}
-                <img className="carousel__item-img" src={TimelineImg}/>
-              </h1>
-              <p className="carousel__item-text">{item.text}</p>
-            </li>
+            //anchor id will have to be replicated somehow in a functional component
+            //until then, we'll use jsx and css file
+            //ideally the buttons will use onClick and scrollTo in the future anyways,
+            //so the anchors will become moot
+            // <li key={index} className="carousel__item" id={`carousel__item-${index}`}>
+            <CarouselItem key={index} className="carousel__item" id={`carousel__item-${index}`}>
+              <CarouselItemTitle>{`${item.year}`}
+                <CarouselItemImg src={TimelineImg}/>
+              </CarouselItemTitle>
+              <CarouselItemText>{item.text}</CarouselItemText>
+            {/* </li> */}
+            </CarouselItem>
           )
         })}
-    </ul>
+    </CarouselContainer>
 
-    <div className="carousel__buttons" >
+    <CarouselButtons >
     {data.map((item, index) => {
           return (
-            <Link key={index} className="carousel__button" href={`#carousel__item-${index}`}></Link>
-            // <Link key={index} className="carousel__button" onClick={handleClick(index)}></Link>
+            <CarouselButton key={index} href={`#carousel__item-${index}`}></CarouselButton>
             )
         })}
-    </div>
+    </CarouselButtons>
   </Section>
   )
 }

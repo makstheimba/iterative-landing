@@ -1,0 +1,126 @@
+.carousel__container {
+  background: #0F1624;
+	padding: 1rem;
+  list-style:none;
+  display: flex;
+  justify-content: space-evenly; 
+  overflow-x:auto;
+}
+
+.carousel__item {
+  background: #0F1624;
+  border-radius: 3px;
+  max-width: 195.6px;
+}
+
+.carousel__item-title{
+  font-weight: bold;
+  font-size: 24x;
+  line-height: 32px;
+  letter-spacing: 0.02em;
+  display: flex;
+  width: max-content;
+  background: linear-gradient(121.57deg, #FFFFFF 18.77%, rgba(255, 255, 255, 0.66) 60.15%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.carousel__item-img{
+  margin-left: 8px;
+  overflow: visible;
+  z-index: 10;
+}
+
+.carousel__item-text{
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0.02em;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.carousel__buttons{
+  width: 288px;
+
+  display: none;
+  visibility: hidden;
+}
+
+.carousel__button{
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.33);
+  width: 4px;
+  height: 4px;
+  border-radius: 100%;
+  margin-right: 3px;
+}
+
+.carousel__button_active{
+  width: 8px;
+  height: 8px;
+  background: #FFFFFF;}
+
+/* hide scroll */
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.carousel__container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.carousel__container {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+@media screen  and (max-width: 767px){
+  .carousel__item-title{
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .carousel__item-text{
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .carousel__item {
+    width: 108.8px;
+    max-width: 195.6px;
+  }
+}
+
+@media screen and (max-width: 413px){
+  .carousel__item-title{
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .carousel__item-text{
+    font-size: 10px;
+    line-height: 16px;
+  }
+
+  .carousel__container {
+    width: 288px;
+
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    touch-action: pan-x;
+    justify-content: initial;
+  }
+  
+  .carousel__item {
+    max-width: 108px;
+    background: #0E131F;
+    scroll-snap-align: start;
+    border-radius: 3px;
+    margin-right: 32px;
+    overflow: visible;
+  }
+
+  .carousel__buttons{
+    display: flex;
+    visibility: visible;
+  }
+}
