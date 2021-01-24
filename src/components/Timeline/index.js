@@ -5,7 +5,6 @@ import {
   CarouselItemText, CarouselButtons, CarouselButton
   } from './Timeline'
 import TimelineImg from '../../images/timeline.svg'
-//import './Timeline.css' //used for id anchors. will delete later
 
 const data = [
   {
@@ -43,17 +42,11 @@ const Timeline = () => {
     <CarouselContainer>
     {data.map((item, index) => {
           return (
-            //anchor id will have to be replicated somehow in a functional component
-            //until then, we'll use jsx and css file
-            //ideally the buttons will use onClick and scrollTo in the future anyways,
-            //so the anchors will become moot
-            // <li key={index} className="carousel__item" id={`carousel__item-${index}`}>
-            <CarouselItem key={index} className="carousel__item" id={`carousel__item-${index}`}>
+            <CarouselItem key={index} id={`carousel__item-${index}`}>
               <CarouselItemTitle>{`${item.year}`}
                 <CarouselItemImg src={TimelineImg}/>
               </CarouselItemTitle>
               <CarouselItemText>{item.text}</CarouselItemText>
-            {/* </li> */}
             </CarouselItem>
           )
         })}
@@ -62,7 +55,9 @@ const Timeline = () => {
     <CarouselButtons >
     {data.map((item, index) => {
           return (
-            <CarouselButton key={index} href={`#carousel__item-${index}`}></CarouselButton>
+             <CarouselButton key={index} href={`#carousel__item-${index}`}></CarouselButton>
+            //can't get this to work with styled components
+            //<Link key={index} className="carousel__button" href={`#carousel__item-${index}`}></Link>
             )
         })}
     </CarouselButtons>

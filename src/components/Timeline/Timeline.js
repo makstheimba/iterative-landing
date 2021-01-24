@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { Link } from "gatsby"
 
 export const CarouselContainer = styled.ul`
   background: #0F1624;
@@ -97,13 +96,8 @@ export const CarouselButtons = styled.div`
     visibility: visible;
   }
 `
-const Link = ({ className, children }) => (
-  <a className={className}>
-    {children}
-  </a>
-);
 
-export const CarouselButton = styled(Link)`
+export const CarouselButton = styled.a`
   text-decoration: none;
   background: rgba(255, 255, 255, 0.33);
   width: 4px;
