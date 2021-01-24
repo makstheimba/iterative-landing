@@ -15,10 +15,10 @@ import avatarBgImgPurple from '../../images/avatar/avatar-bg-purple.svg'
 
 const data = [
   {
-    img: {avatarImg1},
+    img: avatarImg1,
     title: "Dmitry Petrov",
     text: "Creator of DVC. Ex-Data Scientist at Microsoft. PhD in Computer Science.",
-    color: 'blue'
+    color: avatarBgImgBlue
   },
 ]
 
@@ -31,6 +31,7 @@ const Leadership = () => {
         return (
           <div key={index}>
             <img src={item.img}/>
+            
             <img src={item.color}/>
             <h4>{item.title}</h4>
             <p>{item.text}</p>
