@@ -41,6 +41,13 @@ const data = [
   },
 ]
 
+function avatarColor(index){
+    if(index == 0 || index % 3 === 0) return avatarBgImgBlue;
+    if(index == 1 || index % 3 === 1) return avatarBgImgPurple;
+    if(index == 2 || index % 3 === 2) return avatarBgImgRed;
+    return avatarBgImgBlue;
+}
+
 const Leadership = () => {
   return (
     <Section>
@@ -50,6 +57,7 @@ const Leadership = () => {
         return (
           <div key={index}>
             <img src={item.img}/>
+            <img src={avatarColor(index)}/>
             <h4>{item.title}</h4>
             <p>{item.text}</p>
           </div>
