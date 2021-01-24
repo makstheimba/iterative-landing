@@ -29,9 +29,11 @@ export default function Community() {
     </ul>
     <div className="community__links">
       <p className="community__text">Join the community:</p>
-      <img className="community__social" src={discord}/>
-      <img className="community__social" src={github}/>
-      <img className="community__social" src={twitter}/>
+      <div className="community__social-list">
+        <img className="community__social" src={discord}/>
+        <img className="community__social" src={github}/>
+        <img className="community__social" src={twitter}/>
+      </div>
     </div>
   </div>
 };
