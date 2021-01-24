@@ -52,18 +52,20 @@ const Leadership = () => {
   return (
     <Section>
     <SectionTitle>Leadership</SectionTitle>
-    <div>
+    <ul className="list">
       {data.map((item, index) => {
         return (
-          <div key={index}>
-            <img src={item.img}/>
-            <img src={avatarColor(index)}/>
-            <h4>{item.title}</h4>
-            <p>{item.text}</p>
-          </div>
+          <li className="list-item" key={index}>
+            <div className="list-img-container">
+              <img className="list-img" src={item.img}/>
+              <img className="list-img-border" src={avatarColor(index)}/>
+            </div>
+            <h4 className="list-title">{item.title}</h4>
+            <p className="list-text">{item.text}</p>
+          </li>
         )
       })}
-    </div> 
+    </ul> 
     <SectionDivider />
     </Section>
 
