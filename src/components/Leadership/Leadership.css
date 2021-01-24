@@ -1,9 +1,12 @@
 .list{
   display: flex;
   justify-content: space-evenly;
+  margin-top: 80px;
+  margin-bottom: 124px;
 }
 
 .list-item{
+  max-width: 182.4px;
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -12,15 +15,20 @@
 
 .list-img-container{
   position: relative;
+  width: 136px;
+  height: 136px;
+  margin-bottom: 16px;
 }
 
 .list-img{
+  position: absolute;
   top: 0px;
   left: 0px;
   z-index: 1;
 }
 
 .list-img-border{
+  position: absolute;
   top: 8px;
   left: 8px;
   z-index: 0;
@@ -32,6 +40,7 @@
   line-height: 32px;
   letter-spacing: 0.02em;
   color: #FFFFFF;
+  margin-bottom: 8px;
 }
 
 .list-text{
@@ -40,5 +49,4 @@
   font-size: 14px;
   line-height: 22px;
   color: rgba(255, 255, 255, 0.75);
-
 }
