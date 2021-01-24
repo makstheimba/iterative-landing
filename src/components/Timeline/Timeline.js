@@ -99,9 +99,9 @@ export const CarouselButtons = styled.div`
 
 export const CarouselButton = styled.a`
   text-decoration: none;
-  background: rgba(255, 255, 255, 0.33);
-  width: 4px;
-  height: 4px;
+  background: ${(props) => props.active ? '#FFFFFF' : 'rgba(255, 255, 255, 0.33)'};
+  width: ${(props) => props.active ? '4px' : '2px'};
+  height: ${(props) => props.active ? '4px' : '2px'};
   border-radius: 100%;
   margin-right: 3px;
 `

@@ -56,8 +56,6 @@ const Timeline = () => {
     {data.map((item, index) => {
           return (
              <CarouselButton key={index} href={`#carousel__item-${index}`}></CarouselButton>
-            //can't get this to work with styled components
-            //<Link key={index} className="carousel__button" href={`#carousel__item-${index}`}></Link>
             )
         })}
     </CarouselButtons>

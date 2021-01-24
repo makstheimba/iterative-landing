@@ -48,15 +48,15 @@
 .carousel__button{
   text-decoration: none;
   background: rgba(255, 255, 255, 0.33);
-  width: 4px;
-  height: 4px;
+  width: 2px;
+  height: 2px;
   border-radius: 100%;
   margin-right: 3px;
 }
 
 .carousel__button_active{
-  width: 8px;
-  height: 8px;
+  width: 4px;
+  height: 4px;
   background: #FFFFFF;}
 
 /* hide scroll */
