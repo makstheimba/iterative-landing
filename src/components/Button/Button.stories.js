@@ -26,3 +26,9 @@ LightBlueGradient.args = {
   type: 'light-blue',
   children: 'Apply',
 };
+
+export const Black = Template.bind({});
+Black.args = {
+  type: 'black',
+  children: 'Drop us a line',
+};
