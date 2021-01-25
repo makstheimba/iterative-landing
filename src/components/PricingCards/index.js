@@ -9,22 +9,23 @@ import Studio from "../../images/iterative-icon_viewer.svg"
 const PricingCards = () => {
   return (
     <CardList>
+
       <Cards>
+      
         <CardsTitle>Open-source</CardsTitle>
         <CardsSubTitle>Individuals and teams</CardsSubTitle>
-        {/* should I add a divide things? */}
+
         <CardsText>
           DVC, CML, our other open-source tools come for free, no strings attached
        </CardsText>
 
 
         <CardsLogosContainer>
-          <CardsLogoLink>
+          <CardsLogoLink border>
             <CardLogo src={Infinity} alt="infinity logo" />
-            <CardLogoText> Go to CML</CardLogoText>
+            <CardLogoText right> Go to CML</CardLogoText>
           </CardsLogoLink>
 
-          <CardsLogoDivider />
 
           <CardsLogoLink>
             <CardLogo src={DVC} alt="infinity logo" />
@@ -33,14 +34,10 @@ const PricingCards = () => {
 
         </CardsLogosContainer>
 
-
-
-
-
-
       </Cards>
 
-
+     
+ 
 
       <Cards bottom>
         <CardsTitle>SaaS</CardsTitle>
@@ -51,7 +48,7 @@ const PricingCards = () => {
        </CardsText>
 
         <CardsLogosContainer enterprise>
-          <CardsLogoLink >
+          <CardsLogoLink>
             <CardLogo src={Studio} alt="infinity logo" />
             <CardLogoText> Go to Studio</CardLogoText>
           </CardsLogoLink>
@@ -65,10 +62,11 @@ const PricingCards = () => {
       <Cards>
         <CardsTitle>Enterprise</CardsTitle>
         <CardsSubTitle>Cross-org collaboration</CardsSubTitle>
+
         <CardsText>
           Extend your unstructured data storages with data compliance, data access control and SSO capabilities. Online as well as on-premise installation are available
        </CardsText>
-+
+
         <CardButton>
           Contact us
        </CardButton>
