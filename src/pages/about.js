@@ -9,6 +9,7 @@ const AboutPage = () => {
     return (
     <Layout>
         <SEO title="About" description="About us" />
+        <Timeline />
         <Leadership />
     </Layout>
     )
