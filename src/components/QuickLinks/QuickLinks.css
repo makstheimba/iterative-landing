@@ -23,3 +23,38 @@
   line-height: 30px;
   color: rgba(255, 255, 255, 0.75);
 }
+
+@media (min-width:637px) and (max-width:768px) {
+  .quickLinks {
+    width: 100%;
+  }
+
+  .quickLinks__list {
+    width: 188px;
+  }
+
+  .quickLinks__link {
+    font-size: 16px;
+    line-height: 28px;
+  }
+}
+
+@media (max-width: 637px) {
+  .quickLinks {
+    width: 100%;
+  }
+
+  .quickLinks__list {
+    width: 85px;
+  }
+
+  .quickLinks__heading {
+    font-size: 10px;
+    line-height: 12px;
+  }
+
+  .quickLinks__link {
+    font-size: 10px;
+    line-height: 14px;
+  }
+}
