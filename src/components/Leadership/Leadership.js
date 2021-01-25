@@ -23,11 +23,12 @@ export const LeadershipList = styled.ul`
 export const LeadershipItem = styled.li`
   display: flex;
   flex-direction: column;
+  margin-bottom: 8px;
+
 
   @media ${props => props.theme.breakpoints.sm} {
       flex-direction: row;
       align-items: center;
-      margin-bottom: 8px;
   }
 `
 
