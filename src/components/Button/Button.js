@@ -12,8 +12,8 @@ export default function Button({
   return (
     <button
       disabled={disabled}
-      className={`button ${
-        size === 'small' && 'button_size_small'
+      className={`button ${size === 'small' && 'button_size_small'}  ${
+        size === 'medium' && 'button_size_medium'
       } button_color_${type}`}
       onClick={onClick}
     >
@@ -24,8 +24,13 @@ export default function Button({
 
 Button.propTypes = {
   children: PropTypes.node.isRequired,
-  type: PropTypes.oneOf(['blue-gradient', 'orange-gradient', 'light-blue']),
-  size: PropTypes.oneOf(['small', 'default']),
+  type: PropTypes.oneOf([
+    'blue-gradient',
+    'orange-gradient',
+    'light-blue',
+    'black',
+  ]),
+  size: PropTypes.oneOf(['small', 'medium', 'default']),
   onClick: PropTypes.func.isRequired,
   disabled: PropTypes.bool,
 };
