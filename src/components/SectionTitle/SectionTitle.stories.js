@@ -53,7 +53,7 @@ AboutCareer.args = {
       type="black"
       onClick={() => console.log('open demo form')}
     >
-      Request a Demo
+      Drop us a line
     </Button>
   ),
 };

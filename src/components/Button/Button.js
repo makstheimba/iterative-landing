@@ -12,9 +12,9 @@ export default function Button({
   return (
     <button
       disabled={disabled}
-      className={`button ${size === 'small' && 'button_size_small'} ${
-        size === 'small' && 'button_size_small'
-      } ${size === 'medium' && 'button_size_medium'} button_color_${type}`}
+      className={`button ${size === 'small' && 'button_size_small'}  ${
+        size === 'medium' && 'button_size_medium'
+      } button_color_${type}`}
       onClick={onClick}
     >
       {children}
