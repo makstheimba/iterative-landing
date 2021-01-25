@@ -8,11 +8,7 @@ export default function SectionTitle({ title, subtitle, text, children }) {
     <div className="sectiontitle">
       <div className="sectiontitle__line"></div>
       <Title size="m" title={title} />
-      {typeof subtitle === 'string' ? (
-        <h3 className="sectiontitle__subtitle">{subtitle}</h3>
-      ) : (
-        subtitle
-      )}
+      <h3 className="sectiontitle__subtitle">{subtitle}</h3>
       <p className="sectiontitle__text">{text}</p>
       {children}
     </div>
@@ -21,6 +17,6 @@ export default function SectionTitle({ title, subtitle, text, children }) {
 
 SectionTitle.propTypes = {
   title: PropTypes.string.isRequired,
-  subtitle: PropTypes.node,
+  subtitle: PropTypes.string,
   text: PropTypes.string,
 };

@@ -14,13 +14,8 @@ export const Main = Template.bind({});
 
 Main.args = {
   title: 'Enterprise',
-  subtitle: (
-    <h3 className="sectiontitle__subtitle">
-      AI hand in hand with software development.
-      <br className="sectiontitle__break_for_desktop" /> Built with data
-      scientists, ML engineers, and data engineers in mind.
-    </h3>
-  ),
+  subtitle:
+    'AI hand in hand with software development. Built with data scientists, ML engineers, and data engineers in mind.',
 };
 
 export const AboutTeam = Template.bind({});
