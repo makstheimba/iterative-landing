@@ -18,7 +18,6 @@ Defalt.args = {
   text:
     'I’m a passionate software engineer and architect, specialising in node.js, React and distributed systems.',
   image: testAvatar,
-  color: '#f46737',
   globeLink: 'about:blank',
   twitterLink: 'about:blank',
   linkedinLink: 'about:blank',

@@ -14,7 +14,6 @@ export default function DeveloperCard({
   location,
   text,
   image,
-  color,
   globeLink,
   twitterLink,
   linkedinLink,
@@ -31,7 +30,7 @@ export default function DeveloperCard({
           </div>
         </div>
         <div className="developercard__avatar">
-          <Avatar image={image} color={color} shape="square" />
+          <Avatar image={image} shape="square" />
         </div>
       </div>
       <div className="developercard__line"></div>
