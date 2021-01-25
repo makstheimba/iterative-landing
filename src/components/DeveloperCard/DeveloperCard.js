@@ -42,6 +42,7 @@ export default function DeveloperCard({
             link={globeLink}
             linkDescription="Go to personal page"
             widthPixelSizes={[14, 14, 14]}
+            background="light"
           />
         </li>
         <li>
@@ -50,6 +51,7 @@ export default function DeveloperCard({
             link={twitterLink}
             linkDescription="Go to Twitter"
             widthPixelSizes={[15, 15, 15]}
+            background="light"
           />
         </li>
         <li>
@@ -58,6 +60,7 @@ export default function DeveloperCard({
             link={linkedinLink}
             linkDescription="Go to LinkedIn "
             widthPixelSizes={[13, 13, 13]}
+            background="light"
           />
         </li>
       </ul>
@@ -71,7 +74,6 @@ DeveloperCard.propTypes = {
   location: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
-  color: PropTypes.string,
   globeLink: PropTypes.string,
   twitterLink: PropTypes.string,
   linkedinLink: PropTypes.string,

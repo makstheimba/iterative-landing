@@ -8,6 +8,7 @@ export default function Icon({
   linkDescription,
   widthPixelSizes = [],
   heightPixelSizes = [],
+  background = 'dark',
 }) {
   const [widthS, widthM, widthL] = widthPixelSizes;
   const [
@@ -31,7 +32,7 @@ export default function Icon({
       rel="noreferrer"
       style={cssVars}
       href={link}
-      className="icon icon_is-link"
+      className={`icon icon_is-link_${background}`}
     >
       <span className="icon__visually-hidden-el">{linkDescription}</span>
     </a>
@@ -46,4 +47,5 @@ Icon.propTypes = {
   linkDescription: PropTypes.string,
   widthPixelSizes: PropTypes.arrayOf(PropTypes.number).isRequired,
   heightPixelSizes: PropTypes.arrayOf(PropTypes.number),
+  background: PropTypes.oneOf(['light', 'dark']),
 };
