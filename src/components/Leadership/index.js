@@ -1,6 +1,11 @@
 import React from 'react'
 import { Section, SectionTitle, SectionDivider } from '../GlobalStyles'
-import './Leadership.css'
+import {
+  LeadershipList, LeadershipItem, LeadershipImageContainer,
+  LeadershipImage, LeadershipImageBorder, LeadershipTitle,
+  LeadershipText
+} from './Leadership'
+//import './Leadership.css'
 
 //images
 import avatarImg0L from '../../images/avatar/avatar-00.png'
@@ -62,29 +67,31 @@ const Leadership = () => {
   return (
     <Section>
     <SectionTitle>Leadership</SectionTitle>
-    <ul className="list">
+
+    <LeadershipList>
       {data.map((item, index) => {
         return (
-          <li className="list-item" key={index}>
-            <div className="list-img-container">
+          <LeadershipItem key={index}>
+
+            <LeadershipImageContainer>
               <picture>
                 <source media="(max-width:767px)" srcset={item.img[1]} />
                 <source media="(max-width:413px)" srcset={item.img[2]} />
-                <img className="list-img" src={item.img[0]} alt={`profile-pic-${index+1}`}/>
+                <LeadershipImage src={item.img[0]} alt={`profile-pic-${index+1}`}/>
               </picture>
-              <img className="list-img-border" src={avatarColor(index)} alt={`profile-pic-border-${index+1}`} />
+              <LeadershipImageBorder src={avatarColor(index)} alt={`profile-pic-border-${index+1}`} />
+            </LeadershipImageContainer>
+
+            <div> {/* this container breaks text and image into two flex columns */}
+              <LeadershipTitle>{item.title}</LeadershipTitle>
+              <LeadershipText>{item.text}</LeadershipText>
             </div>
-            <div className="list-text-container">
-              <h4 className="list-title">{item.title}</h4>
-              <p className="list-text">{item.text}</p>
-            </div>
-          </li>
+          </LeadershipItem>
         )
       })}
-    </ul> 
+    </LeadershipList> 
     <SectionDivider />
     </Section>
-
 )}
 
 export default Leadership
