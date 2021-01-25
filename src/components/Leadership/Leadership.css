@@ -7,21 +7,30 @@
   margin-bottom: 124px;
 }
 
+@media screen and (max-width: 767px){
+  .list{
+    margin-bottom: 64px;
+  }
+}
+
 @media screen and (max-width: 413px){
   .list{
     display: flex;
     flex-direction: column;
+    margin-bottom: 46px;
   }
 }
 
 .list-item{
   display: flex;
   flex-direction: column;
+  align-items: center;
 } 
 
 @media screen and (max-width: 413px){
   .list-item{
     flex-direction: row;
+    margin-bottom: 8px;
   }
 }
 
@@ -42,8 +51,8 @@
 
 @media screen and (max-width: 413px){
   .list-img-container{
-    width: 88px;
-    height: 88px;
+    min-width: 88px;
+    min-height: 88px;
     margin-bottom: 0px;
     margin-right: 16px;
   }

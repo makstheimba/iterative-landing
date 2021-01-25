@@ -67,15 +67,17 @@ const Leadership = () => {
         return (
           <li className="list-item" key={index}>
             <div className="list-img-container">
-            <picture>
-              <source media="(max-width:767px)" srcset={item.img[1]} />
-              <source media="(max-width:413px)" srcset={item.img[2]} />
-              <img className="list-img" src={item.img[0]} alt={`profile-pic-${index+1}`}/>
-            </picture>
+              <picture>
+                <source media="(max-width:767px)" srcset={item.img[1]} />
+                <source media="(max-width:413px)" srcset={item.img[2]} />
+                <img className="list-img" src={item.img[0]} alt={`profile-pic-${index+1}`}/>
+              </picture>
               <img className="list-img-border" src={avatarColor(index)} alt={`profile-pic-border-${index+1}`} />
             </div>
-            <h4 className="list-title">{item.title}</h4>
-            <p className="list-text">{item.text}</p>
+            <div className="list-text-container">
+              <h4 className="list-title">{item.title}</h4>
+              <p className="list-text">{item.text}</p>
+            </div>
           </li>
         )
       })}
