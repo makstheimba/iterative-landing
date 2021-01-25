@@ -48,8 +48,8 @@ const NavBar = () => {
             <NavLogo src={navIterative} />
             <NavProductsIcon src={navArrow} />
           </NavProductsMobile>
-          <NavLink to="/">About Us</NavLink>
-          <NavLink to="/">Pricing</NavLink>
+          <NavLink to="/about">About Us</NavLink>
+          <NavLink to="/pricing">Pricing</NavLink>
         </>}
     </NavBarWrapper>
   )

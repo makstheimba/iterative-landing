@@ -57,9 +57,9 @@ const data = [
 ]
 
 function avatarColor(index){
-    if(index == 0 || index % 3 === 0) return avatarBgImgBlue;
-    if(index == 1 || index % 3 === 1) return avatarBgImgPurple;
-    if(index == 2 || index % 3 === 2) return avatarBgImgRed;
+    if(index === 0 || index % 3 === 0) return avatarBgImgBlue;
+    if(index === 1 || index % 3 === 1) return avatarBgImgPurple;
+    if(index === 2 || index % 3 === 2) return avatarBgImgRed;
     return avatarBgImgBlue;
 }
 

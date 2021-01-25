@@ -2,15 +2,20 @@ import { Link } from "gatsby";
 import styled from "styled-components";
 
 export const CardList = styled.div`
+    padding: 48px 0 80px;
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap: 1.5rem;
+
     @media ${props => props.theme.breakpoints.lg}{
       display: flex;
       flex-direction: column;
       align-items: center;
+      padding: 40px 0 64px;
     }
- 
+    @media ${props => props.theme.breakpoints.md}{
+      padding: 16px 0 0;
+    }
 `
 
 export const Cards = styled.div`

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Section, SectionTitle, SectionText } from '../GlobalStyles/index'
+import { Section, SectionTitle, SectionText, SectionDivider } from '../GlobalStyles/index'
 import {
   CarouselContainer, CarouselItem, CarouselItemTitle, CarouselItemImg,
   CarouselItemText, CarouselButtons, CarouselButton
@@ -59,6 +59,7 @@ const Timeline = () => {
             )
         })}
     </CarouselButtons>
+    <SectionDivider />
   </Section>
   )
 }

@@ -1,6 +1,5 @@
 import React from 'react'
-import { Section } from '../GlobalStyles'
-import { CardButton, CardList, CardLogo, Cards, CardsSubTitle, CardsText, CardsTitle, CardsLogosContainer, CardLogoText, CardsLogoLink, CardsLogoDivider } from "./PricingCards"
+import { CardButton, CardList, CardLogo, Cards, CardsSubTitle, CardsText, CardsTitle, CardsLogosContainer, CardLogoText, CardsLogoLink } from "./PricingCards"
 
 import Infinity from "../../images/iterative-icon_cml.svg"
 import DVC from "../../images/Group297.svg"

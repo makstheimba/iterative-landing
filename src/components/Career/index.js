@@ -1,5 +1,5 @@
 import React from 'react'
-import { Section, SectionDivider, SectionSubText, SectionText, SectionTitle } from '../GlobalStyles'
+import { Section, SectionSubText, SectionText, SectionTitle } from '../GlobalStyles'
 import { Aboutbutton } from './Career'
 
 const Career = () => {
