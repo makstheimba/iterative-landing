@@ -31,6 +31,26 @@ const data = [
 
 const Timeline = () => {
 
+const carouselRef = React.useRef();
+
+function smoothScroll (node, topOrLeft, horizontal) {
+  return node.scrollTo({
+    [horizontal ? 'left' : 'top']: topOrLeft,
+    behavior: 'smooth'
+  })
+} 
+
+function handleClick(e, i){
+  e.preventDefault();
+  console.log('working');
+
+  if(carouselRef.current){
+    console.log(carouselRef.current);
+    const scrollLeft = Math.floor(carouselRef.current.scrollWidth * (i / data.length ))
+    smoothScroll(carouselRef.current, scrollLeft, true)
+  }
+}
+
   return (
   <Section>
     <SectionTitle main>About Us</SectionTitle>
@@ -39,7 +59,7 @@ const Timeline = () => {
     </SectionText>
 
     
-    <CarouselContainer>
+    <CarouselContainer ref={carouselRef}>
     {data.map((item, index) => {
           return (
             <CarouselItem key={index} id={`carousel__item-${index}`}>
@@ -55,7 +75,7 @@ const Timeline = () => {
     <CarouselButtons >
     {data.map((item, index) => {
           return (
-             <CarouselButton key={index} href={`#carousel__item-${index}`}></CarouselButton>
+             <CarouselButton key={index} type="button" onClick={e => handleClick(e, index)}></CarouselButton>
             )
         })}
     </CarouselButtons>

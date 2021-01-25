@@ -94,10 +94,11 @@ export const CarouselButtons = styled.div`
   @media ${props => props.theme.breakpoints.sm} {
     display: flex;
     visibility: visible;
+    margin-bottom: 48px;
   }
 `
 
-export const CarouselButton = styled.a`
+export const CarouselButton = styled.button`
   text-decoration: none;
   background: ${(props) => props.active ? '#FFFFFF' : 'rgba(255, 255, 255, 0.33)'};
   width: ${(props) => props.active ? '4px' : '2px'};
