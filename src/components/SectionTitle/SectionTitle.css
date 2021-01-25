@@ -1,6 +1,8 @@
 .sectiontitle {
   position: relative;
   font-family: 'Space Grotesk', sans-serif, Arial, Helvetica;
+  font-style: normal;
+  font-weight: normal;
   padding: 18px 0 0 0;
 }
 
@@ -17,8 +19,6 @@
 .sectiontitle__subtitle {
   padding: 0;
   margin: 8px 0 0 0;
-  font-style: normal;
-  font-weight: normal;
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0.02em;
@@ -27,8 +27,6 @@
 
 .sectiontitle__text {
   margin: 16px 0;
-  font-style: normal;
-  font-weight: normal;
   font-size: 14px;
   line-height: 22px;
   letter-spacing: 0.02em;
