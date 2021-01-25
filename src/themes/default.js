@@ -17,5 +17,6 @@ export default {
     sm: 'screen and (max-width: 413px)',
     md: 'screen and (max-width: 767px)',
     lg: 'screen and (max-width: 1023px)',
+    xl: 'screen and (max-width: 1199px)'
   },
 }

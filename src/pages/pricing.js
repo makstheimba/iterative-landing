@@ -1,7 +1,7 @@
 import * as React from "react"
 import { Link } from "gatsby"
 
-const AboutPage = () => {
+const PricingPage = () => {
     return (
         <div>
             Hi! This is an About page.
@@ -10,4 +10,4 @@ const AboutPage = () => {
     )
 }
 
-export default AboutPage;
+export default PricingPage;
