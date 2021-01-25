@@ -4,22 +4,28 @@ import Title from './Title';
 
 const Template = (args) => <Title {...args} />;
 
+export const ExtraSmall = Template.bind({});
+ExtraSmall.args = {
+  size: 'xs',
+  title: '2017',
+};
+
 export const Small = Template.bind({});
 Small.args = {
   size: 's',
-  title: 'add title in prompt',
+  title: 'Open-source',
 };
 
 export const Medium = Template.bind({});
 Medium.args = {
   size: 'm',
-  title: 'add title in prompt',
+  title: 'Enterprise',
 };
 
 export const Large = Template.bind({});
 Large.args = {
   size: 'l',
-  title: 'add title in prompt',
+  title: 'Open platform to operationalize AI',
 };
 
 const ExampleTitle = {

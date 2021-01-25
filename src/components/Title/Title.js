@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import './Title.css';
 
 export default function Title({ size, title }) {
-  if (size === 's') {
-    return <h3 className={`title title_size_${size}`}>{title}</h3>;
+  if (size === 's' || 'xs') {
+    return <h4 className={`title title_size_${size}`}>{title}</h4>;
   } else if (size === 'm') {
     return <h2 className={`title title_size_${size}`}>{title}</h2>;
   }
@@ -13,5 +13,5 @@ export default function Title({ size, title }) {
 
 Title.propTypes = {
   title: PropTypes.string.isRequired,
-  size: PropTypes.oneOf(['s', 'm', 'l']),
+  size: PropTypes.oneOf(['xs', 's', 'm', 'l']),
 };
