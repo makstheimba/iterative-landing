@@ -6,7 +6,7 @@ import './Diagram.css';
 export default function Diagram() {
   return (
     <picture>
-      <source srcset={lgDiagram} media="(min-width: 768px)" />
+      <source srcSet={lgDiagram} media="(min-width: 768px)" />
       <img
         className="diagram"
         src={smDiagram}
