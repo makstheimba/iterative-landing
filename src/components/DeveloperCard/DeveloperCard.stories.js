@@ -12,6 +12,7 @@ export default ElementDeveloperCard;
 
 export const Defalt = Template.bind({});
 Defalt.args = {
+  isOpen: true,
   title: 'Fábio Santos',
   job: 'Software engineer, Terser (new uglify-es) maintainer',
   location: 'Lisbon, Portugal',

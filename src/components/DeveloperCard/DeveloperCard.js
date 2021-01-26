@@ -9,6 +9,7 @@ import twitterIcon from '../../images/icn-twitter-gray.svg';
 import linkedinIcon from '../../images/icn-linkedin-gray.svg';
 
 export default function DeveloperCard({
+  isOpen,
   title,
   job,
   location,
@@ -19,7 +20,7 @@ export default function DeveloperCard({
   linkedinLink,
 }) {
   return (
-    <div className="developercard">
+    <div className={`developercard ${!isOpen && 'developercard__hidden'}`}>
       <div className="developercard__container">
         <div className="developercard__text-container">
           <h4 className="developercard__title">{title}</h4>
@@ -69,6 +70,7 @@ export default function DeveloperCard({
 }
 
 DeveloperCard.propTypes = {
+  isOpen: PropTypes.bool.isRequired,
   title: PropTypes.string.isRequired,
   job: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
