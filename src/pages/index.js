@@ -5,11 +5,8 @@ import Cookies from '../components/Cookies/Cookies';
 import Header from '../components/Header/Header';
 import Button from '../components/Button/Button';
 import CustomersList from '../components/CustomersList/CustomersList';
-import SectionTitle from '../components/SectionTitle/SectionTitle';
-import Diagram from '../components/Diagram/Diagram';
-import CompanyHighlightList from '../components/CompanyHighlightList/CompanyHighlightList';
+import Enterprise from '../components/Enterprise/Enterprise';
 import Footer from '../components/Footer/Footer';
-import '../page-styles/index.css';
 
 const IndexPage = () => {
   return (
@@ -25,14 +22,7 @@ const IndexPage = () => {
         <CustomersList />
       </Header>
       <main>
-        <section className="section enterprise">
-          <SectionTitle
-            title="Enterprise"
-            subtitle="AI hand in hand with software development. Built with data scientists, ML engineers, and data engineers in mind."
-          />
-          <Diagram />
-          <CompanyHighlightList />
-        </section>
+        <Enterprise />
         <Community />
       </main>
       <Footer />
