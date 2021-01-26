@@ -1,6 +1,7 @@
 import React from 'react'
-import { HeroBG, HeroButton, HeroSponsorsContainer, HeroSponsorLogo } from './Hero'
+import { HeroBG, HeroSponsorsContainer, HeroSponsorLogo } from './Hero'
 import { Section, SectionDivider, SectionTitle, SectionText } from '../GlobalStyles'
+import Button from '../GlobalStyles/Button.js'
 import hero0 from '../../images/hero_bg.svg'
 import hero1 from '../../images/hero_Standard.svg'
 import hero2 from '../../images/hero_Rubrik.svg'
@@ -10,6 +11,10 @@ import hero5 from '../../images/hero_Smithsonian.svg'
 import hero6 from '../../images/hero_Neosensory.svg'
 
 const Hero = () => {
+  function handleBtnClick() {
+    console.log("Btn working");
+  }
+
   return (
     <Section>
       <HeroBG src={hero0} />
@@ -17,7 +22,7 @@ const Hero = () => {
       <SectionText>
         AI teams face challenges that require new technologies. We build these technologies. Existing data warehouses and data lakes do not fit unstructured datasets like text, images, and videos.
       </SectionText>
-      <HeroButton>Request a Demo</HeroButton>
+      <Button onClick={handleBtnClick}>Request a Demo</Button>
       <HeroSponsorsContainer>
         <HeroSponsorLogo src={hero1} />
         <HeroSponsorLogo src={hero2} />

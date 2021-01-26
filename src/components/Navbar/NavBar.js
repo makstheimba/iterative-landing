@@ -35,6 +35,8 @@ export const NavLink = styled(Link)`
 
   &:hover {
     color: #fff;
+    opacity: ${({ logo }) => (logo ? '.8' : '1')};
+    transform: ${({ logo }) => (logo ? 'scale(1.05)' : '')};
   }
 
   @media ${(props) => props.theme.breakpoints.lg} {
@@ -48,9 +50,10 @@ export const NavLink = styled(Link)`
     font-size: 14px;
     line-height: 16px;
     height: 16px;
-    margin: 0 0 0 16px;
+    margin: ${({ logo }) => (logo ? '0' : '0 0 0 16px')};
   }
 `
+
 export const NavProducts = styled.button`
   border: none;
   display: flex;
@@ -99,7 +102,7 @@ export const NavProductsMobile = styled.button`
     outline: none;
   }
   &:hover {
-    opacity: .6;
+    opacity: 0.6;
   }
 `
 

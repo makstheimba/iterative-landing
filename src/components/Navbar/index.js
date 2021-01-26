@@ -26,8 +26,8 @@ const NavBar = () => {
     <NavBarWrapper>
       {(width >= MOBILE_WIDTH) &&
         <>
-          <NavLink to="/">
-            <NavLogo src={navLogo} logo="true" />
+          <NavLink to="/" logo>
+            <NavLogo src={navLogo} logo />
             <NavLogo src={navIterative} />
           </NavLink>
           <NavLink to="/about">About Us</NavLink>
@@ -43,8 +43,10 @@ const NavBar = () => {
         </>}
       {width < MOBILE_WIDTH &&
         <>
-          <NavProductsMobile to="/">
-            <NavLogo src={navLogo} logo="true" />
+          <NavLink to="/" logo>
+            <NavLogo src={navLogo} logo />
+          </NavLink>
+          <NavProductsMobile>
             <NavLogo src={navIterative} />
             <NavProductsIcon src={navArrow} />
           </NavProductsMobile>
