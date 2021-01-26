@@ -45,24 +45,8 @@ export const CarouselItem = styled.div`
     overflow: visible;
 
     position: relative;
+    ${(props) => props.active === props.index ? `opacity: 1` : `opacity: 0.5`};
   }
-
-`
-
-export const CarouselOverlay = styled.div`
-  width: 100%;
-  height: 100%;            
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: black;
-  z-index: 100;
-  ${(props) => props.active === props.index ? `opacity: 0.1` : `opacity: 0.5`};
-
-`
-
-export const CarouselItemContainer = styled.div`
-  z-index: 1
 `
 
 export const CarouselItemTitle = styled.h4`

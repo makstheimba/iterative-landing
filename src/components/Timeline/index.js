@@ -2,8 +2,7 @@ import React from 'react'
 import { Section, SectionTitle, SectionText, SectionDivider } from '../GlobalStyles/index'
 import {
   CarouselContainer, CarouselItem, CarouselItemTitle, CarouselItemImg,
-  CarouselItemText, CarouselButtons, CarouselButton,
-  CarouselOverlay, CarouselItemContainer
+  CarouselItemText, CarouselButtons, CarouselButton
   } from './Timeline'
 import TimelineImg from '../../images/timeline.svg'
 
@@ -83,20 +82,16 @@ function handleScroll(){
     <CarouselContainer ref={carouselRef} onScroll={handleScroll}>
     {data.map((item, index) => {
           return (
-              <CarouselItem key={index} id={`carousel__item-${index}`}>
-                <CarouselOverlay
-                  index={index} 
-                  active={activeItem} >
-                </CarouselOverlay>
-                <CarouselItemContainer index={index}>
-                  <CarouselItemTitle>{`${item.year}`}
-                    <CarouselItemImg src={TimelineImg}/>
-                  </CarouselItemTitle>
-                  <CarouselItemText>{item.text}</CarouselItemText>
-                </CarouselItemContainer>
+              <CarouselItem 
+                key={index} 
+                index={index} 
+                id={`carousel__item-${index}`}
+                active={activeItem}>
+                <CarouselItemTitle>{`${item.year}`}
+                  <CarouselItemImg src={TimelineImg}/>
+                </CarouselItemTitle>
+                <CarouselItemText>{item.text}</CarouselItemText>
               </CarouselItem>
-
-
           )
         })}
     </CarouselContainer>
