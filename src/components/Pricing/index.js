@@ -3,9 +3,9 @@ import { Section, SectionText, SectionTitle } from '../GlobalStyles'
 import { CardList, CardLogo, Cards, CardsSubTitle, CardsText, CardsTitle, CardLogoText, CardsLogoLink, CardsLogosLateral } from "./Pricing"
 import Button from '../GlobalStyles/Button'
 
-import CML from "../../images/iterative-icon_cml.svg"
-import DVC from "../../images/Group297.svg"
-import Studio from "../../images/iterative-icon_viewer.svg"
+import CML from "../../images/cml.svg"
+import DVC from "../../images/dvc.svg"
+import Studio from "../../images/viewer.svg"
 
 const Pricing = () => {
   return (

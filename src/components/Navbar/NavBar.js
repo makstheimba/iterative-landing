@@ -134,18 +134,22 @@ export const NavDivider = styled.div`
   }
 `
 export const NavIcon = styled.a`
-  margin-left: 34px;
+  margin-left: 16px;
   transition: 0.3s ease;
   justify-content: center;
+  border-radius: 50px;
+  padding: 8px;
 
   &:hover {
-    opacity: 0.6;
+    background-color: #212d45;
+    transform: scale(1.4);
   }
 
   @media ${(props) => props.theme.breakpoints.lg} {
     margin-left: 25px;
   }
 `
+
 export const NavIconImg = styled.img`
   display: flex;  
   height: 24px;

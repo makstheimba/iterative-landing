@@ -1,5 +1,5 @@
 import React from 'react'
-import { FooterWrapper, LinkName, LinkListName, LinkList, SocialIconsContainer, CompanyContainer, SocialContainer, SocialContainerIcon, CompanyLogo, Slogan } from "./Footer"
+import { FooterWrapper, LinkColumn, LinkTitle, LinkItem, LinkList, SocialIconsContainer, CompanyContainer, SocialContainer, SocialContainerIcon, CompanyLogo, Slogan } from "./Footer"
 import Logo from "../../images/Brand.svg"
 import Discord from "../../images/icn-discord.svg"
 import Github from "../../images/icn-github.svg"
@@ -31,16 +31,22 @@ const Footer = () => {
   return (
     <FooterWrapper>
       <LinkList>
-        {linkData.map((data, index) => {
-          return (
-            <div key={index}>
-              <LinkName>{data.name}</LinkName>
-              <LinkListName>{data.linkOne}</LinkListName>
-              <LinkListName>{data.linkTwo}</LinkListName>
-              {data.linkThree && <LinkListName>{data.linkThree}</LinkListName>}
-            </div>
-          )
-        })}
+        <LinkColumn>
+          <LinkTitle>Company</LinkTitle>
+          <LinkItem to="/about">About us</LinkItem>
+          <LinkItem to="/pricing">Pricing</LinkItem>
+        </LinkColumn>
+        <LinkColumn>
+          <LinkTitle>Legal</LinkTitle>
+          <LinkItem to="/">Prvacy policy</LinkItem>
+          <LinkItem to="/">Terms of use</LinkItem>
+        </LinkColumn>
+        <LinkColumn>
+          <LinkTitle>Our Products</LinkTitle>
+          <LinkItem to="/">DVC</LinkItem>
+          <LinkItem to="/">CML</LinkItem>
+          <LinkItem to="/">Studio</LinkItem>
+        </LinkColumn>
       </LinkList>
 
       <SocialIconsContainer>
