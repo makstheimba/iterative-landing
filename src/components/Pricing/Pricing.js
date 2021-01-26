@@ -2,21 +2,21 @@ import { Link } from "gatsby";
 import styled from "styled-components";
 
 export const CardList = styled.div`
-    padding: 48px 0 80px;
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 24px;
+  padding: 48px 0 80px;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 24px;
 
-    @media ${props => props.theme.breakpoints.lg}{
-      grid-template-columns: 1fr;
-      align-items: center;
-      padding: 40px 0 64px;
-    }
+  @media ${props => props.theme.breakpoints.lg}{
+    grid-template-columns: 1fr;
+    align-items: center;
+    padding: 40px 0 64px;
+  }
 
-    @media ${props => props.theme.breakpoints.sm}{
-      padding: 16px 0 0;
-      gap: 16px;
-    }
+  @media ${props => props.theme.breakpoints.sm}{
+    padding: 16px 0 0;
+    gap: 16px;
+  }
 `
 
 export const Cards = styled.div`
@@ -101,18 +101,26 @@ export const CardsText = styled.p`
     line-height: 22px;
   }
 `
-
+export const CardsLogosLateral = styled.div`
+  @media ${props => props.theme.breakpoints.lg}{
+    display: flex;
+  }
+`
 export const CardsLogoLink = styled(Link)`
   display: flex;
+  height: 24px;
   align-items: center;
   margin-top: 16px;
+  width: fit-content;
+  cursor: pointer;
 
   @media ${props => props.theme.breakpoints.lg}{
-    margin:0;
+    margin: 0 16px 0 0;
     border-right: ${props => props.border ? " 1px solid rgba(255, 255, 255, 0.33)" : ""};
-    &:nth-child(1){
-      margin-right:16px;
-    }
+  }
+  @media ${props => props.theme.breakpoints.md}{
+    margin: 0 11px 0 0;
+    border-right: ${props => props.border ? " 1px solid rgba(255, 255, 255, 0.33)" : ""};
   }
 `
 
@@ -120,11 +128,11 @@ export const CardLogo = styled.img`
   width: 32px;
   height: 32px;
   margin-right: 16px;
-  @media ${props => props.theme.breakpoints.sm}{
+  @media ${props => props.theme.breakpoints.md}{
     width: 24px;
     height: 24px;
     margin-right: 11px;
-}
+  }
 `
 
 export const CardLogoText = styled.p`
@@ -142,42 +150,4 @@ color: #FFFFFF;
   line-height: 16px;
   max-width: 74px;
 }
-`
-
-export const BtnContainer = styled.div`
-display: flex;
-height: min-content;
-margin-top: auto;
-`
-
-export const CardButton = styled.button`
-padding: 16px 24px;
-width: fit-content;
-
-margin-top: auto;
-background: linear-gradient(270deg, #F46737 0%, #945DD6 100%);
-border-radius: 999px;
-
-
-font-style: normal;
-font-weight: 600;
-font-size: 20px;
-line-height: 20px;
-letter-spacing: 0.01em;
-color: #FFFFFF;
-margin-top: 40px;
-
-&:hover {
- 
-   cursor: pointer;
-  };
-@media ${props => props.theme.breakpoints.sm}{
-  padding: 8px 16px;
-  font-size: 14px;
-  line-height: 16px;
-  width: 240px;
-  margin-top: 32px;
-
-}
-
 `

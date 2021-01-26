@@ -1,6 +1,6 @@
 import React from 'react'
 import { Section, SectionText, SectionTitle } from '../GlobalStyles'
-import { CardList, CardLogo, Cards, CardsSubTitle, CardsText, CardsTitle, CardLogoText, CardsLogoLink, BtnContainer } from "./Pricing"
+import { CardList, CardLogo, Cards, CardsSubTitle, CardsText, CardsTitle, CardLogoText, CardsLogoLink, CardsLogosLateral } from "./Pricing"
 import Button from '../GlobalStyles/Button'
 
 import CML from "../../images/iterative-icon_cml.svg"
@@ -22,14 +22,16 @@ const Pricing = () => {
           <CardsTitle>Open-source</CardsTitle>
           <CardsSubTitle>Individuals and teams</CardsSubTitle>
           <CardsText>DVC, CML, our other open-source tools come for free, no strings attached</CardsText>
-          <CardsLogoLink border>
-            <CardLogo src={CML} alt="CML logo" />
-            <CardLogoText right> Go to CML</CardLogoText>
-          </CardsLogoLink>
-          <CardsLogoLink>
-            <CardLogo src={DVC} alt="DVC logo" />
-            <CardLogoText> Go to DVC</CardLogoText>
-          </CardsLogoLink>
+          <CardsLogosLateral>
+            <CardsLogoLink border>
+              <CardLogo src={CML} alt="CML logo" />
+              <CardLogoText right> Go to CML</CardLogoText>
+            </CardsLogoLink>
+            <CardsLogoLink>
+              <CardLogo src={DVC} alt="DVC logo" />
+              <CardLogoText> Go to DVC</CardLogoText>
+            </CardsLogoLink>
+          </CardsLogosLateral>
         </Cards>
         <Cards bottom>
           <CardsTitle>SaaS</CardsTitle>
@@ -48,11 +50,7 @@ const Pricing = () => {
           <CardsText>
             Extend your unstructured data storages with data compliance, data access control and SSO capabilities. Online as well as on-premise installation are available
           </CardsText>
-          
           <Button alt>Contact us</Button>
-
-
-          {/* <CardButton>Contact us</CardButton> */}
         </Cards>
       </CardList>
     </Section>
