@@ -42,10 +42,8 @@ function smoothScroll (node, topOrLeft, horizontal) {
 
 function handleClick(e, i){
   e.preventDefault();
-  console.log('working');
-
+  
   if(carouselRef.current){
-    console.log(carouselRef.current);
     const scrollLeft = Math.floor(carouselRef.current.scrollWidth * (i / data.length ))
     smoothScroll(carouselRef.current, scrollLeft, true)
   }

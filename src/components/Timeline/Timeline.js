@@ -35,7 +35,7 @@ export const CarouselItem = styled.div`
     max-width: 195.6px;
   }
   @media ${props => props.theme.breakpoints.sm} {
-    max-width: 108px;
+    width: 108px;
     background: #0E131F;
     scroll-snap-align: start;
     border-radius: 3px;
