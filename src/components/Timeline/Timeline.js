@@ -29,11 +29,13 @@ export const CarouselItem = styled.div`
   background: #0F1624;
   border-radius: 3px;
   max-width: 195.6px;
+  margin-right: 32px;
 
   @media ${props => props.theme.breakpoints.md} {
     width: 108.8px;
     max-width: 195.6px;
   }
+  
   @media ${props => props.theme.breakpoints.sm} {
     width: 108px;
     background: #0E131F;
@@ -42,6 +44,7 @@ export const CarouselItem = styled.div`
     margin-right: 32px;
     overflow: visible;
   }
+
 `
 
 export const CarouselItemTitle = styled.h4`
