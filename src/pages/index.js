@@ -1,11 +1,11 @@
 import React from "react"
-import { Link } from "gatsby"
 import Layout  from '../components/Layout/Layout'
 import Footer  from '../components/Footer/Footer'
 import QuickLinks from '../components/QuickLinks/QuickLinks'
 import BottomLine from '../components/BottomLine/BottomLine'
 import Community from '../components/Community/Community'
 import Highlights from '../components/Highlights/Highlights'
+import Navbar from '../components/Navbar/Navbar'
 
 // markup
 const IndexPage = () => {
@@ -13,9 +13,10 @@ const IndexPage = () => {
     <main >
       <Layout>
         <title>Home Page</title>
+        <Navbar />
 
 
-        <Link to="/about/">This is a link to About page</Link><br />
+        
         <Highlights />
         <Community />
         <Footer>
