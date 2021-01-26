@@ -64,6 +64,7 @@ function debounce(func, ms) {
 
 function handleScroll(){
   if(carouselRef.current){
+    console.log(activeItem);
     debounce(() => {
       let index = Math.round((carouselRef.current.scrollLeft / carouselRef.current.scrollWidth) * data.length)
       setactiveItem(index)
