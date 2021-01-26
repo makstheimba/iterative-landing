@@ -1,31 +1,13 @@
 import React from 'react'
-import { FooterWrapper, LinkColumn, LinkTitle, LinkItem, LinkList, SocialIconsContainer, CompanyContainer, SocialContainer, SocialContainerIcon, CompanyLogo, Slogan } from "./Footer"
+import { FooterWrapper, LinkColumn, LinkTitle, LinkItem, LinkList, SocialIconsContainer, CompanyContainer, SocialContainer, CompanyLogo, Slogan } from "./Footer"
 import Logo from "../../images/Brand.svg"
-import Discord from "../../images/icn-discord.svg"
-import Github from "../../images/icn-github.svg"
-import Twitter from "../../images/icn-twitter.svg"
-import LinkedIn from '../../images/icn-linkedin-in.svg'
-import Youtube from "../../images/icn-youtube.svg"
+import discord from "../../images/icn-discord.svg"
+import github from "../../images/icn-github.svg"
+import twitter from "../../images/icn-twitter.svg"
+import linkedIn from '../../images/icn-linkedin-in.svg'
+import youtube from "../../images/icn-youtube.svg"
 import { Link } from 'gatsby'
-
-const linkData = [
-  {
-    name: "Company",
-    linkOne: "About Us",
-    linkTwo: "Pricing"
-  },
-  {
-    name: "Legal",
-    linkOne: "Privacy policy",
-    linkTwo: "Terms of use",
-  },
-  {
-    name: "Our products",
-    linkOne: "DCV",
-    linkTwo: "CML",
-    linkThree: "Studio"
-  },
-];
+import LinkIcon from '../GlobalStyles/LinkIcon'
 
 const Footer = () => {
   return (
@@ -56,15 +38,13 @@ const Footer = () => {
           </Link>
           <Slogan>Open platform to operationalize AI</Slogan>
         </CompanyContainer>
-
         <SocialContainer>
-          <a href="google.com" target="_blank" rel="noreferrer"> <SocialContainerIcon src={Github} /></a>
-          <a href="google.com" target="_blank" rel="noreferrer"> <SocialContainerIcon src={Twitter} /></a>
-          <a href="google.com" target="_blank" rel="noreferrer"> <SocialContainerIcon src={LinkedIn} /></a>
-          <a href="google.com" target="_blank" rel="noreferrer"> <SocialContainerIcon src={Youtube} /></a>
-          <a href="google.com" target="_blank" rel="noreferrer"> <SocialContainerIcon src={Discord} /></a>
+          <LinkIcon href="#" src={github}/>
+          <LinkIcon href="#" src={twitter}/>
+          <LinkIcon href="#" src={linkedIn}/>
+          <LinkIcon href="#" src={youtube}/>
+          <LinkIcon href="#" src={discord}/>
         </SocialContainer>
-
       </SocialIconsContainer>
     </FooterWrapper>
   )

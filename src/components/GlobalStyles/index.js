@@ -230,3 +230,32 @@ export const ButtonFront = styled.button`
     font-size: 14px;
   }
 `
+
+export const LinkContainer = styled.a`
+  margin-left: 16px;
+  transition: 0.3s ease;
+  justify-content: center;
+  border-radius: 50px;
+  padding: 8px;
+
+  &:hover {
+    background-color: #212d45;
+    transform: scale(1.4);
+  }
+
+  @media ${(props) => props.theme.breakpoints.lg} {
+    margin-left: 24px;
+  }
+  @media ${(props) => props.theme.breakpoints.md} {
+    margin-left: 16px;
+  }
+`
+
+export const LinkIconImg = styled.img`
+  display: flex;  
+  height: 24px;
+
+  @media ${(props) => props.theme.breakpoints.lg} {
+    height: 16px;
+  }
+`

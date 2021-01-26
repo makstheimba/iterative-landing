@@ -85,6 +85,7 @@ justify-content: space-between;
 
 @media ${props => props.theme.breakpoints.sm}{
   display: flex;
+	width: 100%;
   flex-direction: column;
 }
 `
@@ -93,6 +94,7 @@ export const CompanyContainer = styled.div`
   display: flex;
 	align-items:center;
 	flex-wrap: wrap;
+	margin-right: auto;
 
 	@media ${props => props.theme.breakpoints.md}{
 		flex-direction: column;
@@ -102,8 +104,8 @@ export const CompanyContainer = styled.div`
 	@media ${props => props.theme.breakpoints.sm}{
 		display: flex;
 		flex-direction: column;
-		margin-bottom:32px;
-		align-items: center
+		margin: 0 0 32px;
+		align-items: center;
 	}
 `
 
@@ -144,40 +146,12 @@ export const Slogan = styled.p`
 `
 
 export const SocialContainer = styled.div`
-	width: 336px;
 	display: flex;
   align-items: center;
-  justify-content: space-between;
-
 
 	@media ${props => props.theme.breakpoints.md}{
-    width: 304px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 0 auto;
+		justify-content: center;
+		padding-right: 16px;
 	}
 
-	@media ${props => props.theme.breakpoints.sm}{
-    width: 224px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 0 auto;
-	}
-`
-
-export const SocialContainerIcon = styled.img`
-	width: 24px;
-	height: 24px;
-	
-	@media ${props => props.theme.breakpoints.md}{
-		width: 24px;
-		height: 24px;
-	}
-
-	@media ${props => props.theme.breakpoints.sm}{
-    width: 16px;
-    height: 16px;
-	}
 `

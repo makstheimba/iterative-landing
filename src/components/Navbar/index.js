@@ -1,5 +1,7 @@
 import React from 'react'
 import { NavBarWrapper, NavLink, NavLogo, NavDivider, NavProducts, NavProductsMobile, NavIcon, NavSocial, NavProductsIcon, NavIconImg } from './NavBar'
+import LinkIcon from '../GlobalStyles/LinkIcon'
+
 import navLogo from '../../images/nav_logo.svg'
 import navIterative from '../../images/nav_iterative.svg'
 import navArrow from '../../images/nav_down.svg'
@@ -35,9 +37,9 @@ const NavBar = () => {
           <NavProducts>Products <NavProductsIcon src={navArrow} /></NavProducts>
 
           <NavSocial>
-            <NavIcon href="#" target="_blank" rel="noreferrer"><NavIconImg src={twitter} /></NavIcon>
-            <NavIcon href="#" target="_blank" rel="noreferrer"><NavIconImg src={github} /></NavIcon>
-            <NavIcon href="#" target="_blank" rel="noreferrer"><NavIconImg src={youtube} /></NavIcon>
+            <LinkIcon href="#" src={twitter} />
+            <LinkIcon href="#" src={github} />
+            <LinkIcon href="#" src={youtube} />
           </NavSocial>
         </>}
       {width < MOBILE_WIDTH &&
