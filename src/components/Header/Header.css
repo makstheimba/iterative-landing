@@ -35,13 +35,15 @@
   }
 
   .header__text {
+    width: 600px;
     font-size: 20px;
     line-height: 32px;
-    margin: 24px 72px 0 0;
+    margin: 24px 0 0;
   }
 
   .header__is-main .header__text {
     margin: 24px 0;
+    width: 100%;
   }
 }
 
@@ -64,5 +66,6 @@
 
   .header__is-main .header__text {
     margin: 32px 0;
+    width: 800px;
   }
 }
