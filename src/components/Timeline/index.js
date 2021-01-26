@@ -2,7 +2,8 @@ import React from 'react'
 import { Section, SectionTitle, SectionText, SectionDivider } from '../GlobalStyles/index'
 import {
   CarouselContainer, CarouselItem, CarouselItemTitle, CarouselItemImg,
-  CarouselItemText, CarouselButtons, CarouselButton
+  CarouselItemText, CarouselButtons, CarouselButton,
+  CarouselOverlay, CarouselContainer
   } from './Timeline'
 import TimelineImg from '../../images/timeline.svg'
 
@@ -82,12 +83,18 @@ function handleScroll(){
     <CarouselContainer ref={carouselRef} onScroll={handleScroll}>
     {data.map((item, index) => {
           return (
-            <CarouselItem key={index} id={`carousel__item-${index}`}>
-              <CarouselItemTitle>{`${item.year}`}
-                <CarouselItemImg src={TimelineImg}/>
-              </CarouselItemTitle>
-              <CarouselItemText>{item.text}</CarouselItemText>
-            </CarouselItem>
+
+              <CarouselItem key={index} id={`carousel__item-${index}`}>
+                <CarouselOverlay></CarouselOverlay>
+                <CarouselContainer>
+                  <CarouselItemTitle>{`${item.year}`}
+                    <CarouselItemImg src={TimelineImg}/>
+                  </CarouselItemTitle>
+                  <CarouselItemText>{item.text}</CarouselItemText>
+                </CarouselContainer>
+              </CarouselItem>
+
+
           )
         })}
     </CarouselContainer>

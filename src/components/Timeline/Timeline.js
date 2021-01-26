@@ -43,8 +43,25 @@ export const CarouselItem = styled.div`
     border-radius: 3px;
     margin-right: 32px;
     overflow: visible;
+
+    position: relative;
   }
 
+`
+
+export const CarouselOverlay = styled.div`
+  width: 100%;
+  height: 100%;            
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: black;
+  opacity: 0.8;  
+  z-index: 100;
+`
+
+export const CarouselContainer = styled.div`
+  z-index: 1
 `
 
 export const CarouselItemTitle = styled.h4`
