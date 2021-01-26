@@ -31,7 +31,9 @@ const data = [
 
 const Timeline = () => {
 
+const [activeItem, setactiveItem] = React.useState(0);
 const carouselRef = React.useRef();
+
 
 function smoothScroll (node, left) {
   return node.scrollTo({
@@ -49,6 +51,27 @@ function handleClick(e, i){
   }
 }
 
+function debounce(func, ms) {
+	let timeout
+	return () => {
+		clearTimeout(timeout)
+		timeout = setTimeout(() => {
+			timeout = null
+      func()
+		}, ms)
+	}
+}
+
+function handleScroll(){
+  if(carouselRef.current){
+    debounce(() => {
+      let index = Math.round((carouselRef.current.scrollLeft / carouselRef.current.scrollWidth) * data.length)
+      setactiveItem(index)
+    }, 200)
+  }
+}
+
+
   return (
   <Section>
     <SectionTitle main>About Us</SectionTitle>
@@ -57,7 +80,7 @@ function handleClick(e, i){
     </SectionText>
 
     
-    <CarouselContainer ref={carouselRef}>
+    <CarouselContainer ref={carouselRef} onScroll={handleScroll}>
     {data.map((item, index) => {
           return (
             <CarouselItem key={index} id={`carousel__item-${index}`}>
@@ -73,7 +96,12 @@ function handleClick(e, i){
     <CarouselButtons >
     {data.map((item, index) => {
           return (
-             <CarouselButton key={index} type="button" onClick={e => handleClick(e, index)}></CarouselButton>
+            <CarouselButton 
+              key={index} 
+              onClick={e => handleClick(e, index)}
+              active={activeItem}
+              type="button">
+            </CarouselButton>
             )
         })}
     </CarouselButtons>

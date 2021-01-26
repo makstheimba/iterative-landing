@@ -100,9 +100,9 @@ export const CarouselButtons = styled.div`
 
 export const CarouselButton = styled.button`
   text-decoration: none;
-  background: ${(props) => props.active ? '#FFFFFF' : 'rgba(255, 255, 255, 0.33)'};
-  width: ${(props) => props.active ? '4px' : '2px'};
-  height: ${(props) => props.active ? '4px' : '2px'};
+  background: ${(props) => props.active === key ? '#FFFFFF' : 'rgba(255, 255, 255, 0.33)'};
+  width: ${(props) => props.active === key ? '4px' : '2px'};
+  height: ${(props) => props.active === key ? '4px' : '2px'};
   border-radius: 100%;
   margin-right: 3px;
 `
