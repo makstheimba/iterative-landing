@@ -82,11 +82,11 @@ function handleScroll(){
     <CarouselContainer ref={carouselRef} onScroll={handleScroll}>
     {data.map((item, index) => {
           return (
-              <CarouselItem 
-                key={index} 
-                index={index} 
-                id={`carousel__item-${index}`}
-                active={activeItem}>
+            <CarouselItem 
+              key={index} 
+              index={index} 
+              id={`carousel__item-${index}`}
+              active={activeItem}>
               <CarouselItemTitle>{`${item.year}`}
                 <CarouselItemImg src={TimelineImg}/>
               </CarouselItemTitle>
