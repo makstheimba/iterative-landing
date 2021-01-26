@@ -11,20 +11,20 @@
   transition: background-image ease-in-out 0.2s;
 }
 
-.icon_is-link_dark,
-.icon_is-link_light {
+.icon_is-dark-link,
+.icon_is-light-link {
   border-radius: 50%;
   padding: calc(var(--height-s) / 2) calc(var(--width-s) / 2);
   background-size: var(--height-s) var(--width-s);
   transition: background-color ease-in-out 0.2s;
 }
 
-.icon_is-link_dark:hover {
+.icon_is-dark-link:hover {
   cursor: pointer;
   background-color: #212d45;
 }
 
-.icon_is-link_light:hover {
+.icon_is-light-link:hover {
   cursor: pointer;
   background-color: rgba(15, 22, 36, 0.2);
 }

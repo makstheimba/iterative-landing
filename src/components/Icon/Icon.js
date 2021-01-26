@@ -32,7 +32,7 @@ export default function Icon({
       rel="noreferrer"
       style={cssVars}
       href={link}
-      className={`icon icon_is-link_${background}`}
+      className={`icon icon_is-${background}-link`}
     >
       <span className="icon__visually-hidden-el">{linkDescription}</span>
     </a>

@@ -10,8 +10,8 @@ const ElementDeveloperCard = {
 };
 export default ElementDeveloperCard;
 
-export const Defalt = Template.bind({});
-Defalt.args = {
+export const Default = Template.bind({});
+Default.args = {
   isOpen: true,
   title: 'Fábio Santos',
   job: 'Software engineer, Terser (new uglify-es) maintainer',
