@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavBarWrapper, NavLink, NavLogo, NavDivider, NavProducts, NavProductsMobile, NavIcon, NavSocial, NavProductsIcon, NavIconImg } from './NavBar'
+import { NavBarWrapper, NavLink, NavLogo, NavLogoWrap, NavDivider, NavProducts, NavProductsMobile, NavIcon, NavSocial, NavProductsIcon, NavIconImg } from './NavBar'
 import LinkIcon from '../GlobalStyles/LinkIcon'
 
 import navLogo from '../../images/nav_logo.svg'
@@ -10,7 +10,7 @@ import github from '../../images/icn-github.svg'
 import youtube from '../../images/icn-youtube.svg'
 
 const NavBar = () => {
-  const MOBILE_WIDTH = 768;
+  const MOBILE_WIDTH = 720;
 
   const [width, setWidth] = React.useState(window.innerWidth);
 
@@ -27,10 +27,10 @@ const NavBar = () => {
     <NavBarWrapper>
       {(width >= MOBILE_WIDTH) &&
         <>
-          <NavLink to="/" logo>
+          <NavLogoWrap to="/">
             <NavLogo src={navLogo} logo />
             <NavLogo src={navIterative} />
-          </NavLink>
+          </NavLogoWrap>
           <NavLink to="/about">About Us</NavLink>
           <NavLink to="/pricing">Pricing</NavLink>
           <NavDivider />
@@ -44,11 +44,11 @@ const NavBar = () => {
         </>}
       {width < MOBILE_WIDTH &&
         <>
-          <NavLink to="/" logo>
+          <NavLogoWrap to="/" mobile>
             <NavLogo src={navLogo} logo />
-          </NavLink>
+          </NavLogoWrap>
           <NavProductsMobile>
-            <NavLogo src={navIterative} />
+            <NavLogo src={navIterative} mobile />
             <NavProductsIcon src={navArrow} />
           </NavProductsMobile>
           <NavLink to="/about">About Us</NavLink>

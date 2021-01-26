@@ -11,11 +11,11 @@ export const Section = styled.section`
   position: relative;
   overflow: hidden;
 
-  @media ${(props) => props.theme.breakpoints.lg} {
+  @media ${(props) => props.theme.breakpoints.md} {
     padding: 24px 48px 0;
   }
 
-  @media ${(props) => props.theme.breakpoints.md} {
+  @media ${(props) => props.theme.breakpoints.sm} {
     padding: 16px 16px 0;
     width: calc(100vw - 32px);
   }
@@ -243,10 +243,10 @@ export const LinkContainer = styled.a`
     transform: scale(1.4);
   }
 
-  @media ${(props) => props.theme.breakpoints.lg} {
-    margin-left: 24px;
-  }
   @media ${(props) => props.theme.breakpoints.md} {
+    margin-left: 8px;
+  }
+  @media ${(props) => props.theme.breakpoints.sm} {
     margin-left: 16px;
   }
 `
@@ -255,7 +255,7 @@ export const LinkIconImg = styled.img`
   display: flex;  
   height: 24px;
 
-  @media ${(props) => props.theme.breakpoints.lg} {
+  @media ${(props) => props.theme.breakpoints.md} {
     height: 16px;
   }
 `
