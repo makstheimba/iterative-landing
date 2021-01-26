@@ -22,7 +22,10 @@ export default function TimeLine({ times = [] }) {
   }
 
   function handleTouchEnd() {
-    let ind = currentTimeIndex + 1 <= 4 ? currentTimeIndex + 1 : 4;
+    let ind =
+      currentTimeIndex + 1 <= times.length - 1
+        ? currentTimeIndex + 1
+        : times.length - 1;
     if (initialSwipeX < finalSwipeX) {
       ind = currentTimeIndex - 1 >= 0 ? currentTimeIndex - 1 : 0;
     }

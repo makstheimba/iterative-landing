@@ -83,7 +83,7 @@
 }
 
 .time-line__counter-dot_active {
-  border: 2px solid #fff;
+  border: 1px solid #fff;
   background: #fff;
 }
 
@@ -151,5 +151,6 @@
   .time-line__time-subtitle {
     font-size: 14px;
     line-height: 22px;
+    margin: 8px 0 0;
   }
 }

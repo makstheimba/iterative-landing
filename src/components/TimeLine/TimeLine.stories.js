@@ -1,7 +1,7 @@
 import React from 'react';
 import TimeLine from './TimeLine';
 
-export const Template = (args) => <TimeLine {...args} />;
+const Template = (args) => <TimeLine {...args} />;
 
 const AboutTimeLine = {
   title: 'About/TimeLine',
