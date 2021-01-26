@@ -33,19 +33,19 @@ const Timeline = () => {
 
 const carouselRef = React.useRef();
 
-function smoothScroll (node, topOrLeft, horizontal) {
+function smoothScroll (node, left) {
   return node.scrollTo({
-    [horizontal ? 'left' : 'top']: topOrLeft,
+    'left': left,
     behavior: 'smooth'
   })
 } 
 
 function handleClick(e, i){
   e.preventDefault();
-  
+
   if(carouselRef.current){
-    const scrollLeft = Math.floor(carouselRef.current.scrollWidth * (i / data.length ))
-    smoothScroll(carouselRef.current, scrollLeft, true)
+    const scrollLeft = Math.floor(carouselRef.current.scrollWidth * (i  / data.length ));
+    smoothScroll(carouselRef.current, scrollLeft);
   }
 }
 
