@@ -46,7 +46,8 @@
     width: var(--width-m);
   }
 
-  .icon_is-dark-link .icon_is-light-link {
+  .icon_is-dark-link,
+  .icon_is-light-link {
     padding: calc(var(--height-m) / 2) calc(var(--width-m) / 2);
     background-size: var(--height-m) var(--width-m);
   }
@@ -58,7 +59,8 @@
     width: var(--width-l);
   }
 
-  .icon_is-dark-link .icon_is-light-link {
+  .icon_is-dark-link,
+  .icon_is-light-link {
     padding: calc(var(--height-l) / 2) calc(var(--width-l) / 2);
     background-size: var(--height-l) calc(var(--width-l));
   }
