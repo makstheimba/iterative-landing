@@ -87,11 +87,11 @@ function handleScroll(){
                 index={index} 
                 id={`carousel__item-${index}`}
                 active={activeItem}>
-                <CarouselItemTitle>{`${item.year}`}
-                  <CarouselItemImg src={TimelineImg}/>
-                </CarouselItemTitle>
-                <CarouselItemText>{item.text}</CarouselItemText>
-              </CarouselItem>
+              <CarouselItemTitle>{`${item.year}`}
+                <CarouselItemImg src={TimelineImg}/>
+              </CarouselItemTitle>
+              <CarouselItemText>{item.text}</CarouselItemText>
+            </CarouselItem>
           )
         })}
     </CarouselContainer>
