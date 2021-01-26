@@ -56,11 +56,12 @@ export const CarouselOverlay = styled.div`
   top: 0;
   left: 0;
   background: black;
-  opacity: 0.8;  
   z-index: 100;
+  ${(props) => props.active === props.index ? `opacity: 0.1` : `opacity: 0.5`};
+
 `
 
-export const CarouselContainer = styled.div`
+export const CarouselItemContainer = styled.div`
   z-index: 1
 `
 
@@ -120,9 +121,9 @@ export const CarouselButtons = styled.div`
 
 export const CarouselButton = styled.button`
   text-decoration: none;
-  background: ${(props) => props.active === props.key ? '#FFFFFF' : 'rgba(255, 255, 255, 0.33)'};
-  width: ${(props) => props.active === props.key ? '4px' : '2px'};
-  height: ${(props) => props.active === props.key ? '4px' : '2px'};
+  background: ${(props) => props.active === props.index ? '#FFFFFF' : 'rgba(255, 255, 255, 0.33)'};
+  width: ${(props) => props.active === props.index ? '4px' : '2px'};
+  height: ${(props) => props.active === props.index ? '4px' : '2px'};
   border-radius: 100%;
   margin-right: 3px;
 `

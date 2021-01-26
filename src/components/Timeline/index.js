@@ -3,7 +3,7 @@ import { Section, SectionTitle, SectionText, SectionDivider } from '../GlobalSty
 import {
   CarouselContainer, CarouselItem, CarouselItemTitle, CarouselItemImg,
   CarouselItemText, CarouselButtons, CarouselButton,
-  CarouselOverlay, CarouselContainer
+  CarouselOverlay, CarouselItemContainer
   } from './Timeline'
 import TimelineImg from '../../images/timeline.svg'
 
@@ -83,15 +83,17 @@ function handleScroll(){
     <CarouselContainer ref={carouselRef} onScroll={handleScroll}>
     {data.map((item, index) => {
           return (
-
               <CarouselItem key={index} id={`carousel__item-${index}`}>
-                <CarouselOverlay></CarouselOverlay>
-                <CarouselContainer>
+                <CarouselOverlay
+                  index={index} 
+                  active={activeItem} >
+                </CarouselOverlay>
+                <CarouselItemContainer index={index}>
                   <CarouselItemTitle>{`${item.year}`}
                     <CarouselItemImg src={TimelineImg}/>
                   </CarouselItemTitle>
                   <CarouselItemText>{item.text}</CarouselItemText>
-                </CarouselContainer>
+                </CarouselItemContainer>
               </CarouselItem>
 
 
@@ -103,7 +105,8 @@ function handleScroll(){
     {data.map((item, index) => {
           return (
             <CarouselButton 
-              key={index} 
+              key={index}
+              index={index} 
               onClick={e => handleClick(e, index)}
               active={activeItem}
               type="button">
