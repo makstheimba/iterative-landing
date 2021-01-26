@@ -5,6 +5,7 @@
     rgba(79, 108, 176, 0) 100%
   );
   padding: 15px 0;
+  margin: 32px 0 0;
   width: 100%;
   box-sizing: border-box;
 }
@@ -12,11 +13,13 @@
 @media (min-width: 768px) {
   .diagram {
     padding: 10px 0;
+    margin: 64px 0 0;
   }
 }
 
 @media (min-width: 1024px) {
   .diagram {
     padding: 60px;
+    margin: 80px 0 0;
   }
 }

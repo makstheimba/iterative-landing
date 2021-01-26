@@ -9,7 +9,7 @@ export default function SectionTitle({ title, subtitle, text, children }) {
       <div className="sectiontitle__line"></div>
       <Title size="m" title={title} />
       <h3 className="sectiontitle__subtitle">{subtitle}</h3>
-      <p className="sectiontitle__text">{text}</p>
+      {text ? <p className="sectiontitle__text">{text}</p> : ''}
       {children}
     </div>
   );
