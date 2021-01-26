@@ -1,0 +1,15 @@
+.leadership {
+  padding: 0 16px;
+}
+
+@media (min-width: 768px) {
+  .leadership {
+    padding: 0 48px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .leadership {
+    padding: 0 80px;
+  }
+}

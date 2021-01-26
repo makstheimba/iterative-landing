@@ -1,6 +1,6 @@
 .developerInfo {
   list-style: none;
-  margin: 0;
+  margin: 42px 0 46px 0;
   padding: 0;
   font-family: 'Space Grotesk', sans-serif, Arial, Helvetica;
   font-style: normal;
@@ -12,10 +12,11 @@
 .developerInfo__list-item {
   list-style: none;
   margin: 0;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: min-content auto;
   column-gap: 18px;
   align-items: center;
+  padding: 0 0 0 3px;
 }
 
 .developerInfo__name {
@@ -38,6 +39,7 @@
 
 @media (min-width: 768px) {
   .developerInfo {
+    margin: 68px 0 64px 0;
     grid-template-columns: repeat(5, minmax(0, 1fr));
     row-gap: 0;
     column-gap: 24px;
@@ -68,6 +70,7 @@
 
 @media (min-width: 1024px) {
   .developerInfo {
+    margin: 84px 0 80px 0;
     column-gap: 32px;
   }
 
