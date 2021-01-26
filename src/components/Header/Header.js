@@ -9,7 +9,7 @@ export default function Header({ title, text, isMain, children }) {
     <header className={`header ${isMain && 'header__is-main'}`}>
       <NavBar />
       <Title size="l" title={title} />
-      {typeof text === 'string' ? <p className="header__text">{text}</p> : text}
+      <p className="header__text">{text}</p>
       {children}
     </header>
   );
@@ -17,6 +17,6 @@ export default function Header({ title, text, isMain, children }) {
 
 Header.propTypes = {
   title: PropTypes.string.isRequired,
-  text: PropTypes.node.isRequired,
+  text: PropTypes.string.isRequired,
   isMain: PropTypes.bool,
 };

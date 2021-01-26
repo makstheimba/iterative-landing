@@ -20,14 +20,6 @@
   color: rgba(255, 255, 255, 0.5);
 }
 
-.header__break_for_tablet {
-  display: none;
-}
-
-.header__break_for_desktop {
-  display: none;
-}
-
 .header__is-main .header__text {
   margin: 16px 0;
 }
@@ -43,21 +35,15 @@
   }
 
   .header__text {
+    width: 600px;
     font-size: 20px;
     line-height: 32px;
     margin: 24px 0 0;
   }
 
-  .header__break_for_phone {
-    display: none;
-  }
-
-  .header__break_for_tablet {
-    display: initial;
-  }
-
   .header__is-main .header__text {
     margin: 24px 0;
+    width: 100%;
   }
 }
 
@@ -78,15 +64,8 @@
     line-height: 40px;
   }
 
-  .header__break_for_tablet {
-    display: none;
-  }
-
-  .header__break_for_desktop {
-    display: initial;
-  }
-
   .header__is-main .header__text {
     margin: 32px 0;
+    width: 800px;
   }
 }
