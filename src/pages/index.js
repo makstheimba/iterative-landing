@@ -1,6 +1,7 @@
 import * as React from 'react';
 import Community from '../components/Community/Community';
 import Layout from '../components/Layout/Layout';
+import Cookies from '../components/Cookies/Cookies';
 import Header from '../components/Header/Header';
 import Button from '../components/Button/Button';
 import CustomersList from '../components/CustomersList/CustomersList';
@@ -35,6 +36,7 @@ const IndexPage = () => {
         <Community />
       </main>
       <Footer />
+      <Cookies />
     </Layout>
   );
 };
