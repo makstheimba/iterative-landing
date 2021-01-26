@@ -20,14 +20,6 @@
   color: rgba(255, 255, 255, 0.5);
 }
 
-.header__break_for_tablet {
-  display: none;
-}
-
-.header__break_for_desktop {
-  display: none;
-}
-
 .header__is-main .header__text {
   margin: 16px 0;
 }
@@ -45,15 +37,7 @@
   .header__text {
     font-size: 20px;
     line-height: 32px;
-    margin: 24px 0 0;
-  }
-
-  .header__break_for_phone {
-    display: none;
-  }
-
-  .header__break_for_tablet {
-    display: initial;
+    margin: 24px 72px 0 0;
   }
 
   .header__is-main .header__text {
@@ -76,14 +60,6 @@
     margin: 32px auto 0 0;
     font-size: 24px;
     line-height: 40px;
-  }
-
-  .header__break_for_tablet {
-    display: none;
-  }
-
-  .header__break_for_desktop {
-    display: initial;
   }
 
   .header__is-main .header__text {
