@@ -10,7 +10,7 @@
   color: rgba(255, 255, 255, 0.75);
   list-style: none;
   display: flex;
-  min-height: 76px;
+  min-height: 92px;
   align-items: flex-start;
   width: calc(100% * var(--times-length));
   transform: translateX(var(--right-px));
@@ -65,7 +65,7 @@
 .time-line__counter {
   list-style: none;
   padding: 0;
-  margin: 16px 0 8px 24px;
+  margin: 0 0 8px 24px;
   display: flex;
   align-items: center;
 }
@@ -76,6 +76,10 @@
   border-radius: 50%;
   width: 2px;
   height: 2px;
+}
+
+.time-line__counter-dot:hover {
+  cursor: pointer;
 }
 
 .time-line__counter-dot_active {
@@ -89,6 +93,7 @@
   }
 
   .time-line__times {
+    min-height: auto;
     padding: 0 48px;
     display: grid;
     column-gap: 32px;
