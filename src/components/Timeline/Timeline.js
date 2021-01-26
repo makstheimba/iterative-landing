@@ -8,8 +8,16 @@ export const CarouselContainer = styled.ul`
   justify-content: space-evenly; 
   overflow-x:auto;
 
+  //remove scrollbar
+  -ms-overflow-style: none;  
+  scrollbar-width: none;  
+   &::-webkit-scrollbar {
+     display: none;
+   }
+
   @media ${props => props.theme.breakpoints.sm} {
     width: 288px;
+
     overflow-x: scroll;
     -webkit-overflow-scrolling: touch;
     scroll-snap-type: x mandatory;
@@ -35,8 +43,7 @@ export const CarouselItem = styled.div`
     border-radius: 3px;
     overflow: visible;
     position: relative;
-
-    ${(props) => props.active === props.index ? `opacity: 1` : `opacity: 0.5`};
+    ${(props) => props.active === props.index ? `opacity: 1` : `opacity: 0.5`}; 
   }
 `
 
