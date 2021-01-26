@@ -51,23 +51,10 @@ function handleClick(e, i){
   }
 }
 
-function debounce(func, ms) {
-	let timeout
-	return () => {
-		clearTimeout(timeout)
-		timeout = setTimeout(() => {
-			timeout = null
-      func()
-		}, ms)
-	}
-}
-
 function handleScroll(){
   if(carouselRef.current){
-    debounce(() => {
-      let index = Math.round((carouselRef.current.scrollLeft / carouselRef.current.scrollWidth) * data.length)
-      setactiveItem(index)
-    }, 200)
+    let index = Math.round((carouselRef.current.scrollLeft / carouselRef.current.scrollWidth) * data.length);
+    setactiveItem(index);
   }
 }
 
@@ -102,8 +89,8 @@ function handleScroll(){
             <CarouselButton 
               key={index}
               index={index} 
-              onClick={e => handleClick(e, index)}
               active={activeItem}
+              onClick={e => handleClick(e, index)}
               type="button">
             </CarouselButton>
             )

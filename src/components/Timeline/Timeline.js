@@ -104,10 +104,17 @@ export const CarouselButtons = styled.div`
 `
 
 export const CarouselButton = styled.button`
+appearance: button;
+  background-color: white;
+  box-sizing: border-box;
+  padding: 0px 0px;
+  border-width: 0px;
+  border-image: none;
+
   text-decoration: none;
-  background: ${(props) => props.active === props.index ? '#FFFFFF' : 'rgba(255, 255, 255, 0.33)'};
-  width: ${(props) => props.active === props.index ? '4px' : '2px'};
-  height: ${(props) => props.active === props.index ? '4px' : '2px'};
   border-radius: 100%;
   margin-right: 3px;
+  ${(props) => props.active === props.index ? `background-color: #FFFFFF` : `background-color: rgba(255, 255, 255, 0.33)`};
+  ${(props) => props.active === props.index ? `width: 4px` : `width: 2px`};
+  ${(props) => props.active === props.index ? 'height: 4px' : `height: 2px`};
 `
