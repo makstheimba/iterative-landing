@@ -161,34 +161,34 @@ export const SecondaryBtn = styled.button`
 `
 
 export const ButtonBack = styled.div`
-  width: 262px;
-  height: 64px;
+  width: ${({ alt }) => alt ? '150px' : '262px'};
+  height: ${({ alt }) => alt ? '52px' : '64px'};
   border-radius: 50px;
-  font-size: 24px;
+  font-size: ${({ alt }) => alt ? '20px' : '24px'};
   font-weight: 600;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 0 80px;
+  margin: ${({ alt }) => alt ? '0' : '0 0 80px'};
   color: #fff;
-  background: linear-gradient(270deg, #00DBD8 0%, #B133FF 100%);
+  background: ${({ alt }) => alt ? 'linear-gradient(270deg, #ff622e 0%, #B133FF 100%)' : 'linear-gradient(270deg, #00DBD8 0%, #B133FF 100%)'};
   cursor: pointer;
   transition: 0.5s ease;
   position: relative;
   overflow: hidden;
 
   @media ${(props) => props.theme.breakpoints.lg} {
-    width: 184px;
-    height: 48px;
-    font-size: 16px;
-    margin-bottom: 64px;
+    width: ${({ alt }) => alt ? '150px' : '184px'};
+    height: ${({ alt }) => alt ? '52px' : '48px'};
+    font-size: ${({ alt }) => alt ? '20px' : '16px'};
+    margin-bottom: ${({ alt }) => alt ? '0' : '64px'};
   }
 
   @media ${(props) => props.theme.breakpoints.md} {
     width: 100%;
     height: 32px;
     font-size: 14px;
-    margin-bottom: 32px;
+    margin-bottom: ${({ alt }) => alt ? '0' : '32px'};
   }
 `
 
@@ -202,10 +202,10 @@ export const ButtonFront = styled.button`
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(270deg, #13ADC7 0%, #945DD6 100%);
+  background: ${({ alt }) => alt ? 'linear-gradient(270deg, #F46737 0%, #945DD6 100%)' : 'linear-gradient(270deg, #13ADC7 0%, #945DD6 100%)'};
   opacity: 1;
   transition: .4s ease;
-  font-size: 24px;
+  font-size: ${({ alt }) => alt ? '20px' : '24px'};
   font-weight: 600;
   align-items: center;
   justify-content: center;
@@ -223,7 +223,7 @@ export const ButtonFront = styled.button`
   }
 
   @media ${(props) => props.theme.breakpoints.lg} {
-    font-size: 16px;
+    font-size: ${({ alt }) => alt ? '20px' : '16px'};
   }
 
   @media ${(props) => props.theme.breakpoints.md} {

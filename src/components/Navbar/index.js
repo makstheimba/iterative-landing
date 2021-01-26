@@ -22,7 +22,6 @@ const NavBar = () => {
   });
 
   return (
-
     <NavBarWrapper>
       {(width >= MOBILE_WIDTH) &&
         <>
