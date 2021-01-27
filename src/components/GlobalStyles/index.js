@@ -258,7 +258,7 @@ export const LinkIconImg = styled.img`
   height: ${({ large }) => large ? '32px' : '24px'};
 
   @media ${(props) => props.theme.breakpoints.md} {
-    height: ${({ large }) => large ? '24px' : '24px'};
+    height: ${({ nav }) => nav ? '16px' : '24px'};
   }
 
   @media ${(props) => props.theme.breakpoints.sm} {
