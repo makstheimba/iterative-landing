@@ -5,8 +5,20 @@
   font-family: 'Space Grotesk', sans-serif;
   background-color: #0f1624;
   color: rgba(255, 255, 255, 0.5);
-  width: 100%;
   max-width: 1238px;
   margin: 0 auto;
   position: relative;
+  padding: 0 16px;
+}
+
+@media (min-width: 768px) {
+  .layout {
+    padding: 0 48px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .layout {
+    padding: 0 80px;
+  }
 }

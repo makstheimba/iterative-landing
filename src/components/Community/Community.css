@@ -1,5 +1,5 @@
 .community {
-  padding: 19px 16px 32px 16px;
+  padding: 19px 0 32px;
   position: relative;
 }
 
@@ -50,7 +50,7 @@
 
 @media (min-width: 768px) {
   .community {
-    padding: 28px 48px 32px 48px;
+    padding: 28px 0 32px;
   }
 
   .community__line {
@@ -103,7 +103,7 @@
 
 @media (min-width: 1024px) {
   .community {
-    padding: 41px 80px 80px 80px;
+    padding: 41px 0 80px;
   }
 
   .community__line {
