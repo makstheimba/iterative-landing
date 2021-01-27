@@ -1,0 +1,61 @@
+.worldmap__geography {
+  outline: none;
+}
+
+.worldmap__marker {
+  width: 16px;
+  height: 16px;
+  border-radius: 100%;
+  background-size: contain;
+  object-fit: contain;
+  stroke: #fff;
+  stroke-width: 1px;
+  filter: drop-shadow(0px 2px 8px rgba(0, 0, 0, 0.15));
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.worldmap__marker:active {
+  stroke: #fff;
+  stroke-width: 2px;
+}
+
+.worldmap__marker:hover {
+  stroke: #fff;
+  stroke-width: 2px;
+}
+
+.worldmap__hidden-el {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+@media (min-width: 768px) {
+  .worldmap__circle {
+    width: 24px;
+    height: 24px;
+    stroke-width: 2px;
+  }
+
+  .worldmap__circle:active {
+    stroke-width: 4px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .worldmap__circle {
+    width: 32px;
+    height: 32px;
+    stroke-width: 2px;
+  }
+
+  .worldmap__circle:active {
+    stroke-width: 4px;
+  }
+}

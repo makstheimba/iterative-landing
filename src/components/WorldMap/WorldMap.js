@@ -1,96 +1,145 @@
-import React from 'react';
+import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import {
   ComposableMap,
   Geographies,
   Geography,
   Marker,
 } from 'react-simple-maps';
-import Avatar from '../Avatar/Avatar';
-import tempAvatar from '../../images/temp-avatar.jpg';
+import DeveloperCard from '../DeveloperCard/DeveloperCard';
+import './WorldMap.css';
 
 const geoUrl =
   'https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-110m.json';
 
-const markers = [
-  {
-    markerOffset: -30,
-    name: 'Buenos Aires',
-    coordinates: [-58.3816, -34.6037],
-  },
-  { markerOffset: 15, name: 'Lima', coordinates: [-77.0428, -12.0464] },
-];
+export default function WorldMap({ developers = [] }) {
+  const [isDeveloperCardOpen, setIsDeveloperCardOpen] = useState(false);
+  const [DeveloperCardData, setDeveloperCardData] = useState({});
 
-export default function WorldMap() {
+  function closeDeveloperCardPopup() {
+    setIsDeveloperCardOpen(false);
+  }
+
   return (
-    <ComposableMap projection="geoEqualEarth">
-      <Geographies geography={geoUrl}>
-        {({ geographies }) =>
-          geographies
-            //.filter((d) => d.properties.REGION_UN === 'Americas')
-            .map((geo) => (
-              <Geography
-                key={geo.rsmKey}
-                geography={geo}
-                fill="#EAEAEC"
-                stroke="#D6D6DA"
-              />
-            ))
-        }
-      </Geographies>
-      {markers.map(({ name, coordinates, markerOffset }) => (
-        <Marker key={name} coordinates={coordinates}>
-          <g
-            fill="none"
-            stroke="#FF5533"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            transform="translate(-12, -24)"
+    <>
+      <DeveloperCard
+        isOpen={isDeveloperCardOpen}
+        title={DeveloperCardData.title}
+        job={DeveloperCardData.job}
+        location={DeveloperCardData.location}
+        text={DeveloperCardData.text}
+        image={DeveloperCardData.image}
+        globeLink={DeveloperCardData.globeLink}
+        twitterLink={DeveloperCardData.twitterLink}
+        linkedinLink={DeveloperCardData.linkedinLink}
+      />
+      <ComposableMap
+        projection="geoEqualEarth"
+        projectionConfig={{
+          rotate: [-15, 0, 0],
+          scale: 170,
+        }}
+        onClick={closeDeveloperCardPopup}
+      >
+        <defs>
+          <pattern
+            id="dotPattern"
+            x="5"
+            y="5"
+            width="6"
+            height="6"
+            patternUnits="userSpaceOnUse"
           >
-            <circle cx="12" cy="10" r="3" />
-            <path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 1 0-16 0c0 3 2.7 6.9 8 11.7z" />
-          </g>
-          <text
-            textAnchor="middle"
-            y={markerOffset}
-            style={{ fontFamily: 'system-ui', fill: '#5D5A6D' }}
-          >
-            {name}
-          </text>
-          <svg
-            aria-labelledby="alt-span-id"
-            width="114"
-            height="114"
-            viewBox="0 0 114 114"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            className="avatar__square_item avatar__square_item_shift"
-          >
-            <defs>
-              <pattern
-                id="avatarImg"
-                patternUnits="userSpaceOnUse"
-                width="150"
-                height="150"
-              >
-                <image
-                  href={tempAvatar}
-                  x="-15"
-                  y="-20"
-                  width="150"
-                  height="150"
-                />
-              </pattern>
-            </defs>
-            <path
-              fill="url(#avatarImg)"
-              d="M2.24814 50.7004C-2.18305 34.163 7.631 17.1645 24.1685 12.7333L63.2996 2.24814C79.837 -2.18305 96.8355 7.631 101.267 24.1685L111.752 63.2996C116.183 79.837 106.369 96.8355 89.8316 101.267L50.7004 111.752C34.163 116.183 17.1645 106.369 12.7333 89.8316L2.24814 50.7004Z"
-              stroke="green"
-              strokeWidth="0.5"
+            <circle
+              cx="3"
+              cy="3"
+              r="1.5"
+              stroke="none"
+              fill="#fff"
+              fillOpacity="0.5"
             />
-          </svg>
-        </Marker>
-      ))}
-    </ComposableMap>
+          </pattern>
+        </defs>
+        <Geographies geography={geoUrl}>
+          {({ geographies }) =>
+            geographies
+              .filter((d) => d.properties.REGION_UN !== 'Antarctica')
+              .map((geo) => (
+                <Geography
+                  key={geo.rsmKey}
+                  geography={geo}
+                  fill="url(#dotPattern)"
+                  stroke="none"
+                  className="worldmap__geography"
+                />
+              ))
+          }
+        </Geographies>
+        {developers.map((developer, i) => {
+          function openDeveloperCardPopup() {
+            setIsDeveloperCardOpen(true);
+            setDeveloperCardData(developer);
+          }
+          return (
+            <Marker
+              key={i}
+              coordinates={developer.coordinates}
+              className="worldmap__marker"
+              onMouseEnter={openDeveloperCardPopup}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                width="30"
+                height="30"
+                viewBox="0 0 30 30"
+                aria-labelledby="alt-span-id"
+                x={developer.markerOffsetX}
+                y={developer.markerOffsetY}
+              >
+                <defs>
+                  <pattern
+                    id={`markerImg${i}`}
+                    patternUnits="userSpaceOnUse"
+                    width="50"
+                    height="50"
+                  >
+                    <image
+                      href={developer.image}
+                      x="-4"
+                      y="-10"
+                      width="50"
+                      height="50"
+                    />
+                  </pattern>
+                </defs>
+                <circle cx="15" cy="15" r="14" fill={`url(#markerImg${i})`} />
+              </svg>
+              <span className="worldmap__hidden-el">
+                developer's avatar that hover the information popup
+              </span>
+            </Marker>
+          );
+        })}
+      </ComposableMap>
+    </>
   );
 }
+
+WorldMap.propTypes = {
+  developers: PropTypes.arrayOf(
+    PropTypes.shape({
+      coordinates: PropTypes.array.isRequired,
+      markerOffsetX: PropTypes.number,
+      markerOffsety: PropTypes.number,
+      title: PropTypes.string.isRequired,
+      job: PropTypes.string.isRequired,
+      location: PropTypes.strging.isRequired,
+      text: PropTypes.string.isRequired,
+      image: PropTypes.string.isRequired,
+      globeLink: PropTypes.string.isRequired,
+      twitterLink: PropTypes.string.isRequired,
+      linkedinLink: PropTypes.string.isRequired,
+    })
+  ).isRequired,
+};
