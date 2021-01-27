@@ -60,6 +60,14 @@ export const LinkItem = styled(Link)`
 	line-height: 30px;
 	color: rgba(255, 255, 255, 0.75);
 	margin-bottom: 16px;
+	transition: .3s ease;
+	position: relative;
+	left: 0;
+
+	&:hover {
+		color: #fff;
+		left: 6px;
+	}
 
 	@media ${props => props.theme.breakpoints.lg} {
 		font-size: 16px;
