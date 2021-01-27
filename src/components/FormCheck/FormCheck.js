@@ -9,20 +9,39 @@ export default function FormCheck({ text, shape, onChange }) {
     }
   }
 
+  function handleChange(e) {
+    onChange(e.target.checked);
+  }
+
   return (
-    <label className="formcheck formcheck__text">{text}
-      { shape === "square" && <input type="checkbox" className="formcheck__input" onKeyUp={onKeyUp} onChange={onChange} />}
-      { shape === "circle" && <input type="radio" className="formcheck__input" onKeyUp={onKeyUp} onChange={onChange} />}
+    <label className="formcheck formcheck__text">
+      {text}
+      {shape === 'square' && (
+        <input
+          type="checkbox"
+          className="formcheck__input"
+          onKeyUp={onKeyUp}
+          onChange={handleChange}
+        />
+      )}
+      {shape === 'circle' && (
+        <input
+          type="radio"
+          className="formcheck__input"
+          onKeyUp={onKeyUp}
+          onChange={handleChange}
+        />
+      )}
       <span className={`formcheck__button formcheck__button-${shape}`}></span>
     </label>
-  )
+  );
 }
 
 FormCheck.prototype = {
-  text: PropTypes.string.isRequired,
+  text: PropTypes.node.isRequired,
   shape: PropTypes.oneOf(['circle', 'square']),
   onChange: PropTypes.func,
-}
+};
 
 FormCheck.defaultProps = {
   shape: 'square',
