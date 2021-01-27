@@ -78,8 +78,14 @@ export const CarouselItemTitle = styled.h4`
 `
 export const CarouselItemImg = styled.img`
   margin-left: 8px;
-  // overflow: visible;
   z-index: 10;
+
+  @media ${props => props.theme.breakpoints.sm} {
+    font-size: 10px;
+    line-height: 16px;
+    overflow: visible;
+  }
+
 `
 
 export const CarouselItemText = styled.p`
