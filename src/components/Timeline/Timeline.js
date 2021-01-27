@@ -1,18 +1,25 @@
 import styled from 'styled-components'
 
 export const CarouselContainer = styled.ul`
+  max-width: 1040px
   background: #0F1624;
   padding: 1rem;
   list-style:none;
   display: flex;
-  justify-content: space-evenly; 
-  overflow-x:auto;
+  align-content: start;
+  justify-content: space-between; 
+  overflow-x:hidden;
 
   //remove scrollbar
-  -ms-overflow-style: none;  
-  scrollbar-width: none;  
+  //-ms-overflow-style: none;  
+  scrollbar-width: thin;  
    &::-webkit-scrollbar {
      display: none;
+   }
+
+   margin-left: 32px;
+   &:first-of-type{
+     margin-left: 0px;
    }
 
   @media ${props => props.theme.breakpoints.sm} {
@@ -35,7 +42,9 @@ export const CarouselItem = styled.div`
   
   @media ${props => props.theme.breakpoints.sm} {
     margin-left: 32px;
-
+    &:first-of-type{
+      margin-left: 32px;
+    }
     width: 108px;
     background: #0E131F;
     scroll-snap-align: start;
