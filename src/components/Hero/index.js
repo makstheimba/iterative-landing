@@ -9,11 +9,9 @@ import hero3 from '../../images/hero_Warby-Parker.svg'
 import hero4 from '../../images/hero_Odnoklassniki.svg'
 import hero5 from '../../images/hero_Smithsonian.svg'
 import hero6 from '../../images/hero_Neosensory.svg'
+import { propTypes } from 'gatsby-plugin-image/dist/src/components/static-image.server'
 
-const Hero = () => {
-  function handleBtnClick() {
-    console.log("Btn working");
-  }
+const Hero = (props) => {
 
   return (
     <Section>
@@ -22,7 +20,7 @@ const Hero = () => {
       <SectionText>
         AI teams face challenges that require new technologies. We build these technologies. Existing data warehouses and data lakes do not fit unstructured datasets like text, images, and videos.
       </SectionText>
-      <Button onClick={handleBtnClick}>Request a Demo</Button>
+      <Button onClick={props.handleClick}>Request a Demo</Button>
       <HeroSponsorsContainer>
         <HeroSponsorLogo src={hero1} />
         <HeroSponsorLogo src={hero2} />

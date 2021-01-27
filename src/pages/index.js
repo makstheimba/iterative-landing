@@ -9,16 +9,28 @@ import Modal from "../components/Modal"
 
 // markup
 const IndexPage = () => {
+
+  const [isPopUpOpen, setisPopUpOpen] = React.useState(false);
+
+  function openPopUp(){
+    setisPopUpOpen(true);
+  }
+
+  function closePopup(){
+    setisPopUpOpen(false);
+
+  }
+
   return (
     <>
       <Layout>
         <SEO title="Home" description="This is our home and here we will share basic information" />
-        <Hero />
+        <Hero handleClick={openPopUp} />
         <Enterprise />
         <MeetCommunity />
       </Layout>
-      {/* This is the popup container to be used for the Demo Form */}
-      {/* <Modal /> */}
+
+      <Modal isOpen={isPopUpOpen} handleClose={closePopup}/>
     </>
   )
 }

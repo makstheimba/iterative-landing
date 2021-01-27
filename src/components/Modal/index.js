@@ -1,7 +1,8 @@
 import React from 'react'
 import { formValidator, fieldValidator} from '../../utils/formvalidator'
-import '../Modal/Modal.css'
 import { PopupWrapper } from './Modal'
+
+import '../Modal/Modal.css'
 
 const Modal = (props) => {
 
@@ -60,7 +61,7 @@ const Modal = (props) => {
   const formRef = React.useRef();
 
   function validateForm(){
-    props.formValidator(formRef.current,'.popup__input') ? setSignUpFormInvalid(true) : setSignUpFormInvalid(false);
+    formValidator(formRef.current,'.popup__input') ? setSignUpFormInvalid(true) : setSignUpFormInvalid(false);
   }
 
   //reset fields when opened
@@ -76,7 +77,10 @@ const Modal = (props) => {
   return (
     <section className={`popup ${props.isOpen  && 'popup_state_opened'}` } >
       <form className="popup__form" onChange={validateForm} ref={formRef}>
-        <h4 className="popup__title">Request a demo</h4><button className="popup__close-button">X</button>
+        <h4 className="popup__title">Request a demo</h4><button 
+          className="popup__close-button" 
+          onClick={props.handleClose} 
+          type="button">X</button>
         
         <input className="popup__input" id="name-input" type="text" name="name" required minLength="2" maxLength="40" placeholder="Full name" value={name} onChange={handleName} />
         <span className={`popup__input-error" id="name-input-error ${nameError !=='' && 'popup__error_visible'}`}>{nameError}</span>
