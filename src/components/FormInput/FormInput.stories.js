@@ -1,15 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import FormInput from './FormInput';
 
-const Template = (args) => {
-  const [value, setValue] = useState('');
-
-  function handleChange({ val }) {
-    setValue(val);
-  }
-
-  return <FormInput value={value} onChange={handleChange} {...args} />;
-};
+const Template = (args) => <FormInput {...args} />;
 
 const ExampleFormInput = {
   title: 'Common/FormInput',
@@ -19,7 +11,25 @@ export default ExampleFormInput;
 
 export const Default = Template.bind({});
 Default.args = {
-  name: 'email',
-  caption: 'E-mail',
-  inputOpts: { required: true, type: 'email' },
+  name: 'default',
+  caption: 'Default',
+  value: 'Test',
+  inputOpts: { type: 'text' },
+};
+
+export const Invalid = Template.bind({});
+Invalid.args = {
+  name: 'invalid',
+  caption: 'Invalid',
+  value: 'Add focus to see errors',
+  inputOpts: { type: 'email' },
+};
+
+export const Disabled = Template.bind({});
+Disabled.args = {
+  name: 'disabled',
+  caption: 'Disabled',
+  value: 'disabled',
+  inputOpts: { type: 'text' },
+  disabled: true,
 };
