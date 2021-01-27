@@ -21,7 +21,9 @@
 .quickLinks__link {
   font-size: 18px;
   line-height: 30px;
+  text-decoration: none;
   color: rgba(255, 255, 255, 0.75);
+
 }
 
 @media (min-width:637px) and (max-width:768px) {

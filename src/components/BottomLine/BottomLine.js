@@ -8,18 +8,18 @@ import discord from '../../images/Discord.svg'
 import youtube from '../../images/Youtube.svg'
 import github from '../../images/Github.svg'
 
-export default function BottomLine({  children }) {
+export default function BottomLine() {
   return <div className="bottomLine">
     <div className="bottomLine__logo">
       <img src={logoWithText} />
       <p className="bottomLine__text">Open platform to operationalize AI</p>
     </div>
     <ul className="bottomLine__list">
-      <li className="bottomLine__social"><img src={github} /></li>
-      <li className="bottomLine__social"><img src={twitter} /></li>
-      <li className="bottomLine__social"><img src={linkedin} /></li>
-      <li className="bottomLine__social"><img src={youtube} /></li>
-      <li className="bottomLine__social"><img src={discord} /></li>
+      <li className="bottomLine__social"><a href="#"><img src={github} /></a></li>
+      <li className="bottomLine__social"><a href="#"><img src={twitter} /></a></li>
+      <li className="bottomLine__social"><a href="#"><img src={linkedin} /></a></li>
+      <li className="bottomLine__social"><a href="#"><img src={youtube} /></a></li>
+      <li className="bottomLine__social"><a href="#"><img src={discord} /></a></li>
     </ul>
   </div>
 };

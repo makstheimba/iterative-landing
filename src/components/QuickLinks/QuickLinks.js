@@ -2,23 +2,23 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './QuickLinks.css';
 
-export default function QuickLinks({  children }) {
+export default function QuickLinks() {
   return <ul className="quickLinks">
     <ul className="quickLinks__list">
       <li><h2 className="quickLinks__heading">COMPANY</h2></li>
-      <li className="quickLinks__link">About US</li>
-      <li className="quickLinks__link">Pricing</li>
+      <li><a href="#" className="quickLinks__link">About US</a></li>
+      <li><a href="#" className="quickLinks__link">Pricing</a></li>
     </ul>
     <ul className="quickLinks__list">
       <li><h2 className="quickLinks__heading">LEGAL</h2></li>
-      <li className="quickLinks__link">Privacy policy</li>
-      <li className="quickLinks__link">Terms of use</li>
+      <li><a href="#" className="quickLinks__link">Privacy policy</a></li>
+      <li><a href="#" className="quickLinks__link">Terms of use</a></li>
     </ul>
     <ul className="quickLinks__list">
       <li><h2 className="quickLinks__heading">OUR PRODUCTS</h2></li>
-      <li className="quickLinks__link">DVC</li>
-      <li className="quickLinks__link">CML</li>
-      <li className="quickLinks__link">Studio</li>
+      <li><a href="#" className="quickLinks__link">DVC</a></li>
+      <li><a href="#" className="quickLinks__link">CML</a></li>
+      <li><a href="#" className="quickLinks__link">Studio</a></li>
     </ul>
   </ul>
 };
