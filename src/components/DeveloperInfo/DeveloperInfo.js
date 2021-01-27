@@ -6,7 +6,7 @@ export default function DeveloperInfo({ developers = [] }) {
   return (
     <ul className="developerInfo">
       {developers.map((developer, i) => (
-        <li className="developerInfo__list-item">
+        <li key={i} className="developerInfo__list-item">
           <Avatar
             image={developer.image}
             color={developer.color}
