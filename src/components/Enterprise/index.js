@@ -21,8 +21,8 @@ const Enterprise = () => {
       </SectionText>
       <ImageContainer>
         <picture>
-          <source media="(min-width:600px)" srcset={mainImageL} />
-          <source media="(min-width:300px)" srcset={mainImageS} />
+          <source media="(min-width:550px)" srcset={mainImageL} />
+          <source media="(min-width:250px)" srcset={mainImageS} />
           <MainImage src={mainImageL} alt="enterprise" />
         </picture>
       </ImageContainer>
