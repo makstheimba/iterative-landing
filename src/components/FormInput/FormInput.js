@@ -11,6 +11,7 @@ export default function FormInput({
   value,
   inputOpts,
   caption,
+  inputType,
 }) {
   const inputEl = useRef(null);
   const [isInputValid, setIsInputValid] = useState(true);
@@ -72,6 +73,7 @@ export default function FormInput({
         value={value}
         placeholder={caption}
         onChange={handleChange}
+        type={inputType}
         {...inputOpts}
       />
       <button
@@ -100,4 +102,5 @@ FormInput.propTypes = {
   value: PropTypes.string.isRequired,
   inputOpts: PropTypes.object,
   caption: PropTypes.string.isRequired,
+  inputType: PropTypes.string.isRequired,
 };

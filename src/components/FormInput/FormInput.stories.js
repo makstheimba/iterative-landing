@@ -14,7 +14,7 @@ Default.args = {
   name: 'default',
   caption: 'Default',
   value: 'Test',
-  inputOpts: { type: 'text' },
+  inputType: 'text',
 };
 
 export const Invalid = Template.bind({});
@@ -22,7 +22,7 @@ Invalid.args = {
   name: 'invalid',
   caption: 'Invalid',
   value: 'Add focus to see errors',
-  inputOpts: { type: 'email' },
+  inputType: 'email',
 };
 
 export const Disabled = Template.bind({});
@@ -30,6 +30,6 @@ Disabled.args = {
   name: 'disabled',
   caption: 'Disabled',
   value: 'disabled',
-  inputOpts: { type: 'text' },
+  inputType: 'text',
   disabled: true,
 };

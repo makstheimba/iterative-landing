@@ -26,6 +26,10 @@
     color ease-in-out 0.2s;
 }
 
+.form-input__label {
+  cursor: text;
+}
+
 .form-input__label_focused {
   color: #13adc7;
 }
