@@ -6,6 +6,7 @@ import BottomLine from '../components/BottomLine/BottomLine'
 import Community from '../components/Community/Community'
 import Highlights from '../components/Highlights/Highlights'
 import Navbar from '../components/Navbar/Navbar'
+import HomeHero from '../components/HomeHero/HomeHero'
 
 // markup
 const IndexPage = () => {
@@ -14,7 +15,7 @@ const IndexPage = () => {
       <Layout>
         <title>Home Page</title>
         <Navbar />
-
+        <HomeHero />
 
         
         <Highlights />
