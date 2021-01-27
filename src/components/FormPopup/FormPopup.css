@@ -7,6 +7,10 @@
   box-sizing: border-box;
 }
 
+.form-popup:hover {
+  cursor: initial;
+}
+
 .form-popup__form {
   max-height: calc(100vh - 68px);
   overflow-y: auto;
