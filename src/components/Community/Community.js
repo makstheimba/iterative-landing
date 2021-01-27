@@ -30,9 +30,9 @@ export default function Community() {
     <div className="community__links">
       <p className="community__text">Join the community:</p>
       <div className="community__social-list">
-        <img className="community__social" src={discord}/>
-        <img className="community__social" src={github}/>
-        <img className="community__social" src={twitter}/>
+        <a href="#" className="community__social"><img src={discord}/></a>
+        <a href="#" className="community__social"><img src={github}/></a>
+        <a href="#" className="community__social"><img src={twitter}/></a>
       </div>
     </div>
   </div>
