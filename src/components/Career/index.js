@@ -1,6 +1,5 @@
 import React from 'react'
-import { Section, SectionSubText, SectionText, SectionTitle } from '../GlobalStyles'
-import { Aboutbutton } from './Career'
+import { SecondaryBtn, Section, SectionSubText, SectionText, SectionTitle } from '../GlobalStyles'
 
 const Career = () => {
   return (
@@ -14,7 +13,7 @@ const Career = () => {
       <SectionSubText>
         Building contextual assistants & chatbots that really help customers is hard.Rasa provides infrastructure & tools necessary for high-performing, resilient,proprietary contextual assistants that work. With Iterative, all developers can create better text- and voice-based assistants.
       </SectionSubText>
-      <Aboutbutton>Drop us a line</Aboutbutton>
+      <SecondaryBtn>Drop us a line</SecondaryBtn>
     </Section>
   )
 }

@@ -1,6 +1,6 @@
 import React from 'react'
-import mainImageL from '../../images/Enterprise/main-l.png'
-import mainImageS from '../../images/Enterprise/main-s.png'
+import mainImageL from '../../images/Enterprise/enterprise_large.svg'
+import mainImageS from '../../images/Enterprise/enterprise_small.svg'
 import gearImage from '../../images/Enterprise/icon/gear.svg'
 import codeImage from '../../images/Enterprise/icon/code.svg'
 import shieldImage from '../../images/Enterprise/icon/shield.svg'
@@ -21,8 +21,8 @@ const Enterprise = () => {
       </SectionText>
       <ImageContainer>
         <picture>
-          <source media="(min-width:600px)" srcset={mainImageL} />
-          <source media="(min-width:300px)" srcset={mainImageS} />
+          <source media="(min-width:550px)" srcset={mainImageL} />
+          <source media="(min-width:250px)" srcset={mainImageS} />
           <MainImage src={mainImageL} alt="enterprise" />
         </picture>
       </ImageContainer>

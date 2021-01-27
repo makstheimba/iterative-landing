@@ -1,5 +1,7 @@
 import React from 'react'
-import { NavBarWrapper, NavLink, NavLogo, NavDivider, NavProducts, NavProductsMobile, NavIcon, NavSocial, NavProductsIcon, NavIconImg } from './NavBar'
+import { NavBarWrapper, NavLink, NavLogo, NavLogoWrap, NavDivider, NavProducts, NavProductsMobile, NavIcon, NavSocial, NavProductsIcon, NavIconImg } from './NavBar'
+import LinkIcon from '../GlobalStyles/LinkIcon'
+
 import navLogo from '../../images/nav_logo.svg'
 import navIterative from '../../images/nav_iterative.svg'
 import navArrow from '../../images/nav_down.svg'
@@ -8,7 +10,7 @@ import github from '../../images/icn-github.svg'
 import youtube from '../../images/icn-youtube.svg'
 
 const NavBar = () => {
-  const MOBILE_WIDTH = 768;
+  const MOBILE_WIDTH = 720;
 
   const [width, setWidth] = React.useState(window.innerWidth);
 
@@ -22,30 +24,31 @@ const NavBar = () => {
   });
 
   return (
-
     <NavBarWrapper>
       {(width >= MOBILE_WIDTH) &&
         <>
-          <NavLink to="/">
-            <NavLogo src={navLogo} logo="true" />
+          <NavLogoWrap to="/">
+            <NavLogo src={navLogo} logo />
             <NavLogo src={navIterative} />
-          </NavLink>
+          </NavLogoWrap>
           <NavLink to="/about">About Us</NavLink>
           <NavLink to="/pricing">Pricing</NavLink>
           <NavDivider />
           <NavProducts>Products <NavProductsIcon src={navArrow} /></NavProducts>
 
           <NavSocial>
-            <NavIcon href="#" target="_blank" rel="noreferrer"><NavIconImg src={twitter} /></NavIcon>
-            <NavIcon href="#" target="_blank" rel="noreferrer"><NavIconImg src={github} /></NavIcon>
-            <NavIcon href="#" target="_blank" rel="noreferrer"><NavIconImg src={youtube} /></NavIcon>
+            <LinkIcon href="#" src={twitter} />
+            <LinkIcon href="#" src={github} />
+            <LinkIcon href="#" src={youtube} />
           </NavSocial>
         </>}
       {width < MOBILE_WIDTH &&
         <>
-          <NavProductsMobile to="/">
-            <NavLogo src={navLogo} logo="true" />
-            <NavLogo src={navIterative} />
+          <NavLogoWrap to="/" mobile>
+            <NavLogo src={navLogo} logo />
+          </NavLogoWrap>
+          <NavProductsMobile>
+            <NavLogo src={navIterative} mobile />
             <NavProductsIcon src={navArrow} />
           </NavProductsMobile>
           <NavLink to="/about">About Us</NavLink>

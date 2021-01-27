@@ -1,9 +1,10 @@
 import React from 'react'
 import { Box, Boxes, BoxNum, BoxText, IconContainer, Icons, Join, JoinText } from './MeetCommunity'
-import Discord from "../../images/icn-discord.svg"
-import Github from "../../images/icn-github.svg"
-import Twitter from "../../images/icn-twitter.svg"
+import discord from "../../images/icn-discord.svg"
+import github from "../../images/icn-github.svg"
+import twitter from "../../images/icn-twitter.svg"
 import { Section, SectionTitle } from '../GlobalStyles'
+import LinkIcon from '../GlobalStyles/LinkIcon'
 
 const data = [
   {
@@ -43,9 +44,9 @@ const MeetCommunity = () => {
       <Join>
         <JoinText>Join the community:</JoinText>
         <IconContainer>
-          <Icons src={Discord} />
-          <Icons src={Github} />
-          <Icons src={Twitter} />
+          <LinkIcon large href="#" src={discord}/>
+          <LinkIcon large href="#" src={github}/>
+          <LinkIcon large href="#" src={twitter}/>
         </IconContainer>
       </Join>
     </Section>
