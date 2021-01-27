@@ -16,8 +16,6 @@ export const CarouselContainer = styled.ul`
    }
 
   @media ${props => props.theme.breakpoints.sm} {
-    width: 288px;
-
     overflow-x: scroll;
     -webkit-overflow-scrolling: touch;
     scroll-snap-type: x mandatory;
@@ -29,7 +27,6 @@ export const CarouselItem = styled.div`
   background: #0F1624;
   border-radius: 3px;
   max-width: 195.6px;
-  margin-right: 32px;
 
   @media ${props => props.theme.breakpoints.md} {
     width: 108.8px;
@@ -37,6 +34,8 @@ export const CarouselItem = styled.div`
   }
   
   @media ${props => props.theme.breakpoints.sm} {
+    margin-left: 32px;
+
     width: 108px;
     background: #0E131F;
     scroll-snap-align: start;
@@ -69,7 +68,7 @@ export const CarouselItemTitle = styled.h4`
 `
 export const CarouselItemImg = styled.img`
   margin-left: 8px;
-  overflow: visible;
+  // overflow: visible;
   z-index: 10;
 `
 
