@@ -1,6 +1,6 @@
 .company-highlight-list {
   padding: 0;
-  margin: 32px 0;
+  margin: 32px 0 42px;
   display: grid;
   grid-template-columns: 1fr;
   row-gap: 24px;
@@ -9,7 +9,7 @@
 @media (min-width: 768px) {
   .company-highlight-list {
     padding: 0;
-    margin: 64px 0;
+    margin: 64px 0 60px;
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     row-gap: 0;
@@ -20,7 +20,7 @@
 @media (min-width: 1024px) {
   .company-highlight-list {
     padding: 0;
-    margin: 80px 0;
+    margin: 80px 0 74px;
     column-gap: 40px;
   }
 }
