@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import PropTypes from 'prop-types';
 import Icon from '../Icon/Icon';
 import clearIcon from '../../images/icn-clear.svg';
 import './FormInput.css';
@@ -91,3 +92,12 @@ export default function FormInput({
     </div>
   );
 }
+
+FormInput.propTypes = {
+  onChange: PropTypes.func.isRequired,
+  name: PropTypes.string.isRequired,
+  disabled: PropTypes.bool,
+  value: PropTypes.string.isRequired,
+  inputOpts: PropTypes.object,
+  caption: PropTypes.string.isRequired,
+};
