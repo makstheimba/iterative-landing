@@ -3,6 +3,7 @@ import Icon from './Icon';
 import twitterIcon from '../../images/icn-twitter.svg';
 import gearIcon from '../../images/icn-gear.svg';
 import standardClient from '../../images/client-standard.svg';
+import globeIcon from '../../images/icn-globe-gray.svg';
 
 const Template = (args) => <Icon {...args} />;
 
@@ -31,4 +32,13 @@ Client.args = {
   icon: standardClient,
   widthPixelSizes: [52, 78, 130],
   heightPixelSizes: [6, 9, 16],
+};
+
+export const LightBackground = Template.bind({});
+LightBackground.args = {
+  icon: globeIcon,
+  widthPixelSizes: [14, 14, 14],
+  link: 'about:blank',
+  linkDescription: 'Go to website',
+  background: 'light',
 };

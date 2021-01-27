@@ -17,6 +17,12 @@ Shape.args = {
   color: '#945DD6',
 };
 
+export const GradientColor = Template.bind({});
+GradientColor.args = {
+  shape: 'square',
+  image: testAvatar,
+};
+
 export const ShapeAltCustom = Template.bind({});
 ShapeAltCustom.args = {
   shape: 'square',
