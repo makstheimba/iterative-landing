@@ -30,6 +30,10 @@ export const CarouselContainer = styled.ul`
     justify-content: initial;
     margin-bottom: 0px;
 
+    scrollbar-width: thin;  
+    &::-webkit-scrollbar {
+      display: block;
+    }
   }
 `
 export const CarouselItem = styled.div`

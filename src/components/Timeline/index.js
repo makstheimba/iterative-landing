@@ -35,7 +35,7 @@ const [activeItem, setactiveItem] = React.useState(0);
 const carouselRef = React.useRef();
 
 
-function smoothScroll (node, left) {
+function scroll (node, left) {
   return node.scrollTo({
     'left': left,
     behavior: 'smooth'
@@ -47,7 +47,7 @@ function handleClick(e, i){
 
   if(carouselRef.current){
     const scrollLeft = Math.floor(carouselRef.current.scrollWidth * (i  / data.length ));
-    smoothScroll(carouselRef.current, scrollLeft);
+    scroll(carouselRef.current, scrollLeft);
   }
 }
 
