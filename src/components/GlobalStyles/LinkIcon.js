@@ -3,8 +3,8 @@ import { LinkContainer, LinkIconImg } from './index'
 
 const LinkIcon = (props) => {
   return (
-    <LinkContainer href={props.href} target="_blank" rel="noreferrer">
-      <LinkIconImg src={props.src} />
+    <LinkContainer href={props.href} large={props.large} target="_blank" rel="noreferrer">
+      <LinkIconImg src={props.src} large={props.large} />
     </LinkContainer>
   )
 }
