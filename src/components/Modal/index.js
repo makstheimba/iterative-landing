@@ -77,34 +77,33 @@ const Modal = (props) => {
   return (
     <section className={`popup ${props.isOpen  && 'popup_state_opened'}` } >
       <form className="popup__form" onChange={validateForm} ref={formRef}>
-        <h4 className="popup__title">Request a demo</h4><button 
-          className="popup__close" 
-          onClick={props.handleClose} 
-          type="button">X</button>
+        <h4 className="popup__title">Request a demo<button className="popup__close" 
+          onClick={props.handleClose} type="button"></button>
+        </h4>
         
-        <input className="popup__input" id="name-input" type="text" name="name" required minLength="2" maxLength="40" placeholder="Full name" value={name} onChange={handleName} />
-        <span className={`popup__input-error" id="name-input-error ${nameError !=='' && 'popup__error_visible'}`}>{nameError}</span>
+        <input className={`popup__input ${nameError !=='' && 'popup__input_type_error'} `} id="name-input" type="text" name="name" required minLength="2" maxLength="40" placeholder="Full name" value={name} onChange={handleName} />
+        <span className={`popup__input-error" ${nameError !=='' && 'popup__error_visible'}`} id="name-input-error">{nameError}</span>
         
         <p className="popup__input-label">E-mail</p>
-        <input className="popup__input" id="email-input" type="text" name="email" required minLength="2" maxLength="40" placeholder="Enter email" value={email} onChange={handleEmail} />
-        <span className={`popup__input-error" id="email-input-error ${emailError !=='' && 'popup__error_visible'}`}>{emailError}</span>
+        <input className={`popup__input ${emailError !=='' && 'popup__input_type_error'} `} id="email-input" type="text" name="email" required minLength="2" maxLength="40" placeholder="Enter email" value={email} onChange={handleEmail} />
+        <span className={`popup__input-error" ${emailError !=='' && 'popup__error_visible'}`} id="email-input-error">{emailError}</span>
         
         <p className="popup__input-label">Company</p>  
-        <input className="popup__input" id="company-input" type="text" name="company" required minLength="2" maxLength="12" placeholder="Enter company" value={company} onChange={handleCompany} /> 
-        <span className={`popup__input-error" id="company-input-error ${companyError !=='' && 'popup__error_visible'}`}>{companyError}</span>
+        <input className={`popup__input ${companyError !=='' && 'popup__input_type_error'} `} id="company-input" type="text" name="company" required minLength="2" maxLength="12" placeholder="Enter company" value={company} onChange={handleCompany} /> 
+        <span className={`popup__input-error"  ${companyError !=='' && 'popup__error_visible'}`} id="company-input-error">{companyError}</span>
         
-        <input className="popup__input" id="phone-input" type="text" name="phone" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Phone" value={phone} onChange={handlePhone} /> 
-        <span className={`popup__input-error" id="phone-input-error ${phoneError !=='' && 'popup__error_visible'}`}>{phoneError}</span>
+        <input className={`popup__input ${phoneError !=='' && 'popup__input_type_error'} `} id="phone-input" type="phone" name="phone" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Phone" value={phone} onChange={handlePhone} /> 
+        <span className={`popup__input-error" ${phoneError !=='' && 'popup__error_visible'}`} id="phone-input-error">{phoneError}</span>
 
         <input 
-          className="popup__input" 
+          className={`popup__input ${agreeError !=='' && 'popup__input_type_error'} `} 
           id="agree-input" 
           type="checkbox" 
           name="agree" 
           required 
           value={agree} 
           onChange={handleAgree} 
-        /><p className="popup__input-label">I agree to Iterative’s <a className="popup__link" href="#">Privacy Policy</a></p>  
+        /><p className="popup__checkbook-label">I agree to Iterative’s <a className="popup__link" href="#">Privacy Policy</a></p>  
         <span className={`popup__input-error" id="agree-input-error ${agreeError !=='' && 'popup__error_visible'}`}>{agreeError}</span>
 
         <button className={`popup__submit ${formInvalid && 'popup__submit_disabled'}`} disabled={formInvalid} type="submit">Request a demo</button>
