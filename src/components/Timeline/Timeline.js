@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const CarouselContainer = styled.ul`
-  max-width: 1040px
+  max-width: 1040px;
   background: #0F1624;
   padding: 0rem;
   list-style:none;
@@ -36,6 +36,7 @@ export const CarouselContainer = styled.ul`
     }
   }
 `
+
 export const CarouselItem = styled.div`
   background: #0F1624;
   border-radius: 3px;

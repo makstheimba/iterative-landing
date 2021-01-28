@@ -1,63 +1,36 @@
 import styled from 'styled-components'
 import map from '../../images/map2.svg';
 
-export const TeamSubtext = styled.p`
-  font-size: 18px;
-  line-height: 26px;
-  max-width: 800px;
-  color: rgba(255, 255, 255, 0.75);
-  margin-bottom: 64px;
-
-  @media ${(props) => props.theme.breakpoints.lg} {
-    font-size: 16px;
-    line-height: 28px;
-    margin-bottom: 100px;
-  }
-
-  @media ${(props) => props.theme.breakpoints.md} {
-    font-size: 14px;
-    line-height: 22px;
-    margin-bottom: 40px;
-  }
-`
 export const TeamMap = styled.div`
   width: 100%;
+  max-width: 1200px;
   background: url(${map}) no-repeat center;
   background-size: 1200px;
   height: 600px;
-  margin-bottom: 32px;
+  margin: 64px auto 32px;
   position: relative;
 
   @media ${(props) => props.theme.breakpoints.xl} {
-    background-size: 960px;
-    height: 480px;
-  }
-  @media ${(props) => props.theme.breakpoints.lg} {
-    background-size: 720px;
-    height: 360px
+    background-size: 100%;
+    height: 50vw;
   }
   @media ${(props) => props.theme.breakpoints.md} {
-    background-size: 360px;
-    height: 180px
+    margin: 64px 0 32px;
+  }
+  @media ${(props) => props.theme.breakpoints.sm} {
+    margin: 40px 0 0px;
   }
 `
 export const MemberContainer = styled.div`
   position: relative;
-  width: 1200px;
-  height: 500px;
+  width: 100%;
+  max-width: 1200px;
+  height: 600px;
   margin: 0 auto;
 
   @media ${(props) => props.theme.breakpoints.xl} {
-    width: 960px;
-    height: 400px;
-  }
-  @media ${(props) => props.theme.breakpoints.lg} {
-    width: 720px;
-    height: 300px
-  }
-  @media ${(props) => props.theme.breakpoints.md} {
-    width: 360px;
-    height: 150px
+    width: 100%;
+    height: 50vw;
   }
 `
 
@@ -88,12 +61,12 @@ export const MemberBubble = styled.button`
     margin: 0;
   }
 
-  @media ${(props) => props.theme.breakpoints.lg} {
+  @media ${(props) => props.theme.breakpoints.md} {
     width: 24px;
     height: 24px;
   }
 
-  @media ${(props) => props.theme.breakpoints.md} {
+  @media ${(props) => props.theme.breakpoints.sm} {
     width: 16px;
     height: 16px;
     border: 1px solid #FFF;
@@ -119,7 +92,6 @@ export const PopupContainer = styled.div`
   position: absolute;
   top: 0;
   left: 0;
-  background-color: rgba(0,0,0,.1);
 `
 
 export const TeamPopup = styled.div`
@@ -255,4 +227,29 @@ export const PopupIcon = styled.img`
   height: 16px;
   width: 16px;
   margin-right: ${(props) => props.loc ? '8px' : '0'}; 
+`
+export const TeamStats = styled.div`
+  display: flex;
+`
+
+export const StatColumn = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 74px;
+  padding: 0 16px 40px 0;
+`
+
+export const StatNum = styled.h3`
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 26px;
+  background: linear-gradient(121.57deg, #FFFFFF 10.77%, rgba(255, 255, 255, 0.5) 60.15%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: fit-content;
+`
+export const StatText = styled.p`
+  font-size: 10px;
+  line-height: 14px;
+  color: rgba(255,255,255,0.5);
 `

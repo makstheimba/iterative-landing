@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Boxes, BoxNum, BoxText, IconContainer, Icons, Join, JoinText } from './MeetCommunity'
+import { Box, Boxes, BoxNum, BoxText, IconContainer, Join, JoinText } from './MeetCommunity'
 import discord from "../../images/icn-discord.svg"
 import github from "../../images/icn-github.svg"
 import twitter from "../../images/icn-twitter.svg"
