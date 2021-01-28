@@ -6,7 +6,7 @@
 .community__line {
   position: absolute;
   top: 0;
-  left: 16px;
+  left: 0;
   width: 32px;
   height: 2px;
   border-radius: 1px;
@@ -54,7 +54,6 @@
   }
 
   .community__line {
-    left: 48px;
     width: 48px;
     height: 4px;
     border-radius: 2px;
@@ -107,7 +106,6 @@
   }
 
   .community__line {
-    left: 80px;
     width: 64px;
     height: 6px;
     border-radius: 3px;
