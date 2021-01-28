@@ -40,7 +40,7 @@ export default function FormPopup({
 }
 
 FormPopup.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
   visible: PropTypes.bool.isRequired,
   onClose: PropTypes.func.isRequired,
   title: PropTypes.string.isRequired,
