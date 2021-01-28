@@ -1,3 +1,7 @@
+.worldmap {
+  position: relative;
+}
+
 .worldmap__geography {
   outline: none;
 }

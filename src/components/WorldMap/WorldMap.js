@@ -21,7 +21,7 @@ export default function WorldMap({ developers = [] }) {
   }
 
   return (
-    <>
+    <div className="worldmap">
       <DeveloperCard
         isOpen={isDeveloperCardOpen}
         title={DeveloperCardData.title}
@@ -123,7 +123,7 @@ export default function WorldMap({ developers = [] }) {
           );
         })}
       </ComposableMap>
-    </>
+    </div>
   );
 }
 
