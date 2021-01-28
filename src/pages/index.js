@@ -37,6 +37,7 @@ const IndexPage = () => {
 
   return (
     <Layout>
+      <Cookies />
       <RequestDemoForm
         visible={isRequestDemoFormVisible}
         onClose={closeRequestDemoForm}
@@ -55,7 +56,6 @@ const IndexPage = () => {
         <Community />
       </main>
       <Footer />
-      <Cookies />
     </Layout>
   );
 };

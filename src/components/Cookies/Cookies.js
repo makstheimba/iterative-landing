@@ -24,16 +24,18 @@ export default function Cookies() {
 
   return (
     <div className={`cookies ${isVisible && 'cookies_visible'}`}>
-      <p className="cookies__text">
-        By continuing, you're agreeing to our customer terms of service, privacy
-        policy and{' '}
-        <a className="cookies__link" href="about:blank">
-          cookie policy
-        </a>
-      </p>
-      <Button type="light-blue" onClick={applyCookies} size="small">
-        Apply
-      </Button>
+      <div className="cookies__container">
+        <p className="cookies__text">
+          By continuing, you're agreeing to our customer terms of service,
+          privacy policy and{' '}
+          <a className="cookies__link" href="about:blank">
+            cookie policy
+          </a>
+        </p>
+        <Button type="light-blue" onClick={applyCookies} size="small">
+          Apply
+        </Button>
+      </div>
     </div>
   );
 }
