@@ -8,9 +8,11 @@ export default function Button({
   children,
   size = 'default',
   disabled,
+  typeAttr = 'button',
 }) {
   return (
     <button
+      type={typeAttr}
       disabled={disabled}
       className={`button ${size === 'small' && 'button_size_small'}  ${
         size === 'medium' && 'button_size_medium'
@@ -31,6 +33,7 @@ Button.propTypes = {
     'black',
   ]),
   size: PropTypes.oneOf(['small', 'medium', 'default']),
-  onClick: PropTypes.func.isRequired,
+  typeAttr: PropTypes.oneOf(['submit', 'reset', 'button']),
+  onClick: PropTypes.func,
   disabled: PropTypes.bool,
 };
