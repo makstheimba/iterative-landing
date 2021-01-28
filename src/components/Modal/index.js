@@ -104,7 +104,7 @@ const Modal = (props) => {
           value={agree} 
           onChange={handleAgree} 
         /><p className="popup__checkbook-label">I agree to Iterative’s <a className="popup__link" href="#">Privacy Policy</a></p>  
-        <span className={`popup__input-error" id="agree-input-error ${agreeError !=='' && 'popup__error_visible'}`}>{agreeError}</span>
+        <span className={`popup__input-error" ${agreeError !=='' && 'popup__error_visible'}`} id="agree-input-error">{agreeError}</span>
 
         <button className={`popup__submit ${formInvalid && 'popup__submit_disabled'}`} disabled={formInvalid} type="submit">Request a demo</button>
       </form>

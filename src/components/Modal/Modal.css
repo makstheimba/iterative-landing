@@ -172,9 +172,18 @@
   margin-bottom: 8px;
 }
 
-
 .popup__container.popup_success{
   max-width: 430px;
+}
+
+.popup__checkbook-label{
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+
+  font-size: 18px;
+  line-height: 20px;
+  color: #0F1624;
+
 }
 
 @media screen and (max-width: 709px){
