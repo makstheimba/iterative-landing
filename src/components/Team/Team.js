@@ -7,10 +7,8 @@ import { developers } from '../../utils/data';
 export default function Team() {
   let countriesTemp = [];
   let timezoneTemp = [];
-  developers.map((item) => {
-    countriesTemp.push(item.location.split(',')[1]);
-    timezoneTemp.push(item.timezone);
-  });
+  developers.map((item) => countriesTemp.push(item.location.split(',')[1]));
+  developers.map((item) => timezoneTemp.push(item.timezone));
   const countries = Array.from(new Set(countriesTemp));
   const timezone = Array.from(new Set(timezoneTemp));
   const teamSummary = [
