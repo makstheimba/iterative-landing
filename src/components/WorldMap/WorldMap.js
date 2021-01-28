@@ -88,9 +88,9 @@ export default function WorldMap({ developers = [] }) {
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
-                width="100"
-                height="100"
-                viewBox="0 0 100 100"
+                width="80"
+                height="80"
+                viewBox="0 0 80 80"
                 aria-labelledby="alt-span-id"
                 x={developer.markerOffsetX}
                 y={developer.markerOffsetY}
@@ -99,21 +99,19 @@ export default function WorldMap({ developers = [] }) {
                   <pattern
                     id={`markerImg${i}`}
                     patternUnits="userSpaceOnUse"
-                    width="65"
-                    height="65"
+                    width="80"
+                    height="80"
                   >
                     <image
                       href={developer.image}
-                      x="-5"
-                      y="-13"
-                      width="65"
-                      height="65"
+                      x="-20"
+                      y="-20"
+                      width="80"
+                      height="80"
                     />
                   </pattern>
                 </defs>
                 <circle
-                  cx="25"
-                  cy="25"
                   fill={`url(#markerImg${i})`}
                   className="worldmap__marker"
                 />
@@ -138,6 +136,7 @@ WorldMap.propTypes = {
       title: PropTypes.string.isRequired,
       job: PropTypes.string.isRequired,
       location: PropTypes.string.isRequired,
+      timezone: PropTypes.string.isRequired,
       text: PropTypes.string.isRequired,
       image: PropTypes.string.isRequired,
       globeLink: PropTypes.string.isRequired,

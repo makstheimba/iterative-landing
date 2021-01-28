@@ -8,7 +8,9 @@
   box-sizing: border-box;
   overflow: hidden;
   stroke-width: 1px;
-  r: 22;
+  cx: 25;
+  cy: 25;
+  r: 21;
 }
 
 .worldmap__marker:hover {
@@ -29,7 +31,9 @@
 
 @media (min-width: 768px) {
   .worldmap__marker {
-    r: 13;
+    cx: 18;
+    cy: 18;
+    r: 15;
     stroke-width: 2px;
   }
 
@@ -40,6 +44,8 @@
 
 @media (min-width: 1024px) {
   .worldmap__marker {
+    cx: 18;
+    cy: 18;
     r: 16;
   }
 }

@@ -51,7 +51,7 @@ export default function Avatar({ image, color, shape, alt, onClick }) {
                 width="150"
                 height="150"
               >
-                <image href={image} x="-15" y="-20" width="150" height="150" />
+                <image href={image} x="-25" y="-40" width="190" height="190" />
               </pattern>
             </defs>
             <path
