@@ -13,16 +13,27 @@
 
 .popup__form{
   max-width: 814px;
-  max-height: 736px;
   background-color: white;
   
-  padding: 34px 36px 28px 36px;
+  padding: 40px;
   display: flex;
   flex-direction: column;
   border-radius: 10px;
   z-index: 10;
   margin: auto;
   position: relative;
+}
+
+@media screen and (max-width: 800px){
+  .popup__form{
+    padding: 32px;
+  }
+}
+
+@media screen and (max-width: 550px){
+  .popup__form{
+    padding: 24px;
+  }
 }
 
 .popup__close{
@@ -85,9 +96,21 @@
   }
 }
 
-.popup__input-error{
-  max-width: 358px;
+.popup__error{
+  max-width: 734px;
   margin-bottom: 32px;
+}
+
+@media screen and (max-width: 800px){
+  .popup__error{
+    max-width: 656px;
+  }
+}
+
+@media screen and (max-width: 550px){
+  .popup__error{
+    max-width: 272px;
+  }
 }
 
 .popup__error_visible{
@@ -106,11 +129,10 @@
   }
 }
 
-.popup__input_type_error{
+.popup__input_error{
   border: 1px solid #FF0000;
   color:  #FF0000;
   margin-bottom: 32px;
-
 }
 
 .popup__submit{
