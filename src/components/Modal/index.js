@@ -95,16 +95,18 @@ const Modal = (props) => {
         <input className={`popup__input ${phoneError !=='' && 'popup__input_type_error'} `} id="phone-input" type="phone" name="phone" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Phone" value={phone} onChange={handlePhone} /> 
         <span className={`popup__input-error" ${phoneError !=='' && 'popup__error_visible'}`} id="phone-input-error">{phoneError}</span>
 
-        <input 
-          className={`popup__input ${agreeError !=='' && 'popup__input_type_error'} `} 
-          id="agree-input" 
-          type="checkbox" 
-          name="agree" 
-          required 
-          value={agree} 
-          onChange={handleAgree} 
-        /><p className="popup__checkbook-label">I agree to Iterative’s <a className="popup__link" href="#">Privacy Policy</a></p>  
-        <span className={`popup__input-error" ${agreeError !=='' && 'popup__error_visible'}`} id="agree-input-error">{agreeError}</span>
+        <div className="popup__checkbox-container">
+          <input 
+            className={`popup__checkbox ${agreeError !=='' && 'popup__input_type_error'} `} 
+            id="agree-input" 
+            type="checkbox" 
+            name="agree" 
+            required 
+            value={agree} 
+            onChange={handleAgree} 
+          /><p className="popup__checkbox-label">I agree to Iterative’s <a className="popup__link" href="#">Privacy Policy</a></p>  
+          </div>
+          <span className={`popup__input-error" ${agreeError !=='' && 'popup__error_visible'}`} id="agree-input-error">{agreeError}</span>
 
         <button className={`popup__submit ${formInvalid && 'popup__submit_disabled'}`} disabled={formInvalid} type="submit">Request a demo</button>
       </form>

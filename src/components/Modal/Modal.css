@@ -63,10 +63,6 @@
   padding: 16px;
 }
 
-.popup__input:last-of-type{
-  margin-bottom: 0px;
-}
-
 .popup__input-error{
   max-width: 358px;
   margin-bottom: 32px;
@@ -116,10 +112,11 @@
 }
 
 .popup__link{
+  text-decoration: underline;
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
-  line-height: 16px;
+  font-size: 20px;
+  line-height: 24px;
   color: #0F1624;
 }
 
@@ -176,41 +173,34 @@
   max-width: 430px;
 }
 
-.popup__checkbook-label{
+.popup__checkbox-container{
+  display: flex;
+}
+
+.popup__checkbox{
+  width: 24px;
+  height: 24px;
+  border: 2px solid rgba(15, 22, 36, 0.5);
+  box-sizing: border-box;
+  border-radius: 4px;
+  margin-right: 16px;
+}
+
+.popup__checkbox-label{
   margin-block-start: 0px;
   margin-block-end: 0px;
 
-  font-size: 18px;
-  line-height: 20px;
+  font-size: 20px;
+  line-height: 24px;
   color: #0F1624;
+}
+
+@media screen and (max-width: 800px){
+ 
 
 }
 
-@media screen and (max-width: 709px){
-  .popup{
-    min-height: 100%;
-  }
-  .popup__form{
-    margin-top: 56px;
-    margin-bottom: 0px;
-    min-height: 100%;
-    display: block;
-    position: static;
-  }
-  .popup__close{
-    top: 0px;
-    right: 0px;
-  }
-  .popup__input{
-    width: 100%;
-  }
-
-  .popup__link-text{
-    text-align: center;
-  }
-
-  .popup__submit{
-    min-width: 100%;
-  }
+@media screen and (max-width: 550px){
+ 
 
 }
