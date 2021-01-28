@@ -1,25 +1,31 @@
 .cookies {
-  background-color: #fff;
-  color: #212d45;
-  font-family: 'Space Grotesk', sans-serif;
-  box-sizing: border-box;
-  padding: 16px 16px 16px 24px;
-  position: absolute;
+  position: fixed;
+  width: 100%;
+  max-width: 1238px;
+  left: 50%;
+  transform: translate(-50%);
+  margin: 0 auto;
   top: -100px;
-  left: 0;
-  filter: drop-shadow(0px 8px 16px rgba(46, 49, 55, 0.1)),
-    drop-shadow(0px 0px 2px rgba(46, 49, 55, 0.2));
-  border-radius: 16px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0 10px;
   z-index: 1;
   transition: top 0.4s ease-in-out;
 }
 
 .cookies_visible {
   top: 10px;
+}
+
+.cookies__container {
+  background-color: #fff;
+  color: #212d45;
+  font-family: 'Space Grotesk', sans-serif;
+  box-sizing: border-box;
+  padding: 16px 16px 16px 24px;
+  filter: drop-shadow(0px 8px 16px rgba(46, 49, 55, 0.1)),
+    drop-shadow(0px 0px 2px rgba(46, 49, 55, 0.2));
+  border-radius: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .cookies__text {
@@ -36,13 +42,13 @@
 }
 
 @media (min-width: 414px) {
-  .cookies {
+  .cookies__container {
     margin: 0 68px 0 10px;
   }
 }
 
 @media (min-width: 768px) {
-  .cookies {
+  .cookies__container {
     margin: 0 278px 0 10px;
   }
 
@@ -53,8 +59,9 @@
 }
 
 @media (min-width: 1024px) {
-  .cookies {
+  .cookies__container {
     margin: 0 0 0 10px;
+    width: 740px;
   }
 
   .cookies__text {
