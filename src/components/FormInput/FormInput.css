@@ -1,0 +1,234 @@
+.form-input {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 16px;
+  position: relative;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.form-input:last-of-type {
+  margin-bottom: 24px;
+}
+
+.form-input__label {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+  color: rgba(15, 22, 36, 0.5);
+  margin: 0 0 8px;
+  visibility: visible;
+  opacity: 1;
+  z-index: 0;
+  transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out,
+    transform 0.2s ease-in-out, height ease-in-out 0.2s, margin ease-in-out 0.2s,
+    color ease-in-out 0.2s;
+}
+
+.form-input__label {
+  cursor: text;
+}
+
+.form-input__label_focused {
+  color: #13adc7;
+}
+
+.form-input__label_hidden {
+  height: 0;
+  margin: 0;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(24px);
+}
+
+.form-input__label_invalid {
+  color: #ff3333;
+}
+
+.form-input__input {
+  width: 100%;
+  border: 1px solid rgba(15, 22, 36, 0.1);
+  border-radius: 6px;
+  box-sizing: border-box;
+  padding: 8px;
+  color: #0f1624;
+  caret-color: #0f1624;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  height: 36px;
+  transition: border ease-in-out 0.2s;
+}
+
+.form-input__input_filled {
+  padding: 8px 32px 8px 8px;
+}
+
+.form-input__input_invalid {
+  border: 1px solid #ff3333;
+  color: #ff3333;
+}
+
+.form-input__input:hover {
+  border: 1px solid rgba(15, 22, 36, 0.5);
+}
+
+.form-input__input:focus {
+  outline: none;
+  border: 1px solid #13adc7;
+}
+
+.form-input__input:disabled {
+  background: rgba(15, 22, 36, 0.1);
+  border: 1px solid rgba(15, 22, 36, 0.1);
+}
+
+.form-input__input::placeholder {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.form-input__input::-webkit-input-placeholder {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.form-input__input::-moz-placeholder {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.form-input__input::-ms-input-placeholder {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.form-input__clear-btn {
+  opacity: 0;
+  position: absolute;
+  border: none;
+  padding: 0;
+  top: 34px;
+  right: 9px;
+  z-index: -1;
+  background-color: rgba(0, 0, 0, 0);
+  visibility: hidden;
+  transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+}
+
+.form-input__clear-btn:hover {
+  cursor: pointer;
+}
+
+.form-input__input_filled + .form-input__clear-btn {
+  z-index: 1;
+  opacity: 1;
+  visibility: visible;
+}
+
+.form-input__error {
+  visibility: visible;
+  opacity: 1;
+  z-index: 0;
+  margin: 8px 0 0;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.01em;
+  color: #ff3333;
+  transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out,
+    transform 0.2s ease-in-out, height ease-in-out 0.2s, margin ease-in-out 0.2s;
+}
+
+.form-input__error_hidden {
+  height: 0;
+  margin: 0;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-24px);
+}
+
+@media (min-width: 768px) {
+  .form-input {
+    margin: 0 0 24px;
+  }
+
+  .form-input:last-of-type {
+    margin-bottom: 40px;
+  }
+
+  .form-input__input {
+    padding: 16px;
+    font-size: 20px;
+    line-height: 24px;
+    height: 56px;
+    border-radius: 8px;
+    border: 2px solid rgba(15, 22, 36, 0.1);
+  }
+
+  .form-input__input_invalid {
+    border: 2px solid #ff3333;
+  }
+
+  .form-input__input:hover {
+    border: 2px solid rgba(15, 22, 36, 0.5);
+  }
+
+  .form-input__input:focus {
+    border: 2px solid #13adc7;
+  }
+
+  .form-input__input:disabled {
+    background: rgba(15, 22, 36, 0.1);
+    border: 2px solid rgba(15, 22, 36, 0.1);
+  }
+
+  .form-input__input::placeholder {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .form-input__input::-webkit-input-placeholder {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .form-input__input::-moz-placeholder {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .form-input__input::-ms-input-placeholder {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .form-input__input_filled {
+    padding: 16px 48px 16px 16px;
+  }
+
+  .form-input__clear-btn {
+    top: 40px;
+    right: 14px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .form-input {
+    margin: 0 0 32px;
+  }
+
+  .form-input:last-of-type {
+    margin-bottom: 48px;
+  }
+}
