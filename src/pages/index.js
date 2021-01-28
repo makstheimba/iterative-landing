@@ -11,6 +11,7 @@ import Footer from '../components/Footer/Footer';
 const IndexPage = () => {
   return (
     <Layout>
+      <Cookies />
       <Header
         isMain
         title="Open platform to&nbsp;operationalize AI"
@@ -26,7 +27,6 @@ const IndexPage = () => {
         <Community />
       </main>
       <Footer />
-      <Cookies />
     </Layout>
   );
 };
