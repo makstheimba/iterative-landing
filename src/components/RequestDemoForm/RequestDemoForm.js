@@ -109,7 +109,8 @@ export default function RequestDemoForm({ onClose, visible, onSubmit }) {
         caption="Full name"
         name="full-name"
         disabled={isLoading}
-        inputOpts={{ required: true, type: 'text' }}
+        inputType="text"
+        inputOpts={{ required: true }}
       />
       <FormInput
         onChange={handleEmailInputChange}
@@ -117,7 +118,8 @@ export default function RequestDemoForm({ onClose, visible, onSubmit }) {
         caption="E-mail"
         name="e-mail"
         disabled={isLoading}
-        inputOpts={{ required: true, type: 'email' }}
+        inputType="email"
+        inputOpts={{ required: true }}
       />
       <FormInput
         onChange={handleCompanyInputChange}
@@ -125,9 +127,9 @@ export default function RequestDemoForm({ onClose, visible, onSubmit }) {
         caption="Company"
         name="company"
         disabled={isLoading}
+        inputType="text"
         inputOpts={{
           required: true,
-          type: 'text',
         }}
       />
       <FormInput
@@ -136,9 +138,9 @@ export default function RequestDemoForm({ onClose, visible, onSubmit }) {
         caption="Phone"
         name="phone"
         disabled={isLoading}
+        inputType="tel"
         inputOpts={{
           required: true,
-          type: 'tel',
           pattern: '^[0-9]+$',
           minLength: '10',
           maxLength: '10',
