@@ -34,10 +34,9 @@ export default function WorldMap({ developers = [] }) {
         linkedinLink={DeveloperCardData.linkedinLink}
       />
       <ComposableMap
-        projection="geoEqualEarth"
         projectionConfig={{
-          rotate: [-15, 0, 0],
-          scale: 170,
+          rotate: [-10, 0, 10],
+          scale: 220,
         }}
         onClick={closeDeveloperCardPopup}
       >
