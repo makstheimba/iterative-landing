@@ -78,7 +78,7 @@ const Modal = (props) => {
     <section className={`popup ${props.isOpen  && 'popup_state_opened'}` } >
       <form className="popup__form" onChange={validateForm} ref={formRef}>
         <h4 className="popup__title">Request a demo</h4><button 
-          className="popup__close-button" 
+          className="popup__close" 
           onClick={props.handleClose} 
           type="button">X</button>
         
