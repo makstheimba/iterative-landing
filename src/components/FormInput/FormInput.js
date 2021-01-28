@@ -87,7 +87,7 @@ export default function FormInput({
         id={`${name}-input-error`}
         className={`form-input__error ${
           !inputValidationMessage && 'form-input__error_hidden'
-        } ${isInputValid && 'form-input__error_active'}`}
+        }`}
       >
         {inputValidationMessage}
       </span>
