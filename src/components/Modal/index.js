@@ -44,7 +44,7 @@ const Modal = (props) => {
     formValidator.fieldValidator(e.target, setCompanyError);
   }
 
-  function formatNumber(num){
+  function formatPhoneNumber(num){
     //replace non-number vars
     num = num.replace(/\D/gi,'');
     //add dashes
@@ -62,8 +62,7 @@ const Modal = (props) => {
 
   function handlePhone(e) {
     //set value
-    let num = formatNumber(e.target.value);
-    setPhone(num);
+    setPhone(formatPhoneNumber(e.target.value));
 
     //set error
     formValidator.fieldValidator(e.target, setPhoneError);
@@ -124,7 +123,13 @@ const Modal = (props) => {
         <input className={`popup__input ${companyError !=='' && 'popup__input_error'} `} id="company-input" type="text" name="company" required minLength="2" maxLength="12" placeholder="Enter company" value={company} onChange={handleCompany} /> 
         <span className={`popup__error  ${companyError !=='' && 'popup__error_visible'}`} id="company-error">{companyError}</span>
         
-        <input className={`popup__input ${phoneError !=='' && 'popup__input_error'} `} id="phone-input" type="phone" name="phone" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Phone" value={phone} onChange={handlePhone} /> 
+        <input className={`popup__input ${phoneError !=='' && 'popup__input_error'} `} 
+          id="phone-input" type="phone" name="phone" 
+          required 
+          pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" 
+          placeholder="Phone" 
+          value={phone} 
+          onChange={handlePhone} /> 
         <span className={`popup__error ${phoneError !=='' && 'popup__error_visible'}`} id="phone-error">{phoneError}</span>
 
         <div className="popup__checkbox-container">
