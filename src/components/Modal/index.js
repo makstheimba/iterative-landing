@@ -1,5 +1,5 @@
 import React from 'react'
-import { formValidator, fieldValidator} from '../../utils/formvalidator'
+import { formValidator } from '../../utils/formvalidator'
 import { PopupWrapper } from './Modal'
 
 import '../Modal/Modal.css'
@@ -11,14 +11,14 @@ const Modal = (props) => {
   const [email, setEmail] = React.useState('');
   const [company, setCompany] = React.useState('');
   const [phone, setPhone] = React.useState('');
-  const [agree, setAgree] = React.useState('');
+  const [agree, setAgree] = React.useState(false);
 
   //form validation
   const [nameError, setNameError] = React.useState('');
   const [emailError, setEmailError] = React.useState('');
   const [companyError, setCompanyError] = React.useState('');
   const [phoneError, setPhoneError] = React.useState('');
-  const [agree, setAgreeError] = React.useState('');
+  const [agreeError, setAgreeError] = React.useState('');
 
   const [formInvalid, setFormInvalid] = React.useState(true);
 
@@ -27,41 +27,41 @@ const Modal = (props) => {
     //set value
     setName(e.target.value);
     //set error
-    fieldValidator(e.target, setNameError);
+    formValidator.fieldValidator(e.target, setNameError);
   }
 
   function handleEmail(e) {
     //set value
     setEmail(e.target.value);
     //set error
-    fieldValidator(e.target, setEmailError);
+    formValidator.fieldValidator(e.target, setEmailError);
   }
   
   function handleCompany(e) {
     //set value
     setCompany(e.target.value);
     //set error
-    fieldValidator(e.target, setCompanyError);
+    formValidator.fieldValidator(e.target, setCompanyError);
   }
 
   function handlePhone(e) {
     //set value
     setPhone(e.target.value);
     //set error
-    fieldValidator(e.target, setPhoneError);
+    formValidator.fieldValidator(e.target, setPhoneError);
   }
 
   function handleAgree(e) {
     //set value
     setAgree(e.target.value);
     //set error
-    fieldValidator(e.target, setAgreeError);
+    formValidator.fieldValidator(e.target, setAgreeError);
   }
 
   const formRef = React.useRef();
 
   function validateForm(){
-    formValidator(formRef.current,'.popup__input') ? setSignUpFormInvalid(true) : setSignUpFormInvalid(false);
+    formValidator.formValidator(formRef.current,'.popup__input') ? setFormInvalid(true) : setFormInvalid(false);
   }
 
   //reset fields when opened

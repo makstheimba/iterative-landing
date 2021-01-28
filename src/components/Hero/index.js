@@ -9,7 +9,7 @@ import hero3 from '../../images/hero_Warby-Parker.svg'
 import hero4 from '../../images/hero_Odnoklassniki.svg'
 import hero5 from '../../images/hero_Smithsonian.svg'
 import hero6 from '../../images/hero_Neosensory.svg'
-import { propTypes } from 'gatsby-plugin-image/dist/src/components/static-image.server'
+//import { propTypes } from 'gatsby-plugin-image/dist/src/components/static-image.server'
 
 const Hero = (props) => {
 
