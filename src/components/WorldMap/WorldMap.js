@@ -84,15 +84,14 @@ export default function WorldMap({ developers = [] }) {
             <Marker
               key={i}
               coordinates={developer.coordinates}
-              className="worldmap__marker"
               onMouseEnter={openDeveloperCardPopup}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
-                width="30"
-                height="30"
-                viewBox="0 0 30 30"
+                width="100"
+                height="100"
+                viewBox="0 0 100 100"
                 aria-labelledby="alt-span-id"
                 x={developer.markerOffsetX}
                 y={developer.markerOffsetY}
@@ -101,19 +100,24 @@ export default function WorldMap({ developers = [] }) {
                   <pattern
                     id={`markerImg${i}`}
                     patternUnits="userSpaceOnUse"
-                    width="50"
-                    height="50"
+                    width="65"
+                    height="65"
                   >
                     <image
                       href={developer.image}
-                      x="-4"
-                      y="-10"
-                      width="50"
-                      height="50"
+                      x="-5"
+                      y="-13"
+                      width="65"
+                      height="65"
                     />
                   </pattern>
                 </defs>
-                <circle cx="15" cy="15" r="14" fill={`url(#markerImg${i})`} />
+                <circle
+                  cx="25"
+                  cy="25"
+                  fill={`url(#markerImg${i})`}
+                  className="worldmap__marker"
+                />
               </svg>
               <span className="worldmap__hidden-el">
                 developer's avatar that hover the information popup
@@ -134,7 +138,7 @@ WorldMap.propTypes = {
       markerOffsety: PropTypes.number,
       title: PropTypes.string.isRequired,
       job: PropTypes.string.isRequired,
-      location: PropTypes.strging.isRequired,
+      location: PropTypes.string.isRequired,
       text: PropTypes.string.isRequired,
       image: PropTypes.string.isRequired,
       globeLink: PropTypes.string.isRequired,

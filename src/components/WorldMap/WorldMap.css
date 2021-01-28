@@ -3,21 +3,12 @@
 }
 
 .worldmap__marker {
-  width: 16px;
-  height: 16px;
-  border-radius: 100%;
-  background-size: contain;
-  object-fit: contain;
   stroke: #fff;
-  stroke-width: 1px;
   filter: drop-shadow(0px 2px 8px rgba(0, 0, 0, 0.15));
   box-sizing: border-box;
   overflow: hidden;
-}
-
-.worldmap__marker:active {
-  stroke: #fff;
-  stroke-width: 2px;
+  stroke-width: 1px;
+  r: 22;
 }
 
 .worldmap__marker:hover {
@@ -37,25 +28,18 @@
 }
 
 @media (min-width: 768px) {
-  .worldmap__circle {
-    width: 24px;
-    height: 24px;
+  .worldmap__marker {
+    r: 13;
     stroke-width: 2px;
   }
 
-  .worldmap__circle:active {
+  .worldmap__marker:hover {
     stroke-width: 4px;
   }
 }
 
 @media (min-width: 1024px) {
-  .worldmap__circle {
-    width: 32px;
-    height: 32px;
-    stroke-width: 2px;
-  }
-
-  .worldmap__circle:active {
-    stroke-width: 4px;
+  .worldmap__marker {
+    r: 16;
   }
 }
