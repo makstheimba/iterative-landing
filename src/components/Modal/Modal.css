@@ -40,6 +40,13 @@
   background-color: transparent;
 }
 
+@media screen and (max-width: 550px){
+  .popup__close{
+    width: 16px;
+    height: 16px;
+  }
+}
+
 .popup__close:hover{
   cursor: pointer;
   opacity: 0.6;
@@ -52,21 +59,35 @@
   position: relative;
 }
 
-
-
 .popup__input{
   width: 734px;
   border: 2px solid rgba(15, 22, 36, 0.1);
   border-radius: 8px;
   margin-bottom: 32px;
-
   padding: 16px;
+}
+
+@media screen and (max-width: 800px){
+  .popup__input{
+    width: 656px;
+    margin-bottom: 24px;
+
+  }
+}
+
+@media screen and (max-width: 550px){
+  .popup__input{
+    width: 272px;
+    margin-bottom: 16px;
+    padding: 8px;
+    font-size: 16px;
+    line-height: 20px;
+  }
 }
 
 .popup__input-error{
   max-width: 358px;
   margin-bottom: 32px;
-
 }
 
 .popup__error_visible{
@@ -75,11 +96,19 @@
   line-height: 16px; 
   letter-spacing: 0.01em;
   color: #FF3333;
+}
 
+@media screen and (max-width: 800px){
+  .popup__error_visible{
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.01em;
+  }
 }
 
 .popup__input_type_error{
   border: 1px solid #FF0000;
+  color:  #FF0000;
   margin-bottom: 32px;
 
 }
@@ -145,6 +174,22 @@
     justify-content: space-between;
   }
 
+  @media screen and (max-width: 800px){
+    .popup__title{
+      font-weight: 600;
+      font-size: 28px;
+      line-height: 32px;
+    }
+  }
+
+  @media screen and (max-width: 550px){
+    .popup__title{
+      font-size: 24px;
+      line-height: 26px;
+      margin-bottom: 24px;
+    }
+  }
+
   .popup_state_opened{
     display: flex;
     flex-direction: column;
@@ -169,6 +214,13 @@
   margin-bottom: 8px;
 }
 
+@media screen and (max-width: 800px){
+  .popup__input-label{
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
+
 .popup__container.popup_success{
   max-width: 430px;
 }
@@ -186,6 +238,16 @@
   margin-right: 16px;
 }
 
+@media screen and (max-width: 550px){
+  .popup__checkbox{
+    width: 16px;
+    height: 16px;
+    margin-right: 12px;
+
+  }
+}
+
+
 .popup__checkbox-label{
   margin-block-start: 0px;
   margin-block-end: 0px;
@@ -196,11 +258,15 @@
 }
 
 @media screen and (max-width: 800px){
- 
-
+  .popup__checkbox-label{
+    font-size: 18px;
+    line-height: 20px;    
+  }
 }
 
 @media screen and (max-width: 550px){
- 
-
+  .popup__checkbox-label{
+    font-size: 16px;
+    line-height: 20px;
+  }
 }
