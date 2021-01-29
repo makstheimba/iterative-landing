@@ -37,6 +37,7 @@ export default function WorldMap({ developers = [] }) {
         projectionConfig={{
           scale: 100,
         }}
+        style={{ width: '100%', height: 'auto', marginBottom: '-70px' }}
         projection="geoMercator"
       >
         <defs>

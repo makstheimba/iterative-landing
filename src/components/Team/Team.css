@@ -9,7 +9,7 @@
 
 .team__list {
   list-style: none;
-  margin: -7px 0 0;
+  margin: 0;
   padding: 0;
   display: flex;
   justify-content: flex-start;
