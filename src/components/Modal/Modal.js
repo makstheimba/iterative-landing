@@ -118,8 +118,8 @@ export const ModalInputContainer = styled.div`
 
 export const ModalInputClear = styled.button`
   position: absolute; 
-  top: 16px;
-  right: 16px;
+  top: 15px;
+  right: 15px;
 
   width: 24px;
   height: 24px;
@@ -135,8 +135,8 @@ export const ModalInputClear = styled.button`
   visibility: ${(props) => props.visible.length != 0 ? 'visible' : 'hidden'};
 
   @media ${props => props.theme.breakpoints.sm}{
-    top: 10px;
-    right: 10px;
+    top: 9px;
+    right: 9px;
     width: 16px;
     height: 16px;
   }
