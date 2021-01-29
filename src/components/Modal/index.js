@@ -48,15 +48,18 @@ const Modal = (props) => {
     //replace non-number vars
     num = num.replace(/\D/gi,'');
     //add dashes
-    if(num.length > 3){
+    if(num.length > 3 && num.length <= 12){
       num = num.slice(0, 3) + "-"+ num.slice(3);
     }
-    if(num.length > 7){
+    if(num.length > 7 && num.length <= 12){
       num = num.slice(0,7) + "-" + num.slice(7);
     }
+
     if(num.length > 12){
-      num = num.slice(0,12);
+      num = num.replaceAll('-','');
+      num = num.slice(0,1) + "-" + num.slice(1,4) + "-"+ num.slice(4,7) + "-" + num.slice(7);
     }
+
     return num
   }
 
@@ -124,9 +127,9 @@ const Modal = (props) => {
         <span className={`popup__error  ${companyError !=='' && 'popup__error_visible'}`} id="company-error">{companyError}</span>
         
         <input className={`popup__input ${phoneError !=='' && 'popup__input_error'} `} 
-          id="phone-input" type="phone" name="phone" 
+          id="phone-input" type="tel" name="phone" 
           required 
-          pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" 
+          pattern="(1-[0-9]{3}-[0-9]{3}-[0-9]{4})|([0-9]{3}-[0-9]{3}-[0-9]{4})"
           placeholder="Phone" 
           value={phone} 
           onChange={handlePhone} /> 
@@ -139,7 +142,7 @@ const Modal = (props) => {
             type="checkbox" 
             name="agree"
             minLength="12" 
-            maxLength="12" 
+            maxLength="14" 
             required 
             value={agree} 
             onChange={handleAgree} 
