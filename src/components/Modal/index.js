@@ -1,6 +1,9 @@
 import React from 'react'
 import { formValidator } from '../../utils/formvalidator'
-import { PopupWrapper } from './Modal'
+import { 
+  ModalContainer, ModalForm, ModalTitle,
+  ModalClose
+  } from './Modal'
 
 import '../Modal/Modal.css'
 
@@ -109,11 +112,15 @@ const Modal = (props) => {
   }
 
   return (
-    <section className={`popup ${props.isOpen  && 'popup_state_opened'}` } >
-      <form className="popup__form" onChange={validateForm} onSubmit={e=>{handleSubmit(e)}} ref={formRef}>
-        <h4 className="popup__title">Request a demo<button className="popup__close" 
-          onClick={props.handleClose} type="button"></button>
-        </h4>
+    <ModalContainer>
+      <ModalForm onChange={validateForm} onSubmit={e=>{handleSubmit(e)}} ref={formRef}>
+        <ModalTitle>
+          Request a demo
+          <ModalClose 
+            onClick={props.handleClose} 
+            type="button">
+          </ModalClose>
+        </ModalTitle>
         
         <input className={`popup__input ${nameError !=='' && 'popup__input_error'} `} id="name-input" type="text" name="name" required minLength="2" maxLength="40" placeholder="Full name" value={name} onChange={handleName} />
         <span className={`popup__error ${nameError !=='' && 'popup__error_visible'}`} id="name-error">{nameError}</span>
@@ -127,7 +134,7 @@ const Modal = (props) => {
         <span className={`popup__error  ${companyError !=='' && 'popup__error_visible'}`} id="company-error">{companyError}</span>
         
         <input className={`popup__input ${phoneError !=='' && 'popup__input_error'} `} 
-          id="phone-input" type="tel" name="phone" 
+          id="phone-input" type="phone" name="phone" 
           required 
           pattern="(1-[0-9]{3}-[0-9]{3}-[0-9]{4})|([0-9]{3}-[0-9]{3}-[0-9]{4})"
           placeholder="Phone" 
@@ -151,8 +158,8 @@ const Modal = (props) => {
           <span className={`popup__error ${agreeError !=='' && 'popup__error_visible'}`} id="agree-error">{agreeError}</span>
 
         <button className={`popup__submit ${formInvalid && 'popup__submit_disabled'}`} disabled={formInvalid} type="submit">Request a demo</button>
-      </form>
-    </ section>
+      </ModalForm>
+    </ModalContainer>
     
   )
 }

@@ -1,4 +1,4 @@
-.popup{
+/* .popup{
   position: fixed;
   visibility: hidden;
   transition: visibility 0s, opacity 0.2s linear;
@@ -9,9 +9,9 @@
   z-index: 5; 
   left: 0; 
   top: 0;
-}
+} */
 
-.popup__form{
+/* .popup__form{
   max-width: 814px;
   background-color: white;
   
@@ -34,9 +34,9 @@
   .popup__form{
     padding: 24px;
   }
-}
+} */
 
-.popup__close{
+/* .popup__close{
   width: 24px;
   height: 24px;
   opacity: 1.0;
@@ -49,19 +49,19 @@
   border: none;
   align-self: center;
   background-color: transparent;
-}
+} */
 
-@media screen and (max-width: 550px){
+/* @media screen and (max-width: 550px){
   .popup__close{
     width: 16px;
     height: 16px;
   }
-}
+} */
 
-.popup__close:hover{
+/* .popup__close:hover{
   cursor: pointer;
   opacity: 0.6;
-}
+} */
 
 .popup__container{
   z-index: 10; 
@@ -179,7 +179,7 @@
   opacity: 0.2;
 }
 
-  .popup__title{
+  /* .popup__title{
     font-style: normal;
     font-weight: 600;
     font-size: 36px;
@@ -192,9 +192,9 @@
 
     display: flex;
     justify-content: space-between;
-  }
+  } */
 
-  @media screen and (max-width: 800px){
+  /* @media screen and (max-width: 800px){
     .popup__title{
       font-weight: 600;
       font-size: 28px;
@@ -208,21 +208,21 @@
       line-height: 26px;
       margin-bottom: 24px;
     }
-  }
+  } */
 
-  .popup_state_opened{
+  /* .popup_state_opened{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-  }
+  } */
 
 
-.popup.popup_state_opened{
+/* .popup.popup_state_opened{
   display: flex;
   visibility: visible;
   opacity: 1;
-}
+} */
 
 .popup__input-label{
   font-style: normal;
