@@ -9,7 +9,7 @@ export const ModalContainer = styled.div`
   background-color: rgba(0, 0, 0, 0.5);
   width: 100%;
   height: 100%;
-  z-index: 1; 
+  z-index: 0; 
   left: 0; 
   top: 0;
 `
@@ -24,6 +24,7 @@ export const ModalForm = styled.form`
   border-radius: 10px;
   margin: auto;
   position: relative;
+  z-index: 1; 
 
   @media ${props => props.theme.breakpoints.md}{
       padding: 32px;
@@ -63,7 +64,7 @@ export const ModalTitle = styled.h4`
 export const ModalClose = styled.button`
   width: 24px;
   height: 24px;
-  z-index: 10;
+  z-index: 2;
 
   background-image: ${CloseButtonImg};
   background-position: center;
