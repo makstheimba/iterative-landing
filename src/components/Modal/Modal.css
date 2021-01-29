@@ -63,13 +63,13 @@
   opacity: 0.6;
 } */
 
-.popup__container{
+/* .popup__container{
   z-index: 10; 
   display: flex;
   flex-direction: column;
   position: relative;
-}
-
+} */
+/* 
 .popup__input{
   width: 734px;
   border: 2px solid rgba(15, 22, 36, 0.1);
@@ -93,8 +93,8 @@
     font-size: 16px;
     line-height: 20px;
   }
-}
-
+} */
+/* 
 .popup__error{
   max-width: 734px;
   margin-bottom: 32px;
@@ -126,13 +126,13 @@
     line-height: 16px;
     letter-spacing: 0.01em;
   }
-}
+} */
 
-.popup__input_error{
+/* .popup__input_error{
   border: 1px solid #FF0000;
   color:  #FF0000;
-}
-
+} */
+/* 
 .popup__submit{
   font-family: "Roboto", Times, serif;
   font-style: normal;
@@ -153,31 +153,31 @@
 .popup__submit:hover{
   cursor: pointer;
   opacity: 0.8;
-}
+} */
 
 .popup__link-text{
   align-self: center;
   margin-top: 16px;
 }
 
-.popup__link{
+/* .popup__link{
   text-decoration: underline;
   font-style: normal;
   font-weight: normal;
   font-size: 20px;
   line-height: 24px;
   color: #0F1624;
-}
+} */
 
-.popup_success .popup__link-text {
+/* .popup_success .popup__link-text {
   align-self: auto;
-}
+} */
 
-.popup__submit.popup__submit_disabled{
+/* .popup__submit.popup__submit_disabled{
   background: #E6E8EB;
   color: #B6BCBF;
   opacity: 0.2;
-}
+} */
 
   /* .popup__title{
     font-style: normal;
@@ -224,7 +224,7 @@
   opacity: 1;
 } */
 
-.popup__input-label{
+/* .popup__input-label{
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -239,17 +239,13 @@
     font-size: 14px;
     line-height: 16px;
   }
-}
+} */
 
-.popup__container.popup_success{
-  max-width: 430px;
-}
-
-.popup__checkbox-container{
+/* .popup__checkbox-container{
   display: flex;
-}
+} */
 
-.popup__checkbox{
+/* .popup__checkbox{
   width: 24px;
   height: 24px;
   border: 2px solid rgba(15, 22, 36, 0.5);
@@ -265,10 +261,10 @@
     margin-right: 12px;
 
   }
-}
+} */
 
 
-.popup__checkbox-label{
+/* .popup__checkbox-label{
   margin-block-start: 0px;
   margin-block-end: 0px;
 
@@ -289,4 +285,4 @@
     font-size: 16px;
     line-height: 20px;
   }
-}
+} */
