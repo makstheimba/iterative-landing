@@ -20,6 +20,10 @@ export default function WorldMap({ developers = [] }) {
   );
   const [positionY, setPositionY] = useState(0);
 
+  function closeDeveloperCardPopup() {
+    setIsDeveloperCardOpen(false);
+  }
+
   return (
     <div className="worldmap">
       <DeveloperCard
@@ -42,6 +46,7 @@ export default function WorldMap({ developers = [] }) {
         }}
         style={{ width: '100%', height: 'auto', marginBottom: '-70px' }}
         projection="geoMercator"
+        onClick={closeDeveloperCardPopup}
       >
         <defs>
           <pattern
@@ -89,16 +94,11 @@ export default function WorldMap({ developers = [] }) {
             setDeveloperCardData(developer);
           }
 
-          function closeDeveloperCardPopup() {
-            setIsDeveloperCardOpen(false);
-          }
-
           return (
             <Marker
               key={i}
               coordinates={developer.coordinates}
               onMouseEnter={openDeveloperCardPopup}
-              onMouseLeave={closeDeveloperCardPopup}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
