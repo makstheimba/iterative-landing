@@ -8,27 +8,30 @@ import {
 } from 'react-simple-maps';
 import DeveloperCard from '../DeveloperCard/DeveloperCard';
 import './WorldMap.css';
+import { defaultDeveloperData } from '../../utils/data';
 
 const geoUrl =
   'https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-110m.json';
 
 export default function WorldMap({ developers = [] }) {
   const [isDeveloperCardOpen, setIsDeveloperCardOpen] = useState(false);
-  const [DeveloperCardData, setDeveloperCardData] = useState({});
+  const [developerCardData, setDeveloperCardData] = useState(
+    defaultDeveloperData
+  );
   const [positionY, setPositionY] = useState(0);
 
   return (
     <div className="worldmap">
       <DeveloperCard
         isOpen={isDeveloperCardOpen}
-        title={DeveloperCardData.title}
-        job={DeveloperCardData.job}
-        location={DeveloperCardData.location}
-        text={DeveloperCardData.text}
-        image={DeveloperCardData.image}
-        globeLink={DeveloperCardData.globeLink}
-        twitterLink={DeveloperCardData.twitterLink}
-        linkedinLink={DeveloperCardData.linkedinLink}
+        title={developerCardData.title}
+        job={developerCardData.job}
+        location={developerCardData.location}
+        text={developerCardData.text}
+        image={developerCardData.image}
+        globeLink={developerCardData.globeLink}
+        twitterLink={developerCardData.twitterLink}
+        linkedinLink={developerCardData.linkedinLink}
         style={{
           '--top-px': `${positionY + 20}px`,
         }}
@@ -67,6 +70,7 @@ export default function WorldMap({ developers = [] }) {
                 <Geography
                   key={geo.rsmKey}
                   geography={geo}
+                  tabIndex="-1"
                   fill="url(#dotPattern)"
                   stroke="none"
                   className="worldmap__geography"

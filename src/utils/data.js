@@ -1,3 +1,14 @@
+export const defaultDeveloperData = {
+  title: '',
+  job: '',
+  location: '',
+  text: '',
+  image: '',
+  globeLink: 'about:blank',
+  twitterLink: 'about:blank',
+  linkedinLink: 'about:blank',
+};
+
 export const developers = [
   {
     coordinates: [-9.1393, 38.7223],
