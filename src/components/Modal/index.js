@@ -6,7 +6,7 @@ import {
   ModalClose, ModalInput, ModalError,
   ModalLabel, ModalCheckboxContainer,
   ModalCheckbox, ModalCheckboxLabel,
-  ModalLink, ModalSubmit
+  ModalLink
   } from './Modal'
 
 //import '../Modal/Modal.css'
