@@ -2,9 +2,9 @@ import * as React from "react"
 import Hero from "../components/Hero"
 import Enterprise from '../components/Enterprise'
 import MeetCommunity from "../components/MeetCommunity"
+import Modal from "../components/Modal"
 import Layout from "../Layout/Layout"
 import SEO from "../utils/Seo"
-import Modal from "../components/Modal"
 
 
 // markup

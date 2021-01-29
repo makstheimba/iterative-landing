@@ -1,6 +1,6 @@
 import React from 'react'
 import { formValidator } from '../../utils/formvalidator'
-import { Button } from '../GlobalStyles/Button'
+import Button from '../GlobalStyles/Button'
 import { 
   ModalContainer, ModalForm, ModalTitle,
   ModalClose, ModalInput, ModalError,
@@ -9,7 +9,7 @@ import {
   ModalLink, ModalSubmit
   } from './Modal'
 
-import '../Modal/Modal.css'
+//import '../Modal/Modal.css'
 
 const Modal = (props) => {
 
@@ -150,7 +150,6 @@ const Modal = (props) => {
         <ModalError error={agreeError}>{agreeError}</ModalError>
         
         <Button disabled={formInvalid} type="submit">Request a demo</Button>
-        {/* <ModalSubmit disabledStyle={formInvalid} disabled={formInvalid} type="submit">Request a demo</ModalSubmit> */}
 
       </ModalForm>
     </ModalContainer>
