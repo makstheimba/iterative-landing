@@ -147,7 +147,7 @@ const Modal = (props) => {
         <ModalInputContainer>
           <ModalInput error={nameError} id="name-input" type="text" name="name" required 
             minLength="2" maxLength="40" placeholder="Full name" value={name} onChange={handleName} />
-          <ModalInputClear onClick={handleClearInput(e, "name")} />
+          <ModalInputClear visible={name} onClick={e=>{handleClearInput(e,"name")}} type="button"/>
         </ModalInputContainer>
         <ModalError error={nameError}>{nameError}</ModalError>
         

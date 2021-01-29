@@ -87,6 +87,7 @@ export const ModalClose = styled.button`
 `
 
 export const ModalInput = styled.input`
+
   width: 734px;
   border: 2px solid rgba(15, 22, 36, 0.1);
   border-radius: 8px;
@@ -116,7 +117,7 @@ export const ModalInputContainer = styled.div`
 `
 
 export const ModalInputClear = styled.button`
-  position: absolute: 
+  position: absolute; 
   top: 16px;
   right: 16px;
 
@@ -131,6 +132,7 @@ export const ModalInputClear = styled.button`
   border: none;
   align-self: center;
   background-color: transparent;
+  visibility: ${(props) => props.visible.length != 0 ? 'visible' : 'hidden'};
 `
 
 export const ModalError = styled.span`
