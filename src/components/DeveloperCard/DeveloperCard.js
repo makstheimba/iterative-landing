@@ -18,9 +18,13 @@ export default function DeveloperCard({
   globeLink,
   twitterLink,
   linkedinLink,
+  style,
 }) {
   return (
-    <div className={`developercard ${!isOpen && 'developercard__hidden'}`}>
+    <div
+      style={style}
+      className={`developercard ${!isOpen && 'developercard__hidden'}`}
+    >
       <div className="developercard__container">
         <div className="developercard__text-container">
           <h4 className="developercard__title">{title}</h4>

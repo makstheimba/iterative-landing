@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import {
   ComposableMap,
@@ -15,10 +15,7 @@ const geoUrl =
 export default function WorldMap({ developers = [] }) {
   const [isDeveloperCardOpen, setIsDeveloperCardOpen] = useState(false);
   const [DeveloperCardData, setDeveloperCardData] = useState({});
-
-  function closeDeveloperCardPopup() {
-    setIsDeveloperCardOpen(false);
-  }
+  const [positionY, setPositionY] = useState(0);
 
   return (
     <div className="worldmap">
@@ -32,13 +29,15 @@ export default function WorldMap({ developers = [] }) {
         globeLink={DeveloperCardData.globeLink}
         twitterLink={DeveloperCardData.twitterLink}
         linkedinLink={DeveloperCardData.linkedinLink}
+        style={{
+          '--top-px': `${positionY + 20}px`,
+        }}
       />
       <ComposableMap
         projectionConfig={{
           scale: 100,
         }}
         projection="geoMercator"
-        onClick={closeDeveloperCardPopup}
       >
         <defs>
           <pattern
@@ -75,15 +74,26 @@ export default function WorldMap({ developers = [] }) {
           }
         </Geographies>
         {developers.map((developer, i) => {
-          function openDeveloperCardPopup() {
+          function handlePosition(e) {
+            setPositionY(e.clientY);
+          }
+
+          function openDeveloperCardPopup(e) {
+            handlePosition(e);
             setIsDeveloperCardOpen(true);
             setDeveloperCardData(developer);
           }
+
+          function closeDeveloperCardPopup() {
+            setIsDeveloperCardOpen(false);
+          }
+
           return (
             <Marker
               key={i}
               coordinates={developer.coordinates}
               onMouseEnter={openDeveloperCardPopup}
+              onMouseLeave={closeDeveloperCardPopup}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
