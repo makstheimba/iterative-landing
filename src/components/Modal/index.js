@@ -1,5 +1,6 @@
 import React from 'react'
 import { formValidator } from '../../utils/formvalidator'
+import { Button } from '../GlobalStyles/Button'
 import { 
   ModalContainer, ModalForm, ModalTitle,
   ModalClose, ModalInput, ModalError,
@@ -117,7 +118,7 @@ const Modal = (props) => {
   return (
     <ModalContainer isOpen={props.isOpen}>
       <ModalForm onChange={validateForm} onSubmit={e=>{handleSubmit(e)}} ref={formRef}>
-        
+
         <ModalTitle>Request a demo
           <ModalClose onClick={props.handleClose} type="button"></ModalClose>
         </ModalTitle>
@@ -147,8 +148,9 @@ const Modal = (props) => {
           <ModalCheckboxLabel>I agree to Iterative’s<ModalLink>Privacy Policy</ModalLink></ModalCheckboxLabel>
         </ModalCheckboxContainer>
         <ModalError error={agreeError}>{agreeError}</ModalError>
-
-        <ModalSubmit disabledStyle={formInvalid} disabled={formInvalid} type="submit">Request a demo</ModalSubmit>
+        
+        <Button disabled={formInvalid} type="submit">Request a demo</Button>
+        {/* <ModalSubmit disabledStyle={formInvalid} disabled={formInvalid} type="submit">Request a demo</ModalSubmit> */}
 
       </ModalForm>
     </ModalContainer>
