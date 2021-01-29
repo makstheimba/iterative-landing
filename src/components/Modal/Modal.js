@@ -133,6 +133,13 @@ export const ModalInputClear = styled.button`
   align-self: center;
   background-color: transparent;
   visibility: ${(props) => props.visible.length != 0 ? 'visible' : 'hidden'};
+
+  @media ${props => props.theme.breakpoints.sm}{
+    top: 10px;
+    right: 10px;
+    width: 16px;
+    height: 16px;
+  }
 `
 
 export const ModalError = styled.span`
