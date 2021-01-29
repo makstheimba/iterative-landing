@@ -99,6 +99,12 @@ const Modal = (props) => {
     setCompany('');
     setPhone('');
     setAgree(false);
+
+    setNameError('');
+    setEmailError('');
+    setCompanyError('');
+    setPhoneError('');
+    setAgreeError('');
   },[props.isOpen])
 
   //submit form
@@ -132,7 +138,8 @@ const Modal = (props) => {
         
         <ModalLabel>E-mail</ModalLabel>
         <ModalInput error={emailError} id="email-input" type="text" name="email" required 
-          minLength="2" maxLength="40" placeholder="Enter email" value={email} onChange={handleEmail} />
+          pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}"
+          minLength="6" maxLength="40" placeholder="Enter email" value={email} onChange={handleEmail} />
         <ModalError error={emailError}>{emailError}</ModalError>
 
         <ModalLabel>Company</ModalLabel>
@@ -148,7 +155,7 @@ const Modal = (props) => {
         <ModalCheckboxContainer>
           <ModalCheckbox error={agreeError} id="agree-input"  type="checkbox" name="agree" required
             minLength="12" maxLength="14" value={agree} onChange={handleAgree} />
-          <ModalCheckboxLabel>I agree to Iterative’s<ModalLink>Privacy Policy</ModalLink></ModalCheckboxLabel>
+          <ModalCheckboxLabel>I agree to Iterative’s <ModalLink>Privacy Policy</ModalLink></ModalCheckboxLabel>
         </ModalCheckboxContainer>
         <ModalError error={agreeError}>{agreeError}</ModalError>
         

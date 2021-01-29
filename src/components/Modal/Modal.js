@@ -66,7 +66,7 @@ export const ModalClose = styled.button`
   height: 24px;
   z-index: 2;
 
-  background-image: ${CloseButtonImg};
+  background-image: url(${CloseButtonImg});
   background-position: center;
   object-fit: cover; 
   background-repeat: no-repeat;
@@ -156,15 +156,21 @@ export const ModalCheckboxContainer = styled.div`
 export const ModalCheckbox = styled.input`
   width: 24px;
   height: 24px;
-  border: 2px solid rgba(15, 22, 36, 0.5);
+  border: 4px solid rgba(15, 22, 36, 0.5);
   box-sizing: border-box;
   border-radius: 4px;
   margin-right: 16px;
+  
+  @media ${props => props.theme.breakpoints.md}{
+    border: 2px solid rgba(15, 22, 36, 0.5);
+  }
 
   @media ${props => props.theme.breakpoints.sm}{
     width: 16px;
     height: 16px;
     margin-right: 12px;
+    border: 1px solid rgba(15, 22, 36, 0.5);
+
   }
 `
 export const ModalCheckboxLabel = styled.span`
