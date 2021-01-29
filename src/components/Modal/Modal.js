@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import CloseButtonImg from '../../images/Modal/icon/close.svg'
+import ClearFieldImg from '../../images/Modal/icon/clear.svg'
 
 export const ModalContainer = styled.div`
   position: fixed;
@@ -108,6 +109,28 @@ export const ModalInput = styled.input`
     `border: 1px solid #FF0000;
     color:  #FF0000;`
   };
+`
+
+export const ModalInputContainer = styled.div`
+  position: relative;
+`
+
+export const ModalInputClear = styled.button`
+  position: absolute: 
+  top: 16px;
+  right: 16px;
+
+  width: 24px;
+  height: 24px;
+  z-index: 2;
+
+  background-image: url(${ClearFieldImg});
+  background-position: center;
+  object-fit: cover; 
+  background-repeat: no-repeat;
+  border: none;
+  align-self: center;
+  background-color: transparent;
 `
 
 export const ModalError = styled.span`

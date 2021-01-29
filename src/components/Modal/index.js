@@ -3,10 +3,10 @@ import { formValidator } from '../../utils/formvalidator'
 import Button from '../GlobalStyles/Button'
 import { 
   ModalContainer, ModalForm, ModalTitle,
-  ModalClose, ModalInput, ModalError,
-  ModalLabel, ModalCheckboxContainer,
-  ModalCheckbox, ModalCheckboxLabel,
-  ModalLink
+  ModalClose, ModalInput, ModalInputContainer,
+  ModalInputClear, ModalError, ModalLabel, 
+  ModalCheckboxContainer, ModalCheckbox, 
+  ModalCheckboxLabel, ModalLink
   } from './Modal'
 
 //import '../Modal/Modal.css'
@@ -91,21 +91,17 @@ const Modal = (props) => {
     formValidator.formValidator(formRef.current,'.popup__input') ? setFormInvalid(true) : setFormInvalid(false);
   }
 
-  //reset fields when opened
-  React.useEffect(()=>{
-    setFormInvalid(true);
-    setName('');
-    setEmail('');
-    setCompany('');
-    setPhone('');
-    setAgree(false);
-
-    setNameError('');
-    setEmailError('');
-    setCompanyError('');
-    setPhoneError('');
-    setAgreeError('');
-  },[props.isOpen])
+  //delete field
+  function handleClearInput(e, field){
+    switch(field){
+      case 'name':
+        setName('');
+        break;
+      case 'email':
+        setEmail('');
+        break;
+    }
+  }
 
   //submit form
   function handleSubmit(e){
@@ -124,6 +120,22 @@ const Modal = (props) => {
     console.log(input)
   }
 
+    //reset fields when opened
+    React.useEffect(()=>{
+      setFormInvalid(true);
+      setName('');
+      setEmail('');
+      setCompany('');
+      setPhone('');
+      setAgree(false);
+  
+      setNameError('');
+      setEmailError('');
+      setCompanyError('');
+      setPhoneError('');
+      setAgreeError('');
+    },[props.isOpen])
+
   return (
     <ModalContainer isOpen={props.isOpen}>
       <ModalForm onChange={validateForm} onSubmit={e=>{handleSubmit(e)}} ref={formRef}>
@@ -132,8 +144,11 @@ const Modal = (props) => {
           <ModalClose onClick={props.handleClose} type="button"></ModalClose>
         </ModalTitle>
         
-        <ModalInput error={nameError} id="name-input" type="text" name="name" required 
-          minLength="2" maxLength="40" placeholder="Full name" value={name} onChange={handleName} />
+        <ModalInputContainer>
+          <ModalInput error={nameError} id="name-input" type="text" name="name" required 
+            minLength="2" maxLength="40" placeholder="Full name" value={name} onChange={handleName} />
+          <ModalInputClear onClick={handleClearInput(e, "name")} />
+        </ModalInputContainer>
         <ModalError error={nameError}>{nameError}</ModalError>
         
         <ModalLabel>E-mail</ModalLabel>
