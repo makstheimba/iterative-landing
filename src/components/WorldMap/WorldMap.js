@@ -35,9 +35,9 @@ export default function WorldMap({ developers = [] }) {
       />
       <ComposableMap
         projectionConfig={{
-          rotate: [-10, 0, 10],
-          scale: 220,
+          scale: 100,
         }}
+        projection="geoMercator"
         onClick={closeDeveloperCardPopup}
       >
         <defs>
