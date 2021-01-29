@@ -117,6 +117,7 @@ const Modal = (props) => {
   return (
     <ModalContainer isOpen={props.isOpen}>
       <ModalForm onChange={validateForm} onSubmit={e=>{handleSubmit(e)}} ref={formRef}>
+        
         <ModalTitle>Request a demo
           <ModalClose onClick={props.handleClose} type="button"></ModalClose>
         </ModalTitle>
