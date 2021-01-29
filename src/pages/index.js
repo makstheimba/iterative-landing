@@ -18,7 +18,6 @@ const IndexPage = () => {
 
   function closePopup(){
     setisPopUpOpen(false);
-
   }
 
   return (

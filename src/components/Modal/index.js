@@ -105,14 +105,17 @@ const Modal = (props) => {
   function handleSubmit(e){
     e.preventDefault();
     const fields = {name, email, company, phone, agree};
-    const input = processInput(fields);
-    //props.handleSubmit(input);
+    submitForm(processInput(fields));
     props.handleClose();
   }
 
   function processInput(fields){
     fields.phone = fields.phone.replaceAll('-','');
     return fields;
+  }
+
+  function submitForm(input){
+    console.log(input)
   }
 
   return (
