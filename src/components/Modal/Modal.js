@@ -169,7 +169,7 @@ export const ModalCheckbox = styled.input`
     width: 16px;
     height: 16px;
     margin-right: 12px;
-    border: 1px solid rgba(15, 22, 36, 0.5);
+    border: 1Ipx solid rgba(15, 22, 36, 0.5);
 
   }
 `

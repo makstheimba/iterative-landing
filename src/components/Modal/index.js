@@ -80,7 +80,7 @@ const Modal = (props) => {
 
   function handleAgree(e) {
     //set value
-    setAgree(e.target.value);
+    setAgree(e.target.checked);
     //set error
     formValidator.fieldValidator(e.target, setAgreeError);
   }
