@@ -7,7 +7,7 @@ import cmlIcon from '../../images/icn-cml.svg';
 import dvcIcon from '../../images/icn-dvc.svg';
 import viewerIcon from '../../images/icn-viewer.svg';
 
-export default function PricingCardList() {
+export default function PricingCardList({ onClick }) {
   return (
     <ul className="pricing-card-list">
       <PricingCard
@@ -24,7 +24,10 @@ export default function PricingCardList() {
               widthPixelSizes={[24, 24, 32]}
               background="light"
             />
-            <p className="pricing-card-list__link-text left"> Go to CML</p>
+            <p className="pricing-card-list__link-text pricing-card-list__link-left-border">
+              {' '}
+              Go to CML
+            </p>
           </li>
           <li className="pricing-card-list__link">
             <Icon
@@ -59,7 +62,7 @@ export default function PricingCardList() {
         subtitle="Cross-org collaboration"
         description="Extend your unstructured data storages with data compliance, data access control and SSO capabilities. Online as well as on-premise installation are available"
       >
-        <Button type="orange-gradient" size="large">
+        <Button type="orange-gradient" size="large" onClick={onClick}>
           Contact Us
         </Button>
       </PricingCard>
