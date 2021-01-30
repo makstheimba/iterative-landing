@@ -42,7 +42,7 @@ export const ModalForm = styled.form`
   @media screen and (max-width: 720px){
       min-width: 320px;
       max-width: calc(100vw - 8 * 2)
-
+ 
       padding: 24px;
     }
 `
