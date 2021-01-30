@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 import CloseButtonImg from '../../images/Modal/icon/close.svg'
 import ClearFieldImg from '../../images/Modal/icon/clear.svg'
+import ClearFieldImgS from '../../images/Modal/icon/clear-s.svg'
+
 
 export const ModalContainer = styled.div`
   position: fixed;
@@ -8,8 +10,8 @@ export const ModalContainer = styled.div`
   transition: visibility 0s, opacity 0.2s linear;
   opacity: ${(props) => props.isOpen ? 1 : 0};
   background-color: rgba(0, 0, 0, 0.5);
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   z-index: 0; 
   left: 0; 
   top: 0;
@@ -17,6 +19,7 @@ export const ModalContainer = styled.div`
 
 export const ModalForm = styled.form`
   max-width: 814px;
+
   background-color: white;
 
   padding: 40px;
@@ -28,10 +31,12 @@ export const ModalForm = styled.form`
   z-index: 1; 
 
   @media ${props => props.theme.breakpoints.md}{
+      max-width: 720px;
       padding: 32px;
     }
 
   @media ${props => props.theme.breakpoints.sm}{
+      max-width: 320px;
       padding: 24px;
     }
 `
@@ -45,7 +50,7 @@ export const ModalTitle = styled.h4`
   color: #0F1624;
   margin-block-start: 0px;
   margin-block-end: 0px;
-  margin-bottom: 22px;  
+  margin-bottom: 40px;  
 
   display: flex;
   justify-content: space-between;
@@ -54,6 +59,7 @@ export const ModalTitle = styled.h4`
     font-weight: 600;
     font-size: 28px;
     line-height: 32px;
+    margin-bottom: 32px;  
   }
 
   @media ${props => props.theme.breakpoints.sm}{
@@ -87,23 +93,19 @@ export const ModalClose = styled.button`
 `
 
 export const ModalInput = styled.input`
-  width: 734px;
+  width: 100%;
   border: 2px solid rgba(15, 22, 36, 0.1);
   border-radius: 8px;
   padding: 16px;
+  font-size: 20px;
+  line-height: 24px;
 
   &:focus{
     border: 2px solid rgba(15, 22, 36, 0.5);
   }
 
-  @media ${props => props.theme.breakpoints.md}{
-    width: 656px;
-    margin-bottom: 24px;
-  }
 
   @media ${props => props.theme.breakpoints.sm}{
-    width: 272px;
-    margin-bottom: 16px;
     padding: 8px;
     font-size: 16px;
     line-height: 20px;
@@ -127,38 +129,50 @@ export const ModalInput = styled.input`
 
 export const ModalInputContainer = styled.div`
   position: relative;
+
+  max-width: 734px;
+
+  @media ${props => props.theme.breakpoints.md}{
+    max-width: 656px;
+  }
+
+  @media ${props => props.theme.breakpoints.sm}{
+    max-width: 272px;
+  }
 `
 
 export const ModalInputClear = styled.button`
   position: absolute; 
-  top: 15px;
-  right: 15px;
+  top: 17px;
+  right: 17px;
 
   width: 24px;
   height: 24px;
   z-index: 3;
 
-  background-image: url(${ClearFieldImg});
   background-position: center;
   object-fit: cover; 
   background-repeat: no-repeat;
   align-self: center;
-  background-color: transparent;
+  background: transparent;
+  background-image: url(${ClearFieldImg});
+
   border: none;
+  border-radius: 100%;
 
   visibility: ${(props) => props.visible.length != 0 ? 'visible' : 'hidden'};
   display: ${(props) => props.visible.length != 0 ? 'block' : 'none'};
 
   &:hover{
     cursor: pointer;
-    opacity: 0.8;
   }
 
   @media ${props => props.theme.breakpoints.sm}{
-    top: 9px;
-    right: 9px;
+    top: 12px;
+    right: 12px;
     width: 16px;
     height: 16px;
+    background-image: url(${ClearFieldImgS});
   }
 `
 
@@ -262,6 +276,16 @@ export const ModalLink = styled.a`
   font-size: 20px;
   line-height: 24px;
   color: #0F1624;
+
+  @media ${props => props.theme.breakpoints.md}{
+    font-size: 18px;
+    line-height: 20px;  
+  }
+
+  @media ${props => props.theme.breakpoints.sm}{
+    font-size: 16px;
+    line-height: 20px;
+  }
 `
 export const ModalSubmit = styled.button`
   font-style: normal;

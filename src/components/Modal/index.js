@@ -1,6 +1,7 @@
 import React from 'react'
 import { formValidator } from '../../utils/formvalidator'
 import Button from '../GlobalStyles/Button'
+import {Section} from '../GlobalStyles/index'
 import { 
   ModalContainer, ModalForm, ModalTitle,
   ModalClose, ModalInput, ModalInputContainer,
