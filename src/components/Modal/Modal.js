@@ -12,14 +12,16 @@ export const ModalContainer = styled.div`
   background-color: rgba(0, 0, 0, 0.5);
   width: 100vw;
   height: 100vh;
-  z-index: 0; 
+  z-index: 1; 
   left: 0; 
   top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `
 
 export const ModalForm = styled.form`
-  max-width: 814px;
-
+  min-width: 814px;
   background-color: white;
 
   padding: 40px;
@@ -28,15 +30,19 @@ export const ModalForm = styled.form`
   border-radius: 10px;
   margin: auto;
   position: relative;
-  z-index: 1; 
+  z-index: 2; 
 
   @media ${props => props.theme.breakpoints.md}{
-      max-width: 720px;
+      min-width: 720px;
+      max-width: calc(100vw - 16 * 2)
+
       padding: 32px;
     }
 
-  @media ${props => props.theme.breakpoints.sm}{
-      max-width: 320px;
+  @media screen and (max-width: 720px){
+      min-width: 320px;
+      max-width: calc(100vw - 8 * 2)
+
       padding: 24px;
     }
 `
@@ -71,7 +77,7 @@ export const ModalTitle = styled.h4`
 export const ModalClose = styled.button`
   width: 24px;
   height: 24px;
-  z-index: 2;
+  z-index: 3;
 
   background-image: url(${CloseButtonImg});
   background-position: center;
@@ -89,6 +95,21 @@ export const ModalClose = styled.button`
   @media ${props => props.theme.breakpoints.sm}{
     width: 16px;
     height: 16px;
+  }
+`
+
+export const ModalInputContainer = styled.div`
+  position: relative;
+  max-width: 734px;
+
+  @media ${props => props.theme.breakpoints.md}{
+    max-width: 656px;
+    width: calc(100vw - 32 * 2)
+  }
+
+  @media ${props => props.theme.breakpoints.sm}{
+    max-width: 272px;
+    width: calc(100vw - 24* 2)
   }
 `
 
@@ -127,20 +148,6 @@ export const ModalInput = styled.input`
   };
 `
 
-export const ModalInputContainer = styled.div`
-  position: relative;
-
-  max-width: 734px;
-
-  @media ${props => props.theme.breakpoints.md}{
-    max-width: 656px;
-  }
-
-  @media ${props => props.theme.breakpoints.sm}{
-    max-width: 272px;
-  }
-`
-
 export const ModalInputClear = styled.button`
   position: absolute; 
   top: 17px;
@@ -148,7 +155,7 @@ export const ModalInputClear = styled.button`
 
   width: 24px;
   height: 24px;
-  z-index: 3;
+  z-index: 4;
 
   background-position: center;
   object-fit: cover; 
