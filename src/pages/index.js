@@ -1,8 +1,9 @@
 import * as React from "react"
 import Hero from "../components/Hero"
-import Enterprise from '../components/Enterprise'
+import Enterprise from "../components/Enterprise"
 import MeetCommunity from "../components/MeetCommunity"
 import Modal from "../components/Modal"
+import CookieModal from "../components/CookieModal"
 import Layout from "../Layout/Layout"
 import SEO from "../utils/Seo"
 
@@ -27,6 +28,7 @@ const IndexPage = () => {
         <Enterprise />
         <MeetCommunity />
         <Modal isOpen={isPopUpOpen} handleClose={closePopup}/>
+        <CookieModal />
       </Layout>
 
     </>

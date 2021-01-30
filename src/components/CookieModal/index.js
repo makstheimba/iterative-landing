@@ -3,7 +3,7 @@ import {
   ModalContainer, ModalBody, ModalText, ModalLink, ModalButton
   } from './CookieModal'
 
-const Modal = (props) => {
+const Modal = () => {
   const [isOpen, setisOpen] = React.useState(true);
 
   return (
