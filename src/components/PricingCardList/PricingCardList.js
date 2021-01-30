@@ -61,7 +61,7 @@ export default function PricingCardList() {
         subtitle="Cross-org collaboration"
         description="Extend your unstructured data storages with data compliance, data access control and SSO capabilities. Online as well as on-premise installation are available"
         children={
-          <Button type="orange-gradient" size="default">
+          <Button type="orange-gradient" size="large">
             Contact Us
           </Button>
         }
