@@ -9,7 +9,7 @@ import LeaderShip from '../components/Leadership/Leadership';
 import Career from '../components/Career/Career';
 import { times } from '../utils/data';
 
-export default function AboutPage() {
+export default function AboutPage({ onClick }) {
   return (
     <Layout>
       <Cookies />
@@ -21,7 +21,7 @@ export default function AboutPage() {
       </Header>
       <Team />
       <LeaderShip />
-      <Career />
+      <Career onClick={onClick} />
       <Footer />
     </Layout>
   );
