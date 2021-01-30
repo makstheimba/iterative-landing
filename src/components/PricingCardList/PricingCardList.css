@@ -25,7 +25,7 @@
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 0.02em;
-  padding: 5px 15px 5px 3px;
+  padding: 5px 10px 5px 3px;
 }
 
 .left {
@@ -35,6 +35,7 @@
 .pricing-card-list__link-viewer {
   display: flex;
   justify-content: center;
+  align-items: center;
   margin: -13px 0 -13px -13px;
 }
 
@@ -59,13 +60,11 @@
   .left {
     padding-right: 16px;
     margin-right: 5px;
-    border-right: 1px solid rgba(255, 255, 255, 0.33);
   }
 
   .pricing-card-list__link-viewer {
-    display: flex;
     justify-content: flex-start;
-    margin: -13px 0 -13px -13px;
+    margin: -18px 0 -18px -13px;
   }
 }
 
@@ -76,10 +75,31 @@
     column-gap: 24px;
     justify-content: space-between;
   }
+
+  .pricing-card-list__link-container {
+    margin: 0 0 0 -13px;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    bottom: 25px;
+  }
+
+  .pricing-card-list__link {
+    margin: -6px 0 -6px;
+  }
   .pricing-card-list__link-text {
-    color: #fff;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 20px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .left {
+    border: none;
+    padding-right: 0;
+    margin-right: 0;
+  }
+
+  .pricing-card-list__link-viewer {
+    position: absolute;
+    bottom: 39px;
   }
 }
