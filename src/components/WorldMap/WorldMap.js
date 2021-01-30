@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import PropTypes from 'prop-types';
 import {
   ComposableMap,
@@ -19,13 +19,14 @@ export default function WorldMap({ developers = [] }) {
     defaultDeveloperData
   );
   const [positionY, setPositionY] = useState(0);
+  const worldMapEl = useRef(null);
 
   function closeDeveloperCardPopup() {
     setIsDeveloperCardOpen(false);
   }
 
   return (
-    <div className="worldmap">
+    <div ref={worldMapEl} className="worldmap">
       <DeveloperCard
         isOpen={isDeveloperCardOpen}
         title={developerCardData.title}
@@ -85,7 +86,7 @@ export default function WorldMap({ developers = [] }) {
         </Geographies>
         {developers.map((developer, i) => {
           function handlePosition(e) {
-            setPositionY(e.clientY);
+            setPositionY(e.pageY - worldMapEl.current.offsetTop);
           }
 
           function openDeveloperCardPopup(e) {
