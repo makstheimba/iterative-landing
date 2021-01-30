@@ -114,7 +114,7 @@ export const ModalInput = styled.input`
   };
 
   ${(props) => props.error &&
-    `border: 2px solid #FF3333
+    `border: 2px solid #FF3333;
     color:  #FF0000;`
   };
 
@@ -216,7 +216,7 @@ export const ModalCheckbox = styled.input`
   margin-right: 16px;
 
   &:checked{
-    background: #13ADC7;
+    background-color: #13ADC7;
   }
   
   @media ${props => props.theme.breakpoints.md}{
