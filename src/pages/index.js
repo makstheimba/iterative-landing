@@ -7,7 +7,6 @@ import Layout from "../Layout/Layout"
 import SEO from "../utils/Seo"
 
 
-// markup
 const IndexPage = () => {
 
   const [isPopUpOpen, setisPopUpOpen] = React.useState(false);
@@ -27,9 +26,9 @@ const IndexPage = () => {
         <Hero handleClick={openPopUp} />
         <Enterprise />
         <MeetCommunity />
+        <Modal isOpen={isPopUpOpen} handleClose={closePopup}/>
       </Layout>
 
-      <Modal isOpen={isPopUpOpen} handleClose={closePopup}/>
     </>
   )
 }
