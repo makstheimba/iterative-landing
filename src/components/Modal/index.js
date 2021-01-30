@@ -185,7 +185,7 @@ const Modal = (props) => {
         <ModalCheckboxContainer>
           <ModalCheckbox error={agreeError} id="agree-input"  type="checkbox" name="agree" required
             minLength="12" maxLength="14" value={agree} onChange={handleAgree} />
-          <ModalCheckboxLabel>I agree to Iterative’s <ModalLink>Privacy Policy</ModalLink></ModalCheckboxLabel>
+          <ModalCheckboxLabel>I agree to Iterative’s <ModalLink href="#">Privacy Policy</ModalLink></ModalCheckboxLabel>
         </ModalCheckboxContainer>
         <ModalError error={agreeError}>{agreeError}</ModalError>
         
