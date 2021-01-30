@@ -238,7 +238,6 @@ export const ModalCheckbox = styled.input`
   width: 24px;
   height: 24px;
   border: 4px solid rgba(15, 22, 36, 0.5);
-  box-sizing: border-box;
   border-radius: 4px;
   margin-right: 16px;
 
