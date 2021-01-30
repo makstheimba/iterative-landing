@@ -35,7 +35,7 @@ export default function DeveloperCard({
           </div>
         </div>
         <div className="developercard__avatar">
-          <Avatar image={image} shape="square" />
+          <Avatar image={image} shape="square" id="popup" />
         </div>
       </div>
       <div className="developercard__line"></div>
