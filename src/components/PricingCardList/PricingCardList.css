@@ -21,11 +21,6 @@
   padding: 0 12px 0 0;
 }
 
-.pricing-card-list__link-item:hover {
-  opacity: 0.75;
-  cursor: pointer;
-}
-
 .pricing-card-list__link-item:last-child {
   margin: 0;
 }
@@ -42,6 +37,11 @@
   width: max-content;
 }
 
+.pricing-card-list__link:hover {
+  opacity: 0.75;
+  cursor: pointer;
+}
+
 .pricing-card-list__link .icon {
   margin-right: 16px;
 }
@@ -55,11 +55,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.pricing-card-list__link-viewer:hover {
-  opacity: 0.75;
-  cursor: pointer;
 }
 
 @media (min-width: 768px) {
