@@ -6,6 +6,8 @@
   border-radius: 16px;
   font-family: 'Space Grotesk', sans-serif, Arial, Helvetica;
   font-style: normal;
+  display: flex;
+  flex-direction: column;
 }
 
 .pricing-card__subtitle {

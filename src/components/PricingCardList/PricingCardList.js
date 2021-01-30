@@ -16,28 +16,25 @@ export default function PricingCardList({ onClick }) {
         description="DVC, CML, our other open-source tools come for free, no strings attached"
       >
         <ul className="pricing-card-list__link-container">
-          <li className="pricing-card-list__link">
-            <Icon
-              icon={cmlIcon}
-              link="about:blank"
-              linkDescription="Go to CML"
-              widthPixelSizes={[24, 24, 32]}
-              background="light"
-            />
-            <p className="pricing-card-list__link-text pricing-card-list__link-left-border">
-              {' '}
-              Go to CML
-            </p>
+          <li className="pricing-card-list__link-item pricing-card-list__link-item-right-border">
+            <a
+              href="about:blank"
+              rel="noreferrer"
+              target="_blank"
+              className="pricing-card-list__link"
+            >
+              <Icon icon={cmlIcon} widthPixelSizes={[24, 24, 32]} /> Go to CML
+            </a>
           </li>
-          <li className="pricing-card-list__link">
-            <Icon
-              icon={dvcIcon}
-              link="about:blank"
-              linkDescription="Go to DVC"
-              widthPixelSizes={[24, 24, 32]}
-              background="light"
-            />
-            <p className="pricing-card-list__link-text"> Go to DVC</p>
+          <li className="pricing-card-list__link-item">
+            <a
+              href="about:blank"
+              rel="noreferrer"
+              target="_blank"
+              className="pricing-card-list__link"
+            >
+              <Icon icon={dvcIcon} widthPixelSizes={[24, 24, 32]} /> Go to DVC
+            </a>
           </li>
         </ul>
       </PricingCard>
@@ -47,14 +44,15 @@ export default function PricingCardList({ onClick }) {
         description="Studio is an extension of GitHub, GitLab or BitBucket. Sign up for the online SaaS version or contact us to get on-premise installation"
       >
         <div className="pricing-card-list__link-viewer">
-          <Icon
-            icon={viewerIcon}
-            link="about:blank"
-            linkDescription="Go to  Studio"
-            widthPixelSizes={[24, 24, 32]}
-            background="light"
-          />
-          <p className="pricing-card-list__link-text"> Go to Studio</p>
+          <a
+            href="about:blank"
+            rel="noreferrer"
+            target="_blank"
+            className="pricing-card-list__link"
+          >
+            <Icon icon={viewerIcon} widthPixelSizes={[24, 24, 32]} /> Go to
+            Studio
+          </a>
         </div>
       </PricingCard>
       <PricingCard

@@ -1,5 +1,5 @@
 .pricing-card-list {
-  list-style: 0;
+  list-style: none;
   margin: 32px 0;
   padding: 0;
   display: grid;
@@ -9,36 +9,47 @@
 
 .pricing-card-list__link-container {
   list-style: none;
-  margin: -13px 0 -13px -13px;
+  margin: 0;
   padding: 0;
   display: flex;
   align-items: flex-end;
   justify-content: flex-start;
+  align-self: center;
+}
+
+.pricing-card-list__link-item {
+  padding: 0 12px 0 0;
+}
+
+.pricing-card-list__link-item:last-child {
+  margin: 0;
 }
 
 .pricing-card-list__link {
   display: flex;
   align-items: center;
-}
-
-.pricing-card-list__link-text {
   color: #fff;
   font-weight: 600;
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 0.02em;
-  padding: 5px 10px 5px 4px;
+  text-decoration: none;
+  width: max-content;
 }
 
-.pricing-card-list__link-left-border {
+.pricing-card-list__link .icon {
+  margin-right: 16px;
+}
+
+.pricing-card-list__link-item-right-border {
   border-right: 1px solid rgba(255, 255, 255, 0.33);
+  margin-right: 12px;
 }
 
 .pricing-card-list__link-viewer {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: -13px 0 -13px -13px;
 }
 
 @media (min-width: 768px) {
@@ -48,28 +59,22 @@
   }
 
   .pricing-card-list__link-container {
-    margin: -18px 0 -18px -13px;
+    align-self: start;
   }
 
   .pricing-card-list__link {
-    display: flex;
-    align-items: center;
-  }
-
-  .pricing-card-list__link-text {
     font-size: 20px;
     line-height: 20px;
-    padding: 2px 15px 2px 3px;
+    margin: 0 16px 0 0;
   }
 
-  .pricing-card-list__link-left-border {
-    padding-right: 16px;
-    margin-right: 5px;
+  .pricing-card-list__link-item-right-border {
+    margin-right: 16px;
   }
 
   .pricing-card-list__link-viewer {
     justify-content: flex-start;
-    margin: -18px 0 -18px -13px;
+    margin: 0;
   }
 }
 
@@ -83,30 +88,30 @@
   }
 
   .pricing-card-list__link-container {
-    margin: 0 0 0 -13px;
+    flex-grow: 1;
     flex-direction: column;
     align-items: flex-start;
-    position: absolute;
-    bottom: 25px;
+    justify-content: flex-end;
   }
 
-  .pricing-card-list__link {
-    margin: -6px 0 -6px;
-  }
-
-  .pricing-card-list__link-text {
-    padding: 0;
-    margin: 0;
-  }
-
-  .pricing-card-list__link-left-border {
+  .pricing-card-list__link-item-right-border {
     border: none;
-    padding-right: 0;
     margin-right: 0;
   }
 
+  .pricing-card-list__link-item {
+    margin-bottom: 20px;
+  }
+
+  .pricing-card-list__link-item:last-child {
+    margin-bottom: 0;
+  }
+
   .pricing-card-list__link-viewer {
-    position: absolute;
-    bottom: 39px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
   }
 }
