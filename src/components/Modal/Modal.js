@@ -75,14 +75,14 @@ export const ModalClose = styled.button`
   align-self: center;
   background-color: transparent;
 
-  @media ${props => props.theme.breakpoints.sm}{
-    width: 16px;
-    height: 16px;
-  }
-
   &:hover{
     cursor: pointer;
     opacity: 0.6;
+  }
+
+  @media ${props => props.theme.breakpoints.sm}{
+    width: 16px;
+    height: 16px;
   }
 `
 
@@ -136,17 +136,23 @@ export const ModalInputClear = styled.button`
 
   width: 24px;
   height: 24px;
-  z-index: 2;
+  z-index: 3;
 
   background-image: url(${ClearFieldImg});
   background-position: center;
   object-fit: cover; 
   background-repeat: no-repeat;
-  border: none;
   align-self: center;
   background-color: transparent;
+  border: none;
+
   visibility: ${(props) => props.visible.length != 0 ? 'visible' : 'hidden'};
   display: ${(props) => props.visible.length != 0 ? 'block' : 'none'};
+
+  &:hover{
+    cursor: pointer;
+    opacity: 0.8;
+  }
 
   @media ${props => props.theme.breakpoints.sm}{
     top: 9px;
