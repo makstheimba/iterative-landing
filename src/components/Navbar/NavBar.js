@@ -32,6 +32,7 @@ export const NavLink = styled(Link)`
   margin-right: 40px;
   color: rgba(255, 255, 255, .75);
   transition: 0.4s ease;
+  white-space: nowrap;
 
   &:hover {
     color: #fff;
@@ -42,7 +43,7 @@ export const NavLink = styled(Link)`
     font-size: 18px;
     line-height: 24px;
     height: 32px;
-    margin-right: 24px;
+    margin-right: ${({ mobile }) => mobile ? '0' : '24px'};
   }
 
   @media ${(props) => props.theme.breakpoints.sm} {
@@ -56,11 +57,11 @@ export const NavLink = styled(Link)`
 export const NavProducts = styled.button`
   border: none;
   display: flex;
+  position: relative;
   background: none;
   font-size: 24px;
   line-height: 32px;
-  color: #fff;
-  opacity: 0.75;
+  color: rgba(255,255,255,0.75);
   cursor: pointer;
   transition: 0.3s ease;
 
@@ -68,7 +69,7 @@ export const NavProducts = styled.button`
     outline: none;
   }
   &:hover {
-    opacity: 1;
+    color: #fff;
   }
 
   @media ${(props) => props.theme.breakpoints.lg} {
@@ -81,6 +82,13 @@ export const NavProductsIcon = styled.img`
   margin-left: 8px;
   display: flex;
   align-self: center;
+  transition: 0.3s ease;
+  opacity: ${({ isOpen }) => isOpen ? '1' : '.75'};
+  transform: ${({ isOpen }) => isOpen ? 'scaleY(-1)' : 'scaleY(1)'};
+
+  &:hover {
+    opacity: 1;
+  }
 
   @media ${(props) => props.theme.breakpoints.sm} {
     margin: 2px 0 0;
@@ -96,19 +104,17 @@ export const NavProductsMobile = styled.button`
   cursor: pointer;
   transition: 0.3s ease;
   margin-right: auto;
+  position: relative;
 
   &:focus {
     outline: none;
-  }
-  &:hover {
-    opacity: 0.6;
   }
 `
 
 export const NavLogoWrap = styled(Link)`
   display: flex;
   align-items: center;
-  margin-right: ${({ mobile }) => (mobile ? '0' : '40px')};
+  padding-right: ${({ mobile }) => (mobile ? '0' : '40px')};
 `
 
 export const NavLogo = styled.img`
