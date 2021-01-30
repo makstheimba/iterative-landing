@@ -13,7 +13,8 @@ const developers = [
       'Creator of DVC. Ex-Data Scientist at Microsoft. PhD in Computer Science.',
   },
   {
-    image: testAvatar,
+    image:
+      'https://images.unsplash.com/photo-1421789665209-c9b2a435e3dc?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTl8fHRyZWV8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60',
     color: '#945DD6',
     name: 'Ivan Shcheklein',
     description:

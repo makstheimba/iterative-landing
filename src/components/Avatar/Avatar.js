@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import './Avatar.css';
 import avatarBgGradient from '../../images/avatar-bg-gradient.svg';
 
-export default function Avatar({ image, color, shape, alt, onClick }) {
-  const fill = image ? 'url(#avatarImg)' : '#0f1624';
+export default function Avatar({ image, color, shape, alt, onClick, id }) {
+  const fill = image ? `url(#avatarImg_${id})` : '#0f1624';
   const squareAltClass = image ? 'avatar__hidden-el' : 'avatar__square_alt';
   const squareAltBorder = image ? '' : '#fff';
   const circleAltClass = image ? 'avatar__hidden-el' : 'avatar__circle_alt';
@@ -46,12 +46,12 @@ export default function Avatar({ image, color, shape, alt, onClick }) {
           >
             <defs>
               <pattern
-                id="avatarImg"
+                id={`avatarImg_${id}`}
                 patternUnits="userSpaceOnUse"
                 width="150"
                 height="150"
               >
-                <image href={image} x="-15" y="-20" width="150" height="150" />
+                <image href={image} x="-25" y="-40" width="190" height="190" />
               </pattern>
             </defs>
             <path
@@ -84,5 +84,6 @@ Avatar.propTypes = {
   shape: PropTypes.oneOf(['square', 'circle']),
   color: PropTypes.string,
   alt: PropTypes.string,
+  id: PropTypes.string.isRequired,
   onClick: PropTypes.func,
 };

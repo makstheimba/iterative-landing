@@ -18,9 +18,13 @@ export default function DeveloperCard({
   globeLink,
   twitterLink,
   linkedinLink,
+  style,
 }) {
   return (
-    <div className={`developercard ${!isOpen && 'developercard__hidden'}`}>
+    <div
+      style={style}
+      className={`developercard ${!isOpen && 'developercard__hidden'}`}
+    >
       <div className="developercard__container">
         <div className="developercard__text-container">
           <h4 className="developercard__title">{title}</h4>
@@ -31,7 +35,7 @@ export default function DeveloperCard({
           </div>
         </div>
         <div className="developercard__avatar">
-          <Avatar image={image} shape="square" />
+          <Avatar image={image} shape="square" id="popup" />
         </div>
       </div>
       <div className="developercard__line"></div>

@@ -11,6 +11,7 @@ export default function DeveloperInfo({ developers = [] }) {
             image={developer.image}
             color={developer.color}
             shape="square"
+            id={`leader_${i}`}
           />
           <div className="developerInfo__text-container">
             <h4 className="developerInfo__name">{developer.name}</h4>
