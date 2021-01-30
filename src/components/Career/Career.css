@@ -1,0 +1,15 @@
+.career {
+  margin: -5px 0 40px;
+}
+
+@media (min-width: 768px) {
+  .career {
+    margin: -5px 0 64px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .career {
+    margin: -5px 0 80px;
+  }
+}
