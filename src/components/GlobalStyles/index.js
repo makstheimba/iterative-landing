@@ -191,6 +191,7 @@ export const ButtonBack = styled.div`
     font-size: 14px;
     margin-bottom: ${({ alt }) => alt ? '0' : '32px'};
   }
+
 `
 
 export const ButtonFront = styled.button`

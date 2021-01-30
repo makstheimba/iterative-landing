@@ -87,11 +87,14 @@ export const ModalClose = styled.button`
 `
 
 export const ModalInput = styled.input`
-
   width: 734px;
   border: 2px solid rgba(15, 22, 36, 0.1);
   border-radius: 8px;
   padding: 16px;
+
+  &:focus{
+    border: 2px solid rgba(15, 22, 36, 0.5);
+  }
 
   @media ${props => props.theme.breakpoints.md}{
     width: 656px;
@@ -107,8 +110,18 @@ export const ModalInput = styled.input`
   }
 
   ${(props) => props.error &&
-    `border: 1px solid #FF0000;
+    `border: 2px solid #FF3333
     color:  #FF0000;`
+  };
+
+  ${(props) => (props.value.length > 0 && !props.error) &&
+    `border: 2px solid #13ADC7;`
+  };
+
+  ${(props) => (!props.disabled) &&
+    `background: rgba(15, 22, 36, 0.1);
+    border: 2px solid rgba(15, 22, 36, 0.1);
+    `
   };
 `
 
@@ -133,6 +146,7 @@ export const ModalInputClear = styled.button`
   align-self: center;
   background-color: transparent;
   visibility: ${(props) => props.visible.length != 0 ? 'visible' : 'hidden'};
+  display: ${(props) => props.visible.length != 0 ? 'block' : 'none'};
 
   @media ${props => props.theme.breakpoints.sm}{
     top: 9px;
@@ -181,6 +195,10 @@ export const ModalLabel = styled.p`
     font-size: 14px;
     line-height: 16px;
   }
+
+  ${(props) => (!props.error) &&
+    `color: #13ADC7;
+    `};
 `
 export const ModalCheckboxContainer = styled.div`
   display: flex;
@@ -192,6 +210,10 @@ export const ModalCheckbox = styled.input`
   box-sizing: border-box;
   border-radius: 4px;
   margin-right: 16px;
+
+  &:checked{
+    background: #13ADC7;
+  }
   
   @media ${props => props.theme.breakpoints.md}{
     border: 2px solid rgba(15, 22, 36, 0.5);
