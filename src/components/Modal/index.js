@@ -157,7 +157,7 @@ const Modal = (props) => {
         </ModalInputContainer>
         <ModalError error={nameError}>{nameError}</ModalError>
         
-        <ModalLabel error={emailError}>E-mail</ModalLabel>
+        <ModalLabel error={emailError} value={email}>E-mail</ModalLabel>
         <ModalInputContainer>
           <ModalInput error={emailError} id="email-input" type="text" name="email" required 
             pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}"
@@ -166,7 +166,7 @@ const Modal = (props) => {
           </ModalInputContainer>
         <ModalError error={emailError}>{emailError}</ModalError>
 
-        <ModalLabel error={companyError}>Company</ModalLabel>
+        <ModalLabel error={companyError} value={company}>Company</ModalLabel>
         <ModalInputContainer>
           <ModalInput error={companyError} id="company-input" type="text" name="company" required 
             minLength="2" maxLength="40" placeholder="Enter company" value={company} onChange={handleCompany} />

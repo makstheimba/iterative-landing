@@ -109,16 +109,16 @@ export const ModalInput = styled.input`
     line-height: 20px;
   }
 
+  ${(props) => (props.value.length > 0 && !props.error) &&
+    `border: 2px solid #13ADC7;`
+  };
+
   ${(props) => props.error &&
     `border: 2px solid #FF3333
     color:  #FF0000;`
   };
 
-  ${(props) => (props.value.length > 0 && !props.error) &&
-    `border: 2px solid #13ADC7;`
-  };
-
-  ${(props) => (!props.disabled) &&
+  ${(props) => (props.disabled) &&
     `background: rgba(15, 22, 36, 0.1);
     border: 2px solid rgba(15, 22, 36, 0.1);
     `
@@ -196,9 +196,13 @@ export const ModalLabel = styled.p`
     line-height: 16px;
   }
 
-  ${(props) => (!props.error) &&
-    `color: #13ADC7;
-    `};
+  ${(props) => (props.value.length > 0 && !props.error) &&
+    `color: #13ADC7;`
+  };
+
+  ${(props) => props.error &&
+    `color:  #FF0000;`
+  };
 `
 export const ModalCheckboxContainer = styled.div`
   display: flex;
