@@ -1,7 +1,6 @@
 import React from 'react'
 import { formValidator } from '../../utils/formvalidator'
 import Button from '../GlobalStyles/Button'
-import {Section} from '../GlobalStyles/index'
 import { 
   ModalContainer, ModalForm, ModalTitle,
   ModalClose, ModalInput, ModalInputContainer,
@@ -9,8 +8,6 @@ import {
   ModalCheckboxContainer, ModalCheckbox, 
   ModalCheckboxLabel, ModalLink
   } from './Modal'
-
-//import '../Modal/Modal.css'
 
 const Modal = (props) => {
 
