@@ -8,7 +8,7 @@ export const FooterWrapper = styled.section`
   margin: 0 auto;
   box-sizing: content-box;
 
-  @media ${props => props.theme.breakpoints.md} {
+  @media ${props => props.theme.breakpoints.sm} {
     padding: 0 16px 48px;
     width: calc(100vw - 32px);
   }
@@ -48,7 +48,7 @@ export const LinkTitle = styled.h4`
 	color: rgba(255, 255, 255, 0.4);
 	margin-bottom: 16px;
 
-	@media ${props => props.theme.breakpoints.md} {
+	@media ${props => props.theme.breakpoints.sm} {
 		font-size: 10px;
 		line-height: 12px;
 		margin-bottom: 8px;
@@ -69,12 +69,12 @@ export const LinkItem = styled(Link)`
 		left: 6px;
 	}
 
-	@media ${props => props.theme.breakpoints.lg} {
+	@media ${props => props.theme.breakpoints.md} {
 		font-size: 16px;
 		line-height: 28px;
 	}
 
-	@media ${props => props.theme.breakpoints.md} {
+	@media ${props => props.theme.breakpoints.sm} {
 		font-size: 10px;
 		line-height: 14px;
 		margin-bottom: 8px;
@@ -141,12 +141,12 @@ export const Slogan = styled.p`
 	font-size: 18px;
 	line-height: 30px;
 
-	@media ${props => props.theme.breakpoints.lg}{
+	@media ${props => props.theme.breakpoints.md}{
 		font-size: 16px;
 		line-height: 28px;
 	}
 
-	@media ${props => props.theme.breakpoints.md}{
+	@media ${props => props.theme.breakpoints.sm}{
 		line-height: 22px;
 		font-size: 14px;
 		min-width: 100px;
@@ -160,6 +160,6 @@ export const SocialContainer = styled.div`
 	@media ${props => props.theme.breakpoints.md}{
 		justify-content: center;
 		padding-right: 16px;
+		flex-wrap: wrap;
 	}
-
 `
