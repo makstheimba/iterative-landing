@@ -105,6 +105,9 @@ export const CardsLogosLateral = styled.div`
   @media ${props => props.theme.breakpoints.lg}{
     display: flex;
   }
+  @media ${props => props.theme.breakpoints.sm}{
+    align-self: center;
+  }
 `
 export const CardsLogoLink = styled(Link)`
   display: flex;
@@ -120,12 +123,13 @@ export const CardsLogoLink = styled(Link)`
     color: rgba(255,255,255, 0.75);
   }
 
-  @media ${props => props.theme.breakpoints.lg}{
+  @media ${props => props.theme.breakpoints.md}{
     margin: 0 16px 0 0;
   }
 
-  @media ${props => props.theme.breakpoints.md}{
+  @media ${props => props.theme.breakpoints.sm}{
     margin: 0 11px 0 0;
+    align-self: center;
   }
 `
 
@@ -163,6 +167,5 @@ export const CardLogoText = styled.p`
   @media ${props => props.theme.breakpoints.sm}{
     font-size: 14px;
     line-height: 16px;
-    max-width: 74px;
   }
 `
