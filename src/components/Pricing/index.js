@@ -7,7 +7,7 @@ import CML from "../../images/cml.svg"
 import DVC from "../../images/dvc.svg"
 import Studio from "../../images/viewer.svg"
 
-const Pricing = () => {
+const Pricing = (props) => {
   return (
     <Section>
       <SectionTitle main>
@@ -50,7 +50,7 @@ const Pricing = () => {
           <CardsText>
             Extend your unstructured data storages with data compliance, data access control and SSO capabilities. Online as well as on-premise installation are available
           </CardsText>
-          <Button alt>Contact us</Button>
+          <Button alt onClick={props.handleClick}>Contact us</Button>
         </Cards>
       </CardList>
     </Section>
