@@ -34,7 +34,6 @@ const Timeline = () => {
 const [activeItem, setactiveItem] = React.useState(0);
 const carouselRef = React.useRef();
 
-
 function scroll (node, left) {
   return node.scrollTo({
     'left': left,
@@ -58,6 +57,14 @@ function handleScroll(){
   }
 }
 
+//snap back to beginning of scroll when window is resized 
+//avoids a bug where content is covered up if coming from smaller screen
+function handleResize(){
+  scroll(carouselRef.current, 0);
+}
+  React.useEffect(() => {
+    window.addEventListener('resize', handleResize);
+},[])
   return (
   <Section>
     <SectionTitle main>About Us</SectionTitle>
