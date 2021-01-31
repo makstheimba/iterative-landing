@@ -1,5 +1,5 @@
 .team {
-  margin: 0 0 40px;
+  margin: 38px 0 0;
   font-family: 'Space Grotesk', sans-serif, Arial, Helvetica;
 }
 
@@ -53,7 +53,7 @@
 
 @media (min-width: 768px) {
   .team {
-    margin: 0 0 40px;
+    margin: 60px 0 0;
   }
 
   .team__map-container {
@@ -67,7 +67,7 @@
 
 @media (min-width: 1024px) {
   .team {
-    margin: 0 0 -150px;
+    margin: 74px 0 0;
   }
 
   .team__map-container {

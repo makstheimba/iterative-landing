@@ -89,9 +89,13 @@ export default function RequestDemoForm({ onClose, visible, onSubmit }) {
       company: companyVal,
       phone: phoneVal,
     };
-    onSubmit(data).finally(() => {
-      setIsLoading(false);
-    });
+    onSubmit(data)
+      .then(() => {
+        onClose();
+      })
+      .finally(() => {
+        setIsLoading(false);
+      });
   }
 
   return (

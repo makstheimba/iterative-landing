@@ -1,6 +1,6 @@
 .developerInfo {
   list-style: none;
-  margin: 42px 0 46px 0;
+  margin: 42px 0 40px;
   padding: 0;
   font-family: 'Space Grotesk', sans-serif, Arial, Helvetica;
   font-style: normal;
@@ -70,7 +70,7 @@
 
 @media (min-width: 1024px) {
   .developerInfo {
-    margin: 84px 0 80px 0;
+    margin: 84px 0 76px 0;
     column-gap: 32px;
   }
 
