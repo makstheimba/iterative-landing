@@ -1,0 +1,66 @@
+.pricing-card {
+  list-style: none;
+  margin: 0;
+  padding: 24px;
+  background: #212d45;
+  border-radius: 16px;
+  font-family: 'Space Grotesk', sans-serif, Arial, Helvetica;
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+}
+
+.pricing-card__subtitle {
+  margin: 8px 0 0;
+  padding: 0 0 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.02em;
+  color: #fff;
+}
+
+.pricing-card__text {
+  margin: 16px 0 32px;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0.02em;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+@media (min-width: 768px) {
+  .pricing-card {
+    padding: 32px;
+  }
+
+  .pricing-card__subtitle {
+    padding: 0 0 16px;
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  .pricing-card__text {
+    margin: 17px 0 32px;
+    font-size: 16px;
+    line-height: 28px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .pricing-card {
+    position: relative;
+  }
+
+  .pricing-card__subtitle {
+    padding: 0 0 24px;
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .pricing-card__text {
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
