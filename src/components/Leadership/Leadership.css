@@ -1,9 +1,15 @@
 .leadership {
-  margin: -16px 0 0;
+  margin: 38px 0 0;
+}
+
+@media (min-width: 768px) {
+  .leadership {
+    margin: 40px 0 0;
+  }
 }
 
 @media (min-width: 1024px) {
   .leadership {
-    margin: 46px 0 0;
+    margin: -150px 0 0;
   }
 }
