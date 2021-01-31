@@ -104,6 +104,8 @@ export const TeamPopup = styled.div`
   border-radius: 16px;
   padding: 24px;
   transition: 0.4s ease-out;
+  display: flex;
+  flex-direction: column;
 
   @media ${(props) => props.theme.breakpoints.lg} {
     width: 400px;
@@ -184,25 +186,61 @@ export const IntroAvatar = styled.div`
   width: 136px;
   height: 136px;
   margin-left: auto;
-  background-color: rgba(0,0,0,.4);
+  padding: 8px;
+  position: relative;
 
   @media ${(props) => props.theme.breakpoints.lg} {
     width: 104px;
     height: 104px;
   }
 `
-export const PopupPic = styled.img``
+export const PopupPicFrame = styled.div`
+  border-radius: 32px;
+  overflow: hidden;
+  height: 112px;
+  width: 112px;
+  transform: rotate(-15deg);
+
+  @media ${(props) => props.theme.breakpoints.lg} {
+    height: 80px;
+    width: 80px;
+    border-radius: 24px;
+  }
+`
+
+export const PopupPic = styled.img`
+  transform: rotate(15deg) scale(1.2);
+  z-index: 10;
+
+  @media ${(props) => props.theme.breakpoints.lg} {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+  }
+`
+
+export const PopupPicAccent = styled.img`
+  transform: scale(1.4);
+  position: absolute;
+  bottom: 20px;
+  right: 16px;
+
+  @media ${(props) => props.theme.breakpoints.lg} {
+    transform: scale(1);
+    bottom: 4px;
+    right: 4px;
+  }
+`
 
 export const IntroDescription = styled.p`
   font-size: 18px;
   line-height: 30px;
   color: rgba(15, 22, 36, 0.75);
-  padding-bottom: 24px;
+  margin-bottom: auto;
 
   @media ${(props) => props.theme.breakpoints.lg} {
     font-size: 16px;
     line-height: 28px;
-    padding-bottom: 16px;
   }
 `
 
