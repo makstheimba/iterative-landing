@@ -1,6 +1,6 @@
 import React from 'react'
 import { Section, SectionText, SectionTitle } from '../GlobalStyles'
-import { CardList, CardLogo, Cards, CardsSubTitle, CardsText, CardsTitle, CardLogoText, CardsLogoLink, CardsLogosLateral } from "./Pricing"
+import { CardList, CardLogo, Cards, CardsSubTitle, CardsText, CardsTitle, CardLogoText, CardsLogoLink, CardsLogoSeparator, CardsLogosLateral } from "./Pricing"
 import Button from '../GlobalStyles/Button'
 
 import CML from "../../images/cml.svg"
@@ -23,10 +23,11 @@ const Pricing = (props) => {
           <CardsSubTitle>Individuals and teams</CardsSubTitle>
           <CardsText>DVC, CML, our other open-source tools come for free, no strings attached</CardsText>
           <CardsLogosLateral>
-            <CardsLogoLink border>
+            <CardsLogoLink>
               <CardLogo src={CML} alt="CML logo" />
-              <CardLogoText right> Go to CML</CardLogoText>
+              <CardLogoText> Go to CML</CardLogoText>
             </CardsLogoLink>
+            <CardsLogoSeparator />
             <CardsLogoLink>
               <CardLogo src={DVC} alt="DVC logo" />
               <CardLogoText> Go to DVC</CardLogoText>

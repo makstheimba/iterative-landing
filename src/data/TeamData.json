@@ -1,101 +1,101 @@
 [
   {
-    "name": "",
-    "title": "",
+    "name": "Fabio Santos",
+    "title": "Software engineer, Terser (new uglify-es) maintainer",
     "pic": "https://randomuser.me/api/portraits/men/4.jpg",
-    "location": "",
+    "location": "Lisbon, Portugal",
+    "description": "I’m a passionate software engineer and architect, specialising in node.js, React and distributed systems.",
     "coordinates": {
       "x": "11%",
       "y": "25%"
-    },
-    "description": ""
+    }
   },
   {
-    "name": "",
-    "title": "",
+    "name": "Name Here",
+    "title": "Title goes here",
     "pic": "https://randomuser.me/api/portraits/women/4.jpg",
-    "location": "",
+    "location": "City, Country",
+    "description": "This is my description!",
     "coordinates": {
       "x": "9%",
       "y": "33.5%"
-    },
-    "description": ""
+    }
   },
   {
-    "name": "",
-    "title": "",
+    "name": "Other Name",
+    "title": "Title Here",
     "pic": "https://randomuser.me/api/portraits/women/5.jpg",
-    "location": "",
+    "location": "Place Somewhere",
+    "description": "This is the description.",
     "coordinates": {
       "x": "12.4%",
       "y": "34%"
-    },
-    "description": ""
+    }
   },
   {
-    "name": "",
+    "name": "Cool Person",
     "title": "",
     "pic": "https://randomuser.me/api/portraits/women/6.jpg",
-    "location": "",
+    "location": "Place Somewhere",
+    "description": "This is the description.",
     "coordinates": {
       "x": "11.2%",
       "y": "42%"
-    },
-    "description": ""
+    }
   },
   {
-    "name": "",
+    "name": "Smart Nerd",
     "title": "",
     "pic": "https://randomuser.me/api/portraits/men/5.jpg",
-    "location": "",
+    "location": "Place Somewhere",
+    "description": "This is the description.",
     "coordinates": {
       "x": "20%",
       "y": "20%"
-    },
-    "description": ""
+    }
   },
   {
-    "name": "",
+    "name": "Bob Bobson",
     "title": "",
     "pic": "https://randomuser.me/api/portraits/men/6.jpg",
-    "location": "",
+    "location": "Place Somewhere",
+    "description": "This is the description.",
     "coordinates": {
       "x": "16.4%",
       "y": "27%"
-    },
-    "description": ""
+    }
   },
   {
-    "name": "",
+    "name": "Michel Shelly",
     "title": "",
     "pic": "https://randomuser.me/api/portraits/women/7.jpg",
-    "location": "",
+    "location": "Place Somewhere",
+    "description": "This is the description.",
     "coordinates": {
       "x": "20%",
       "y": "28%"
-    },
-    "description": ""
+    }
   },
   {
-    "name": "",
+    "name": "James Bond Jr.",
     "title": "",
     "pic": "https://randomuser.me/api/portraits/men/7.jpg",
-    "location": "",
+    "location": "Place Somewhere",
+    "description": "This is the description.",
     "coordinates": {
       "x": "23.5%",
       "y": "28%"
-    },
-    "description": ""
+    }
   },
   {
-    "name": "",
+    "name": "Erin",
     "title": "",
     "pic": "https://randomuser.me/api/portraits/women/8.jpg",
-    "location": "",
+    "location": "Place Somewhere",
+    "description": "This is the description.",
     "coordinates": {
-      "x": "19%",
-      "y": "37%"
-    },
-    "description": ""
+      "x": "44%",
+      "y": "19%"
+    }
   }
 ]

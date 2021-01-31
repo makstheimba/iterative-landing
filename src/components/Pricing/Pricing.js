@@ -14,7 +14,7 @@ export const CardList = styled.div`
   }
 
   @media ${props => props.theme.breakpoints.sm}{
-    padding: 16px 0 0;
+    padding: 16px 0 32px;
     gap: 16px;
   }
 `
@@ -69,7 +69,7 @@ export const CardsSubTitle = styled.p`
   margin-bottom: 24px;
   height: 64px;
 
-  @media ${props => props.theme.breakpoints.lg}{
+  @media ${props => props.theme.breakpoints.md}{
     font-size: 20px;
     line-height: 32px;
     height: 32px;
@@ -105,6 +105,9 @@ export const CardsLogosLateral = styled.div`
   @media ${props => props.theme.breakpoints.lg}{
     display: flex;
   }
+  @media ${props => props.theme.breakpoints.sm}{
+    align-self: center;
+  }
 `
 export const CardsLogoLink = styled(Link)`
   display: flex;
@@ -113,14 +116,31 @@ export const CardsLogoLink = styled(Link)`
   margin-top: 16px;
   width: fit-content;
   cursor: pointer;
+  transition: 0.3s ease;
 
-  @media ${props => props.theme.breakpoints.lg}{
-    margin: 0 16px 0 0;
-    border-right: ${props => props.border ? " 1px solid rgba(255, 255, 255, 0.33)" : ""};
+  &:hover {
+    transform: scale(1.1);
+    color: rgba(255,255,255, 0.75);
   }
+
   @media ${props => props.theme.breakpoints.md}{
+    margin: 0 16px 0 0;
+  }
+
+  @media ${props => props.theme.breakpoints.sm}{
     margin: 0 11px 0 0;
-    border-right: ${props => props.border ? " 1px solid rgba(255, 255, 255, 0.33)" : ""};
+    align-self: center;
+  }
+`
+
+export const CardsLogoSeparator = styled.div`
+  width: 1px;
+  height: 24px;
+  background-color: rgba(255,255,255,0.33);
+  margin-right: 16px;
+
+  @media ${props => props.theme.breakpoints.md}{
+    margin-right: 11px;
   }
 `
 
@@ -128,6 +148,7 @@ export const CardLogo = styled.img`
   width: 32px;
   height: 32px;
   margin-right: 16px;
+
   @media ${props => props.theme.breakpoints.md}{
     width: 24px;
     height: 24px;
@@ -136,18 +157,15 @@ export const CardLogo = styled.img`
 `
 
 export const CardLogoText = styled.p`
-font-style: normal;
-font-weight: 600;
-font-size: 20px;
-line-height: 20px;
-letter-spacing: 0.01em;
-color: #FFFFFF;
-@media ${props => props.theme.breakpoints.lg}{
-  margin-right: ${props => props.right ? "16px" : "0"}
-}
-@media ${props => props.theme.breakpoints.sm}{
-  font-size: 14px;
-  line-height: 16px;
-  max-width: 74px;
-}
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 20px;
+  letter-spacing: 0.01em;
+  color: rgba(255,255,255, 1);
+
+  @media ${props => props.theme.breakpoints.sm}{
+    font-size: 14px;
+    line-height: 16px;
+  }
 `

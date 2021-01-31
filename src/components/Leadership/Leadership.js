@@ -5,18 +5,19 @@ export const LeadershipList = styled.ul`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(136px, 1fr));
   column-gap: 32px;
-  margin-top: 80px;
+  margin-top: 64px;
   margin-bottom: 124px;
 
   @media ${props => props.theme.breakpoints.md} {
     grid-template-columns: repeat(auto-fit, minmax(104px, 1fr));
-    margin-bottom: 64px;
+    margin: 52px 0 64px;
+    column-gap: 24px;
   }
 
   @media ${props => props.theme.breakpoints.sm} {
     display: flex;
     flex-direction: column;
-    margin-bottom: 46px;
+    margin: 32px 0 40px;
   }
 `
 
@@ -46,7 +47,7 @@ export const LeadershipImageContainer = styled.div`
 
   @media ${props => props.theme.breakpoints.sm} {
     min-width: 88px;
-    min-height: 88px;
+    height: 92px;
     margin-bottom: 0px;
     margin-right: 16px;
   }

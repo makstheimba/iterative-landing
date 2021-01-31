@@ -128,18 +128,3 @@ export const IconContainer = styled.div`
     justify-content: space-between;
   }
 `
-
-export const Icons = styled.img`
-  &:nth-child(2){
-    margin: 0 40px;
-  }
-  @media ${props => props.theme.breakpoints.md}{
-    &:nth-child(2){
-    margin: 0 32px;
-  }
-  }
-  @media ${props => props.theme.breakpoints.sm}{
-    width: 32px;
-    height: 32px;
-  }
-`
