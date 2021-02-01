@@ -34,15 +34,13 @@ export const ModalForm = styled.form`
 
   @media ${props => props.theme.breakpoints.md}{
       min-width: 720px;
-      max-width: calc(100vw - 16 * 2)
-
+      max-width: calc(100vw - 16 * 2);
       padding: 32px;
     }
 
   @media screen and (max-width: 720px){
       min-width: 320px;
-      max-width: calc(100vw - 8 * 2)
- 
+      max-width: calc(100vw - 8 * 2);
       padding: 24px;
     }
 `
@@ -167,8 +165,8 @@ export const ModalInputClear = styled.button`
   border: none;
   border-radius: 100%;
 
-  visibility: ${(props) => props.visible.length != 0 ? 'visible' : 'hidden'};
-  display: ${(props) => props.visible.length != 0 ? 'block' : 'none'};
+  visibility: ${(props) => props.visible.length !== 0 ? 'visible' : 'hidden'};
+  display: ${(props) => props.visible.length !== 0 ? 'block' : 'none'};
 
   &:hover{
     cursor: pointer;

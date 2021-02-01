@@ -3,7 +3,7 @@ import { Section, SectionTitle, SectionText, SectionDivider } from '../GlobalSty
 import {
   CarouselContainer, CarouselItem, CarouselItemTitle, CarouselItemImg,
   CarouselItemText, CarouselButtons, CarouselButton
-  } from './Timeline'
+} from './Timeline'
 import TimelineImg from '../../images/timeline.svg'
 
 const data = [
@@ -31,80 +31,84 @@ const data = [
 
 const Timeline = () => {
 
-const [activeItem, setactiveItem] = React.useState(0);
-const carouselRef = React.useRef();
+  const [activeItem, setactiveItem] = React.useState(0);
+  const carouselRef = React.useRef();
 
-function scroll (node, left) {
-  return node.scrollTo({
-    'left': left,
-    behavior: 'smooth'
-  })
-} 
-
-function handleClick(e, i){
-  e.preventDefault();
-
-  if(carouselRef.current){
-    const scrollLeft = Math.floor(carouselRef.current.scrollWidth * (i  / data.length ));
-    scroll(carouselRef.current, scrollLeft);
+  function scroll(node, left) {
+    return node.scrollTo({
+      'left': left,
+      behavior: 'smooth'
+    })
   }
-}
 
-function handleScroll(){
-  if(carouselRef.current){
-    let index = Math.round((carouselRef.current.scrollLeft / carouselRef.current.scrollWidth) * data.length);
-    setactiveItem(index);
+  function handleClick(e, i) {
+    e.preventDefault();
+
+    if (carouselRef.current) {
+      const scrollLeft = Math.floor(carouselRef.current.scrollWidth * (i / data.length));
+      scroll(carouselRef.current, scrollLeft);
+    }
   }
-}
 
-//snap back to beginning of scroll when window is resized 
-//avoids a bug where content is covered up if coming from smaller screen
-function handleResize(){
-  scroll(carouselRef.current, 0);
-}
+  function handleScroll() {
+    if (carouselRef.current) {
+      let index = Math.round((carouselRef.current.scrollLeft / carouselRef.current.scrollWidth) * data.length);
+      setactiveItem(index);
+    }
+  }
+
+  //snap back to beginning of scroll when window is resized 
+  //avoids a bug where content is covered up if coming from smaller screen
+  
+
   React.useEffect(() => {
+    function handleResize() {
+      scroll(carouselRef.current, 0);
+    }
+
     window.addEventListener('resize', handleResize);
-},[])
+  }, []);
+
   return (
-  <Section>
-    <SectionTitle main>About Us</SectionTitle>
-    <SectionText>
-      Data Science = Highly Iterative Metrics-driven Process With Data and Code
+    <Section>
+      <SectionTitle main>About Us</SectionTitle>
+      <SectionText>
+        Data Science = Highly Iterative Metrics-driven Process With Data and Code
     </SectionText>
 
-    
-    <CarouselContainer ref={carouselRef} onScroll={handleScroll}>
-    {data.map((item, index) => {
+
+      <CarouselContainer ref={carouselRef} onScroll={handleScroll}>
+        {data.map((item, index) => {
           return (
-            <CarouselItem 
-              key={index} 
-              index={index} 
+            <CarouselItem
+              key={index}
+              index={index}
               id={`carousel__item-${index}`}
               active={activeItem}>
               <CarouselItemTitle>{`${item.year}`}
-                <CarouselItemImg src={TimelineImg}/>
+                <CarouselItemImg src={TimelineImg} />
               </CarouselItemTitle>
               <CarouselItemText>{item.text}</CarouselItemText>
             </CarouselItem>
           )
         })}
-    </CarouselContainer>
+      </CarouselContainer>
 
-    <CarouselButtons >
-    {data.map((item, index) => {
+      <CarouselButtons >
+        {data.map((item, index) => {
           return (
-            <CarouselButton 
+            <CarouselButton
               key={index}
-              index={index} 
+              index={index}
               active={activeItem}
               onClick={e => handleClick(e, index)}
               type="button">
             </CarouselButton>
-            )
+          )
         })}
-    </CarouselButtons>
-    <SectionDivider />
-  </Section>
+      </CarouselButtons>
+      <SectionDivider />
+    </Section>
   )
 }
 

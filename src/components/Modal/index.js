@@ -104,6 +104,8 @@ const Modal = (props) => {
       case 'phone':
         setPhone('');
         break;
+      default:
+        break;
     }
   }
 
