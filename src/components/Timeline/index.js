@@ -59,8 +59,6 @@ const Timeline = () => {
 
   //snap back to beginning of scroll when window is resized 
   //avoids a bug where content is covered up if coming from smaller screen
-  
-
   React.useEffect(() => {
     function handleResize() {
       scroll(carouselRef.current, 0);
@@ -74,8 +72,7 @@ const Timeline = () => {
       <SectionTitle main>About Us</SectionTitle>
       <SectionText>
         Data Science = Highly Iterative Metrics-driven Process With Data and Code
-    </SectionText>
-
+      </SectionText>
 
       <CarouselContainer ref={carouselRef} onScroll={handleScroll}>
         {data.map((item, index) => {
