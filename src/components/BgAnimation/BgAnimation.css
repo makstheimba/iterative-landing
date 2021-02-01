@@ -1,7 +1,20 @@
 .BgAnimation {
   background-color: transparent;
   position: absolute;
+  width: 600px;
   z-index: -1;
   right: 0;
   top: 0;
+}
+
+@media (min-width: 768px) {
+  .BgAnimation {
+    width: 450px;
+  }
+}
+
+@media (min-width: 768px) {
+  .BgAnimation {
+    width: 300px;
+  }
 }
