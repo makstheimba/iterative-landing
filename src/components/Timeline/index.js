@@ -2,7 +2,7 @@ import React from 'react'
 import { Section, SectionTitle, SectionText, SectionDivider } from '../GlobalStyles/index'
 import {
   CarouselContainer, CarouselItem, CarouselItemTitle, CarouselItemImg,
-  CarouselItemText, CarouselButtons, CarouselButton
+  CarouselItemText, CarouselButtons, CarouselButton, CarouselMobileScrollNode
 } from './Timeline'
 import TimelineImg from '../../images/timeline.svg'
 
@@ -29,6 +29,8 @@ const data = [
   },
 ]
 
+const TOTAL_CAROUSEL_COUNT = data.length;
+
 const Timeline = () => {
 
   const [activeItem, setactiveItem] = React.useState(0);
@@ -45,14 +47,14 @@ const Timeline = () => {
     e.preventDefault();
 
     if (carouselRef.current) {
-      const scrollLeft = Math.floor(carouselRef.current.scrollWidth * (i / data.length));
+      const scrollLeft = Math.floor(carouselRef.current.scrollWidth * 0.7 * (i / data.length));
       scroll(carouselRef.current, scrollLeft);
     }
   }
 
   function handleScroll() {
     if (carouselRef.current) {
-      let index = Math.round((carouselRef.current.scrollLeft / carouselRef.current.scrollWidth) * data.length);
+      let index = Math.round((carouselRef.current.scrollLeft / (carouselRef.current.scrollWidth * 0.7)) * data.length);
       setactiveItem(index);
     }
   }
@@ -75,20 +77,24 @@ const Timeline = () => {
       </SectionText>
 
       <CarouselContainer ref={carouselRef} onScroll={handleScroll}>
-        {data.map((item, index) => {
-          return (
-            <CarouselItem
-              key={index}
-              index={index}
-              id={`carousel__item-${index}`}
-              active={activeItem}>
-              <CarouselItemTitle>{`${item.year}`}
-                <CarouselItemImg src={TimelineImg} />
-              </CarouselItemTitle>
-              <CarouselItemText>{item.text}</CarouselItemText>
-            </CarouselItem>
-          )
-        })}
+        <>
+          {data.map((item, index) => {
+            return (
+              <CarouselMobileScrollNode final={(index === (TOTAL_CAROUSEL_COUNT - 1))}>
+                <CarouselItem
+                  key={index}
+                  index={index}
+                  id={`carousel__item-${index}`}
+                  active={activeItem}>
+                  <CarouselItemTitle>{`${item.year}`}
+                    <CarouselItemImg src={TimelineImg} />
+                  </CarouselItemTitle>
+                  <CarouselItemText>{item.text}</CarouselItemText>
+                </CarouselItem>
+              </CarouselMobileScrollNode>
+            )
+          })}
+        </>
       </CarouselContainer>
 
       <CarouselButtons >

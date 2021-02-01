@@ -29,12 +29,17 @@ export const CarouselContainer = styled.ul`
     touch-action: pan-x;
     justify-content: initial;
     margin-bottom: 0px;
-    scrollbar-width: thin;
 
     &::-webkit-scrollbar {
       display: block;
     }
 
+  }
+`
+export const CarouselMobileScrollNode = styled.div`
+  @media ${props => props.theme.breakpoints.sm} {
+    display: flex;
+    min-width: ${({ final }) => final ? `120%;` : `min-content`}
   }
 `
 
