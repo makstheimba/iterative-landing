@@ -68,13 +68,19 @@ export const ModalButton = styled.button`
   padding: 8px 16px;
   width: 70px;
   height: 32px;
+  cursor: pointer;
 
   &:hover{
     background: #15C2E0;
     border: 1px solid #15C2E0;
   }
 
+  &:active {
+    outline: none;
+  }
+
   &:focus{
+    outline: none;
     background: #13ADC7;
     border: 1px solid #15C2E0;
     box-shadow: inset 0px 2px 1px rgba(46, 49, 55, 0.15), inset 0px 0px 4px rgba(20, 20, 55, 0.3);

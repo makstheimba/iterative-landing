@@ -90,7 +90,6 @@ export const CarouselItemImg = styled.img`
     line-height: 16px;
     overflow: visible;
   }
-
 `
 
 export const CarouselItemText = styled.p`
