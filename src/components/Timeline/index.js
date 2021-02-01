@@ -2,7 +2,7 @@ import React from 'react'
 import { Section, SectionTitle, SectionText, SectionDivider } from '../GlobalStyles/index'
 import {
   CarouselContainer, CarouselItem, CarouselItemTitle, CarouselItemImg,
-  CarouselItemText, CarouselButtons, CarouselButton
+  CarouselItemText, CarouselButtons, CarouselButton, CarouselButtonDot, CarouselMobileScrollNode
 } from './Timeline'
 import TimelineImg from '../../images/timeline.svg'
 
@@ -29,6 +29,8 @@ const data = [
   },
 ]
 
+const TOTAL_CAROUSEL_COUNT = data.length;
+
 const Timeline = () => {
 
   const [activeItem, setactiveItem] = React.useState(0);
@@ -45,22 +47,20 @@ const Timeline = () => {
     e.preventDefault();
 
     if (carouselRef.current) {
-      const scrollLeft = Math.floor(carouselRef.current.scrollWidth * (i / data.length));
+      const scrollLeft = Math.floor(carouselRef.current.scrollWidth * 0.7 * (i / data.length));
       scroll(carouselRef.current, scrollLeft);
     }
   }
 
   function handleScroll() {
     if (carouselRef.current) {
-      let index = Math.round((carouselRef.current.scrollLeft / carouselRef.current.scrollWidth) * data.length);
+      let index = Math.round((carouselRef.current.scrollLeft / (carouselRef.current.scrollWidth * 0.7)) * data.length);
       setactiveItem(index);
     }
   }
 
   //snap back to beginning of scroll when window is resized 
   //avoids a bug where content is covered up if coming from smaller screen
-  
-
   React.useEffect(() => {
     function handleResize() {
       scroll(carouselRef.current, 0);
@@ -74,24 +74,29 @@ const Timeline = () => {
       <SectionTitle main>About Us</SectionTitle>
       <SectionText>
         Data Science = Highly Iterative Metrics-driven Process With Data and Code
-    </SectionText>
-
+      </SectionText>
 
       <CarouselContainer ref={carouselRef} onScroll={handleScroll}>
-        {data.map((item, index) => {
-          return (
-            <CarouselItem
-              key={index}
-              index={index}
-              id={`carousel__item-${index}`}
-              active={activeItem}>
-              <CarouselItemTitle>{`${item.year}`}
-                <CarouselItemImg src={TimelineImg} />
-              </CarouselItemTitle>
-              <CarouselItemText>{item.text}</CarouselItemText>
-            </CarouselItem>
-          )
-        })}
+        <>
+          {data.map((item, index) => {
+            return (
+              <CarouselMobileScrollNode final={(index === (TOTAL_CAROUSEL_COUNT - 1))}>
+                <CarouselItem
+                  key={index}
+                  index={index}
+                  id={`carousel__item-${index}`}
+                  active={activeItem}
+                  onClick={e => handleClick(e, index)}>
+                  <CarouselItemTitle>{`${item.year}`}
+                    <CarouselItemImg src={TimelineImg} />
+                  </CarouselItemTitle>
+                  <CarouselItemText>{item.text}</CarouselItemText>
+                </CarouselItem>
+              </CarouselMobileScrollNode>
+            )
+          })}
+        </>
+        
       </CarouselContainer>
 
       <CarouselButtons >
@@ -103,6 +108,7 @@ const Timeline = () => {
               active={activeItem}
               onClick={e => handleClick(e, index)}
               type="button">
+                <CarouselButtonDot active={activeItem}/>
             </CarouselButton>
           )
         })}
