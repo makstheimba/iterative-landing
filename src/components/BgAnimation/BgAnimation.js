@@ -3,7 +3,7 @@ import './BgAnimation.css';
 
 export default function BgAnimation() {
   return (
-    <div>
+    <div className="BgAnimation">
       <svg
         width="602"
         height="602"
@@ -16,14 +16,12 @@ export default function BgAnimation() {
             fill-rule="evenodd"
             clip-rule="evenodd"
             d="M201.337 87.437C193.474 79.5738 180.725 79.5738 172.862 87.437L87.437 172.862C79.5739 180.725 79.5739 193.474 87.437 201.337L400.663 514.563C408.526 522.426 421.275 522.426 429.138 514.563L514.563 429.138C522.426 421.275 522.426 408.526 514.563 400.663L201.337 87.437ZM30.4869 115.912C-8.82897 155.228 -8.82897 218.972 30.4869 258.287L343.713 571.513C383.028 610.829 446.772 610.829 486.088 571.513L571.513 486.088C610.829 446.772 610.829 383.028 571.513 343.713L258.287 30.4869C218.972 -8.82896 155.228 -8.82896 115.912 30.4869L30.4869 115.912Z"
-            //stroke="url(#paint0_radial)"
-            stroke="red"
+            stroke="url(#paint0_radial)"
             id="path_0"
           />
           <path
             d="M514.563 201.337C522.426 193.474 522.426 180.725 514.563 172.862L429.138 87.437C421.275 79.5738 408.526 79.5739 400.663 87.437L358.098 130.002L301.148 73.0516L343.713 30.4869C383.028 -8.82896 446.772 -8.82896 486.088 30.4869L571.513 115.912C610.829 155.228 610.829 218.972 571.513 258.287L357.802 471.999L300.852 415.049L514.563 201.337Z"
-            //stroke="url(#paint1_radial)"
-            stroke="yellow"
+            stroke="url(#paint1_radial)"
             id="path_1"
           />
           <path
@@ -50,6 +48,37 @@ export default function BgAnimation() {
           stroke="url(#paint3_linear)"
         >
           <animateMotion dur="10s" repeatCount="indefinite" rotate="auto">
+            <mpath xlinkHref="#path_2" />
+          </animateMotion>
+        </path>
+        <ellipse
+          cx="295.027"
+          cy="193.118"
+          transform="translate(-295.027 -193.118)"
+          rx="1.07306"
+          ry="1.07433"
+          fill="#46737"
+        >
+          <animateMotion
+            dur="5s"
+            begin="1"
+            repeatCount="indefinite"
+            rotate="auto"
+          >
+            <mpath xlinkHref="#path_2" />
+          </animateMotion>
+        </ellipse>
+        <path
+          d="M294.685 193.474L268.932 219.258"
+          transform="translate(-294.685 -193.474) rotate(45 294.685 193.474)"
+          stroke="url(#paint7_linear)"
+        >
+          <animateMotion
+            dur="5s"
+            begin="1"
+            repeatCount="indefinite"
+            rotate="auto"
+          >
             <mpath xlinkHref="#path_2" />
           </animateMotion>
         </path>
@@ -197,43 +226,66 @@ export default function BgAnimation() {
           </animateMotion>
         </path>
         <ellipse
-          cx="516.659"
-          cy="288.95"
-          rx="1.07433"
-          ry="1.07306"
-          transform="rotate(-90 516.659 288.95)"
-          //fill="#13ADC7"
-          fill="green"
-        />
-        <path
-          d="M516.3 288.596L529.177 301.488L542.054 288.596"
-          //stroke="url(#paint9_linear)"
-          stroke="green"
-        />
-        <ellipse
-          cx="117.005"
-          cy="230.616"
-          rx="1.07433"
-          ry="1.07306"
-          transform="rotate(-90 117.005 230.616)"
-          fill="#945DD6"
-        />
-        <path
-          d="M117.359 230.977L130.236 243.869L117.359 256.761"
-          stroke="url(#paint10_linear)"
-        />
-        <ellipse
-          cx="349.237"
-          cy="463.721"
-          rx="1.07433"
-          ry="1.07306"
-          transform="rotate(-90 349.237 463.721)"
+          //start here
+          cx="414.383"
+          cy="301.154"
+          rx="1.07306"
+          ry="1.07433"
+          transform="translate(-414.383 -301.154) rotate(-180 414.383 301.154)"
           fill="#13ADC7"
-        />
+        >
+          <animateMotion
+            dur="5s"
+            begin="3"
+            repeatCount="indefinite"
+            rotate="auto"
+          ></animateMotion>
+        </ellipse>
         <path
-          d="M349.592 464.081L375.346 489.865"
+          d="M414.725 300.798L440.479 275.014"
+          stroke="url(#paint9_linear)"
+          transform="scale(-1 1) translate(-414.725 -300.798) rotate(45 414.725 300.798)"
+        >
+          <animateMotion
+            dur="5s"
+            begin="2"
+            repeatCount="indefinite"
+            rotate="auto"
+          >
+            <mpath xlinkHref="#path_1" />
+          </animateMotion>
+        </path>
+        <ellipse
+          cx="476.525"
+          cy="363.313"
+          rx="1.07433"
+          ry="1.07306"
+          transform="translate(-476.525 -363.313) rotate(90 476.525 363.313)"
+          fill="#13ADC7"
+        >
+          <animateMotion
+            dur="12s"
+            begin="4"
+            repeatCount="indefinite"
+            rotate="auto"
+          >
+            <mpath xlinkHref="#path_0" />
+          </animateMotion>
+        </ellipse>
+        <path
+          d="M476.171 362.952L450.417 337.168"
+          transform="translate(-476.525 -363.313) rotate(-45 476.171 362.952)"
           stroke="url(#paint11_linear)"
-        />
+        >
+          <animateMotion
+            dur="12s"
+            begin="4"
+            repeatCount="indefinite"
+            rotate="auto"
+          >
+            <mpath xlinkHref="#path_0" />
+          </animateMotion>
+        </path>
         <defs>
           <radialGradient
             id="paint0_radial"
