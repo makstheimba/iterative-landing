@@ -2,10 +2,11 @@ import React, { useState } from 'react';
 import Community from '../components/Community/Community';
 import Layout from '../components/Layout/Layout';
 import Cookies from '../components/Cookies/Cookies';
-import Header from '../components/Header/Header';
 import RequestDemoForm from '../components/RequestDemoForm/RequestDemoForm';
+import Header from '../components/Header/Header';
 import Button from '../components/Button/Button';
 import CustomersList from '../components/CustomersList/CustomersList';
+import BgAnimation from '../components/BgAnimation/BgAnimation';
 import Enterprise from '../components/Enterprise/Enterprise';
 import Footer from '../components/Footer/Footer';
 
@@ -50,6 +51,7 @@ const IndexPage = () => {
       >
         <Button onClick={openRequestDemoForm}>Request a Demo</Button>
         <CustomersList />
+        <BgAnimation />
       </Header>
       <main>
         <Enterprise />

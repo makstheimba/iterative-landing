@@ -9,6 +9,7 @@
   margin: 0 auto;
   position: relative;
   padding: 0 16px;
+  z-index: -2;
 }
 
 @media (min-width: 768px) {

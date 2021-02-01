@@ -2,13 +2,8 @@
   padding: 8px 16px 0;
   margin: 0 -16px;
   font-family: 'Space Grotesk', sans-serif;
-}
-
-.header__is-main {
-  background-image: url(../../images/header-background.svg);
-  background-size: 300px;
-  background-position: top 66px right -214px;
-  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
 }
 
 .header__text {
@@ -31,11 +26,6 @@
     margin: 0 -48px;
   }
 
-  .header__is-main {
-    background-position: top 47px left 477px;
-    background-size: 450px;
-  }
-
   .header__text {
     width: 600px;
     font-size: 20px;
@@ -53,11 +43,6 @@
   .header {
     padding: 40px 80px 0;
     margin: 0 -80px;
-  }
-
-  .header__is-main {
-    background-position: top 56px left 581px;
-    background-size: 600px;
   }
 
   .header .title_size_l {

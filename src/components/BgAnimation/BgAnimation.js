@@ -197,65 +197,6 @@ export default function BgAnimation() {
           </animateMotion>
         </path>
         <ellipse
-          cx="414.383"
-          cy="301.154"
-          rx="1.07306"
-          ry="1.07433"
-          transform="translate(-414.383 -301.154) rotate(-180 414.383 301.154)"
-          fill="#13ADC7"
-        >
-          <animateMotion
-            dur="5s"
-            begin="2"
-            repeatCount="indefinite"
-            rotate="auto"
-          ></animateMotion>
-        </ellipse>
-        <path
-          d="M414.725 300.798L440.479 275.014"
-          stroke="url(#paint8_linear)"
-          transform="scale(-1 1) translate(-414.725 -300.798) rotate(45 414.725 300.798)"
-        >
-          <animateMotion
-            dur="5s"
-            begin="2"
-            repeatCount="indefinite"
-            rotate="auto"
-          >
-            <mpath xlinkHref="#path_1" />
-          </animateMotion>
-        </path>
-        <ellipse
-          //start here
-          cx="414.383"
-          cy="301.154"
-          rx="1.07306"
-          ry="1.07433"
-          transform="translate(-414.383 -301.154) rotate(-180 414.383 301.154)"
-          fill="#13ADC7"
-        >
-          <animateMotion
-            dur="5s"
-            begin="3"
-            repeatCount="indefinite"
-            rotate="auto"
-          ></animateMotion>
-        </ellipse>
-        <path
-          d="M414.725 300.798L440.479 275.014"
-          stroke="url(#paint9_linear)"
-          transform="scale(-1 1) translate(-414.725 -300.798) rotate(45 414.725 300.798)"
-        >
-          <animateMotion
-            dur="5s"
-            begin="2"
-            repeatCount="indefinite"
-            rotate="auto"
-          >
-            <mpath xlinkHref="#path_1" />
-          </animateMotion>
-        </path>
-        <ellipse
           cx="476.525"
           cy="363.313"
           rx="1.07433"

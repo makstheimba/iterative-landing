@@ -1,20 +1,29 @@
 .BgAnimation {
   background-color: transparent;
   position: absolute;
-  width: 600px;
+  overflow: hidden;
+  width: 300px;
+  height: 300px;
   z-index: -1;
-  right: 0;
-  top: 0;
+  right: -214px;
+  top: 66px;
 }
 
 @media (min-width: 768px) {
   .BgAnimation {
     width: 450px;
+    height: 450px;
+    right: auto;
+    left: 477px;
+    top: 47px;
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .BgAnimation {
-    width: 300px;
+    width: 600px;
+    height: 600px;
+    left: 581px;
+    top: 56px;
   }
 }
