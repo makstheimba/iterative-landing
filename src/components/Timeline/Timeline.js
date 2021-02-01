@@ -28,12 +28,7 @@ export const CarouselContainer = styled.ul`
     scroll-snap-type: x mandatory;
     touch-action: pan-x;
     justify-content: initial;
-    margin-bottom: 0px;
-
-    &::-webkit-scrollbar {
-      display: block;
-    }
-
+    margin-bottom: 8px;
   }
 `
 export const CarouselMobileScrollNode = styled.div`
@@ -62,6 +57,7 @@ export const CarouselItem = styled.div`
     border-radius: 3px;
     overflow: visible;
     position: relative;
+    height: fit-content;
     
     ${(props) => props.active === props.index ? `opacity: 1` : `opacity: 0.5`}; 
   }
@@ -134,20 +130,24 @@ export const CarouselButtons = styled.div`
 `
 
 export const CarouselButton = styled.button`
-  appearance: button;
-  background-color: white;
   box-sizing: border-box;
-  padding: 2px;
+  background: none;
+  padding: 4px;
   border: none;
   cursor: pointer;
-
-  text-decoration: none;
-  border-radius: 10px;
-  margin-right: 8px;
-  ${(props) => props.active === props.index ? `background-color: #FFFFFF` : `background-color: rgba(255, 255, 255, 0.33)`};
+  margin-right: 4px;
+  opacity: ${(props) => props.active === props.index ? `1` : `.33`};
   transform: ${(props) => props.active === props.index ? `scale(1.6)` : `scale(1)`};
 
   &:focus {
     outline: none;
   }
+`
+
+export const CarouselButtonDot = styled.div`
+  background-color: white;
+  border-radius: 10px;
+  margin: auto;
+  width: 3px;
+  height: 3px;
 `

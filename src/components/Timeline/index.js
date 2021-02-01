@@ -2,7 +2,7 @@ import React from 'react'
 import { Section, SectionTitle, SectionText, SectionDivider } from '../GlobalStyles/index'
 import {
   CarouselContainer, CarouselItem, CarouselItemTitle, CarouselItemImg,
-  CarouselItemText, CarouselButtons, CarouselButton, CarouselMobileScrollNode
+  CarouselItemText, CarouselButtons, CarouselButton, CarouselButtonDot, CarouselMobileScrollNode
 } from './Timeline'
 import TimelineImg from '../../images/timeline.svg'
 
@@ -106,6 +106,7 @@ const Timeline = () => {
               active={activeItem}
               onClick={e => handleClick(e, index)}
               type="button">
+                <CarouselButtonDot active={activeItem}/>
             </CarouselButton>
           )
         })}
