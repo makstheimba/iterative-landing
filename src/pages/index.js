@@ -1,4 +1,4 @@
-import * as React from "react"
+import React, { useEffect, useState }  from "react"
 import Hero from "../components/Hero"
 import Enterprise from "../components/Enterprise"
 import MeetCommunity from "../components/MeetCommunity"
@@ -8,15 +8,44 @@ import Layout from "../Layout/Layout"
 import SEO from "../utils/Seo"
 
 
+
+
+
+
+
+
 const IndexPage = () => {
 
-  const [isPopUpOpen, setisPopUpOpen] = React.useState(false);
+  const [isPopUpOpen, setisPopUpOpen] = useState(false);
+  const [cookieOpen, setIscookieOpen] = useState(true)
+  const [cookies, setCookies] = useState(false)
 
-  function openPopUp(){
+  const savedItem = localStorage.getItem("cookie")
+  function closeModal() {
+    localStorage.setItem("cookie", "cookies")
+    setIscookieOpen(false);
+    setCookies(true)
+  }
+  const test = () => {
+    console.log(savedItem);
+  }
+  test()
+  const getCookies = () => {
+    if(localStorage.getItem !== null){
+      setCookies(true)
+    }
+  }
+  console.log(cookies);
+  useEffect(() => {
+    getCookies()
+  }, [])
+
+
+  function openPopUp() {
     setisPopUpOpen(true);
   }
 
-  function closePopup(){
+  function closePopup() {
     setisPopUpOpen(false);
   }
 
@@ -27,8 +56,9 @@ const IndexPage = () => {
         <Hero handleClick={openPopUp} />
         <Enterprise />
         <MeetCommunity />
-        <Modal isOpen={isPopUpOpen} handleClose={closePopup}/>
-        <CookieModal />
+        {cookies === true ?  "null"  : < Modal isOpen={isPopUpOpen} handleClose={closePopup} />}
+        
+        <CookieModal cookieOpen={cookieOpen} handleClose={closeModal} cookies={cookies} />
       </Layout>
 
     </>
