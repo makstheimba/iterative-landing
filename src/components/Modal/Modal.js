@@ -23,7 +23,6 @@ export const ModalContainer = styled.div`
 export const ModalForm = styled.form`
   min-width: 814px;
   background-color: white;
-
   padding: 40px;
   display: flex;
   flex-direction: column;

@@ -189,8 +189,7 @@ const Modal = (props) => {
         </ModalCheckboxContainer>
         <ModalError error={agreeError}>{agreeError}</ModalError>
         
-        <Button disabled={formInvalid} type="submit">Request a demo</Button>
-
+        <Button form={true} disabled={formInvalid} type="submit">Request a demo</Button>
       </ModalForm>
     </ModalContainer>
     
