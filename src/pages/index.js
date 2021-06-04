@@ -5,7 +5,7 @@ import { Logo } from "../components/logo/logo"
 // styles
 const pageStyles = {
   color: "#232129",
-  padding: "96px",
+  padding: "97px",
   fontFamily: "-apple-system, Roboto, sans-serif, serif",
 }
 const headingStyles = {
